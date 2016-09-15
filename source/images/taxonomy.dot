@@ -1,0 +1,18 @@
+    digraph foo {
+        node [ shape=box ]
+        nodesep=0.5
+        margin = 0.3
+        ranksep = "0.3 equally"
+        fontsize = 10
+        "Evolutionary\n DT" -> "Full DT"
+        "Evolutionary\n DT" -> "Components"
+        "Full DT" -> "Classification"
+        "Full DT" -> "Regression"
+        "Classification" -> "Axis-\n Parallel"
+        "Classification" -> "Oblique"
+        "Regression" -> "Regression\n DT"
+        "Regression" -> "Model\n DT"
+        "Components" -> "Hyperplanes"
+        "Components" -> "Pruning"
+        "Components" -> "Other"
+    }

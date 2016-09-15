@@ -1,0 +1,23 @@
+Dataset,HW/SW [s],SW-ARM [s],SW-PC [s],SW-DSP [s]
+ausc,:math:`3.7 \pm 0.02`,:math:`82.3 \pm 3.00`,:math:`9.0 \pm 0.18`,:math:`197.1 \pm 15.14`
+ca,:math:`3.7 \pm 0.02`,:math:`90.5 \pm 4.62`,:math:`8.9 \pm 0.19`,:math:`207.3 \pm 13.86`
+car,:math:`7.1 \pm 0.03`,:math:`241.4 \pm 8.58`,:math:`23.8 \pm 0.44`,:math:`482.1 \pm 21.82`
+cmc,:math:`6.4 \pm 0.05`,:math:`216.9 \pm 6.60`,:math:`21.3 \pm 0.44`,:math:`438.2 \pm 15.21`
+ctg,:math:`8.9 \pm 0.09`,:math:`374.9 \pm 4.74`,:math:`35.4 \pm 0.23`,:math:`738.4 \pm 11.44`
+ger,:math:`4.7 \pm 0.02`,:math:`151.1 \pm 5.80`,:math:`13.9 \pm 0.51`,:math:`270.0 \pm 20.09`
+jvow,:math:`15.7 \pm 0.06`,:math:`777.5 \pm 10.15`,:math:`73.2 \pm 0.37`,:math:`1747.2 \pm 12.36`
+page,:math:`16.7 \pm 0.02`,:math:`752.4 \pm 34.20`,:math:`74.6 \pm 2.46`,:math:`985.7 \pm 47.07`
+pid,:math:`4.0 \pm 0.03`,:math:`105.9 \pm 4.66`,:math:`10.6 \pm 0.32`,:math:`203.6 \pm 11.63`
+psd,:math:`4.8 \pm 0.02`,:math:`138.1 \pm 4.98`,:math:`13.7 \pm 0.27`,:math:`256.2 \pm 13.70`
+sb,:math:`9.3 \pm 0.00`,:math:`261.7 \pm 0.08`,:math:`29.3 \pm 0.10`,:math:`523.1 \pm 2.56`
+seg,:math:`9.2 \pm 0.09`,:math:`398.0 \pm 8.17`,:math:`38.1 \pm 0.25`,:math:`778.7 \pm 11.98`
+sick,:math:`12.9 \pm 0.01`,:math:`417.7 \pm 7.25`,:math:`50.1 \pm 0.22`,:math:`657.8 \pm 2.71`
+spect,:math:`2.5 \pm 0.03`,:math:`37.6 \pm 1.42`,:math:`3.8 \pm 0.11`,:math:`75.4 \pm 4.59`
+spf,:math:`8.3 \pm 0.13`,:math:`342.9 \pm 5.63`,:math:`32.1 \pm 0.32`,:math:`609.3 \pm 17.30`
+thy,:math:`12.9 \pm 0.02`,:math:`516.7 \pm 18.84`,:math:`54.4 \pm 1.29`,:math:`860.5 \pm 49.35`
+veh,:math:`4.9 \pm 0.09`,:math:`137.6 \pm 3.07`,:math:`13.6 \pm 0.09`,:math:`285.4 \pm 5.23`
+vote,:math:`3.0 \pm 0.03`,:math:`58.0 \pm 2.58`,:math:`5.8 \pm 0.14`,:math:`123.5 \pm 5.89`
+vow,:math:`6.0 \pm 0.09`,:math:`165.9 \pm 0.88`,:math:`15.7 \pm 0.13`,:math:`449.5 \pm 0.90`
+w21,:math:`16.8 \pm 0.03`,:math:`856.3 \pm 35.38`,:math:`82.2 \pm 2.31`,:math:`1636.0 \pm 95.01`
+wfr,:math:`17.2 \pm 0.06`,:math:`906.4 \pm 16.29`,:math:`86.9 \pm 1.85`,:math:`1458.1 \pm 50.54`
+Average speedup,,:math:`34.2 \pm 4.80`,:math:`3.4 \pm 0.45`,:math:`65.8 \pm 8.62`

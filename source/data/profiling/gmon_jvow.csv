@@ -1,0 +1,34 @@
+Name (location),Time,Calls,% Time
+Summary,1min 5s,,100.0
+evaluate_node_test,41.000s,-165808731,62.528595
+find_dt_leaf_for_inst,21.520s,1068504274,32.819885
+find_node_distribution,2.980s,250001,4.544761
+efti,30.000ms,1,0.04575263
+_extract_hierarcy,20.000ms,633042,0.030501753
+fitness_eval,10.000ms,250001,0.015250877
+timing_reset,10.000ms,251913,0.015250877
+delete_trimmed_subtree,0ns,45,0.0
+efti_close,0ns,1,0.0
+efti_init,0ns,1,0.0
+efti_load_instance,0ns,4274,0.0
+efti_printf,0ns,5,0.0
+efti_reset,0ns,2,0.0
+extract_hierarcy,0ns,23144,0.0
+node_alloc,0ns,11430,0.0
+node_free,0ns,11334,0.0
+pack_coefs,0ns,520,0.0
+random_hiperplane,0ns,520,0.0
+rnd_perm,0ns,1,0.0
+timing_close,0ns,2,0.0
+timing_count_get,0ns,501912,0.0
+timing_init,0ns,2,0.0
+timing_start,0ns,250001,0.0
+timing_stop,0ns,250000,0.0
+tree_copy,0ns,10389,0.0
+tree_create,0ns,1041,0.0
+tree_create_child,0ns,1040,0.0
+tree_delete_child,0ns,966,0.0
+tree_delete_node,0ns,11334,0.0
+tree_get_sibling,0ns,11083,0.0
+tree_init,0ns,1,0.0
+main,0ns,0,0.0
