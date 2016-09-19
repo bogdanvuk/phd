@@ -22,7 +22,7 @@ import shlex
 # # add custom extensions directory to python path
 # sys.path.append(os.path.join(CURDIR, 'extensions'))
 
-#from sphinxpp import latex_mods
+from sphinxpp import latex_mods
 sys.path.append('./source/images')
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -38,7 +38,13 @@ sys.path.append('./source/images')
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.bibtex', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinxpp.numfig', 'bdp.sphinxext.bdpfigure', 'sphinx.ext.graphviz', 'sphinx.ext.todo',
+extensions = ['sphinxcontrib.bibtex',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.ifconfig',
+              'sphinxpp.numfig',
+              'bdp.sphinxext.bdpfigure',
+              'sphinx.ext.graphviz',
+              'sphinx.ext.todo',
               'sphinxpp.plot_directive',
               'sphinx.ext.autodoc',
               'sphinx.ext.doctest',
@@ -92,7 +98,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = []
+exclude_patterns = ['tex','toc.rst','conf.rst']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -223,55 +229,7 @@ htmlhelp_basename = 'ensemblesdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_preamble = ur'''
-\nonstopmode
-\usepackage[none]{hyphenat}
-\usepackage{booktabs}
-\usepackage{hyperref}
-
-% for subfigure
-\usepackage{subcaption}
-\captionsetup{labelfont=bf}
-
-\usepackage{fancyhdr}
-\usepackage{array}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-\pagestyle{fancy}
-
-\newcommand{\NA}{N_{A}}
-\newcommand{\SM}{S_m}
-\newcommand{\LM}{L_m}
-\newcommand{\AM}{A_{m}}
-\newcommand{\IM}{I_{m}}
-\newcommand{\WDTD}{W_{DTD}}
-\newcommand{\Nl}{N_{l}}
-\newcommand{\Nc}{N_{c}}
-\newcommand{\NlM}{N_{lm}}
-\newcommand{\Tsw}{T_{sw}}
-\newcommand{\Ths}{T_{hs}}
-\newcommand{\Tswmut}{T_{sw\_mut}}
-\newcommand{\Tswacc}{T_{sw\_acc}}
-\newcommand{\Thsmut}{T_{hs\_mut}}
-\newcommand{\Thsacc}{T_{hs\_acc}}
-\newcommand{\DM}{D^{M}}
-\newcommand{\NAM}{N^{M}_{A}}
-\newcommand{\NIM}{N^{M}_{I}}
-\newcommand{\NPADD}{\left\lceil ld(\NAM) \right\rceil}
-
-\renewcommand{\arraystretch}{1.2}
-\setlength{\tabcolsep}{.4em}
-\setcounter{secnumdepth}{4}
-\errorcontextlines 10000
-
-\let\oldsection\section
-\renewcommand\section{\clearpage\oldsection}
-
-\lhead{}
-\chead{}
-\rhead{\fontsize{8pt}{12pt}\selectfont PhD Thesis \thepage}
-
+\input{preamble._tex}
 '''
 
 latex_title = ur'''
@@ -279,7 +237,7 @@ latex_title = ur'''
 \begin{center}
 {\rm\Huge PhD Thesis } \par
 \vspace{25pt}
-{\Huge{Hardware acceleration of non-incremental algorithms for induction of the decision trees and their ensembles} \par}
+{\Huge{Hardware Acceleration of Nonincremental Algorithms for the Induction of Decision Trees and Decision Tree Ensembles} \par}
 Bogdan Vukobratović, mentor dr Rastistlav Struharik
 \vspace{50pt}
 \end{center}
@@ -302,7 +260,7 @@ latex_elements = {
 'releasename': "",
 'maketitle': latex_title,
 'tableofcontents' : "",
-#'babel': '\\usepackage[english]{babel}',
+# 'babel': '\\usepackage[english]{babel}',
 
 }
 
@@ -338,6 +296,10 @@ latex_documents = [
 # If false, no module index is generated.
 #latex_domain_indices = True
 
+latex_additional_files = [
+    'tex/preamble._tex',
+    # 'phd.bib'
+]
 
 # -- Options for manual page output ---------------------------------------
 
