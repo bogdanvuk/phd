@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-markers = ['x', 's', 'o', '^', '*']
+markers = ['*', 's', 'o', '^', '*']
 colors = ['r', 'g', 'b', 'b', 'b']
 
 
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     #attr, cls = load_arff("/data/personal/doktorat/data/data_sets_all/knowledge.csv")
     #attr, cls = load_arff("/data/personal/doktorat/data/data_sets_all/column_2C_weka.arff")
     #attr, cls = load_arff("/data/personal/doktorat/data/data_sets_all/iris.arff")
-    attr, cls = load_arff("/data/personal/doktorat/data/data_sets_all/vene.csv")
+    attr, cls = load_arff("../data/yingyang.csv")
     ds = {'attr': attr, 'cls': cls}
 
     plot2pdf(ds, "attrspace.pdf", (0,1))
