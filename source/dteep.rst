@@ -134,6 +134,8 @@ As for the the number of clock cycles required to determine the accuracy for the
 
 where, |NIass| designates the number of instances in the training set associated with the single DT ensemble member, |Nc| the total number of classes in the training set and |Nl| the number of leaves in the DT. Therefore, the accuracy evaluation time is dependent on the training set size.
 
+.. _ens-hw-sw-speedup-estim:
+
 Theoretical estimation of the acheivable speedup of the proposed HW/SW system
 -----------------------------------------------------------------------------
 

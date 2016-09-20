@@ -25,7 +25,7 @@ def draw_children(parent, templ, t, separation):
     return objs
 
 def draw_node_test_eq(node, id, pos):
-    t = "$\mathbf{w_{" + str(id) + "}}\cdot \mathbf{x} < thr_{" + str(id) + "}$"
+    t = r"$\mathbf{w_{" + str(id) + r"}}\cdot \mathbf{x} < \theta_{" + str(id) + r"}$"
     if pos == 'left':
         fig << text(t).align(node.w(0.5), prev().e(1.0))
     else:

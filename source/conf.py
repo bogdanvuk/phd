@@ -39,6 +39,7 @@ sys.path.append('./source/images')
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinxcontrib.bibtex',
+              'sphinxpp.subfig',
               'sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinxpp.numfig',
@@ -48,7 +49,7 @@ extensions = ['sphinxcontrib.bibtex',
               'sphinxpp.plot_directive',
               'sphinx.ext.autodoc',
               'sphinx.ext.doctest',
-              'sphinxpp.subfig']
+              ]
 
 numfig = True
 numfig_format = {'figure': 'Figure %s',

@@ -85,14 +85,14 @@ def dt2dot(dt):
     return dot_tmplt.format('\n    '.join(node_def), '\n    '.join(hier))
 
 
-import json
-with open('/data/personal/doktorat/prj/efti_pc/dt.js') as data_file:    
-    dt = json.load(data_file)
+# import json
+# with open('/data/personal/doktorat/prj/efti_pc/dt.js') as data_file:
+#     dt = json.load(data_file)
     
-s = dt2dot(dt)
+# s = dt2dot(dt)
 
-with open('proba.dot', 'w') as fout:
-    fout.write(s)
+# with open('proba.dot', 'w') as fout:
+#     fout.write(s)
     
-from subprocess import call
-call(["dot", "-Tpng", "proba.dot", "-o", "proba.png"])
+# from subprocess import call
+# call(["dot", "-Tpng", "proba.dot", "-o", "proba.png"])

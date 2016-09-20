@@ -88,30 +88,30 @@ This thesis focuses on the oblique binary classification DTs. The tests performe
 
 where |w| represents the coefficient vector and |th| (called the threshold) models the afine part of the test.
 
-Next, an example describing the classification process by oblique DTs will be given. The :num:`Figure #fig-oblique-dt-traversal-attrspace-only` shows a dataset that will be used for this example, plotted in its attribute space. The dataset instances are conviniently described using only two attributes :math:`x_1` and :math:`x_2`, so that they can be represented in 2-D attribute space. The dataset comprises instances belonging to one of the two classes: :math:`C_1` and :math:`C_2`. Each instance is represented in the figure by either a star (if it belongs to the class :math:`C_1`) or by a square (if it belongs to the class :math:`C_2`), with its position defined by the values of its attributes.
+Next, an example describing the classification process by oblique DTs will be given. The :num:`Figure #fig-oblique-dt-traversal-attrspace-only` shows a dataset named yinyang that will be used for this example, plotted in its attribute space. The dataset instances are conviniently described using only two attributes :math:`x_1` and :math:`x_2`, so that they can be represented in 2-D attribute space. The dataset comprises instances belonging to one of the two classes: :math:`C_1` and :math:`C_2`. Each instance is represented in the figure by either a star (if it belongs to the class :math:`C_1`) or by a square (if it belongs to the class :math:`C_2`), with its position defined by the values of its attributes.
 
 .. _fig-oblique-dt-traversal-attrspace-only:
 .. plot:: images/oblique_dt_traversal_attrspace_only.py
     :width: 90%
 
-    The dataset used for the demonstration of the classification process by oblique DTs. Instances of the dataset are described using two attributes :math:`x_1` and :math:`x_2`, and can belong to one of the two classes :math:`C_1`, represented by the star symbols, and :math:`C_2`, represented by the square symbols.
+    The yinyang dataset used for the demonstration of the classification process by oblique DTs. Instances of the dataset are described using two attributes :math:`x_1` and :math:`x_2`, and can belong to one of the two classes :math:`C_1`, represented by the star symbols, and :math:`C_2`, represented by the square symbols.
 
-An example of the oblique binary DT that can be used to accurately classify the instances of the dataset from the :num:`Figure #fig-oblique-dt-traversal-attrspace-only`, is shown in the :num:`Figure #fig-oblique-dt-traversal`. Since this is an oblique DT, each of its node tests follow a form defined by the equation :eq:`oblique-test`. Each DT leaf has one of two classes of the dataset assigned to it. The classification is performed by letting each instance of the dataset traverse the DT, starting from the root node, in order to be assign a class to it. During the traversal, the node's test is evaluated at each of the DT nodes. Based on the results of the node test conditions (**true** or **false**), the DT traversal is continued accordingly until a leaf is reached, when the instance is classified into the class assigned to that leaf. One possible traversal path is shown in the :num:`Figure #fig-oblique-dt-traversal`, where the instance got classified into the class :math:`C_{1}` after the traversal.
+An example of the oblique binary DT that can be used to accurately classify the instances of the yinyang dataset, is shown in the :num:`Figure #fig-oblique-dt-traversal`. Since this is an oblique DT, each of its node tests follow a form defined by the equation :eq:`oblique-test`. Each DT leaf has one of two classes of the yinyang dataset assigned to it. The classification is performed by letting each instance of the yinyang dataset traverse the DT, starting from the root node, in order to be assign a class to it. During the traversal, the node's test is evaluated at each of the DT nodes. Based on the results of the node test conditions (**true** or **false**), the DT traversal is continued accordingly until a leaf is reached, when the instance is classified into the class assigned to that leaf. One possible traversal path is shown in the :num:`Figure #fig-oblique-dt-traversal`, where the instance got classified into the class :math:`C_{1}` after the traversal.
 
 .. _fig-oblique-dt-traversal:
 
 .. bdp:: images/oblique_dt_traversal.py
 
-    An example of the oblique binary DT with one possible traversal path shown in red.
+    Oblique binary DT that could be used to classify the instances of the yinyang dataset ploted in the :num:`Figure #fig-oblique-dt-traversal-attrspace-only`. The curvy line shows a traversal path for one possible instance. This example traversal path is visually presented via plots in dataset attribute space in the :num:`Figure #fig-oblique-dt-traversal-attrspace`.
 
-As it was already discussed, a different way of looking at the classification process by the DT is by examining what happens in the attribute space. The structure of the attribute space regions is defined by the DT node tests, resulting in one region assigned to each node and each leaf of the DT as shown in the :num:`Figure #fig-oblique-dt-attrspace`. The dashed lines on the figure represent the 2-D hyperplanes generated by the node's tests that partition the attribute space. The regions of the final partition are the ones assigned to the DT leaves, and each of them is marked with the ID of its corresponding leaf and the class assigned to that leaf.
+As it was already discussed, a different way of looking at the classification process by the DT is by examining what happens in the attribute space. The structure of the attribute space regions is defined by the DT node tests, resulting in one region assigned to each node and each leaf of the DT as shown in the :num:`Figure #fig-oblique-dt-attrspace`. The dashed lines on the figure represent the 1-D hyperplanes (lines in this case) generated by the node tests that partition the attribute space. The regions of the final partition are the ones assigned to the DT leaves, and each of them is marked with the ID of its corresponding leaf and the class assigned to that leaf. The regions assigned to the non-leaf nodes can be easily obtained from the figure plot and the DT structure from the :num:`Figure #fig-oblique-dt-traversal`, by noticing that the node's region equals the union of its children regions. Working from the bottom up recursively, regions for all DT nodes can be obtained by combining the regions assigned to their descendents.
 
 .. _fig-oblique-dt-attrspace:
 
-.. figure:: images/oblique_dt_traversal_attrspace_0.pdf
+.. plot:: images/oblique_dt_traversal_attrspace_0.py
     :width: 80%
 
-    The attribute space partition of an example dataset generated by the DT from the :num:`Figure #fig-oblique-dt-traversal`. The instances belong to one of the two different classes: :math:`C_1` marked by Xs and :math:`C_2` marked by squares. The dashed lines on the figure represent the hyperplanes generated by the node's tests that partition the attribute space into the regions, each corresponding to a leaf of the DT. Each of the attribute space regions is marked with the ID of its corresponding leaf and the class assigned to the leaf.
+    The attribute space partition of yinyang dataset from the :num:`Figure #fig-oblique-dt-traversal-attrspace-only` generated by the DT from the :num:`Figure #fig-oblique-dt-traversal`. The instances belong to one of the two different classes: :math:`C_1` marked by stars and :math:`C_2` marked by squares. The dashed lines on the figure represent the hyperplanes generated by the node's tests that partition the attribute space into the regions, each corresponding to a leaf of the DT. Each of the attribute space regions is marked with the ID of its corresponding leaf and the class assigned to the leaf.
 
 In order to find out in which region the instance resides, and thus to which class it belongs, we need to let the instance traverse the DT. The :num:`Figure #fig-oblique-dt-traversal-attrspace` shows this process for the example traversal path shown in the :num:`Figure #fig-oblique-dt-traversal`. At the begining, when the classification of an instance is started at the root, all the regions are valid candidates. After the root node test is evaluated, the location of the instance can be narrowed down to the regions either to the left or to the right of the hyperplane :math:`\mathbf{w_1}\cdot \mathbf{x} - \theta = 0`, generated by the root node test. For this example instance, the root node test evaluated to **true**, the instance continues to the node 2, and the location of the instance is narrowed down to the region assigned to the node 2 and shown in the :num:`Figure #fig-oblique-dt-traversal-attrspace-1`. Then, the test of the node 2 is evaluated for the instance, and it turns out to be **false**, hence the instance continues to the node 5 and the number of possible regions is reduced again to the ones marked in the :num:`Figure #fig-oblique-dt-traversal-attrspace-2`, i.e. to the part of the attribute space assigned to the node 5. Finally, the node 5 test is evaluated to **true**, the instance hits the leaf node 8 and it is finaly located in the region marked in the :num:`Figure #fig-oblique-dt-traversal-attrspace-3` and assigned the :math:`C_1` class.
 
@@ -119,21 +119,21 @@ In order to find out in which region the instance resides, and thus to which cla
 
 .. _fig-oblique-dt-traversal-attrspace-1:
 
-.. figure:: images/oblique_dt_traversal_attrspace_1.pdf
+.. plot:: images/oblique_dt_traversal_attrspace_1.py
     :align: center
 
     Region of the attribute space assigned to the node 2 of the DT from the :num:`Figure #fig-oblique-dt-traversal`.
 
 .. _fig-oblique-dt-traversal-attrspace-2:
 
-.. figure:: images/oblique_dt_traversal_attrspace_2.pdf
+.. plot:: images/oblique_dt_traversal_attrspace_2.py
     :align: center
 
     Region of the attribute space assigned to the node 5 of the DT from the :num:`Figure #fig-oblique-dt-traversal`.
 
 .. _fig-oblique-dt-traversal-attrspace-3:
 
-.. figure:: images/oblique_dt_traversal_attrspace_3.pdf
+.. plot:: images/oblique_dt_traversal_attrspace_3.py
     :align: center
 
     Region of the attribute space assigned to the node 8 of the DT from the :num:`Figure #fig-oblique-dt-traversal`.
@@ -147,7 +147,7 @@ In order to find out in which region the instance resides, and thus to which cla
 Decision tree induction
 -----------------------
 
-In the field of machine learning, as is with most other scientific disciplines, simpler models are prefered over the more complex ones as stated in the principle of Occam's razor :cite:`gauch2003scientific`. This principle, in terms of information theory was proposed in :cite:`rissanen1985minimum` and called the Minimum Description Length (MDL). In essence it says that the shortest description of something, i.e., the most compressed one, is the best description. The preference for simplicity in the scientific method is based on the falsifiability criterion. For each accepted model of a phenomenon, there is extremely large number of possible alternatives with an increasing level of  complexity, because aspects in which the model fails to correctly describe the phenomenon can always be masked with ad hoc hypotheses to prevent the model from being falsified. Therefore, simpler theories are preferable to more complex ones because they are more testable. Hence, there is an obvious benefit for having the algorithm that induces smaller DTs, since smaller DT corresponds to simpler description of the phenomenon being modeled by it.
+In the field of machine learning, as is with most other scientific disciplines, simpler models are prefered over the more complex ones as stated in the principle of Occam's razor :cite:`gauch2003scientific`. This principle, in terms of information theory was proposed in :cite:`rissanen1985minimum` under the name Minimum Description Length (MDL). In essence it says that the shortest description of something, i.e., the most compressed one, is the best description. The preference for simplicity in the scientific method is based on the falsifiability criterion. For each accepted model of a phenomenon, there is extremely large number of possible alternatives with an increasing level of  complexity, because aspects in which the model fails to correctly describe the phenomenon can always be masked with ad hoc hypotheses to prevent the model from being falsified. Therefore, simpler theories are preferable to more complex ones because they are more testable. Hence, there is an obvious benefit for having the algorithm that induces smaller DTs, since smaller DT corresponds to simpler description of the phenomenon being modeled by it.
 
 Second, with growth and advancements in the field of electronics, wireless communications, networking, cognitive and affective computing and robotics, embedded devices have penetrated deeper into our daily lives. In order for them to seemlesly integrate with our daily routine, they need to comprise some sort of machine learning system for execution of any non-trivial task. Hence, the |algo| algorithm was designed with its implementation for the embedded systems in mind. In other words, the |algo| algorithm was designed to reqire as little hardware resources for implementation as possible in order for it to be easily integrated into an embedded system.
 
