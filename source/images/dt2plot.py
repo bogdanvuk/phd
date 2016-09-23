@@ -200,8 +200,8 @@ def plot_dts_iter():
     import os
 
     dataset = "../data/vene.csv"
-    json_dir = '/home/bvukobratovic/projects/rst/examples/doktorat/source/images/efti_overview_dts/json'
-    pdf_dir = '/home/bvukobratovic/projects/rst/examples/doktorat/source/images/efti_overview_dts'
+    json_dir = '/data/projects/phd/source/images/efti_overview_dts/json'
+    pdf_dir = '/data/projects/phd/source/images/efti_overview_dts'
     _, _, filenames = next(os.walk(json_dir), (None, None, []))
     efti_iters = sorted([int(os.path.splitext(f)[0]) for f in filenames])
     while len(efti_iters) > 8:

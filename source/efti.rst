@@ -3,18 +3,18 @@
 |algo| algorithm
 ================
 
-This section describes an evolutionary algorithm for oblique full DT induction using supervised learning - the |algo|. The main motivation for creating |algo| was to develop an algorithm that:
+This section describes an evolutionary algorithm for oblique full DT induction using supervised learning - the |algo|. The main motivation for creating |algo| was to develop an algorithm that is:
 
-- Suitability for the implementation on embedded systems, i.e. low hardware resource requirements,
-- Ease of parallelization and acceleration in hardware, and
-- Induction of smaller DTs than the existing solutions
+- Suitable for the implementation on embedded systems, i.e. has low hardware resource requirements,
+- Easy parallelizable and accelerated in hardware, and
+- Induces smaller DTs than the existing solutions, without the loss in DT accuracy.
 
 The algorithm overview
 ----------------------
 
-The :num:`Algorithm #fig-algorithm-pca` shows the algorithmic framework for the |algo| algorithm, which is similar for all evolutionary algorithms and comprises main tasks of the individual mutation, fitness evaluation and selection. The DT is induced from the training set - the argument *train_set* received by the *efti()* function. Since the |algo| algorithm performs the supervised learning, the training set consists of the problem instances which have the known class membership. The |algo| algorithm maintaines a single candidate solution, stored in the variable *dt* in pseudo-code. The evolution is started from the randomly generated one-node DT (containing only the root) by the *initialize()* function and iteratively tries to improve on it. In each iteration, DT is slightly changed by the *mutate()* function to obtain the mutated individual stored into the *dt_mut* variable. Two types of mutations are employed on the DT individual:
+The :num:`Algorithm #fig-algorithm-pca` shows the algorithmic framework for the |algo| algorithm, which is similar for all evolutionary algorithms and comprises main tasks of the individual mutation, fitness evaluation and selection. The DT is induced from the training set - the argument *train_set* received by the *efti()* function. Since the |algo| algorithm performs supervised learning, the training set consists of problem instances which have the known class membership. The |algo| algorithm maintaines a single candidate solution, stored in the variable *dt* in pseudo-code. The evolution is started from the randomly generated one-node DT (containing only the root) by the *initialize()* function and iteratively tries to improve on it. In each iteration, DT is slightly changed by the *mutate()* function to obtain the mutated individual stored into the *dt_mut* variable. Two types of mutations are employed on the DT individual:
 
-- Every iteration the small number of randomly selected coefficients in the certain number of randomly selected nodes are slightly changed, and
+- Every iteration a small number of randomly selected coefficients in the certain number of randomly selected nodes are changed, and
 - Every few iterations, the nodes are either added or removed from the DT
 
 The fitness of the mutated individual (variable *fit_mut*), calculated by the *fitness_eval()* function, is then compared with the fitness of the candidate solution individual (variable *fit*) by the *selection()* function, which decides whether the mutated individual will be taken as the new candidate solution, i.e. in the next iteration it will become the base for the mutation. During *max_iter* iterations the |algo| algorithm tries to improve upon the DT candidate solution, after which the algorithm exits and the candidate solution is returned. Once the DT is formed in this way, it can be used to classify new instances of the problem.
