@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-markers = ['*', 's', 'o', '^', '*']
+markers = ['*', 's', '^', '^', '*']
 colors = ['r', 'g', 'b', 'b', 'b']
 
 

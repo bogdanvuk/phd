@@ -3,7 +3,7 @@
 |algo| algorithm
 ================
 
-This section describes an evolutionary algorithm for oblique full DT induction using supervised learning - the |algo|. The main motivation for creating |algo| was to develop an algorithm that is:
+This section describes an evolutionary algorithm for oblique full DT induction using supervised learning - |algo|. The main motivation for creating |algo|, was to develop an algorithm that is:
 
 - Suitable for the implementation on embedded systems, i.e. has low hardware resource requirements,
 - Easy parallelizable and accelerated in hardware, and
@@ -12,98 +12,24 @@ This section describes an evolutionary algorithm for oblique full DT induction u
 The algorithm overview
 ----------------------
 
-The :num:`Algorithm #fig-algorithm-pca` shows the algorithmic framework for the |algo| algorithm, which is similar for all evolutionary algorithms and comprises main tasks of the individual mutation, fitness evaluation and selection. The DT is induced from the training set - the argument *train_set* received by the *efti()* function. Since the |algo| algorithm performs supervised learning, the training set consists of problem instances which have the known class membership. The |algo| algorithm maintaines a single candidate solution, stored in the variable *dt* in pseudo-code. The evolution is started from the randomly generated one-node DT (containing only the root) by the *initialize()* function and iteratively tries to improve on it. In each iteration, DT is slightly changed by the *mutate()* function to obtain the mutated individual stored into the *dt_mut* variable. Two types of mutations are employed on the DT individual:
+The :num:`Algorithm #fig-algorithm-pca` shows the algorithmic framework for the |algo| algorithm, which is similar for all evolutionary algorithms and comprises main tasks of the individual mutation, fitness evaluation and selection. The DT is induced from the training set - the argument *train_set* received by the *efti()* function. Since the |algo| algorithm performs supervised learning, the training set consists of problem instances which have the known class membership. The |algo| algorithm maintaines a single candidate solution, stored in the variable *dt* in pseudo-code. The evolution is started from the randomly generated one-node DT (containing only the root) by the *initialize()* function and iteratively the effort is made to improve on it. In each iteration, DT is slightly changed by the *mutate()* function to obtain the mutated individual stored into the *dt_mut* variable. Two types of mutations are employed on the DT individual:
 
 - Every iteration a small number of randomly selected coefficients in the certain number of randomly selected nodes are changed, and
-- Every few iterations, the nodes are either added or removed from the DT
+- Every few iterations, a node is either added or removed from the DT
 
-The fitness of the mutated individual (variable *fit_mut*), calculated by the *fitness_eval()* function, is then compared with the fitness of the candidate solution individual (variable *fit*) by the *selection()* function, which decides whether the mutated individual will be taken as the new candidate solution, i.e. in the next iteration it will become the base for the mutation. During *max_iter* iterations the |algo| algorithm tries to improve upon the DT candidate solution, after which the algorithm exits and the candidate solution is returned. Once the DT is formed in this way, it can be used to classify new instances of the problem.
+The fitness of the mutated individual (variable *fit_mut*), calculated by the *fitness_eval()* function, is then compared with the fitness of the candidate solution individual (variable *fit*) by the *selection()* function, which decides whether the mutated individual will be taken as the new candidate solution, i.e. will it become the base for the mutation in the iterations to follow. During *max_iter* iterations the |algo| algorithm tries to improve upon the DT candidate solution, after which the algorithm exits and the candidate solution is returned. Once the DT is formed in this way, it can be used to classify new instances of the problem.
 
 .. _fig-algorithm-pca:
 
 .. literalinclude:: code/algorithm.py
     :caption: Overview of the |algo| algorithm
 
-The :num:`Figure #fig-efti-overview` and :num:`Figure #fig-efti-overview-dot` show one example evolution of the DT by the |algo| algorithm. The :num:`Figure #fig-efti-overview` shows the DT evolution from the perspective of the attribute space partitioning. Each partition is labeled in the format *i-Cj*, where *i* equals the ID of the leaf that corresponds to the partition, and *j* equals the class number assigned to the leaf. The :num:`Figure #fig-efti-overview-dot` shows the DT evoultion from the perspective of the DT structure. The nodes are drawn using circles and the leaves using squares, and each node and each leaf is assigned a unique ID.
+In the :num:`Figure #fig-efti-overview00` through :num:`Figure #fig-efti-overview07`, one example evolution of the DT by the |algo| algorithm is shown. Eight specific moments in the DT evolution, where significant breakthroughs in the fitness of the DT were made, are presented in these figures by both plotting their tree structure, and displaying the partition of the attribute space that these individuals induce. The nodes are drawn using circles and the leaves using squares, and each node and each leaf is assigned a unique ID. Each leaf node and the attribute space region is labeled in the format *i-Cj*, where *i* equals the ID of the leaf, that also corresponds to the region, and *j* equals the class number assigned to the leaf, hence also to the region. For each of these figures, the following information is given:
 
-Both figures capture the state of the induced DT in 8 of the critical moments where the fitness of the DT has advanced, within subfigures enumerated from *a - f*. Their subfigures wich share the enumeration correspond to the DT individual in the same iteration, i.e the :num:`Figure #fig-efti-overview-00` corresponds to the :num:`Figure #fig-efti-overview-dot00`, etc. The caption below each of the subfigures, shows the status of the DT individaul in the corresponding iteration:
-
-- iter - the iteration count
-- fit - the fitness of the DT
-- size - the size of the DT: calculated as the number of leaves in the DT
-- acc - the accuracy of the DT on the training set: calculated as the percentage of the instances from the training set that are classified correctly
-
-.. subfigstart::
-
-.. _fig-efti-overview-00:
-
-.. figure:: images/efti_overview_dts/dt00.pdf
-    :width: 80%
-    :align: center
-
-    iter: 000000, fit: 0.602, size: 2, acc: 0.600
-
-.. _fig-efti-overview-01:
-
-.. figure:: images/efti_overview_dts/dt01.pdf
-    :width: 80%
-    :align: center
-
-    iter: 000013, fit: 0.629, size: 2, acc: 0.627
-
-.. _fig-efti-overview-02:
-
-.. figure:: images/efti_overview_dts/dt02.pdf
-    :width: 80%
-    :align: center
-
-    iter: 003599, fit: 0.914, size: 5, acc: 0.920
-
-.. _fig-efti-overview-03:
-
-.. figure:: images/efti_overview_dts/dt03.pdf
-    :width: 80%
-    :align: center
-
-    iter: 007859, fit: 0.927, size: 4, acc: 0.930
-
-.. _fig-efti-overview-04:
-
-.. figure:: images/efti_overview_dts/dt04.pdf
-    :width: 80%
-    :align: center
-
-    iter: 030268, fit: 0.927, size: 5, acc: 0.933
-
-.. _fig-efti-overview-05:
-
-.. figure:: images/efti_overview_dts/dt05.pdf
-    :width: 80%
-    :align: center
-
-    iter: 177050, fit: 0.927, size: 6, acc: 0.937
-
-.. _fig-efti-overview-06:
-
-.. figure:: images/efti_overview_dts/dt06.pdf
-    :width: 80%
-    :align: center
-
-    iter: 279512, fit: 0.927, size: 7, acc: 0.940
-
-.. _fig-efti-overview-07:
-
-.. figure:: images/efti_overview_dts/dt07.pdf
-    :width: 80%
-    :align: center
-
-    iter: 415517, fit: 0.934, size: 5, acc: 0.940
-
-.. subfigend::
-    :width: 0.48
-    :label: fig-efti-overview
-
-    The figures capture the attribute space partition induced by the DT individual in 8 of the critical moments where the fitness of the DT has advanced. Each partition is labeled in the format *i-Cj*, where *i* equals the ID of the leaf that corresponds to the partition, and *j* equals the class number assigned to the leaf. The caption below each of the subfigures, shows the status of the DT individaul in the corresponding iteration: iter - the iteration count, fit - the fitness of the DT, size - the size of the DT, acc - the accuracy of the DT on the training set.
+- Iteration - the iteration number in which the DT individual was evolved
+- Fitness - the fitness of the DT
+- Size - the size of the DT: calculated as the number of leaves in the DT
+- Accuracy - the accuracy of the DT on the training set: calculated as the percentage of the instances from the training set that are classified correctly
 
 .. subfigstart::
 
@@ -113,7 +39,23 @@ Both figures capture the state of the induced DT in 8 of the critical moments wh
     :width: 100%
     :align: center
 
-    iter: 000000, fit: 0.602, size: 2, acc: 0.600
+    The initial one-node DT generated by the *initialize()* function
+
+.. _fig-efti-overview-attr00:
+
+.. figure:: images/efti_overview_dts/dt00.pdf
+    :width: 93%
+    :align: center
+
+    The initial attribute space partition
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-efti-overview00
+
+    Iteration: 000000, Fitness: 0.602, Size: 2, Accuracy: 0.600
+
+.. subfigstart::
 
 .. _fig-efti-overview-dot01:
 
@@ -121,7 +63,23 @@ Both figures capture the state of the induced DT in 8 of the critical moments wh
     :width: 100%
     :align: center
 
-    iter: 000013, fit: 0.629, size: 2, acc: 0.627
+    No added nodes that were tried managed to increase fitness
+
+.. _fig-efti-overview-attr01:
+
+.. figure:: images/efti_overview_dts/dt01.pdf
+    :width: 93%
+    :align: center
+
+    Position of the split shifted to increase the accuracy
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-efti-overview01
+
+    Iteration: 000013, Fitness: 0.629, Size: 2, Accuracy: 0.627
+
+.. subfigstart::
 
 .. _fig-efti-overview-dot02:
 
@@ -129,60 +87,138 @@ Both figures capture the state of the induced DT in 8 of the critical moments wh
     :width: 100%
     :align: center
 
-    iter: 003599, fit: 0.914, size: 5, acc: 0.920
+    Three new nodes added to increase the accuracy
+
+.. _fig-efti-overview-attr02:
+
+.. figure:: images/efti_overview_dts/dt02.pdf
+    :width: 93%
+    :align: center
+
+    Three new splits added for finer attribute space partition
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-efti-overview02
+
+    Iteration: 003599, Fitness: 0.914, Size: 5, Accuracy: 0.920
+
+.. subfigstart::
 
 .. _fig-efti-overview-dot03:
-
 .. figure:: images/efti_overview_dts/dot03.png
     :width: 100%
     :align: center
 
-    iter: 007859, fit: 0.927, size: 4, acc: 0.930
+    Since the region of leaf #6 contained almost no individuals in the :num:`Figure #fig-efti-overview-attr02`, it was removed and the node #7 was basically moved up to replace node #3 (:num:`Figure #fig-efti-overview-dot02`), and thus removing the said empty region.
+
+.. _fig-efti-overview-attr03:
+.. figure:: images/efti_overview_dts/dt03.pdf
+    :width: 93%
+    :align: center
+
+    The region of the leaf #6 (:num:`Figure #fig-efti-overview-attr02`) was removed, since it was almost empty and contributed little to accuracy. The resulting DT is smaller, with even a slight increase in accuracy (since the split induced by node 1 has also shifted slightly to a better position).
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-efti-overview03
+
+    Iteration: 007859, Fitness: 0.927, Size: 4, Accuracy: 0.930
+
+.. subfigstart::
 
 .. _fig-efti-overview-dot04:
-
 .. figure:: images/efti_overview_dts/dot04.png
     :width: 100%
     :align: center
 
-    iter: 030268, fit: 0.927, size: 5, acc: 0.933
+    The leaf #5 was made into a node
+
+.. _fig-efti-overview-attr04:
+.. figure:: images/efti_overview_dts/dt04.pdf
+    :width: 93%
+    :align: center
+
+    Small increase in accuracy was obtained by further dividing the central region of the attribute space, where the individuals of all three classes overlap
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-efti-overview04
+
+    Iteration: 030268, Fitness: 0.927, Size: 5, Accuracy: 0.933
+
+.. subfigstart::
 
 .. _fig-efti-overview-dot05:
-
 .. figure:: images/efti_overview_dts/dot05.png
     :width: 100%
     :align: center
 
-    iter: 177050, fit: 0.927, size: 6, acc: 0.937
+    The leaf #4 was now made into a node
+
+.. _fig-efti-overview-attr05:
+.. figure:: images/efti_overview_dts/dt05.pdf
+    :width: 93%
+    :align: center
+
+    Again, further division of cental attribute space region produced a small increase in accuracy. Fitness has progressed even less, since the addition of a new node diminished the advantage of a small accuracy increase.
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-efti-overview05
+
+    Iteration: 177050, Fitness: 0.927, Size: 6, Accuracy: 0.937
+
+.. subfigstart::
 
 .. _fig-efti-overview-dot06:
-
 .. figure:: images/efti_overview_dts/dot06.png
     :width: 100%
     :align: center
 
-    iter: 279512, fit: 0.927, size: 7, acc: 0.940
+    The leaf #8 was split into two
+
+.. _fig-efti-overview-attr06:
+.. figure:: images/efti_overview_dts/dt06.pdf
+    :width: 93%
+    :align: center
+
+    The region of leaf #8 was split, bringing no improvement to the class separation, but with some other shifts in the split positions, some small accuracy gain was achieved
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-efti-overview06
+
+    Iteration: 279512, Fitness: 0.927, Size: 7, Accuracy: 0.940
+
+.. subfigstart::
 
 .. _fig-efti-overview-dot07:
-
 .. figure:: images/efti_overview_dts/dot07.png
     :width: 100%
     :align: center
 
-    iter: 415517, fit: 0.934, size: 5, acc: 0.940
+    Leaf #9 was removed together with the node #4, which brought the node #8 up in the place of the node #4. Leaves #10 and #11 were removed, and the node #5 was reverted to leaf again.
+
+.. _fig-efti-overview-attr07:
+.. figure:: images/efti_overview_dts/dt07.pdf
+    :width: 93%
+    :align: center
+
+    |algo| gave up on finely partitioning the central attribute space region, since very little gain in accuracy could not justify the increase in the DT size, and it managed to produce the smaller DT without sacrificing the accuracy. The split by the node #8 between the regions #12 and #13 in the :num:`Figure #fig-efti-overview06`, became the split between the regions #8 and #9 after the node #8 moved up to replace the node #4. This, once useless split, has now shifted to turn out very usefull in separating instances of the classes :math:`C_1` and :math:`C_3` and hence contributing to the accuracy.
 
 .. subfigend::
-    :width: 0.32
-    :label: fig-efti-overview-dot
+    :width: 0.48
+    :label: fig-efti-overview07
 
-    The figures capture the structure of the DT individual in 8 of the critical moments where the fitness of the DT has advanced. The nodes are drawn using circles and the leaves using squares, and each node and each leaf is assigned a unique ID. The caption below each of the subfigures, shows the status of the DT individaul in the corresponding iteration: iter - the iteration count, fit - the fitness of the DT, size - the size of the DT, acc - the accuracy of the DT on the training set.
+    Iteration: 415517, Fitness: 0.934, Size: 5, Accuracy: 0.940
 
-At the beggining of the |algo| algorithm, the initial individual needs to be generated (:num:`Figure #fig-efti-overview-00` and :num:`Figure #fig-efti-overview-dot00`). Since |algo| has a goal of creating DTs as small as possible, the initial individual will be first created empty and than only the root node will be generated and inserted into it. By the iteration 13 (:num:`Figure #fig-efti-overview-01` and :num:`Figure #fig-efti-overview-dot01`), no new nodes were added, but the root node test was modified to produce the increase in the DT accuracy from 0.6 to 0.627. During the further evolution the nodes are added, which raises the accuracy of the DT. Notice how fitness becomes to deviate from the accuracy when more nodes are added. This is because the fitness also depends on the size of the DT, in that it is penalized the more leaves the DT has. In this example, the biggest drop in the fitness because of the DT size is in the iteration 279512 of the DT evolution (:num:`Figure #fig-efti-overview-06` and :num:`Figure #fig-efti-overview-dot06`), where the DT individual comprises 7 leaves and although the accuracy climbs to 0.94 (classification success rate of 94%), the fitness remains at 0.927. In this way, the evolutionary process is forced to search for the smaller DT solutions, in which it eventually succeds by the iteration 415517 (:num:`Figure #fig-efti-overview-07` and :num:`Figure #fig-efti-overview-dot07`), where the DT size drops to only 5 leaves without affecting the accuracy.
+At the beggining of the |algo| algorithm, the initial individual needs to be generated (:num:`Figure #fig-efti-overview00`). Since |algo| has a goal of creating DTs as small as possible, the initial individual will be first created empty and than only the root node will be generated and inserted into it. By the iteration 13 (:num:`Figure #fig-efti-overview01`), no new nodes were added, but the root node test was modified to produce the increase in the DT accuracy from 0.6 to 0.627. During the further evolution the nodes are added, which raises the accuracy of the DT. Notice how fitness becomes to deviate from the accuracy when more nodes are added. This is because the fitness also depends on the size of the DT, in that it is penalized the more leaves the DT has. In this example, the biggest drop in the fitness because of the DT size is in the iteration 279512 of the DT evolution (:num:`Figure #fig-efti-overview06`), where the DT individual comprises 7 leaves and although the accuracy climbs to 0.94 (classification success rate of 94%), the fitness remains at 0.927. In this way, the evolutionary process is forced to search for the smaller DT solutions, in which it eventually succeds by the iteration 415517 (:num:`Figure #fig-efti-overview07`), where the DT size drops to only 5 leaves without affecting the accuracy.
 
 Detailed description
 --------------------
 
-In this section, the detailed descriptons of all |algo| subtasks is given.
+In this section, the detailed descriptons of individual |algo| subtasks is given. Although |algo| was based on the HereBoy algorithm, it both deviates from HereBoy in some aspects (for an example: the mutation strength profile and selection procedure) and implements many operations that are specific to the full DT induction and not present in the HereBoy (for an example: tree structure mutation and fitness calculation specifics).
 
 Mutation
 ........
@@ -275,7 +311,7 @@ The DT oversize is calculated as the relative difference between the number of l
 
 DT oversize negatively influences the fitness as it can be seen from the way fitness is calculated in the :num:`Algorithm #fig-fitness-eval-pca`: *fitness = accuracy \* (1 - Ko*oversize)*. The parameter |Ko| is used to control how much influence oversize will have on overall fitness. In other words, it determines the shape of the collection of Pareto frontiers for the DT individual. Each DT individual can be represented as a point in a 2-D space induced by DT oversize and accuracy measures. A Pareto set is formed for each possible fitness value, where all elements of the set are assigned the same fitness value, even though they have different accuracy and oversize measures.
 
-.. _fig-fit-oversize:
+.. _fig-fit-overSize:
 .. plot:: images/pareto.py
     :width: 90%
 
@@ -286,7 +322,7 @@ The :num:`Figure #fig-fit-oversize` shows the position of the Pareto frontier fo
 Selection
 .........
 
-The selection task is responsible for deciding in each iteration which DT will be taken for candidate solution for the next iteration: either the current candidate solution, i.e. the parent, or the mutated individual. Whenever the mutated individual outperforms its parent in fitness, it is always taken as the new candidate solution.
+The selection task is responsible for deciding in each iteration which DT will be taken for candidate solution for the next Iteration: either the current candidate solution, i.e. the parent, or the mutated individual. Whenever the mutated individual outperforms its parent in fitness, it is always taken as the new candidate solution.
 
 **Iz HEREBOY rada, prepevati**
 

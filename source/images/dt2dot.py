@@ -40,17 +40,24 @@
 
 dot_tmplt = """
 digraph foo {{
+    compound=true
     edge [dir=none]
     node [fontsize=30]
-    nodesep=0.5
-    ranksep = "0.5 equally"
+    nodesep=0.7
+    ranksep = "0.7 equally"
     {}
     {}
 }}
 """
 
-node_tmplt = '{} [shape={}]'
-hier_tmplt = '{} -> {}'
+# node_tmplt = '{} [shape={}]'
+node_tmplt = """
+    subgraph cluster{0} {{
+        style=invis;
+        {0}[label=<{1}>shape={2}];
+    }}
+"""
+hier_tmplt = '{0} -> {1} [ltail=cluster{0} lhead=cluster{1}]'
 
 class NodePool(list):
 
@@ -75,12 +82,18 @@ def dt2dot(dt):
     while node_pool:
         node = node_pool.pop(0)
         if node['left'] != "-1":
-            node_def.append(node_tmplt.format(node['id'], 'circle'))
+            node_def.append(node_tmplt.format(node['id'], node['id'], 'circle'))
             for ch in ['left', 'right']:
                 child = node_pool.insert(node[ch], dt[node[ch]])
                 hier.append(hier_tmplt.format(node['id'], child['id']))
         else:
-            node_def.append(node_tmplt.format(node['id'], 'square'))
+            if 'cls' not in node:
+                node_def.append(node_tmplt.format(node['id'], 'box'))
+            else:
+                node_def.append(node_tmplt.format(
+                    node['id'],
+                    '{}-C<SUB>{}</SUB>'.format(node['id'], node['cls']),
+                    'box'))
 
     return dot_tmplt.format('\n    '.join(node_def), '\n    '.join(hier))
 

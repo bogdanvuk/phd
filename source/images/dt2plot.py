@@ -61,6 +61,9 @@ import numpy as np
 import math
 import json
 import dt2dot
+from bdp import *
+from dtdtools import draw_dt, balance_dt, templdef
+from buchheim import buchheim
 
 matplotlib.rcParams['contour.negative_linestyle'] = 'solid'
 
@@ -134,21 +137,21 @@ def get_intersections(hier, path, node):
     #print(intersections)
     return intersections
 
-def plot_subspace(dt, n, hier=[], path=[]):
+def plot_subspace(dt, n, hier=[], path=[], alpha=1):
     if n['left'] != "-1":
         inter = get_intersections(hier, path, n)
         n['line'] = inter
         if hier is None:
             y,x=np.ogrid[0:1:100j,0:1:100j]
-            plt.contour(x.ravel(), y.ravel(), n['coeffs'][0]*x + n['coeffs'][1]*y, [n['thr']], linewidths=2, colors='k', alpha=0.5)
+            plt.contour(x.ravel(), y.ravel(), n['coeffs'][0]*x + n['coeffs'][1]*y, [n['thr']], linewidths=2, colors='k', alpha=alpha)
         elif inter:
             #print(inter)
-            plt.plot([inter[0][0], inter[1][0]], [inter[0][1], inter[1][1]], linewidth=2, linestyle='--', color='k', alpha=0.5)
+            plt.plot([inter[0][0], inter[1][0]], [inter[0][1], inter[1][1]], linewidth=2, linestyle='--', color='k', alpha=alpha)
 
         hier.append(n)
         for ch in ['left', 'right']:
             path.append(ch)
-            plot_subspace(dt, dt[n[ch]], hier, path)
+            plot_subspace(dt, dt[n[ch]], hier, path, alpha=alpha)
             path.pop()
 
         hier.pop()
@@ -186,14 +189,25 @@ def plot(dt, dataset, alpha=0.5):
     ds = {'attr': attr, 'cls': cls}
     attrspace_plot.plot(ds, (0,1), alpha=alpha)
 
-    plot_subspace(dt, dt['0'])
+    plot_subspace(dt, dt['0'], alpha=0.7)
     plt.gca().axes.get_xaxis().set_visible(False)
     plt.gca().axes.get_yaxis().set_visible(False)
 
-def plot2pdf(dt, pdffn, dataset):
-    plot(dt, dataset)
+def plot2pdf(dt, pdffn, dataset, alpha=0.5):
+    plot(dt, dataset, alpha=alpha)
     plt.savefig(pdffn, bbox_inches='tight')
     plt.close()
+
+def conv2dttree(node, dt):
+    node['c'] = []
+    node['id'] += 1
+    if node['left'] != '-1':
+        node['c'] += [dt[node['left']], dt[node['right']]]
+
+        for c in node['c']:
+            conv2dttree(c, dt)
+
+    return node
 
 def plot_dts_iter():
 
@@ -216,6 +230,9 @@ def plot_dts_iter():
         del efti_iters[rem_suggest]
 
     print(efti_iters)
+    templdef['node'].nodesep = p(0.5, 1.5)
+    templdef['leaf'].nodesep = p(0.5, 1.5)
+    templdef['leaf'].size = p(3.2,1.8)
     for i, ei in enumerate(efti_iters):
         jsfn = os.path.join(json_dir, '{}.js'.format(ei))
         pdffn = os.path.join(pdf_dir, 'dt{0:02d}.pdf'.format(i))
@@ -225,17 +242,34 @@ def plot_dts_iter():
         with open(jsfn) as data_file:
             dt = json.load(data_file)
 
-        plot(dt, pdffn, dataset)
+        plot2pdf(dt, pdffn, dataset, alpha=0.15)
 
-        s = dt2dot.dt2dot(dt)
+        dt = conv2dttree(dt['0'], dt)
+        buchheim(dt)
+        root = draw_dt(dt)
+        fig << root
+        render_fig(fig, dotpdffn, options={'p': True, 'c': True} )
+        fig.clear()
 
-        with open(dotfn, 'w') as fout:
-            fout.write(s)
+        # s = dt2dot.dt2dot(dt)
 
-        from subprocess import call
-        call(["dot", "-Tpng", dotfn, "-o", dotpdffn])
+        # with open(dotfn, 'w') as fout:
+        #     fout.write(s)
 
-#plot_dts_iter()
+        # from subprocess import call
+        # call(["dot", "-Tpng", dotfn, "-o", dotpdffn])
+
+if __name__ == "__main__":
+    plot_dts_iter()
+# with open('/data/projects/phd/source/images/efti_overview_dts/json/177050.js') as data_file:
+#     dt = json.load(data_file)
+
+# dt = conv2dttree(dt['0'], dt)
+# buchheim(dt)
+# root = draw_dt(dt)
+# fig << root
+# render_fig(fig)
+# print(dt)
 
 # dt = {
 #     "0": {"lvl": 0, "id": 0,"cls": 0,"left": "1","right": "2","thr": 1,"coeffs": [2,0]},

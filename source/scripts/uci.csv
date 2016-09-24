@@ -1,0 +1,52 @@
+Short Name,Dataset Name,No. of attributes,No. of instances,No. of classes
+adult,Adult,14,32561,2
+ausc,Australian Credit Approval,14,690,2
+bank,Bank Marketing,16,45211,2
+bc,Balance Scale,4,625,3
+bch,Bach Choral Harmony,16,5665,60
+bcw,Breast Cancer Winsconsin,9,699,2
+ca,Credit Approval,15,690,2
+car,Car Evaluation,6,1728,4
+cmc,Contraceptive Method Choice,9,1473,3
+ctg,Cardiotocography,21,2126,10
+cvf,Clave Vectors Firm-Teacher Model,15,10800,7
+eb,Tamilnadu Electricity Board Hourly Readings,4,45781,31
+eye,EEG Eye State,14,14980,2
+ger,German Credit Data,24,1000,2
+gls,Glass Identification Database,9,214,7
+hep,Hepatitis,19,155,2
+hrtc,Heart Disease Clevelend,13,303,5
+hrts,Heart Statlog,13,270,2
+ion,Johns Hopkins University Ionosphere,34,351,2
+irs,Iris Plants,4,150,3
+jvow,Japanese Vowels,14,4274,9
+krkopt,Chess (King-Rook vs. King-Pawn),6,28056,18
+letter,Letter Recognition,16,20000,26
+liv,BUPA liver disorders,6,345,2
+lym,Lymphography,18,148,4
+magic,MAGIC Gamma Telescope,10,19020,2
+mushroom,Mushroom,22,8124,2
+nurse,Nursery,8,12960,5
+page,Page Block Classification,10,5000,5
+pen,Pen-Based Recognition of Handwritten Digits,16,10992,10
+pid,Pima Indians Diabetes,8,768,2
+psd,Parkinson Speech,27,1040,2
+sb,Seismic Bumps,18,2584,2
+seg,Image Segmentation,18,2310,7
+shuttle,Shuttle,9,58000,7
+sick,Thyroid Disease 2 Class,29,3772,2
+son,Sonar (Mines vs. Rocks),60,208,2
+spect,SPECT Heart,22,267,2
+spf,Steel Plates Faults,27,1941,7
+thy,Thyroid Disease 4 Class,29,3772,4
+ttt,Tic-Tac-Toe Endgame,9,958,2
+veh,Vehicle Silhouettes,18,846,4
+vene,Vene Diagram - Non UCI,2,300,3
+vote,Congressional Voting Records,16,435,2
+vow,Vowel Recognition,10,990,11
+w21,Waveform Database Generator - 21 Attributes,21,5000,3
+w40,Waveform Database Generator - 40 Attributes,40,4090,3
+wfr,Wall Following Robot Navigation,24,5000,4
+wilt,Wilt,5,4839,2
+wine,Wine,11,4898,7
+zoo,Zoo,17,101,7
