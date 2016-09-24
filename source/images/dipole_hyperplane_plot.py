@@ -45,7 +45,7 @@ dpos = np.add((1-(1-delta)/2)*inst[1], (1-delta)/2*inst[0])
 plt.text(dpos[0] - 0.05, dpos[1] - 0.1, r'$1-\delta$', size=30, multialignment='center')
 
 plt.xlabel('$x_1$', fontsize=20)
-plt.ylabel('$x_2$', fontsize=20)
+plt.ylabel('$x_2$', fontsize=20, rotation=0, labelpad=10)
 
 #plt.contour(x.ravel(), y.ravel(), y + 0.0767853*x, [0.712073], linewidth=2)
 #plt.show()
