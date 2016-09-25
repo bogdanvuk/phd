@@ -63,8 +63,9 @@ for coef, caption, resc in zip(coef_row_text, row_caption, res_caption):
 
     coef_row += make_row(pos, coef, field)
     fig << text(caption).align(coef_row[-1][0].w(0.5), prev().e(0.5))
-    fig << bus(coef_row[-1][-1].e(0.5), poffx(2), shorten=p(0.4, 0), style=('', bus_cap))
-    fig << text(resc).align(fig[-1][-1], cur().w(0.5))
+    if resc:
+        fig << bus(coef_row[-1][-1].e(0.5), poffx(2), shorten=p(0.4, 0), style=('', bus_cap))
+        fig << text(resc).align(fig[-1][-1], cur().w(0.5))
 
 for b,c in zip(coef_row[0], col_caption):
     fig << text(c).align(coef_row[0][b].n(0.5), cur().s(0.5))

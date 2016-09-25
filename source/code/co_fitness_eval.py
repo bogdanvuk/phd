@@ -8,7 +8,7 @@ def hw_fitness_eval(train_set):
     accuracy = eftip_accuracy(eftip_res)
 
     Nc = train_set.cls_num()
-    oversize = (len(dt.leaves) - Nc)/Nc
+    oversize = (len(dt.leaves()) - Nc)/Nc
 
     fitness = accuracy * (1 - Ko*oversize)
     return fitness

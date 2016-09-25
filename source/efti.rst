@@ -276,7 +276,7 @@ The main task of the optimization procedure is to maximize the accuracy of the D
     :language: python3
     :caption: The pseudo-code of the accuracy calculation task.
 
-First, the class distribution is determined, by letting all instances from the training set traverse the DT, i.e. by calling the *find_dt_leaf_for_inst()* function whose pseudo-code is given in the :num:`Algorithm #fig-find-dt-leaf-for-inst-pca`. This function determines the instance traversal path, and returns the leaf node in which the instance finished the traversal. The traversal starts at the root node (accessed via *dt.root*), and is performed in the manner depicted in the :num:`Figure #fig-oblique-dt-traversal`, where one possible path is given by the red line. Until a leaf is reached, the node test is performed and a decision to which child to proceed is made based on it. The function *dot_product()*, calculates the scalar product of the node test coefficient vector |w| (stored in *cur_node.w* attribute), and the attribute vector of the instance |x| (stored in *instance.x* variable), and the value returned is compared with the node test threshold |th| (stored in *cur_node.thr* attribute).
+First, the class distribution is determined by letting all instances from the training set traverse the DT, i.e. by calling the *find_dt_leaf_for_inst()* function whose pseudo-code is given in the :num:`Algorithm #fig-find-dt-leaf-for-inst-pca`. This function determines the instance traversal path, and returns the leaf node in which the instance finished the traversal. The traversal starts at the root node (accessed via *dt.root*), and is performed in the manner depicted in the :num:`Figure #fig-oblique-dt-traversal`, where one possible path is given by the curvy line. Until a leaf is reached, the node test is performed and a decision to which child to proceed is made based on it. The function *dot_product()*, calculates the scalar product of the node test coefficient vector |w| (stored in *cur_node.w* attribute), and the attribute vector of the instance |x| (stored in *instance.x* variable), and the value returned is compared with the node test threshold |th| (stored in *cur_node.thr* attribute).
 
 .. _fig-find-dt-leaf-for-inst-pca:
 
@@ -285,21 +285,28 @@ First, the class distribution is determined, by letting all instances from the t
 
 Next step in the accuracy calculation process (the first for loop in the :num:`Algorithm #fig-accuracy-calc-pca`) is to calculate the class distribution matrix. The distribution matrix has one row for each DT leaf, i.e. for each attribute space partition induced by the DT. Each row in turn contains one element for each of the classes in the training set. Hence, a row of the distribution matrix contains the statistics on how many instances of each of the training set classes finished the traversal in the leaf corresponding to the row.
 
-The classes of all the instances from the training set are known and accessed for each instance via the attribute *instance.cls* (within the *accuracy_calc()* function). Based on the leaf nodes' IDs, returned by the *find_dt_leaf_for_inst()* function and the instances class, the distribution matrix is updated. The :math:`d_{i,j}` element of the distribution matrix contains the number of instances of the class *j* that finished in the leaf node with the ID *i* after the DT traversal. After all the instances from the training set traverse the DT, this matrix contains the distribution of classes among the leaf nodes.
+The classes of all the instances from the training set are known and accessed for each instance via the attribute *instance.cls* (within the *accuracy_calc()* function). Based on the leaf nodes' IDs, returned by the *find_dt_leaf_for_inst()* function and the instances class, the distribution matrix is updated. The :math:`d_{i,j}` element of the distribution matrix contains the number of instances of the class *j* (:math:`C_j`) that finished in the leaf node with the ID *i* after the DT traversal. After all the instances from the training set traverse the DT, this matrix contains the distribution of classes among the leaf nodes.
 
 The second for loop of the *accuracy_calc()* function finds the dominant class for each leaf node. The dominant class for a leaf node is the class having the largest percentage of instances finishing the traversal in that leaf node. Formally, the dominant class :math:`k_i` of the leaf node with the ID *i* is:
 
-.. math:: k_i | (d_{i,k} = \max_{j}(d_{i,j}))
+.. math:: k_i | (d_{(i,k_i)} = \max_{j}(d_{i,j}))
     :label: dominant_class
+
+The structure of the distribution matrix is displayed in the :num:`Figure #fig-distribution-matrix`. Rows correspond to the leaves of the DT, and the columns correspond to the classes of the training set. From the distribution matrix we obtain for each row *i*, the dominant class :math:`k_i` and the number of instances of the dominant class :math:`d_{(i,k_i)}` that finished the traversal in the leaf with ID *i*.
 
 .. _fig-distribution-matrix:
 
 .. bdp:: images/distribution_matrix.py
     :width: 80%
 
-    The distribution matrix
+    The structure of the distribution matrix. From for each matrix row *i*, we obtain the dominant class :math:`k_i` and the number of instances of the dominant class :math:`d_{(i,k_i)}` that finished the traversal in the leaf with ID *i*.
 
-If we were to do a classification run with the current DT individual over the training set, the maximum accuracy would be attained if all leaf nodes were assigned their corresponding dominant classe. Thus, each instance which finishes in a certain leaf node, that is of the node's dominant class, is added to the number of classification hits (the *hits* variable of the :num:`Algorithm #fig-accuracy-calc-pca`), otherwise it is qualified as a missclassification. The accuracy of the DT is hence the percentage of the instances whose classifications were declared as hits: *accuracy* = *hits* / len(*train_set*).
+If we were to do a classification run with the current DT individual over the training set, the maximum accuracy would be attained if all leaf nodes were assigned their corresponding dominant classes. Thus, each instance which finishes in a certain leaf node, that is of the node's dominant class, is added to the number of classification hits (the *hits* variable of the :num:`Algorithm #fig-accuracy-calc-pca`), otherwise it is qualified as a missclassification.
+
+.. math:: hits=\sum_{i=1}^{N_l}{d_{(i,k_i)}}
+    :label: hits_sum
+
+The accuracy of the DT is hence the percentage of the instances whose classifications were declared as hits: *accuracy* = *hits* / len(*train_set*).
 
 Oversize
 ;;;;;;;;
@@ -309,35 +316,66 @@ The DT oversize is calculated as the relative difference between the number of l
 .. math:: oversize = \frac{\Nl - \Nc}{\Nc}
     :label: eq-oversize
 
-DT oversize negatively influences the fitness as it can be seen from the way fitness is calculated in the :num:`Algorithm #fig-fitness-eval-pca`: *fitness = accuracy \* (1 - Ko*oversize)*. The parameter |Ko| is used to control how much influence oversize will have on overall fitness. In other words, it determines the shape of the collection of Pareto frontiers for the DT individual. Each DT individual can be represented as a point in a 2-D space induced by DT oversize and accuracy measures. A Pareto set is formed for each possible fitness value, where all elements of the set are assigned the same fitness value, even though they have different accuracy and oversize measures.
+DT oversize negatively influences the fitness as it can be seen from the way fitness is calculated in the :num:`Algorithm #fig-fitness-eval-pca`: *fitness = accuracy \* (1 - Ko\*oversize\*oversize)*. The parameter |Ko| is used to control how much influence oversize will have on overall fitness. In other words, it determines the shape of the collection of Pareto frontiers for the DT individual. Each DT individual can be represented as a point in a 2-D space induced by DT oversize and accuracy measures. A Pareto set is formed for each possible fitness value, where all elements of the set are assigned the same fitness value, even though they have different accuracy and oversize measures.
 
 .. _fig-fit-overSize:
 .. plot:: images/pareto.py
     :width: 90%
 
-    Position of Pareto frontiers for accuracy value of 0.8, when |Nc| equals 5, for |Ko| parameter values of: 0, 0.1 and 0.2.
+    Position of Pareto frontiers for accuracy value of 0.8, when |Nc| equals 5, for |Ko| parameter values of: 0, 0.02 and 0.1.
 
-The :num:`Figure #fig-fit-oversize` shows the position of the Pareto frontier for an example of fitness value of 0.8 and few values of the parameter |Ko|. Also, fot this example, it was taken for |Nc| to be equal 5. It can be seen that if |Ko| is chosen to be 0, the oversize does not influence the fitness which is always equal to the accuracy value. When :math:`K_o > 0`, the |algo| algorithm will be willing to trade accuracy for the DT size. As it can be seen from the figure, the DT individuals of size 2 and accuracy of 0.72 are equally fit for the algorithm as the one of size 10 and almost perfect accuracy of 1.
+The :num:`Figure #fig-fit-oversize` shows the position of the Pareto frontier for an example of fitness value of 0.8 and few values of the parameter |Ko|. Also, for this example, it was taken for |Nc| to be equal 5. It can be seen that if |Ko| is chosen to be 0, the oversize does not influence the fitness which is in turn always equal to the accuracy value. When :math:`K_o > 0`, the |algo| algorithm will be willing to trade accuracy for the DT size. As it can be seen from the figure, when the parameter |Ko| has the large value of 0.1 for an example, big DTs are highly discouraged in that an individual of size 5 with the accuracy of 0.8 is equally fit for the algorithm as a one of size 10 with more than 10% higher accuracy.
+
+As shown in the :num:`Algorithm #fig-fitness-eval-pca`, the dependence of the fitness on the oversize measure is quadratic. This serves two purposes:
+
+#. Since oversize turns negative when the DT size falls below |Nc|, such undersized DTs would be getting a boost in fitness if it were not for the squaring. If all classes are to be represented in the DT, the number of leaves should at least match the number of classes, where it would be at least possible for each class to have a leaf. By squaring the oversize, the undersized DTs are discouraged in the same way the oversized are.
+
+#. By using the quadratic dependence, the rate at which fitness decreases with the DT size is lower when the size is closer to the |Nc|, and gets progressively higher as the size increases. This way, the DTs whose size is close to |Nc| are penalized less then they would be if the dependence of the fitness on oversize were linear.
+
+.. raw:: latex
+
+   \begingroup
+   \small
+   \renewcommand{\arraystretch}{0.8}
+
+.. tabularcolumns:: L{0.2\linewidth} R{0.20\linewidth} R{0.20\linewidth} R{0.20\linewidth}
+
+.. _tbl-oversize-size-comp:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/oversize_weight_size_comp.csv
+
+.. tabularcolumns:: L{0.2\linewidth} R{0.20\linewidth} R{0.20\linewidth} R{0.20\linewidth}
+
+.. _tbl-oversize-acc-comp:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/oversize_weight_acc_comp.csv
+
+.. raw:: latex
+
+    \endgroup
 
 Selection
 .........
 
-The selection task is responsible for deciding in each iteration which DT will be taken for candidate solution for the next Iteration: either the current candidate solution, i.e. the parent, or the mutated individual. Whenever the mutated individual outperforms its parent in fitness, it is always taken as the new candidate solution.
+The selection task, implemented by the :num:`Algorithm #fig-selection-pca`, is responsible for deciding in each iteration which DT will be taken for the candidate solution for the next iteration: either the current candidate solution, i.e. the parent, or the mutated individual. Whenever the mutated individual outperforms its parent in fitness, it is always taken as the new candidate solution. However, sometimes it can be benefitial for the evolution process to select the less fit individual.
 
-**Iz HEREBOY rada, prepevati**
-
+.. _fig-selection-pca:
 .. literalinclude:: code/selection.py
     :caption: The pseudo-code of the *selection()* function of the |algo| algorithm, that implement's the individual selection procedure
 
-Evolving a solution is inherently an unpredictable process. Like running a maze and only seeing what is in the immediate vicinity, sometimes the system runs into a local dead-end and needs to backtrack to the main path. Consider :num:`Figure #fig-escaping-local-maxima`, a simple 1-dimensional curve of a scoring function. At point A, the solution is at a local maximum, all points in its neighborhood having lower scores. In order to get to point B the solution has to first traverse through the lower scoring regions in order to get to the base of the hill from which it can start scaling to a better solution. The probability test to accept poorer performing solutions is a process that allows the system to search its surrounding neighborhood for better opportunities. Without a search, the system would tend to get stuck at local maximas.
+Evolution is inherently an unpredictable process. It is akin to searching for the highest peak in the mountain range, but only being able to see ones immediate vicinity, i.e. not being able to peak at distant mountain tops that could guide ones exploration (see :num:`Figure #fig-oblique-dt-attrspace`). Simplest strategy for conquering the peak closest to ones current location is to always choose the path that leads upwards. This strategy is thus called the greedy hill-climbing strategy. However, there is no guarantee that the closest peak is in the same time the highest in the mountain range and it often is not. One example of such a peak is the peak marked by the letter A in the :num:`Figure #fig-oblique-dt-attrspace`, which is called the local maximum. It is maximum since all points in its neghborhood have lower elevation, but it is only local since there is a higher peak in our search space, namely B from the :num:`Figure #fig-oblique-dt-attrspace`. The greedy approach described above fails in finding a path from point A to point B, since there exist no monotonically uphill path connecting A to B. In order to get to point B the exploration has to first traverse through the regions with lower elevation, shown by an arrow in the :num:`Figure #fig-oblique-dt-attrspace`, in order to get to the base of the hill from which it can start movin up again.
 
-.. _fig-escaping-local-maxima:
+.. _fig-oblique-dt-attrspace:
+.. plot:: images/escape_local.py
+    :bbox: tight
+    :pad: -1.4
+    :width: 80%
 
-.. figure:: images/local_maxima.png
-    :width: 60%
-    :align: center
+    An example of the hill climbing problem and the issue of escaping the local optimum A by a greedy strategy in order to reach point B.
 
-    Escaping a local maxima
+The search space for the optimal DT individual has much higher dimensionality and is thus much more complicated than the hill-climbing problem described above. Also, instead of striving for higher elevation, we strive for higher DT individual fitness, and instead of walking in the mountains, we are mutating the DT individual to move around in the search space. However, the main idea is the same, in order to visit as discover as many fitness peaks as possible (in order to find the highest one), we sometimes need to pursue a less fit individual. Since we are unable to tell, which poorer performing solution will eventually lead to an improved one, this decision is made at random with some probability. This probability is called the search probability, since it allows for the evolution process to search the wider neighborhood of the current solution. Without this search, the system would tend to get stuck at local maximas.
 
 **Ovo cak nije ni uradjeno, probati da li unapredjuje rezultate**
 
@@ -365,7 +403,7 @@ The percentage of missing classes is calculated as the percentage of the classes
 .. math:: missing = \frac{\Nc - N_{DTc}}{\Nc}
     :label: eq-missing
 
-where |NDTc| is the number of classes represented in the DT leaves. The fitness calculation is then updated so that the penalties are taken for the missing classes in the DT individual: *fitness = accuracy \* (1 - Ko*oversize) \* (1 - Km*missing)*, where the parameter |Km| is used to control how much influence the number of missing classes will have on overall fitness.
+where |NDTc| is the number of classes represented in the DT leaves. The fitness calculation is then updated so that the penalties are taken for the missing classes in the DT individual: *fitness = accuracy \* (1 - Ko*oversize*oversize) \* (1 - Km*missing)*, where the parameter |Km| is used to control how much influence the number of missing classes will have on overall fitness.
 
 Return to best
 ..............
