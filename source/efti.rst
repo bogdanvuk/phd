@@ -391,9 +391,18 @@ HereBoy employs an adaptive scheme to reduce the search probability. The search 
 
     The equations explaining the adaptive search
 
-
 Improvements to the |algo| algorithm
 ------------------------------------
+
+In this section several additional features that can improve either the execution time or the quality of solutions produced by the |algo| algorithm are discussed:
+
+- **Test this!** Fitness dependence on the missing classes - number of classes that are not assigned to any leaf
+- Return to the best candidate - give a chance to the evolutionary process to abondon the current candidate solution and to return to the best solution yet.
+- **Test this!** Impurity
+- **Test this!** Increase in search probability
+- **Test this!** Delta classification
+
+In order to test whether |EFTI| really benefits from a new feature, the fitnesses of the DTs induced by the basic |EFTI| and |EFTI| with the feature included, were compared for all UCI datasets listed in the :num:`Table #tbl-uci`. For each dataset, five 5-fold cross-validations were performed. In order to discover whether there is a statistical difference between the fitnesses of the DTs, one-way analysis of variance (ANOVA) :cite:`neter1996applied` has been applied on collected data with the significance level set at 0.05. **When the ANOVA analysis indicated that at least one of the results was statistically different from the others, the Tukey multiple comparisons test :cite:`hochberg2009multiple` was used to group the algorithms into groups of statistically identical results.**
 
 Percentage of missing classes
 .............................
@@ -405,8 +414,8 @@ The percentage of missing classes is calculated as the percentage of the classes
 
 where |NDTc| is the number of classes represented in the DT leaves. The fitness calculation is then updated so that the penalties are taken for the missing classes in the DT individual: *fitness = accuracy \* (1 - Ko*oversize*oversize) \* (1 - Km*missing)*, where the parameter |Km| is used to control how much influence the number of missing classes will have on overall fitness.
 
-Return to best
-..............
+Return to the best candidate
+............................
 
 
 
