@@ -444,19 +444,24 @@ The *calculate_node_test_sum()* function is used to recalculate and store the ve
 Complexity of the |algo| algorithm
 ----------------------------------
 
-The computational complexity of the |algo| algorithm can be calculated using the algorithm pseudo-code. The computational complexity will be given in the big O notation. Since the individual selection is performed in constant time it can be omitted, and the total complexity can be computed as:
+The computational complexity of the |algo| algorithm can be calculated using the algorithm pseudo-code. The computational complexity will be given in the big O notation, i.e. the worst-case complexity will be calculated. Since the individual selection is performed in constant time it can be omitted, and the total complexity can be computed as:
 
 .. math:: T(EFTI) = max\_iter\cdot(O(mutate) + O(fitness\_eval))
     :label: cplx_algo_tot_components
 
-Let *n* be the number of non-leaf nodes in the DT. In the worst case, the depth of the DT equals the number of non-leaf nodes:
+The number of leaves, |Nl|, in binary DT is always by 1 larger then the number of non-leaf nodes. If *n* represents the number of non-leaf nodes in the DT, then:
 
-.. math:: D=n
+.. math:: N_l = n + 1
+    :label: leaves_cnt
+
+In the worst case, the depth of the DT equals the number of non-leaf nodes, hence:
+
+.. math:: D = N_l - 1
 	:label: depth
 
-Let |NA| equal the size of attribute (|x|) and coefficient (|w|) vectors. Each non-leaf node in the DT has |NA| + 1 (*thr*) coefficients, and the portion |alpha| is mutated each iteration, so the complexity of mutating coefficients is:
+Let |NA| equal the size of the attribute (|x|) and the coefficient (|w|) vectors. Each non-leaf node in the DT has |NA| + 1 (:math:`\theta`) coefficients, and the portion |alpha| is mutated each iteration, so the complexity of mutating coefficients is:
 
-.. math:: T(coefficient\ mutation) = O(\alpha \cdot n \cdot \NA)
+.. math:: T(coefficient\ mutation) = O(\alpha \cdot (N_l - 1) \cdot \NA)
 	:label: cplx_mut_coef
 
 The topology can be mutated by either adding or removing the node from the DT. When the node is removed, only a pointer to the removed child is altered so the complexity is:
@@ -469,22 +474,17 @@ When the node is added, the new set of node test coefficients needs to be calcul
 .. math:: T(node\ addition) = O(\NA)
 	:label: cplx_add_node
 
-Since :math:`\rho\ll\alpha\cdot n`, the complexity of the whole DT Mutation task sums to:
+Since :math:`\rho\ll\alpha\cdot (N_l - 1) < \alpha\cdot N_l`, the complexity of the whole DT Mutation task sums to:
 
-.. math:: T(mutation) = O(\alpha \cdot n \cdot \NA + \rho (O(1)+O(\NA))) = O(\alpha \cdot n \cdot \NA)
+.. math:: T(mutation) = O(\alpha \cdot (N_l - 1) \cdot \NA + \rho (O(1)+O(\NA))) = O(\alpha \cdot N_l \cdot \NA)
     :label: cplx_mutation
-
-Let |NI| be the number of instances in the training set, |Nl| the number of leaves and |Nc| the total number of classes in the classification problem. The number of leaves in binary DT is:
-
-.. math:: N_l = n + 1
-    :label: leaves_cnt
 
 Once the number of hits is determined, the fitness can be calculated in constant time :math:`O(1)`, hence the complexity of the whole *fitness_eval()* function is:
 
 .. math:: T(fitness\_eval) = N_I\cdot O(find\_dt\_leaf\_for\_inst) + O(N_l\cdot N_c) + O(1)
     :label: fitness_eval
 
-As for the *find_dt_leaf_for_inst()* function, the complexity can be calculated as:
+where |NI| is the number of instances in the training set and |Nc| is the total number of classes in the classification problem. As for the *find_dt_leaf_for_inst()* function, the complexity can be calculated as:
 
 .. math:: T(find\_dt\_leaf\_for\_inst) = D\cdot O(calculate\_node\_test\_sum),
     :label: find_dt_leaf
@@ -501,12 +501,12 @@ By inserting the equation :eq:`node_test_eval` into the equation :eq:`find_dt_le
 
 By inserting the equations :eq:`fitness_eval_tot`, :eq:`cplx_mutation`, :eq:`leaves_cnt` and :eq:`depth` into the equation :eq:`cplx_algo_tot_components`, we obtain the total complexity of the |algo| algorithm:
 
-.. math:: T(EFTI) = max\_iter\cdot(N_I\cdot n\cdot\NA + n\cdot N_c + \alpha \cdot n \cdot \NA)
+.. math:: T(EFTI) = max\_iter\cdot(N_I\cdot N_l \cdot\NA + N_l\cdot N_c + \alpha \cdot N_l \cdot \NA)
     :label: cplx_all_together
 
-Since :math:`\alpha\cdot n \ll N_I\cdot n` the mutation insignificantly influences the complexity and can be disregarded. We finally obtain that complexity of the |algo| algorithm is dominated by the fitness evaluation task complexity, and sums up to:
+Since :math:`\alpha\cdot N_l \ll N_I\cdot N_l` the mutation insignificantly influences the complexity and can be disregarded. We finally obtain that complexity of the |algo| algorithm is dominated by the fitness evaluation task complexity, and sums up to:
 
-.. math:: T(EFTI) = O(max\_iter\cdot(N_I\cdot n\cdot\NA + n\cdot N_c))
+.. math:: T(EFTI) = O(max\_iter\cdot(N_I\cdot N_l\cdot\NA + N_l\cdot N_c))
     :label: cplx_final
 
 It is clear from the equation :eq:`cplx_final` that the *fitness_eval()* function is a good candidate for the hardware acceleration, while the mutation tasks can be left in the software since they insignificantly influence the complexity of the |algo| algorithm.
@@ -529,11 +529,13 @@ DSP implementation
 Experiments
 -----------
 
-Conducted experiments were devised to compare the performance of evolved DTs using the proposed EFTI algorithm with the DTs inferred using some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy.
+Conducted experiments were devised to compare the quality of the DTs evolved by the proposed |algo| algorithm, with the DTs inferred by some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy. All datasets listed in the :num:`Table #tbl-uci` were used for the induction in the experiments. All reported results are the averages of the five five-fold cross-validation experiments. Experimental setup for each algorithm and each dataset was as follows:
 
-In total, 21 different datasets from the UCI machine learning repository [36] have been used in the experiments: Wisconsin Breast Cancer (bcw), Pima Indians Diabetes (pid), Glass Identification (gls), Iris Plants (irs), Vehicle Silhouettes (veh), Vowel Recognition (vow), Statlog Heart Disease (hrts), Australian Credit Approval (ausc), Hepatitis Domain (hep), Lymphography Domain (lym), Balance Scale Weight & Distance (bc), Zoo (zoo), 1984 United States Congressional Voting Records (vote), Ionosphere (ion), Sonar (son), Contraceptive Method Choice (cmc), German Credit (ger), Liver Disorders (liv), Page Blocks Classification (page), Thyroid Disease (thy) and Waveform 40 (w40). Only change to the original datasets was that the instances with missing values have been removed from the datasets.
+- The dataset D, was divided into 5 non-overlapping sets: :math:`D_1`, :math:`D_2`, ... :math:`D_5`, by randomly selecting the instances from D using uniform distribution
+- For the *i*th :math:`i \in (1,5)`, cross-validation run, training set was formed by using all the instances from D except the ones from :math:`D_i`, i.e. :math:`train\_set = D \ D_i`, and was used to induce the DT by the current algorithm being tested
+- Inferred DT was than tested for accuracy by using the instances form the set :math:`D_i`.
 
-All reported results are the averages of the five ten-fold cross-validation experiments. Experimental setup was the following. Each dataset D, was divided into 10 non-overlapping sets, D1, D2, … D10, by randomly selecting the instances from D using uniform distribution. In each cross-validation run, a DT was created using a selected DT inference algorithm. During the inference process, D\Di set was used as the training set. Inferred DT was than tested using Di set as the test set. This procedure was repeated 5 times, resulting in 50 inferred DTs for each dataset and for each DT inference algorithm. Using these sets of 50 DTs, average inferred DT size, measured as the number of DT leafs, was calculated for every dataset and every DT inference algorithm. Using test set classification accuracies, calculated as a percentage of correctly classified test set instances, average DT classification accuracy for every dataset and DT inference algorithm has been also calculated. Both the DT size and test set classification accuracy are reported with 95% confidence intervals.
+This whole procedure was repeated 5 times, resulting in 25 inferred DTs for each dataset and for each inference algorithm, together with the classification accuracy calculated as a percentage of correctly classified test set instances, for each of them. Using test set classification accuracies, calculated as a percentage of correctly classified test set instances, average DT classification accuracy for every dataset and DT inference algorithm has been also calculated. Both the DT size and test set classification accuracy are reported with 95% confidence intervals.
 
 For DT inference algorithms that require DT pruning a pruning set has been created, taking 30% of the training set instances selected randomly, and used to prune the DT.
 
