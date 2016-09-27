@@ -7,6 +7,7 @@ from rank import load_data, form_mean_table, dump_table_csv, rank
 
 files = [
     'EFTI_500k.js',
+    'EFTI_500k_ow-0.02_sp-0.3.js',
     # 'EFTI_500k_norp.js',
     'EFTI_500k_nosp.js',
 ]
