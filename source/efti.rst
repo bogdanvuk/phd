@@ -338,14 +338,14 @@ As shown in the :num:`Algorithm #fig-fitness-eval-pca`, the dependence of the fi
    \small
    \renewcommand{\arraystretch}{0.8}
 
-.. tabularcolumns:: L{0.2\linewidth} R{0.20\linewidth} R{0.20\linewidth} R{0.20\linewidth}
+.. tabularcolumns:: L{0.15\linewidth} | R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} | R{0.10\linewidth}
 
 .. _tbl-oversize-size-comp:
 .. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
     :header-rows: 1
     :file: scripts/oversize_weight_size_comp.csv
 
-.. tabularcolumns:: L{0.2\linewidth} R{0.20\linewidth} R{0.20\linewidth} R{0.20\linewidth}
+.. tabularcolumns:: L{0.15\linewidth} | R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} | R{0.10\linewidth}
 
 .. _tbl-oversize-acc-comp:
 .. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
@@ -355,6 +355,28 @@ As shown in the :num:`Algorithm #fig-fitness-eval-pca`, the dependence of the fi
 .. raw:: latex
 
     \endgroup
+
+.. subfigstart::
+
+.. _fig-proba1:
+
+.. figure:: images/oversize_compare/size0.pdf
+    :align: center
+
+    DT size: algo, ausc, bank, bc, bch
+
+.. _fig-proba2:
+
+.. figure:: images/oversize_compare/acc0.pdf
+    :align: center
+
+    DT accuracy: algo, ausc, bank, bc, bch
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-oversize-compare
+
+    The figure shows the attribute space regions assigned to the nodes and leafs an example instance visits during its traversal along the line shown in the :num:`Figure #fig-oblique-dt-traversal`.
 
 Selection
 .........
@@ -402,7 +424,7 @@ In this section several additional features that can improve either the executio
 - **Test this!** Increase in search probability
 - **Test this!** Delta classification
 
-In order to test whether |EFTI| really benefits from a new feature, the fitnesses of the DTs induced by the basic |EFTI| and |EFTI| with the feature included, were compared for all UCI datasets listed in the :num:`Table #tbl-uci`. For each dataset, five 5-fold cross-validations were performed. In order to discover whether there is a statistical difference between the fitnesses of the DTs, one-way analysis of variance (ANOVA) :cite:`neter1996applied` has been applied on collected data with the significance level set at 0.05. **When the ANOVA analysis indicated that at least one of the results was statistically different from the others, the Tukey multiple comparisons test :cite:`hochberg2009multiple` was used to group the algorithms into groups of statistically identical results.**
+In order to test whether |algo| really benefits from a new feature, the fitnesses of the DTs induced by the basic |algo| and |algo| with the feature included, were compared for all UCI datasets listed in the :num:`Table #tbl-uci`. For each dataset, five 5-fold cross-validations were performed. In order to discover whether there is a statistical difference between the fitnesses of the DTs, one-way analysis of variance (ANOVA) :cite:`neter1996applied` has been applied on collected data with the significance level set at 0.05. **When the ANOVA analysis indicated that at least one of the results was statistically different from the others, the Tukey multiple comparisons test :cite:`hochberg2009multiple` was used to group the algorithms into groups of statistically identical results.**
 
 Percentage of missing classes
 .............................
@@ -532,7 +554,7 @@ Experiments
 Conducted experiments were devised to compare the quality of the DTs evolved by the proposed |algo| algorithm, with the DTs inferred by some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy. All datasets listed in the :num:`Table #tbl-uci` were used for the induction in the experiments. All reported results are the averages of the five five-fold cross-validation experiments. Experimental setup for each algorithm and each dataset was as follows:
 
 - The dataset D, was divided into 5 non-overlapping sets: :math:`D_1`, :math:`D_2`, ... :math:`D_5`, by randomly selecting the instances from D using uniform distribution
-- For the *i*th :math:`i \in (1,5)`, cross-validation run, training set was formed by using all the instances from D except the ones from :math:`D_i`, i.e. :math:`train\_set = D \ D_i`, and was used to induce the DT by the current algorithm being tested
+- For the :math:`i^{th}` cross-validation run, where :math:`i \in (1,5)`, training set was formed by using all the instances from D except the ones from :math:`D_i`, :math:`train\_set = D \setminus D_i`, and was used to induce the DT by the current algorithm being tested
 - Inferred DT was than tested for accuracy by using the instances form the set :math:`D_i`.
 
 This whole procedure was repeated 5 times, resulting in 25 inferred DTs for each dataset and for each inference algorithm, together with the classification accuracy calculated as a percentage of correctly classified test set instances, for each of them. Using test set classification accuracies, calculated as a percentage of correctly classified test set instances, average DT classification accuracy for every dataset and DT inference algorithm has been also calculated. Both the DT size and test set classification accuracy are reported with 95% confidence intervals.
