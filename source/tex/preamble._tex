@@ -16,7 +16,9 @@
 \usepackage[none]{hyphenat}
 \usepackage{booktabs}
 \usepackage{hyperref}
-
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
 % for subfigure
 \usepackage{subcaption}
 \captionsetup{labelfont=bf}

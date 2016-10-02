@@ -52,6 +52,7 @@ extensions = ['sphinxcontrib.bibtex',
               ]
 
 numfig = True
+numfig_secnum_depth = 2
 numfig_format = {'figure': 'Figure %s',
                  'table': 'Table %s',
                  'code-block': 'Algorithm %s'}
