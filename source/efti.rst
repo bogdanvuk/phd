@@ -338,19 +338,19 @@ As shown in the :num:`Algorithm #fig-fitness-eval-pca`, the dependence of the fi
    \small
    \renewcommand{\arraystretch}{0.8}
 
-.. tabularcolumns:: L{0.15\linewidth} | R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} | R{0.10\linewidth}
+.. tabularcolumns:: L{0.15\linewidth} | R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth}
 
 .. _tbl-oversize-size-comp:
 .. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
     :header-rows: 1
-    :file: scripts/oversize_weight_size_comp.csv
+    :file: scripts/oversize-comp-size.csv
 
-.. tabularcolumns:: L{0.15\linewidth} | R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} R{0.10\linewidth} | R{0.10\linewidth}
+.. tabularcolumns:: L{0.15\linewidth} | R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth} R{0.08\linewidth}
 
 .. _tbl-oversize-acc-comp:
 .. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
     :header-rows: 1
-    :file: scripts/oversize_weight_acc_comp.csv
+    :file: scripts/oversize-comp-acc.csv
 
 .. raw:: latex
 
@@ -358,25 +358,159 @@ As shown in the :num:`Algorithm #fig-fitness-eval-pca`, the dependence of the fi
 
 .. subfigstart::
 
-.. _fig-proba1:
+.. _fig-oversize-comp-size0:
 
-.. figure:: images/oversize_compare/size0.pdf
+.. figure:: images/oversize-comp/size0.pdf
     :align: center
 
-    DT size: algo, ausc, bank, bc, bch
+    DT size: bc, ion, lym, pen, sb
 
-.. _fig-proba2:
+.. _fig-oversize-comp-acc0:
 
-.. figure:: images/oversize_compare/acc0.pdf
+.. figure:: images/oversize-comp/acc0.pdf
     :align: center
 
-    DT accuracy: algo, ausc, bank, bc, bch
+    DT acc: bc, ion, lym, pen, sb
+
+.. _fig-oversize-comp-size1:
+
+.. figure:: images/oversize-comp/size1.pdf
+    :align: center
+
+    DT size: cmc, eb, eye, letter, seg
+
+.. _fig-oversize-comp-acc1:
+
+.. figure:: images/oversize-comp/acc1.pdf
+    :align: center
+
+    DT acc: cmc, eb, eye, letter, seg
+
+.. _fig-oversize-comp-size2:
+
+.. figure:: images/oversize-comp/size2.pdf
+    :align: center
+
+    DT size: ctg, cvf, hrtc, liv, ttt
+
+.. _fig-oversize-comp-acc2:
+
+.. figure:: images/oversize-comp/acc2.pdf
+    :align: center
+
+    DT acc: ctg, cvf, hrtc, liv, ttt
+
+.. _fig-oversize-comp-size3:
+
+.. figure:: images/oversize-comp/size3.pdf
+    :align: center
+
+    DT size: bch, vene, wfr, wine
+
+.. _fig-oversize-comp-acc3:
+
+.. figure:: images/oversize-comp/acc3.pdf
+    :align: center
+
+    DT acc: bch, vene, wfr, wine
+
+.. _fig-oversize-comp-size4:
+
+.. figure:: images/oversize-comp/size4.pdf
+    :align: center
+
+    DT size: adult, car, gls, magic, pid
+
+.. _fig-oversize-comp-acc4:
+
+.. figure:: images/oversize-comp/acc4.pdf
+    :align: center
+
+    DT acc: adult, car, gls, magic, pid
 
 .. subfigend::
     :width: 0.48
-    :label: fig-oversize-compare
+    :label: fig-oversize-comp1
 
-    The figure shows the attribute space regions assigned to the nodes and leafs an example instance visits during its traversal along the line shown in the :num:`Figure #fig-oblique-dt-traversal`.
+    The figure shows the dependencies of the DT sizes and accuracies on the oversize weight (|Ko|) parameter values. DT sizes and accuracies are displayed for five datasets per subfigure.
+
+.. subfigstart::
+
+.. _fig-oversize-comp-size5:
+
+.. figure:: images/oversize-comp/size5.pdf
+    :align: center
+
+    DT size: krkopt, son, w21, w40
+
+.. _fig-oversize-comp-acc5:
+
+.. figure:: images/oversize-comp/acc5.pdf
+    :align: center
+
+    DT acc: krkopt, son, w21, w40
+
+.. _fig-oversize-comp-size6:
+
+.. figure:: images/oversize-comp/size6.pdf
+    :align: center
+
+    DT size: bcw, ger, irs, mushroom, page
+
+.. _fig-oversize-comp-acc6:
+
+.. figure:: images/oversize-comp/acc6.pdf
+    :align: center
+
+    DT acc: bcw, ger, irs, mushroom, page
+
+.. _fig-oversize-comp-size7:
+
+.. figure:: images/oversize-comp/size7.pdf
+    :align: center
+
+    DT size: ausc, bank, ca, hep, hrts
+
+.. _fig-oversize-comp-acc7:
+
+.. figure:: images/oversize-comp/acc7.pdf
+    :align: center
+
+    DT acc: ausc, bank, ca, hep, hrts
+
+.. _fig-oversize-comp-size8:
+
+.. figure:: images/oversize-comp/size8.pdf
+    :align: center
+
+    DT size: nurse, psd, shuttle, sick, spect
+
+.. _fig-oversize-comp-acc8:
+
+.. figure:: images/oversize-comp/acc8.pdf
+    :align: center
+
+    DT acc: nurse, psd, shuttle, sick, spect
+
+.. _fig-oversize-comp-size9:
+
+.. figure:: images/oversize-comp/size9.pdf
+    :align: center
+
+    DT size: jvow, spf, thy, veh, vote
+
+.. _fig-oversize-comp-acc9:
+
+.. figure:: images/oversize-comp/acc9.pdf
+    :align: center
+
+    DT acc: jvow, spf, thy, veh, vote
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-oversize-comp2
+
+    The figure shows the dependencies of the DT sizes and accuracies on the oversize weight (|Ko|) parameter values. DT sizes and accuracies are displayed for five datasets per subfigure.
 
 Selection
 .........
@@ -387,9 +521,9 @@ The selection task, implemented by the :num:`Algorithm #fig-selection-pca`, is r
 .. literalinclude:: code/selection.py
     :caption: The pseudo-code of the *selection()* function of the |algo| algorithm, that implement's the individual selection procedure
 
-Evolution is inherently an unpredictable process. It is akin to searching for the highest peak in the mountain range, but only being able to see ones immediate vicinity, i.e. not being able to peak at distant mountain tops that could guide ones exploration (see :num:`Figure #fig-oblique-dt-attrspace`). Simplest strategy for conquering the peak closest to ones current location is to always choose the path that leads upwards. This strategy is thus called the greedy hill-climbing strategy. However, there is no guarantee that the closest peak is in the same time the highest in the mountain range and it often is not. One example of such a peak is the peak marked by the letter A in the :num:`Figure #fig-oblique-dt-attrspace`, which is called the local maximum. It is maximum since all points in its neghborhood have lower elevation, but it is only local since there is a higher peak in our search space, namely B from the :num:`Figure #fig-oblique-dt-attrspace`. The greedy approach described above fails in finding a path from point A to point B, since there exist no monotonically uphill path connecting A to B. In order to get to point B the exploration has to first traverse through the regions with lower elevation, shown by an arrow in the :num:`Figure #fig-oblique-dt-attrspace`, in order to get to the base of the hill from which it can start movin up again.
+Evolution is inherently an unpredictable process. It is akin to searching for the highest peak in the mountain range, but only being able to see ones immediate vicinity, i.e. not being able to peak at distant mountain tops that could guide ones exploration (see :num:`Figure #fig-escape-local-optimum`). Simplest strategy for conquering the peak closest to ones current location is to always choose the path that leads upwards. This strategy is thus called the greedy hill-climbing strategy. However, there is no guarantee that the closest peak is in the same time the highest in the mountain range and it often is not. One example of such a peak is the peak marked by the letter A in the :num:`Figure #fig-escape-local-optimum`, which is called the local maximum. It is maximum since all points in its neghborhood have lower elevation, but it is only local since there is a higher peak in our search space, namely B from the :num:`Figure #fig-escape-local-optimum`. The greedy approach described above fails in finding a path from point A to point B, since there exist no monotonically uphill path connecting A to B. In order to get to point B the exploration has to first traverse through the regions with lower elevation, shown by an arrow in the :num:`Figure #fig-escape-local-optimum`, in order to get to the base of the hill from which it can start movin up again.
 
-.. _fig-oblique-dt-attrspace:
+.. _fig-escape-local-optimum:
 .. plot:: images/escape_local.py
     :bbox: tight
     :pad: -1.4
@@ -462,6 +596,23 @@ To implement the optimizations mentioned above, the |algo| algorithm memorizes, 
 - When an instance reaches the node that has been mutated, the vector scalar product can be updated based on the memorized value from the iteration before. By updating only those elements of the vector scalar product sum whose node test coefficients were changed by the mutation, the multiplication and addition operations for all other elements can be skipped. This is performed by calling the *update_node_test_sum()* function. If the newly calculated sum causes the instance to change its traversal path, variable *path_diverged* is set to *True* indicating that the remainder of the traversal path has to be completely recalculated.
 
 The *calculate_node_test_sum()* function is used to recalculate and store the vector scalar product of the subsequent node tests, while the *update_instance_path()* function updates the stored instance traversal path.
+
+.. raw:: latex
+
+   \begingroup
+   \small
+   \renewcommand{\arraystretch}{0.8}
+
+.. tabularcolumns:: L{0.15\linewidth} | R{0.08\linewidth} R{0.08\linewidth} | L{0.15\linewidth} | R{0.08\linewidth} R{0.08\linewidth}
+
+.. _tbl-delta-time-comp:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/delta-comp-time.csv
+
+.. raw:: latex
+
+    \endgroup
 
 Complexity of the |algo| algorithm
 ----------------------------------
@@ -551,7 +702,187 @@ DSP implementation
 Experiments
 -----------
 
-Conducted experiments were devised to compare the quality of the DTs evolved by the proposed |algo| algorithm, with the DTs inferred by some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy. All datasets listed in the :num:`Table #tbl-uci` were used for the induction in the experiments. All reported results are the averages of the five five-fold cross-validation experiments. Experimental setup for each algorithm and each dataset was as follows:
+.. raw:: latex
+
+   \begingroup
+   \small
+   \renewcommand{\arraystretch}{0.8}
+
+.. tabularcolumns:: L{0.15\linewidth} | R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth}
+
+.. _tbl-max-iter-comp-acc:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/max-iter-comp-acc.csv
+
+.. tabularcolumns:: L{0.15\linewidth} | R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth}
+
+.. _tbl-max-iter-comp-size:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/max-iter-comp-size.csv
+
+.. raw:: latex
+
+    \endgroup
+
+.. subfigstart::
+
+.. _fig-max-iter-comp-size0:
+
+.. figure:: images/max-iter-comp/size0.pdf
+    :align: center
+
+    DT size: ger, mushroom, page, psd, sb
+
+.. _fig-max-iter-comp-acc0:
+
+.. figure:: images/max-iter-comp/acc0.pdf
+    :align: center
+
+    DT acc: ger, mushroom, page, psd, sb
+
+.. _fig-max-iter-comp-size1:
+
+.. figure:: images/max-iter-comp/size1.pdf
+    :align: center
+
+    DT size: jvow, sick, spf, thy, veh
+
+.. _fig-max-iter-comp-acc1:
+
+.. figure:: images/max-iter-comp/acc1.pdf
+    :align: center
+
+    DT acc: jvow, sick, spf, thy, veh
+
+.. _fig-max-iter-comp-size2:
+
+.. figure:: images/max-iter-comp/size2.pdf
+    :align: center
+
+    DT size: bch, vene, vote, vow, wilt
+
+.. _fig-max-iter-comp-acc2:
+
+.. figure:: images/max-iter-comp/acc2.pdf
+    :align: center
+
+    DT acc: bch, vene, vote, vow, wilt
+
+.. _fig-max-iter-comp-size3:
+
+.. figure:: images/max-iter-comp/size3.pdf
+    :align: center
+
+    DT size: adult, car, gls, magic, nurse
+
+.. _fig-max-iter-comp-acc3:
+
+.. figure:: images/max-iter-comp/acc3.pdf
+    :align: center
+
+    DT acc: adult, car, gls, magic, nurse
+
+.. _fig-max-iter-comp-size4:
+
+.. figure:: images/max-iter-comp/size4.pdf
+    :align: center
+
+    DT size: eb, letter, pid, son, w21
+
+.. _fig-max-iter-comp-acc4:
+
+.. figure:: images/max-iter-comp/acc4.pdf
+    :align: center
+
+    DT acc: eb, letter, pid, son, w21
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-max-iter-comp1
+
+    max-iter-comp
+
+.. subfigstart::
+
+.. _fig-max-iter-comp-size5:
+
+.. figure:: images/max-iter-comp/size5.pdf
+    :align: center
+
+    DT size: ausc, bank, bc, ca, hep
+
+.. _fig-max-iter-comp-acc5:
+
+.. figure:: images/max-iter-comp/acc5.pdf
+    :align: center
+
+    DT acc: ausc, bank, bc, ca, hep
+
+.. _fig-max-iter-comp-size6:
+
+.. figure:: images/max-iter-comp/size6.pdf
+    :align: center
+
+    DT size: ctg, cvf, hrtc, hrts, ion
+
+.. _fig-max-iter-comp-acc6:
+
+.. figure:: images/max-iter-comp/acc6.pdf
+    :align: center
+
+    DT acc: ctg, cvf, hrtc, hrts, ion
+
+.. _fig-max-iter-comp-size7:
+
+.. figure:: images/max-iter-comp/size7.pdf
+    :align: center
+
+    DT size: bcw, irs, liv, lym, pen
+
+.. _fig-max-iter-comp-acc7:
+
+.. figure:: images/max-iter-comp/acc7.pdf
+    :align: center
+
+    DT acc: bcw, irs, liv, lym, pen
+
+.. _fig-max-iter-comp-size8:
+
+.. figure:: images/max-iter-comp/size8.pdf
+    :align: center
+
+    DT size: krkopt, seg, shuttle, spect, ttt
+
+.. _fig-max-iter-comp-acc8:
+
+.. figure:: images/max-iter-comp/acc8.pdf
+    :align: center
+
+    DT acc: krkopt, seg, shuttle, spect, ttt
+
+.. _fig-max-iter-comp-size9:
+
+.. figure:: images/max-iter-comp/size9.pdf
+    :align: center
+
+    DT size: cmc, eye, w40, wfr, wine
+
+.. _fig-max-iter-comp-acc9:
+
+.. figure:: images/max-iter-comp/acc9.pdf
+    :align: center
+
+    DT acc: cmc, eye, w40, wfr, wine
+
+.. subfigend::
+    :width: 0.48
+    :label: fig-max-iter-comp2
+
+    max-iter-comp
+
+Conducted experiments were devised to compare the quality of the DTs evolved by the proposed |algo| algorithm, with the DTs inferred by some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy. All datasets listed in the :numref:`tbl-uci` were used for the induction in the experiments. All reported results are the averages of the five five-fold cross-validation experiments. Experimental setup for each algorithm and each dataset was as follows:
 
 - The dataset D, was divided into 5 non-overlapping sets: :math:`D_1`, :math:`D_2`, ... :math:`D_5`, by randomly selecting the instances from D using uniform distribution
 - For the :math:`i^{th}` cross-validation run, where :math:`i \in (1,5)`, training set was formed by using all the instances from D except the ones from :math:`D_i`, :math:`train\_set = D \setminus D_i`, and was used to induce the DT by the current algorithm being tested

@@ -18,134 +18,55 @@ To confirm the results obtained by the computational complexity analysis, the so
 
 To perform the experiments 21 datasets, presented in the :num:`Table #tbl-uci-datasets`, were selected from the UCI benchmark datasets database :cite:`newman1998uci`. The UCI database is commonly used in the machine learning community to estimate and compare the performance of different machine learning algorithms.
 
-.. tabularcolumns:: l p{30pt} p{40pt} p{40pt} p{40pt}
+The software implementation of the |algo| algorithm was compiled using the GCC 4.8.2 compiler, run on the AMD Phenom(tm) II X4 965 (3.4 GHz) computer and profiled using the GProf performance analysis tool for each of the tests listed in the :numref:`tbl-uci-datasets`. The results obtained by profiling were consistent with the algorithm complexity analysis performed in the previous chapter and are shown in the :numref:`fig-profiling-plot`. The :numref:`fig-profiling-plot` shows the percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset. On average, |algo| spent 99.0% of time calculating the fitness of the individual.
 
-.. _tbl-uci-datasets:
+.. subfigstart::
 
-.. list-table:: Characteristics of the UCI datasets used in the experiments
-    :header-rows: 1
+.. _fig-profiling-plot1:
 
-    * - Dataset Name
-      - Short Name
-      - No. of attributes
-      - No. of instances
-      - No. of classes
-    * - Australian Credit Approval
-      - ausc
-      - 14
-      - 690
-      - 2
-    * - Credit Approval
-      - ca
-      - 15
-      - 699
-      - 2
-    * - Car Evaluation
-      - car
-      - 6
-      - 1728
-      - 4
-    * - Contraceptive Method Choice
-      - cmc
-      - 9
-      - 1473
-      - 3
-    * - Cardiotocography
-      - ctg
-      - 21
-      - 2126
-      - 10
-    * - German Credit Data
-      - ger
-      - 24
-      - 1000
-      - 2
-    * - Japanese Vowels
-      - jvow
-      - 14
-      - 4274
-      - 9
-    * - Page Block Classification
-      - page
-      - 10
-      - 5473
-      - 5
-    * - Pima Indians Diabetes
-      - pid
-      - 8
-      - 768
-      - 2
-    * - Parkinson Speech
-      - psd
-      - 27
-      - 1040
-      - 2
-    * - Seismic Bumps
-      - sb
-      - 18
-      - 2584
-      - 2
-    * - Image Segmentation
-      - seg
-      - 18
-      - 2310
-      - 7
-    * - Sick
-      - sick
-      - 29
-      - 3722
-      - 2
-    * - SPECT Heart
-      - spect
-      - 22
-      - 267
-      - 2
-    * - Steel Plates Faults
-      - spf
-      - 21
-      - 1941
-      - 7
-    * - Thyroid Disease
-      - thy
-      - 29
-      - 3722
-      - 4
-    * - Vehicle Silhouettes
-      - veh
-      - 18
-      - 846
-      - 4
-    * - Congressional Voting Records
-      - vote
-      - 16
-      - 435
-      - 2
-    * - Vowel Recognition
-      - vow
-      - 10
-      - 990
-      - 11
-    * - Waveform Database Generator
-      - w21
-      - 21
-      - 5000
-      - 3
-    * - Wall Following Robot Navigation
-      - wfr
-      - 24
-      - 5456
-      - 4
+.. plot:: images/profiling_plot1.py
+    :align: center
 
-The software implementation of the |algo| algorithm was compiled using the GCC 4.8.2 compiler, run on the AMD Phenom(tm) II X4 965 (3.4 GHz) computer and profiled using the GProf performance analysis tool for each of the tests listed in the :num:`Table #tbl-uci-datasets`. The results obtained by profiling were consistent with the algorithm complexity analysis performed in the previous chapter and are shown in the :num:`Figure #fig-profiling-plot`. The :num:`Figure #fig-profiling-plot` shows the percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset. On average, |algo| spent 99.0% of time calculating the fitness of the individual.
+    The percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset listed in the :numref:`tbl-uci`
 
-.. _fig-profiling-plot:
+.. _fig-profiling-plot2:
 
-.. plot:: images/profiling_plot.py
-    :width: 100%
+.. plot:: images/profiling_plot2.py
+    :align: center
 
     The percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset listed in the :num:`Table #tbl-uci-datasets`
 
-The results of one example profiling experiment on the *veh* dataset are shown in the :num:`Figure #fig-profiling`. The results are given in tabular fashion, with each row providing the profiling data for one function. The following data are given for each function:
+.. _fig-profiling-plot3:
+
+.. plot:: images/profiling_plot3.py
+    :align: center
+
+    The percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset listed in the :num:`Table #tbl-uci-datasets`
+
+.. subfigend::
+    :width: 1
+    :label: fig-profiling-plot
+
+    The percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset listed in the :num:`Table #tbl-uci-datasets`
+
+.. raw:: latex
+
+   \begingroup
+   \small
+   \renewcommand{\arraystretch}{0.8}
+
+.. tabularcolumns:: L{0.12\linewidth} | R{0.17\linewidth} R{0.17\linewidth} R{0.17\linewidth} R{0.17\linewidth} R{0.17\linewidth}
+
+.. _tbl-profiling:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/profiling.csv
+
+.. raw:: latex
+
+    \endgroup
+
+The results of one example profiling experiment on the *veh* dataset are shown in the :numref:`fig-profiling`. The results are given in tabular fashion, with each row providing the profiling data for one function. The following data are given for each function:
 
 - **Name** - The name of the function.
 - **Time** - Total amount of time spent in the function.
