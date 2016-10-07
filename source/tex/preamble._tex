@@ -16,6 +16,7 @@
 \usepackage[none]{hyphenat}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{cprotect}
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}

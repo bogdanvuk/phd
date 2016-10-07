@@ -7,7 +7,7 @@ from rank import load_data, form_mean_table, dump_table_csv
 import matplotlib.pyplot as plt
 from table_fig_dual_feature import table_fig_dual_feature
 
-oversize_weights = [0.0, 0.001, 0.01, 0.02, 0.06, 0.1, 0.2]
+oversize_weights = [0, 0.001, 0.01, 0.02, 0.06, 0.1, 0.2]
 files = [os.path.join('results',
                       'EFTI_500k.js' if ow == 0.02 else 'EFTI_500k_ow-{}.js'.format(ow))
          for ow in oversize_weights]

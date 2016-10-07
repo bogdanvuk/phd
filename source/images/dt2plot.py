@@ -193,6 +193,8 @@ def plot(dt, dataset, alpha=0.5):
     plt.gca().axes.get_xaxis().set_visible(False)
     plt.gca().axes.get_yaxis().set_visible(False)
 
+    return plt
+
 def plot2pdf(dt, pdffn, dataset, alpha=0.5):
     plot(dt, dataset, alpha=alpha)
     plt.savefig(pdffn, bbox_inches='tight')

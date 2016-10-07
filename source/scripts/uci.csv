@@ -25,7 +25,7 @@ letter,Letter Recognition,16,20000,26
 liv,BUPA liver disorders,6,345,2
 lym,Lymphography,18,148,4
 magic,MAGIC Gamma Telescope,10,19020,2
-mushroom,Mushroom,22,8124,2
+msh,Mushroom,22,8124,2
 nurse,Nursery,8,12960,5
 page,Page Block Classification,10,5000,5
 pen,Pen-Based Recognition of Handwritten Digits,16,10992,10

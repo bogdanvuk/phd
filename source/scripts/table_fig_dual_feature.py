@@ -48,7 +48,9 @@ def print_figures(table, feature, fplot, xvals, name, loc=1, figs=None):
         plt.tight_layout()
         plt.savefig("../images/{}/{}{}.pdf".format(name,feature,n), bbox_inches='tight')
 
-def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=None):
+def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=None,
+                             head_fmt=r":raw:`\multicolumn{{1}}{{c}}{{{}}}`",
+                             data_fmt="{0:0.2f}"):
     data, cvs = load_data(files, 0.02)
     if titles:
         for i, n in enumerate(titles):
@@ -59,7 +61,7 @@ def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=
 
         dump_table_csv("{}-{}.csv".format(name, feature),
                        table, cvs, horizontal_splits=horizontal_splits,
-                       variance=False, sort_by_desc=False)
+                       sort_by_desc=False, head_fmt=head_fmt, data_fmt=data_fmt)
 
 def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fig_plotsnum=5,
                            cluster_by=None, plot_funcs=(plt.plot, plt.plot),

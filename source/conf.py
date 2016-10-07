@@ -38,18 +38,20 @@ sys.path.append('./source/images')
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.bibtex',
-              'sphinxpp.subfig',
-              'sphinx.ext.mathjax',
-              'sphinx.ext.ifconfig',
-              'sphinxpp.numfig',
-              'bdp.sphinxext.bdpfigure',
-              'sphinx.ext.graphviz',
-              'sphinx.ext.todo',
-              'sphinxpp.plot_directive',
-              'sphinx.ext.autodoc',
-              'sphinx.ext.doctest',
-              ]
+extensions = [
+    'sphinxcontrib.inlinesyntaxhighlight',
+    'sphinxcontrib.bibtex',
+    'sphinxpp.subfig',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.ifconfig',
+    'sphinxpp.numfig',
+    'bdp.sphinxext.bdpfigure',
+    'sphinx.ext.graphviz',
+    'sphinx.ext.todo',
+    'sphinxpp.plot_directive',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+]
 
 numfig = True
 numfig_secnum_depth = 2
@@ -57,6 +59,8 @@ numfig_format = {'figure': 'Figure %s',
                  'table': 'Table %s',
                  'code-block': 'Algorithm %s'}
 
+inline_highlight_respect_highlight = True
+inline_highlight_literals = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -300,7 +304,6 @@ latex_documents = [
 
 latex_additional_files = [
     'tex/preamble._tex',
-    # 'phd.bib'
 ]
 
 # -- Options for manual page output ---------------------------------------

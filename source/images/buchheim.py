@@ -128,7 +128,7 @@ def apportion(v, default_ancestor, distance):
 
 def move_subtree(wl, wr, shift):
     subtrees = wr.number - wl.number
-    print(wl.tree, "is conflicted with", wr.tree, 'moving', subtrees, 'shift', shift)
+    # print(wl.tree, "is conflicted with", wr.tree, 'moving', subtrees, 'shift', shift)
     #print wl, wr, wr.number, wl.number, shift, subtrees, shift/subtrees
     wr.change -= shift / subtrees
     wr.shift += shift
@@ -139,7 +139,7 @@ def move_subtree(wl, wr, shift):
 def execute_shifts(v):
     shift = change = 0
     for w in v.children[::-1]:
-        print("shift:", w, shift, w.change)
+        # print("shift:", w, shift, w.change)
         w.x += shift
         w.mod += shift
         change += w.change
