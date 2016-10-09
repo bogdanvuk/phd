@@ -298,7 +298,7 @@
         {
             "categ_max": 2,
             "attr_cnt": 22,
-            "name": "mushroom",
+            "name": "msh",
             "inst_cnt": 8124,
             "seed": -636333067
         },
@@ -22531,7 +22531,7 @@
                 0,
                 1625
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 0,
             "leaves": 4,
@@ -22552,7 +22552,7 @@
                 1625,
                 3250
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 0,
             "leaves": 4,
@@ -22573,7 +22573,7 @@
                 3250,
                 4875
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 0,
             "leaves": 4,
@@ -22594,7 +22594,7 @@
                 4875,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 0,
             "leaves": 4,
@@ -22615,7 +22615,7 @@
                 6500,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "run": 0,
             "leaves": 5,
@@ -22636,7 +22636,7 @@
                 0,
                 1625
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "run": 1,
             "leaves": 5,
@@ -22657,7 +22657,7 @@
                 1625,
                 3250
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "run": 1,
             "leaves": 5,
@@ -22678,7 +22678,7 @@
                 3250,
                 4875
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "run": 1,
             "leaves": 3,
@@ -22699,7 +22699,7 @@
                 4875,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 1,
             "leaves": 4,
@@ -22720,7 +22720,7 @@
                 6500,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 1,
             "leaves": 4,
@@ -22741,7 +22741,7 @@
                 0,
                 1625
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "run": 2,
             "leaves": 5,
@@ -22762,7 +22762,7 @@
                 1625,
                 3250
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 2,
             "leaves": 4,
@@ -22783,7 +22783,7 @@
                 3250,
                 4875
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 2,
             "leaves": 4,
@@ -22804,7 +22804,7 @@
                 4875,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "run": 2,
             "leaves": 5,
@@ -22825,7 +22825,7 @@
                 6500,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 2,
             "leaves": 4,
@@ -22846,7 +22846,7 @@
                 0,
                 1625
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 3,
             "leaves": 4,
@@ -22867,7 +22867,7 @@
                 1625,
                 3250
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 3,
             "leaves": 4,
@@ -22888,7 +22888,7 @@
                 3250,
                 4875
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 3,
             "leaves": 4,
@@ -22909,7 +22909,7 @@
                 4875,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "run": 3,
             "leaves": 5,
@@ -22930,7 +22930,7 @@
                 6500,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 3,
             "leaves": 4,
@@ -22951,7 +22951,7 @@
                 0,
                 1625
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "run": 4,
             "leaves": 3,
@@ -22972,7 +22972,7 @@
                 1625,
                 3250
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 4,
             "leaves": 4,
@@ -22993,7 +22993,7 @@
                 3250,
                 4875
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 4,
             "leaves": 4,
@@ -23014,7 +23014,7 @@
                 4875,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 4,
             "leaves": 4,
@@ -23035,7 +23035,7 @@
                 6500,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "run": 4,
             "leaves": 4,

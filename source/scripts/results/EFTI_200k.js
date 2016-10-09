@@ -22052,7 +22052,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.931636,
             "time": 58.729092,
             "id": 0,
@@ -22073,7 +22073,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.941874,
             "time": 33.654034,
             "id": 1,
@@ -22094,7 +22094,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.92481,
             "time": 52.453983,
             "id": 2,
@@ -22115,7 +22115,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.941721,
             "time": 31.133568,
             "id": 3,
@@ -22136,7 +22136,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.921652,
             "time": 40.275894,
             "id": 4,
@@ -22157,7 +22157,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.934721,
             "time": 52.948689,
             "id": 0,
@@ -22178,7 +22178,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.948032,
             "time": 53.259087,
             "id": 1,
@@ -22199,7 +22199,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.945619,
             "time": 48.175121,
             "id": 2,
@@ -22220,7 +22220,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.894605,
             "time": 46.654697,
             "id": 3,
@@ -22241,7 +22241,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.924881,
             "time": 64.910378,
             "id": 4,
@@ -22262,7 +22262,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.941548,
             "time": 43.299805,
             "id": 0,
@@ -22283,7 +22283,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.937024,
             "time": 50.83131,
             "id": 1,
@@ -22304,7 +22304,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.954888,
             "time": 33.214508,
             "id": 2,
@@ -22325,7 +22325,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.942453,
             "time": 48.129929,
             "id": 3,
@@ -22346,7 +22346,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.896525,
             "time": 53.294048,
             "id": 4,
@@ -22367,7 +22367,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.954667,
             "time": 39.176144,
             "id": 0,
@@ -22388,7 +22388,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.927675,
             "time": 39.506596,
             "id": 1,
@@ -22409,7 +22409,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.951349,
             "time": 50.709896,
             "id": 2,
@@ -22430,7 +22430,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.93235,
             "time": 45.00692,
             "id": 3,
@@ -22451,7 +22451,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.933714,
             "time": 39.314011,
             "id": 4,
@@ -22472,7 +22472,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.96296,
             "time": 50.822197,
             "id": 0,
@@ -22493,7 +22493,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.945469,
             "time": 47.62608,
             "id": 1,
@@ -22514,7 +22514,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.925611,
             "time": 46.827244,
             "id": 2,
@@ -22535,7 +22535,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.941699,
             "time": 39.340691,
             "id": 3,
@@ -22556,7 +22556,7 @@
             ]
         },
         {
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.94472,
             "time": 49.435127,
             "id": 4,
@@ -27076,7 +27076,7 @@
             "inst_cnt": 8124,
             "categ_max": 2,
             "attr_cnt": 22,
-            "name": "mushroom",
+            "name": "msh",
             "seed": 1266262003
         },
         {

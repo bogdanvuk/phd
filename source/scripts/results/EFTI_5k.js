@@ -22173,7 +22173,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 0,
             "train_cnt": 6499,
             "leaves": 3,
@@ -22194,7 +22194,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 1,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22215,7 +22215,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 2,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22236,7 +22236,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 3,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22257,7 +22257,7 @@
                 6500
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 4,
             "train_cnt": 6500,
             "leaves": 4,
@@ -22278,7 +22278,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 0,
             "train_cnt": 6499,
             "leaves": 3,
@@ -22299,7 +22299,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 1,
             "train_cnt": 6499,
             "leaves": 3,
@@ -22320,7 +22320,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 2,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22341,7 +22341,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 3,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22362,7 +22362,7 @@
                 6500
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 4,
             "train_cnt": 6500,
             "leaves": 4,
@@ -22383,7 +22383,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 0,
             "train_cnt": 6499,
             "leaves": 3,
@@ -22404,7 +22404,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 1,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22425,7 +22425,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 2,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22446,7 +22446,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 3,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22467,7 +22467,7 @@
                 6500
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 4,
             "train_cnt": 6500,
             "leaves": 3,
@@ -22488,7 +22488,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 0,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22509,7 +22509,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 1,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22530,7 +22530,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 2,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22551,7 +22551,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 3,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22572,7 +22572,7 @@
                 6500
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 4,
             "train_cnt": 6500,
             "leaves": 4,
@@ -22593,7 +22593,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 0,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22614,7 +22614,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 1,
             "train_cnt": 6499,
             "leaves": 4,
@@ -22635,7 +22635,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 2,
             "train_cnt": 6499,
             "leaves": 5,
@@ -22656,7 +22656,7 @@
                 8124
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 3,
             "train_cnt": 6499,
             "leaves": 3,
@@ -22677,7 +22677,7 @@
                 6500
             ],
             "ensemble_size": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "id": 4,
             "train_cnt": 6500,
             "leaves": 4,
@@ -27189,7 +27189,7 @@
         {
             "inst_cnt": 8124,
             "categ_max": 2,
-            "name": "mushroom",
+            "name": "msh",
             "attr_cnt": 22,
             "seed": -845455225
         },

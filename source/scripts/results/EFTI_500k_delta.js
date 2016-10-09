@@ -22058,7 +22058,7 @@
             "test_cnt": 1625,
             "nonleaves": 2.0,
             "id": 0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22079,7 +22079,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22100,7 +22100,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 2,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22121,7 +22121,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 3,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22142,7 +22142,7 @@
             "test_cnt": 1624,
             "nonleaves": 3.0,
             "id": 4,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22163,7 +22163,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22184,7 +22184,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22205,7 +22205,7 @@
             "test_cnt": 1625,
             "nonleaves": 2.0,
             "id": 2,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22226,7 +22226,7 @@
             "test_cnt": 1625,
             "nonleaves": 2.0,
             "id": 3,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22247,7 +22247,7 @@
             "test_cnt": 1624,
             "nonleaves": 4.0,
             "id": 4,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22268,7 +22268,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22289,7 +22289,7 @@
             "test_cnt": 1625,
             "nonleaves": 4.0,
             "id": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22310,7 +22310,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 2,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22331,7 +22331,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 3,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22352,7 +22352,7 @@
             "test_cnt": 1624,
             "nonleaves": 3.0,
             "id": 4,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22373,7 +22373,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22394,7 +22394,7 @@
             "test_cnt": 1625,
             "nonleaves": 2.0,
             "id": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22415,7 +22415,7 @@
             "test_cnt": 1625,
             "nonleaves": 2.0,
             "id": 2,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22436,7 +22436,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 3,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22457,7 +22457,7 @@
             "test_cnt": 1624,
             "nonleaves": 4.0,
             "id": 4,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22478,7 +22478,7 @@
             "test_cnt": 1625,
             "nonleaves": 2.0,
             "id": 0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22499,7 +22499,7 @@
             "test_cnt": 1625,
             "nonleaves": 4.0,
             "id": 1,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22520,7 +22520,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 2,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22541,7 +22541,7 @@
             "test_cnt": 1625,
             "nonleaves": 3.0,
             "id": 3,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -22562,7 +22562,7 @@
             "test_cnt": 1624,
             "nonleaves": 3.0,
             "id": 4,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "ensemble_size": 1,
             "train_range": [
                 0,
@@ -27073,7 +27073,7 @@
         },
         {
             "seed": -1595443510,
-            "name": "mushroom",
+            "name": "msh",
             "inst_cnt": 8124,
             "categ_max": 2,
             "attr_cnt": 22

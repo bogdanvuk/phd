@@ -15,27 +15,34 @@ def form_cluster_matrix(table):
 
     return np.matrix(m)
 
-def print_figures(table, feature, fplot, xvals, name, loc=1, figs=None):
+def print_figures(table, feature, fplot, xvals, name, loc=1, figs=None, aspect=1):
     plots = form_cluster_matrix(table)
 
     if figs is None:
         figs = [[j for j in range(i,i+5)] for i in range(0,50,5)]
 
     line_styles = ['-', '--', ':', '-', '--']
-    line_widths = [2,2,2,4,4]
+    line_widths = [8,8,8,8,8]
     for n,f in enumerate(figs):
         plt.close()
-        w, h = matplotlib.figure.figaspect(0.6)
+        w, h = matplotlib.figure.figaspect(aspect)
         fig = plt.figure(figsize=(w,h))
         legend_handle = []
         legend_title = []
 
         for i,p in enumerate(f):
             # plt.semilogy([0, 0.01, 0.02, 0.06, 0.1], plots[i].A1)
-            legend_title.append(list(sorted(table))[p])
+            if isinstance(p,str):
+                ds = p
+                ds_id = sorted(table).index(p)
+            else:
+                ds_id = p
+                ds = sorted(table)[p]
+
+            legend_title.append(ds)
             line, = fplot(
                 xvals,
-                plots[p].A1,
+                plots[ds_id].A1,
                 linewidth=line_widths[i],
                 linestyle=line_styles[i]
             )
@@ -44,7 +51,9 @@ def print_figures(table, feature, fplot, xvals, name, loc=1, figs=None):
 
         # plt.gca().set_aspect(0.7)
         # forceAspect(plt.gca(), 0.7)
-        plt.gca().legend(legend_handle, legend_title, loc=loc)
+        plt.gca().legend(legend_handle, legend_title, loc=loc, fontsize=30, labelspacing=0.1)
+        plt.tick_params(axis='both', labelsize=30, pad=20)
+        plt.locator_params(axis='y', nbins=4)
         plt.tight_layout()
         plt.savefig("../images/{}/{}{}.pdf".format(name,feature,n), bbox_inches='tight')
 
@@ -64,9 +73,9 @@ def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=
                        sort_by_desc=False, head_fmt=head_fmt, data_fmt=data_fmt)
 
 def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fig_plotsnum=5,
-                           cluster_by=None, plot_funcs=(plt.plot, plt.plot),
-                           subfig_caption = "DT {feature}: {datasets}",
-                           fig_caption = "{name}", titles=None, locs=["lower left", "lower left"]
+                           figs=None,cluster_by=None, plot_funcs=(plt.plot, plt.plot),
+                           aspect=1, subfig_caption = "DT {feature}: {datasets}",
+                           fig_caption = ("{name}", "{name}"), titles=None, locs=["lower left", "lower left"]
                            ):
     if (cluster_by is None) or (features[0] == cluster_by):
         fig_order = features
@@ -87,14 +96,18 @@ def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fi
         if feature == cluster_by:
             figs = form_clusters(plots,fignum,fig_plotsnum)
 
-        print_figures(table,feature, plot, xvals=xvals, name=name, loc=l, figs=figs)
+        print_figures(table,feature, plot, xvals=xvals, name=name, loc=l, figs=figs, aspect=aspect)
         dump_table_csv("{}-{}.csv".format(name, feature),
                        table, cvs, variance=False, sort_by_desc=False)
 
     subfigs = []
     for i,f in enumerate(figs):
         for feature in features:
-            datasets = ', '.join([list(sorted(table))[p] for p in f])
+            if isinstance(f[0],str):
+                datasets = ', '.join(f)
+            else:
+                datasets = ', '.join([list(sorted(table))[p] for p in f])
+
             subfigs.append(subfig_tmpl.format(name=name,
                                               feature=feature,
                                               id=i,
@@ -105,5 +118,5 @@ def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fi
     for i in range(2):
         figure = fig_tmpl.format(name=name + str(i+1),
                                  subfigures=''.join(subfigs[i*10:(i+1)*10]),
-                                 caption=fig_caption.format(name=name))
+                                 caption=fig_caption[i].format(name=name))
         substitute_subfigure(rst_file, figure, name + str(i+1))

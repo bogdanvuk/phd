@@ -23,7 +23,9 @@
 % for subfigure
 \usepackage{subcaption}
 \captionsetup{labelfont=bf}
-
+\usepackage{xcolor,colortbl}
+\definecolor{bluegray}{rgb}{0.4, 0.6, 0.8}
+\definecolor{carnelian}{rgb}{0.7, 0.11, 0.11}
 \usepackage{fancyhdr}
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}

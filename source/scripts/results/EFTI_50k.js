@@ -22069,7 +22069,7 @@
             "fitness": 0.920762,
             "id": 0,
             "nonleaves": 4.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.962457
         },
         {
@@ -22090,7 +22090,7 @@
             "fitness": 0.920909,
             "id": 1,
             "nonleaves": 4.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.961965
         },
         {
@@ -22111,7 +22111,7 @@
             "fitness": 0.909731,
             "id": 2,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.926268
         },
         {
@@ -22132,7 +22132,7 @@
             "fitness": 0.927521,
             "id": 3,
             "nonleaves": 4.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.970089
         },
         {
@@ -22153,7 +22153,7 @@
             "fitness": 0.929024,
             "id": 4,
             "nonleaves": 2.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.935007
         },
         {
@@ -22174,7 +22174,7 @@
             "fitness": 0.909731,
             "id": 0,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.928114
         },
         {
@@ -22195,7 +22195,7 @@
             "fitness": 0.92677,
             "id": 1,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.944239
         },
         {
@@ -22216,7 +22216,7 @@
             "fitness": 0.943207,
             "id": 2,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.962088
         },
         {
@@ -22237,7 +22237,7 @@
             "fitness": 0.943659,
             "id": 3,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.962088
         },
         {
@@ -22258,7 +22258,7 @@
             "fitness": 0.957343,
             "id": 4,
             "nonleaves": 2.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.960857
         },
         {
@@ -22279,7 +22279,7 @@
             "fitness": 0.946976,
             "id": 0,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.966396
         },
         {
@@ -22300,7 +22300,7 @@
             "fitness": 0.924659,
             "id": 1,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.945963
         },
         {
@@ -22321,7 +22321,7 @@
             "fitness": 0.931746,
             "id": 2,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.948917
         },
         {
@@ -22342,7 +22342,7 @@
             "fitness": 0.933707,
             "id": 3,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.953102
         },
         {
@@ -22363,7 +22363,7 @@
             "fitness": 0.933262,
             "id": 4,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.951132
         },
         {
@@ -22384,7 +22384,7 @@
             "fitness": 0.939588,
             "id": 0,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.960118
         },
         {
@@ -22405,7 +22405,7 @@
             "fitness": 0.920739,
             "id": 1,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.938454
         },
         {
@@ -22426,7 +22426,7 @@
             "fitness": 0.947278,
             "id": 2,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.964919
         },
         {
@@ -22447,7 +22447,7 @@
             "fitness": 0.92481,
             "id": 3,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.941654
         },
         {
@@ -22468,7 +22468,7 @@
             "fitness": 0.941102,
             "id": 4,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.961595
         },
         {
@@ -22489,7 +22489,7 @@
             "fitness": 0.920615,
             "id": 0,
             "nonleaves": 4.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.963319
         },
         {
@@ -22510,7 +22510,7 @@
             "fitness": 0.921643,
             "id": 1,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.938577
         },
         {
@@ -22531,7 +22531,7 @@
             "fitness": 0.957184,
             "id": 2,
             "nonleaves": 2.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.962334
         },
         {
@@ -22552,7 +22552,7 @@
             "fitness": 0.910334,
             "id": 3,
             "nonleaves": 3.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.93033
         },
         {
@@ -22573,7 +22573,7 @@
             "fitness": 0.927378,
             "id": 4,
             "nonleaves": 4.0,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "accuracy": 0.970335
         },
         {
@@ -27074,7 +27074,7 @@
         },
         {
             "attr_cnt": 22,
-            "name": "mushroom",
+            "name": "msh",
             "categ_max": 2,
             "inst_cnt": 8124,
             "seed": -1767951400

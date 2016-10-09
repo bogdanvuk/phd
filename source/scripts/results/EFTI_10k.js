@@ -22057,7 +22057,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.434957,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22078,7 +22078,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.514397,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22099,7 +22099,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.019438,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22120,7 +22120,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.244678,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22141,7 +22141,7 @@
             "train_cnt": 6500,
             "test_cnt": 1624,
             "time": 2.58727,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "train_range": [
                 0,
@@ -22162,7 +22162,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.045316,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22183,7 +22183,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.657614,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22204,7 +22204,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 1.789314,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22225,7 +22225,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 1.603858,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22246,7 +22246,7 @@
             "train_cnt": 6500,
             "test_cnt": 1624,
             "time": 2.502314,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22267,7 +22267,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.364883,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "train_range": [
                 0,
@@ -22288,7 +22288,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.539519,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "train_range": [
                 0,
@@ -22309,7 +22309,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.485111,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22330,7 +22330,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.336514,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22351,7 +22351,7 @@
             "train_cnt": 6500,
             "test_cnt": 1624,
             "time": 2.259964,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22372,7 +22372,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 1.854406,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22393,7 +22393,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.877905,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "train_range": [
                 0,
@@ -22414,7 +22414,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 1.604104,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "train_range": [
                 0,
@@ -22435,7 +22435,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 1.657649,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "train_range": [
                 0,
@@ -22456,7 +22456,7 @@
             "train_cnt": 6500,
             "test_cnt": 1624,
             "time": 2.32032,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22477,7 +22477,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.403244,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22498,7 +22498,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.095319,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22519,7 +22519,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 1.637198,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "train_range": [
                 0,
@@ -22540,7 +22540,7 @@
             "train_cnt": 6499,
             "test_cnt": 1625,
             "time": 2.435479,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "train_range": [
                 0,
@@ -22561,7 +22561,7 @@
             "train_cnt": 6500,
             "test_cnt": 1624,
             "time": 1.654579,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "train_range": [
                 0,
@@ -27190,7 +27190,7 @@
             "categ_max": 2,
             "seed": -1493891378,
             "inst_cnt": 8124,
-            "name": "mushroom",
+            "name": "msh",
             "attr_cnt": 22
         },
         {

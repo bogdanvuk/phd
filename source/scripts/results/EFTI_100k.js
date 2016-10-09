@@ -22063,7 +22063,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.941246,
             "run": 0,
             "nonleaves": 3.0,
@@ -22084,7 +22084,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.918175,
             "run": 0,
             "nonleaves": 3.0,
@@ -22105,7 +22105,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.939738,
             "run": 0,
             "nonleaves": 3.0,
@@ -22126,7 +22126,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.92481,
             "run": 0,
             "nonleaves": 3.0,
@@ -22147,7 +22147,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.926025,
             "run": 0,
             "nonleaves": 3.0,
@@ -22168,7 +22168,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.929014,
             "run": 1,
             "nonleaves": 2.0,
@@ -22189,7 +22189,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.944783,
             "run": 1,
             "nonleaves": 2.0,
@@ -22210,7 +22210,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.922548,
             "run": 1,
             "nonleaves": 3.0,
@@ -22231,7 +22231,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.939889,
             "run": 1,
             "nonleaves": 3.0,
@@ -22252,7 +22252,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.943062,
             "run": 1,
             "nonleaves": 3.0,
@@ -22273,7 +22273,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.929485,
             "run": 2,
             "nonleaves": 3.0,
@@ -22294,7 +22294,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.930019,
             "run": 2,
             "nonleaves": 4.0,
@@ -22315,7 +22315,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.925905,
             "run": 2,
             "nonleaves": 4.0,
@@ -22336,7 +22336,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.93431,
             "run": 2,
             "nonleaves": 3.0,
@@ -22357,7 +22357,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.954369,
             "run": 2,
             "nonleaves": 3.0,
@@ -22378,7 +22378,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.952285,
             "run": 3,
             "nonleaves": 2.0,
@@ -22399,7 +22399,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.920135,
             "run": 3,
             "nonleaves": 3.0,
@@ -22420,7 +22420,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.954122,
             "run": 3,
             "nonleaves": 2.0,
@@ -22441,7 +22441,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.918477,
             "run": 3,
             "nonleaves": 3.0,
@@ -22462,7 +22462,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.938538,
             "run": 3,
             "nonleaves": 3.0,
@@ -22483,7 +22483,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.919381,
             "run": 4,
             "nonleaves": 3.0,
@@ -22504,7 +22504,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.923604,
             "run": 4,
             "nonleaves": 3.0,
@@ -22525,7 +22525,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.934461,
             "run": 4,
             "nonleaves": 3.0,
@@ -22546,7 +22546,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.913953,
             "run": 4,
             "nonleaves": 3.0,
@@ -22567,7 +22567,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "fitness": 0.933714,
             "run": 4,
             "nonleaves": 3.0,
@@ -27188,7 +27188,7 @@
         {
             "attr_cnt": 22,
             "categ_max": 2,
-            "name": "mushroom",
+            "name": "msh",
             "seed": -4635757,
             "inst_cnt": 8124
         },

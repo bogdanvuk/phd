@@ -22179,7 +22179,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.871731,
             "leaves": 4,
@@ -22200,7 +22200,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.906413,
             "leaves": 4,
@@ -22221,7 +22221,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.906355,
             "leaves": 3,
@@ -22242,7 +22242,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.936975,
             "leaves": 3,
@@ -22263,7 +22263,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.919839,
             "leaves": 3,
@@ -22284,7 +22284,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.909429,
             "leaves": 4,
@@ -22305,7 +22305,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.904604,
             "leaves": 4,
@@ -22326,7 +22326,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.947233,
             "leaves": 3,
@@ -22347,7 +22347,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.898271,
             "leaves": 4,
@@ -22368,7 +22368,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.918155,
             "leaves": 3,
@@ -22389,7 +22389,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.930088,
             "leaves": 4,
@@ -22410,7 +22410,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.904001,
             "leaves": 4,
@@ -22431,7 +22431,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.877914,
             "leaves": 4,
@@ -22452,7 +22452,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 4.0,
             "fitness": 0.904598,
             "leaves": 5,
@@ -22473,7 +22473,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.922442,
             "leaves": 3,
@@ -22494,7 +22494,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.914556,
             "leaves": 4,
@@ -22515,7 +22515,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.886056,
             "leaves": 4,
@@ -22536,7 +22536,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.90069,
             "leaves": 3,
@@ -22557,7 +22557,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.922699,
             "leaves": 4,
@@ -22578,7 +22578,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.889388,
             "leaves": 4,
@@ -22599,7 +22599,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.922583,
             "leaves": 3,
@@ -22620,7 +22620,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 3.0,
             "fitness": 0.904302,
             "leaves": 4,
@@ -22641,7 +22641,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.916,
             "leaves": 3,
@@ -22662,7 +22662,7 @@
                 0,
                 8124
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.917072,
             "leaves": 3,
@@ -22683,7 +22683,7 @@
                 0,
                 6500
             ],
-            "dataset": "mushroom",
+            "dataset": "msh",
             "nonleaves": 2.0,
             "fitness": 0.923972,
             "leaves": 3,
@@ -27189,7 +27189,7 @@
         {
             "inst_cnt": 8124,
             "attr_cnt": 22,
-            "name": "mushroom",
+            "name": "msh",
             "categ_max": 2,
             "seed": 792538182
         },

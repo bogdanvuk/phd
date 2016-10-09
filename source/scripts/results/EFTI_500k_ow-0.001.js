@@ -410,7 +410,7 @@
         },
         {
             "categ_max": 2,
-            "name": "mushroom",
+            "name": "msh",
             "inst_cnt": 8124,
             "seed": -553638674,
             "attr_cnt": 22
@@ -22529,7 +22529,7 @@
             "time": 194.238754,
             "ensemble_size": 1,
             "accuracy": 0.984244,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 0,
                 1625
@@ -22550,7 +22550,7 @@
             "time": 181.429962,
             "ensemble_size": 1,
             "accuracy": 0.988922,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 1625,
                 3250
@@ -22571,7 +22571,7 @@
             "time": 164.655045,
             "ensemble_size": 1,
             "accuracy": 0.980305,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 3250,
                 4875
@@ -22592,7 +22592,7 @@
             "time": 175.70607,
             "ensemble_size": 1,
             "accuracy": 0.985106,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 4875,
                 6500
@@ -22613,7 +22613,7 @@
             "time": 157.575943,
             "ensemble_size": 1,
             "accuracy": 0.987691,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 6500,
                 8124
@@ -22634,7 +22634,7 @@
             "time": 216.99826,
             "ensemble_size": 1,
             "accuracy": 0.99003,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 0,
                 1625
@@ -22655,7 +22655,7 @@
             "time": 200.940033,
             "ensemble_size": 1,
             "accuracy": 0.993353,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 1625,
                 3250
@@ -22676,7 +22676,7 @@
             "time": 208.243469,
             "ensemble_size": 1,
             "accuracy": 0.988183,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 3250,
                 4875
@@ -22697,7 +22697,7 @@
             "time": 165.390076,
             "ensemble_size": 1,
             "accuracy": 0.991137,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 4875,
                 6500
@@ -22718,7 +22718,7 @@
             "time": 192.454941,
             "ensemble_size": 1,
             "accuracy": 0.987691,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 6500,
                 8124
@@ -22739,7 +22739,7 @@
             "time": 200.389084,
             "ensemble_size": 1,
             "accuracy": 0.991137,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 0,
                 1625
@@ -22760,7 +22760,7 @@
             "time": 175.066833,
             "ensemble_size": 1,
             "accuracy": 0.987937,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 1625,
                 3250
@@ -22781,7 +22781,7 @@
             "time": 177.486496,
             "ensemble_size": 1,
             "accuracy": 0.985844,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 3250,
                 4875
@@ -22802,7 +22802,7 @@
             "time": 224.88063,
             "ensemble_size": 1,
             "accuracy": 0.985475,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 4875,
                 6500
@@ -22823,7 +22823,7 @@
             "time": 184.214264,
             "ensemble_size": 1,
             "accuracy": 0.989414,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 6500,
                 8124
@@ -22844,7 +22844,7 @@
             "time": 210.490265,
             "ensemble_size": 1,
             "accuracy": 0.993722,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 0,
                 1625
@@ -22865,7 +22865,7 @@
             "time": 201.185226,
             "ensemble_size": 1,
             "accuracy": 0.986952,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 1625,
                 3250
@@ -22886,7 +22886,7 @@
             "time": 177.084366,
             "ensemble_size": 1,
             "accuracy": 0.993599,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 3250,
                 4875
@@ -22907,7 +22907,7 @@
             "time": 215.826904,
             "ensemble_size": 1,
             "accuracy": 0.990153,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 4875,
                 6500
@@ -22928,7 +22928,7 @@
             "time": 221.225861,
             "ensemble_size": 1,
             "accuracy": 0.991014,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 6500,
                 8124
@@ -22949,7 +22949,7 @@
             "time": 168.035858,
             "ensemble_size": 1,
             "accuracy": 0.990399,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 0,
                 1625
@@ -22970,7 +22970,7 @@
             "time": 188.586655,
             "ensemble_size": 1,
             "accuracy": 0.989783,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 1625,
                 3250
@@ -22991,7 +22991,7 @@
             "time": 200.210526,
             "ensemble_size": 1,
             "accuracy": 0.98449,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 3250,
                 4875
@@ -23012,7 +23012,7 @@
             "time": 187.889771,
             "ensemble_size": 1,
             "accuracy": 0.995938,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 4875,
                 6500
@@ -23033,7 +23033,7 @@
             "time": 192.989532,
             "ensemble_size": 1,
             "accuracy": 0.994338,
-            "dataset": "mushroom",
+            "dataset": "msh",
             "test_range": [
                 6500,
                 8124

@@ -718,7 +718,7 @@ The proposed partial reclassification algorithm has an additional performance is
 
 The pseudo-code in the :num:`Algorithm #fig-partial-find-dt-leaf-for-inst` describes the implementation of the partial reclassification method whithin ``find_dt_leaf_for_inst()`` function (the original implementation is given by the :num:`Algorithm #fig-find-dt-leaf-for-inst-pca`). If the partial classification is turned off by |algo| algorithm (by passing the value ``True`` for the argument ``recalc_all``), the paths of all the training set instances will be imediately considered to have diverged from the stored paths, and the partial classification algorithm will not be used and the classification procedure will be effectively same as the original one. Otherwise, the classification for an instance (variable ``instance``) starts by following the stored path (``path_diverged = recalc_all = False``) from the root node (``cur_node = dt.root``). The path is followed one node at a time (``cur_node = get_stored_next_node(instance, cur_node)``), in order to look out for mutated nodes along its length, by using the functions ``dt.is_topo_mutated(cur_node)`` and ``dt.is_coeff_mutated(cur_node)``, which signal, respectively, if the current node was mutated via topological mutation or only its test coefficients were mutated. If it was a topological mutation, the instance is facing completely different node, hence the dot product is calculated a new. On the other hand if the current node's test coefficients were mutated, the dot product is reconstructed from the stored value (retrieved via ``get_stored_psum(instance, cur_node)``), using the equation :eq:`dot-product-recalc`. In both cases, it is considered that the instance has diverged from the memorized path: ``path_diverged = True``. The rest of the node test is carried out by comparing the dot product with the threshold to obtain the next node in the path, and if that node corresponds to the next node in the stored path, instance can safely go back to following it (once again ``path_diverged = False``). Finally, in order not to update the memorized paths in each classification run, the argument ``store_paths`` is used to signal to the function whether the mutated DT individual has become the new candidate solution and the updates to the memory should take place.
 
-In the :num:`Table #tbl-delta-time-comp`, the results of the experiment are shown which tests the performance benefits of utilizing the partial reclassification procedure. The DT induction times are listed for...
+In the :num:`Table #tbl-delta-time-comp`, the results of an experiment are shown, that tests the performance benefits of utilizing the partial reclassification procedure. The DT induction times were tested for all datasets from the :numref:`tbl-uci`, using the following configuration: ``max_iter=500k, Ko=0.02, Ss=0.05, Si=5e-5, Rp=1e-4``, on the |algo| algorithm implementations with and without partial reclassification. The results show that induction speedups differ between the datasets, and depend on the size of the induced DTs, as was expected and already discussed in this section. The speedups range from
 
 .. raw:: latex
 
@@ -807,23 +807,34 @@ Since :math:`\alpha\cdot N_l \ll N_I\cdot N_l` the mutation insignificantly infl
 
 It is clear from the equation :eq:`cplx_final` that the ``fitness_eval()`` function is a good candidate for the hardware acceleration, while the mutation tasks can be left in the software since they insignificantly influence the complexity of the |algo| algorithm.
 
-Software implementations
-------------------------
-
-PC implementation
-.................
-
-- deljenje hits/inst_cnt nije potrebno, jer je uvek isti inst_cnt
-- deljenje sa Nc nije potrebno
-
-ARM implementation
-..................
-
-DSP implementation
-..................
-
 Experiments
 -----------
+
+In this section, the results of the experiments are presented, that were conducted in order to compare the |algo| algorithm to the existing solutions. The following algorithms, available in open literature, were used for the comparison:
+
+#. CART-LC (The Classification and Regression Tree with Linear Combinations) :cite:`breiman1984classification`, an incremental deterministic algorithm for oblique DT induction. For its implementation, the description provided in :cite:`murthy1994system` was used as a reference.
+#. OC1 (Oblique Classifier) :cite:`murthy1994system`, an incremental randomized algorithm for oblique DT induction,
+#. OC1-AP (Oblique Classifier - Axis-Parallel) :cite:`murthy1994system`, the OC1 algorithm limited to inducing only axis-parallel tests,
+#. OC1-ES (Oblique Classifier - Evolutionary Strategy) :cite:`cantu2003inducing`, an extension to OC1 that uses ES to optimize the oblique hyperplanes,
+#. OC1-SA, (Oblique Classifier - Simulated Annealing) :cite:`cantu2003inducing`, an extension to OC1 that uses simulated annealing to optimize the oblique hyperplanes,
+#. HBDT (HereBoy Decision Tree induction) :cite:`struharik2014inducing`, an incremental randomized algorithm for oblique DT induction, that uses HereBoy :cite:`levi2000hereboy` for the hyperplane optimization process.
+#. GaTree (Genetic Algorithm decision Tree induction) :cite:`papagelis2000ga`, a nonincremental (full tree) DT induction algorithm based on genetic algorithms.
+#. GALE (Genetic and Artificial Life Environment), a nonincremental (full tree) DT induction algorithm based on the cellular automata and the Pittsburgh approach :cite:`smith1983flexible`.
+
+Conducted experiments were devised to compare the quality of the DTs evolved by the proposed |algo| algorithm, with the DTs inferred by some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy. All datasets listed in the :numref:`tbl-uci` were used for the induction in the experiments. All reported results are the averages of the five five-fold cross-validation experiments. Experimental setup for each algorithm and each dataset was as follows:
+
+- The dataset D, was divided into 5 non-overlapping sets: :math:`D_1`, :math:`D_2`, ... :math:`D_5`, by randomly selecting the instances from D using uniform distribution
+- For the :math:`i^{th}` cross-validation run, where :math:`i \in (1,5)`, training set was formed by using all the instances from D except the ones from :math:`D_i`, :math:`train\_set = D \setminus D_i`, and was used to induce the DT by the current algorithm being tested
+- Inferred DT was than tested for accuracy by using the instances form the set :math:`D_i`.
+
+This whole procedure was repeated 5 times, resulting in 25 inferred DTs for each dataset and for each inference algorithm, together with the classification accuracy calculated as a percentage of correctly classified test set instances, for each of them. Using test set classification accuracies, calculated as a percentage of correctly classified test set instances, average DT classification accuracy for every dataset and DT inference algorithm has been also calculated. Both the DT size and test set classification accuracy are reported with 95% confidence intervals.
+
+For the DT inference algorithms that require DT pruning, a pruning set was created by taking 30% of the training set instances selected at random.
+
+Dependence on the number of iterations
+......................................
+
+First, the results are presented for the set of the experiments that test the dependency of the inferred DT quality to the number of iterations the |algo| algorithm was run. The induced DT accuracies and sizes are shown in the :num:`Table #tbl-max-iter-comp-acc` and :num:`Table #tbl-max-iter-comp-size` respectively, for different number of iterations. The same results are also presented in series of plots in the :num:`Figure #fig-max-iter-comp1` and :num:`Figure #fig-max-iter-comp2`. In these figures, the plots are organized in pairs, where each pair consists of the accuracy and size plots for the same five algorithms displayed in juxtaposition. Please notice that the x-axis, correpsoning to the number of iterations, is given in logarithmic scale. Please also notice that the ranges for the y-axis, be it for the accuracy or the size plots, vary from plot to plot and depend on which datasets are present.
 
 .. raw:: latex
 
@@ -831,7 +842,7 @@ Experiments
    \small
    \renewcommand{\arraystretch}{0.8}
 
-.. tabularcolumns:: L{0.15\linewidth} | R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth}
+.. tabularcolumns:: L{0.08\linewidth} | R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth} R{0.07\linewidth}
 
 .. _tbl-max-iter-comp-acc:
 .. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
@@ -856,76 +867,76 @@ Experiments
 .. figure:: images/max-iter-comp/size0.pdf
     :align: center
 
-    DT size: ger, mushroom, page, psd, sb
+    DT size: ger, sick, ca, vote, wilt
 
 .. _fig-max-iter-comp-acc0:
 
 .. figure:: images/max-iter-comp/acc0.pdf
     :align: center
 
-    DT acc: ger, mushroom, page, psd, sb
+    DT acc: ger, sick, ca, vote, wilt
 
 .. _fig-max-iter-comp-size1:
 
 .. figure:: images/max-iter-comp/size1.pdf
     :align: center
 
-    DT size: jvow, sick, spf, thy, veh
+    DT size: bcw, irs, msh, psd, thy
 
 .. _fig-max-iter-comp-acc1:
 
 .. figure:: images/max-iter-comp/acc1.pdf
     :align: center
 
-    DT acc: jvow, sick, spf, thy, veh
+    DT acc: bcw, irs, msh, psd, thy
 
 .. _fig-max-iter-comp-size2:
 
 .. figure:: images/max-iter-comp/size2.pdf
     :align: center
 
-    DT size: bch, vene, vote, vow, wilt
+    DT size: ausc, bank, ca, hep, hrts
 
 .. _fig-max-iter-comp-acc2:
 
 .. figure:: images/max-iter-comp/acc2.pdf
     :align: center
 
-    DT acc: bch, vene, vote, vow, wilt
+    DT acc: ausc, bank, ca, hep, hrts
 
 .. _fig-max-iter-comp-size3:
 
 .. figure:: images/max-iter-comp/size3.pdf
     :align: center
 
-    DT size: adult, car, gls, magic, nurse
+    DT size: ion, sb, spect, thy, bc
 
 .. _fig-max-iter-comp-acc3:
 
 .. figure:: images/max-iter-comp/acc3.pdf
     :align: center
 
-    DT acc: adult, car, gls, magic, nurse
+    DT acc: ion, sb, spect, thy, bc
 
 .. _fig-max-iter-comp-size4:
 
 .. figure:: images/max-iter-comp/size4.pdf
     :align: center
 
-    DT size: eb, letter, pid, son, w21
+    DT size: son, w21, adult, car, magic
 
 .. _fig-max-iter-comp-acc4:
 
 .. figure:: images/max-iter-comp/acc4.pdf
     :align: center
 
-    DT acc: eb, letter, pid, son, w21
+    DT acc: son, w21, adult, car, magic
 
 .. subfigend::
-    :width: 0.48
+    :width: 0.49
     :label: fig-max-iter-comp1
 
-    max-iter-comp
+    Dependency of the induced DTs on the number of iterations the |algo| algorithm was run. Datasets 1-25.
 
 .. subfigstart::
 
@@ -934,106 +945,102 @@ Experiments
 .. figure:: images/max-iter-comp/size5.pdf
     :align: center
 
-    DT size: ausc, bank, bc, ca, hep
+    DT size: zoo, shuttle, seg, page, gls
 
 .. _fig-max-iter-comp-acc5:
 
 .. figure:: images/max-iter-comp/acc5.pdf
     :align: center
 
-    DT acc: ausc, bank, bc, ca, hep
+    DT acc: zoo, shuttle, seg, page, gls
 
 .. _fig-max-iter-comp-size6:
 
 .. figure:: images/max-iter-comp/size6.pdf
     :align: center
 
-    DT size: ctg, cvf, hrtc, hrts, ion
+    DT size: nurse, pen, pid, w40, ctg
 
 .. _fig-max-iter-comp-acc6:
 
 .. figure:: images/max-iter-comp/acc6.pdf
     :align: center
 
-    DT acc: ctg, cvf, hrtc, hrts, ion
+    DT acc: nurse, pen, pid, w40, ctg
 
 .. _fig-max-iter-comp-size7:
 
 .. figure:: images/max-iter-comp/size7.pdf
     :align: center
 
-    DT size: bcw, irs, liv, lym, pen
+    DT size: cvf, hrtc, jvow, liv, ttt
 
 .. _fig-max-iter-comp-acc7:
 
 .. figure:: images/max-iter-comp/acc7.pdf
     :align: center
 
-    DT acc: bcw, irs, liv, lym, pen
+    DT acc: cvf, hrtc, jvow, liv, ttt
 
 .. _fig-max-iter-comp-size8:
 
 .. figure:: images/max-iter-comp/size8.pdf
     :align: center
 
-    DT size: krkopt, seg, shuttle, spect, ttt
+    DT size: spf, veh, vow, cmc, wine
 
 .. _fig-max-iter-comp-acc8:
 
 .. figure:: images/max-iter-comp/acc8.pdf
     :align: center
 
-    DT acc: krkopt, seg, shuttle, spect, ttt
+    DT acc: spf, veh, vow, cmc, wine
 
 .. _fig-max-iter-comp-size9:
 
 .. figure:: images/max-iter-comp/size9.pdf
     :align: center
 
-    DT size: cmc, eye, w40, wfr, wine
+    DT size: eb, eye, krkopt, letter, bch
 
 .. _fig-max-iter-comp-acc9:
 
 .. figure:: images/max-iter-comp/acc9.pdf
     :align: center
 
-    DT acc: cmc, eye, w40, wfr, wine
+    DT acc: eb, eye, krkopt, letter, bch
 
 .. subfigend::
-    :width: 0.48
+    :width: 0.49
     :label: fig-max-iter-comp2
 
-    max-iter-comp
+    Dependency of the induced DTs on the number of iterations the |algo| algorithm was run. Datasets 25-50.
 
-Conducted experiments were devised to compare the quality of the DTs evolved by the proposed |algo| algorithm, with the DTs inferred by some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy. All datasets listed in the :numref:`tbl-uci` were used for the induction in the experiments. All reported results are the averages of the five five-fold cross-validation experiments. Experimental setup for each algorithm and each dataset was as follows:
+CART-LC
+.......
 
-- The dataset D, was divided into 5 non-overlapping sets: :math:`D_1`, :math:`D_2`, ... :math:`D_5`, by randomly selecting the instances from D using uniform distribution
-- For the :math:`i^{th}` cross-validation run, where :math:`i \in (1,5)`, training set was formed by using all the instances from D except the ones from :math:`D_i`, :math:`train\_set = D \setminus D_i`, and was used to induce the DT by the current algorithm being tested
-- Inferred DT was than tested for accuracy by using the instances form the set :math:`D_i`.
+The following section presents the results of the comparison between the CART-LC and |algo| algorithms. First, the CART-LC algorithm was run on the datasets from the :numref:`tbl-uci`, and the induction times (among other induction results) were recorded. Next, the |algo| algorithm was let to classify the same datasets. For each dataset, the |algo| algorithm was constrained to use up only as much time as CART-LC did on average (since the crossvalidation was performed) for the same dataset.
 
-This whole procedure was repeated 5 times, resulting in 25 inferred DTs for each dataset and for each inference algorithm, together with the classification accuracy calculated as a percentage of correctly classified test set instances, for each of them. Using test set classification accuracies, calculated as a percentage of correctly classified test set instances, average DT classification accuracy for every dataset and DT inference algorithm has been also calculated. Both the DT size and test set classification accuracy are reported with 95% confidence intervals.
+.. raw:: latex
 
-For DT inference algorithms that require DT pruning a pruning set has been created, taking 30% of the training set instances selected randomly, and used to prune the DT.
+   \begingroup
+   \small
 
-In the performance comparison process, following incremental DT inference algorithms have been used:
+.. tabularcolumns:: L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth}
+.. _tbl-cart-time:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/cart-time.csv
 
-# OC1-AP, Oblique Classifier Algorithm developed and used by S. K. Murthy and others in [16], but limited to using only axis-parallel tests,
-# OC1, developed and used by S. K. Murthy and others with default parameters [16],
-# CART-LC, as used by Murthy in [16],
-# OC1-ES, extension to OC1 using evolution strategies described in [17],
-# OC1-GA, extension to OC1 using genetic algorithms described in [17],
-# OC1-SA, extension to OC1 using simulated annealing described in [17] and
-# HBDT, proposed in [21], that uses HereBoy algorithm for hyperplane optimization process.
+.. tabularcolumns:: L{0.09\linewidth} | R{0.12\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth}
+.. _tbl-cart-comp-acc:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 2
+    :file: scripts/cart-acc-size-comp.csv
 
-DTs generated by algorithms 1-6 have used error complexity pruning algorithm [37] for DT pruning, while DTs generated by the algorithm 7 have been pruned by the Prune_DT algorithm proposed in [21].
+.. raw:: latex
 
-In addition, two full DT induction algorithms, previously proposed in the open literature have also been used:
-# GaTree algorithm proposed by the Papagelis and Kalles in [22] and
-# GALE evolutionary model proposed by Llorà and Wilson in [24].
-
-Since these algorithms infer optimized DTs, no additional pruning algorithm and pruning set are needed.
-
-Average test set accuracies for all DT inference algorithms that have been used in the experiments, and average tree sizes are presented in Tables 1 and 2 respectively. For every reported value, 95% confidence interval is also provided.
+    \endgroup
 
 .. raw:: latex
 
