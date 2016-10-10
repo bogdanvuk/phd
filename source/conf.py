@@ -247,7 +247,8 @@ latex_title = ur'''
 Bogdan Vukobratović, mentor dr Rastistlav Struharik
 \vspace{50pt}
 \end{center}
-
+\pagebreak
+\listofffigures
 '''
 
 latex_elements = {

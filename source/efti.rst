@@ -663,8 +663,6 @@ The search space for the optimal DT individual has much higher dimensionality an
 
 This concept is well documented in the Simulated Annealing literature. The test probability starts off with high values and reduces over time. This is referred to in the literature as the cooling schedule. The basic idea is to allow the system a lot of freedom at the beginning of the run when the system is in a high state of disorder in order to allow it to search for optimal structures. Then as structures emerge the freedom is reigned in so that the structures aren’t destroyed. Typically cooling schedules are predefined, although it has been shown that adaptive schedules produce better results.
 
-HereBoy employs an adaptive scheme to reduce the search probability. The search probability is defined by Formula 5 which closely resembles the adaptive mutation rate formula. Again, the output is the product of two terms: the maximum search probability (ρ) and a fractional term that reduces from 1 to 0 as the process converges (β). The maximum search probability is a user-defined parameter between 0 and 1. It defines the maximum chance that a poor performing mutation will be accepted. The fractional term is identical to the one in the adaptive mutation rate formula and performs the same function, to reduce the output from the maximum to 0 as the process converges.
-
 .. subfigstart::
 
 .. _fig-veh-searchprob-fitpath-hereboy:
@@ -682,6 +680,61 @@ HereBoy employs an adaptive scheme to reduce the search probability. The search 
     :label: fig-searchprob-fitpath-hereboy
 
     max-iter-comp
+
+HereBoy employs an adaptive scheme to reduce the search probability. The search probability is defined by Formula 5 which closely resembles the adaptive mutation rate formula. Again, the output is the product of two terms: the maximum search probability (ρ) and a fractional term that reduces from 1 to 0 as the process converges (β). The maximum search probability is a user-defined parameter between 0 and 1. It defines the maximum chance that a poor performing mutation will be accepted. The fractional term is identical to the one in the adaptive mutation rate formula and performs the same function, to reduce the output from the maximum to 0 as the process converges.
+
+.. subfigstart::
+
+.. _fig-searchprob-func1:
+.. plot:: images/searchprob_plot_1.py
+    :bbox: tight
+    :width: 100%
+
+    ``Ss=0.05, Si=5e-5``
+
+.. _fig-searchprob-func2:
+.. plot:: images/searchprob_plot_2.py
+    :bbox: tight
+    :width: 100%
+
+    ``Ss=0.05, Si=5e-4``
+
+.. _fig-searchprob-func3:
+.. plot:: images/searchprob_plot_3.py
+    :bbox: tight
+    :width: 100%
+
+    ``Ss=0.2, Si=5e-5``
+
+.. _fig-searchprob-func4:
+.. plot:: images/searchprob_plot_4.py
+    :bbox: tight
+    :width: 100%
+
+    ``Ss=0.2, Si=5e-4``
+
+.. subfigend::
+    :width: 0.49
+    :label: fig-searchprob-func
+
+    The cumulative probability of accepting a less fit individual as a function of the number of iterations that have passed since the last advancement in fitness. In each plot a cumulative probability of acceptance is plotted for an individuals whose fitness is smaller than that of the current candidate solution by: 1%, 5%, 10%, 20% and 40%.
+
+.. raw:: latex
+
+   \begingroup
+   \small
+   \renewcommand{\arraystretch}{1}
+
+.. tabularcolumns:: L{0.09\linewidth} | R{0.12\linewidth} R{0.05\linewidth} | R{0.12\linewidth} R{0.05\linewidth} | R{0.12\linewidth} R{0.05\linewidth} | R{0.12\linewidth} R{0.05\linewidth}
+
+.. _tbl-searchprob-comp:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 2
+    :file: scripts/searchprob-comp-fit.csv
+
+.. raw:: latex
+
+    \endgroup
 
 .. _fig-adaptive-search-eq:
 
@@ -1033,14 +1086,69 @@ The following section presents the results of the comparison between the CART-LC
     :file: scripts/cart-time.csv
 
 .. tabularcolumns:: L{0.09\linewidth} | R{0.12\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth}
-.. _tbl-cart-comp-acc:
+.. _tbl-cart-acc:
 .. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
     :header-rows: 2
-    :file: scripts/cart-acc-size-comp.csv
+    :file: scripts/cart-comp.csv
 
 .. raw:: latex
 
     \endgroup
+
+OC1-ES
+......
+
+The following section presents the results of the comparison between the OC1-ES and |algo| algorithms. First, the OC1-ES algorithm was run on the datasets from the :numref:`tbl-uci`, and the induction times (among other induction results) were recorded. Next, the |algo| algorithm was let to classify the same datasets. For each dataset, the |algo| algorithm was constrained to use up only as much time as OC1-ES did on average (since the crossvalidation was performed) for the same dataset.
+
+.. raw:: latex
+
+   \begingroup
+   \small
+
+.. tabularcolumns:: L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth}
+.. _tbl-oc1-es-time:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/oc1_es-time.csv
+
+.. tabularcolumns:: L{0.09\linewidth} | R{0.12\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth}
+.. _tbl-oc1-es-acc:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 2
+    :file: scripts/oc1_es-comp.csv
+
+.. raw:: latex
+
+    \endgroup
+
+OC1
+...
+
+The following section presents the results of the comparison between the OC1 and |algo| algorithms. First, the OC1 algorithm was run on the datasets from the :numref:`tbl-uci`, and the induction times (among other induction results) were recorded. Next, the |algo| algorithm was let to classify the same datasets. For each dataset, the |algo| algorithm was constrained to use up only as much time as OC1 did on average (since the crossvalidation was performed) for the same dataset.
+
+.. raw:: latex
+
+   \begingroup
+   \small
+
+.. tabularcolumns:: L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth}
+.. _tbl-oc1-time:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 1
+    :file: scripts/oc1-time.csv
+
+.. tabularcolumns:: L{0.09\linewidth} | R{0.12\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth} | R{0.15\linewidth} R{0.12\linewidth}
+.. _tbl-oc1-acc:
+.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+    :header-rows: 2
+    :file: scripts/oc1-comp.csv
+
+.. raw:: latex
+
+    \endgroup
+
+EFTI max
+........
 
 .. raw:: latex
 

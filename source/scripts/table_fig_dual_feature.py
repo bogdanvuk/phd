@@ -3,6 +3,7 @@ import os
 import numpy as np
 sys.path.append(os.path.expandvars('$EFTI/script'))
 from rank import load_data, form_mean_table, dump_table_csv
+from rank import features as feature_properties
 import matplotlib.pyplot as plt
 import matplotlib
 from plot_tools import form_clusters
@@ -59,14 +60,17 @@ def print_figures(table, feature, fplot, xvals, name, loc=1, figs=None, aspect=1
 
 def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=None,
                              head_fmt=r":raw:`\multicolumn{{1}}{{c}}{{{}}}`",
-                             data_fmt="{0:0.2f}"):
-    data, cvs = load_data(files, 0.02)
+                             data_fmt="{0:0.2f}", complexity_weight=0.02, rank=False):
+    data, cvs = load_data(files, complexity_weight)
     if titles:
         for i, n in enumerate(titles):
             cvs[i]['desc'] = n
 
     for feature in features:
-        table = form_mean_table(data[feature])
+        if not rank:
+            table = form_mean_table(data[feature])
+        else:
+            table = anova(data[feature], feature_properties[feature]['desc'])
 
         dump_table_csv("{}-{}.csv".format(name, feature),
                        table, cvs, horizontal_splits=horizontal_splits,

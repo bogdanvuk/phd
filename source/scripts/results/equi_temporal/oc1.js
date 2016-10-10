@@ -1,10204 +1,10204 @@
 {
     "cv_pc_run": [
         {
-            "time": 66.633598,
-            "fold": 1,
-            "accuracy": 85.523285,
             "dataset": "adult",
+            "accuracy": 0.85523285,
+            "fold": 1,
             "depth": 9,
-            "leaves": 19
+            "leaves": 19,
+            "time": 66.633598
         },
         {
-            "time": 69.901649,
-            "fold": 2,
-            "accuracy": 84.724144,
             "dataset": "adult",
+            "accuracy": 0.8472414399999999,
+            "fold": 2,
             "depth": 17,
-            "leaves": 70
+            "leaves": 70,
+            "time": 69.901649
         },
         {
-            "time": 74.341263,
+            "dataset": "adult",
+            "accuracy": 0.85338867,
             "fold": 3,
-            "accuracy": 85.338867,
-            "dataset": "adult",
             "depth": 14,
-            "leaves": 29
+            "leaves": 29,
+            "time": 74.341263
         },
         {
-            "time": 63.882729,
-            "fold": 4,
-            "accuracy": 85.200554,
             "dataset": "adult",
+            "accuracy": 0.85200554,
+            "fold": 4,
             "depth": 13,
-            "leaves": 64
+            "leaves": 64,
+            "time": 63.882729
         },
         {
-            "time": 67.494797,
+            "dataset": "adult",
+            "accuracy": 0.85095268,
             "fold": 5,
-            "accuracy": 85.095268,
-            "dataset": "adult",
             "depth": 20,
-            "leaves": 62
+            "leaves": 62,
+            "time": 67.494797
         },
         {
-            "time": 71.202583,
+            "dataset": "adult",
+            "accuracy": 0.85999695,
             "fold": 1,
-            "accuracy": 85.999695,
-            "dataset": "adult",
             "depth": 11,
-            "leaves": 21
+            "leaves": 21,
+            "time": 71.202583
         },
         {
-            "time": 67.251526,
+            "dataset": "adult",
+            "accuracy": 0.8560012100000001,
             "fold": 2,
-            "accuracy": 85.600121,
-            "dataset": "adult",
             "depth": 11,
-            "leaves": 40
+            "leaves": 40,
+            "time": 67.251526
         },
         {
-            "time": 70.205017,
+            "dataset": "adult",
+            "accuracy": 0.85185188,
             "fold": 3,
-            "accuracy": 85.185188,
-            "dataset": "adult",
             "depth": 14,
-            "leaves": 37
+            "leaves": 37,
+            "time": 70.205017
         },
         {
-            "time": 76.861946,
-            "fold": 4,
-            "accuracy": 85.323494,
             "dataset": "adult",
+            "accuracy": 0.85323494,
+            "fold": 4,
             "depth": 7,
-            "leaves": 13
+            "leaves": 13,
+            "time": 76.861946
         },
         {
-            "time": 72.526711,
-            "fold": 5,
-            "accuracy": 84.357712,
             "dataset": "adult",
+            "accuracy": 0.8435771200000001,
+            "fold": 5,
             "depth": 5,
-            "leaves": 11
+            "leaves": 11,
+            "time": 72.526711
         },
         {
-            "time": 74.383202,
-            "fold": 1,
-            "accuracy": 85.092979,
             "dataset": "adult",
+            "accuracy": 0.85092979,
+            "fold": 1,
             "depth": 9,
-            "leaves": 19
+            "leaves": 19,
+            "time": 74.383202
         },
         {
-            "time": 72.050018,
-            "fold": 2,
-            "accuracy": 85.384972,
             "dataset": "adult",
+            "accuracy": 0.85384972,
+            "fold": 2,
             "depth": 10,
-            "leaves": 25
+            "leaves": 25,
+            "time": 72.050018
         },
         {
-            "time": 68.841782,
+            "dataset": "adult",
+            "accuracy": 0.85554016,
             "fold": 3,
-            "accuracy": 85.554016,
-            "dataset": "adult",
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 68.841782
         },
         {
-            "time": 64.527046,
+            "dataset": "adult",
+            "accuracy": 0.84094055,
             "fold": 4,
-            "accuracy": 84.094055,
-            "dataset": "adult",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 64.527046
         },
         {
-            "time": 76.611229,
+            "dataset": "adult",
+            "accuracy": 0.8481868699999999,
             "fold": 5,
-            "accuracy": 84.818687,
-            "dataset": "adult",
             "depth": 15,
-            "leaves": 27
+            "leaves": 27,
+            "time": 76.611229
         },
         {
-            "time": 72.017715,
-            "fold": 1,
-            "accuracy": 85.139084,
             "dataset": "adult",
+            "accuracy": 0.85139084,
+            "fold": 1,
             "depth": 20,
-            "leaves": 86
+            "leaves": 86,
+            "time": 72.017715
         },
         {
-            "time": 63.639393,
-            "fold": 2,
-            "accuracy": 85.861382,
             "dataset": "adult",
+            "accuracy": 0.8586138200000001,
+            "fold": 2,
             "depth": 11,
-            "leaves": 27
+            "leaves": 27,
+            "time": 63.639393
         },
         {
-            "time": 62.782249,
+            "dataset": "adult",
+            "accuracy": 0.8497003200000001,
             "fold": 3,
-            "accuracy": 84.970032,
-            "dataset": "adult",
             "depth": 13,
-            "leaves": 44
+            "leaves": 44,
+            "time": 62.782249
         },
         {
-            "time": 69.189522,
+            "dataset": "adult",
+            "accuracy": 0.85200554,
             "fold": 4,
-            "accuracy": 85.200554,
-            "dataset": "adult",
             "depth": 11,
-            "leaves": 20
+            "leaves": 20,
+            "time": 69.189522
         },
         {
-            "time": 65.141426,
+            "dataset": "adult",
+            "accuracy": 0.8540258000000001,
             "fold": 5,
-            "accuracy": 85.40258,
-            "dataset": "adult",
             "depth": 15,
-            "leaves": 38
+            "leaves": 38,
+            "time": 65.141426
         },
         {
-            "time": 67.323479,
+            "dataset": "adult",
+            "accuracy": 0.85031502,
             "fold": 1,
-            "accuracy": 85.031502,
-            "dataset": "adult",
             "depth": 12,
-            "leaves": 56
+            "leaves": 56,
+            "time": 67.323479
         },
         {
-            "time": 68.227882,
-            "fold": 2,
-            "accuracy": 85.354233,
             "dataset": "adult",
+            "accuracy": 0.8535423299999999,
+            "fold": 2,
             "depth": 18,
-            "leaves": 52
+            "leaves": 52,
+            "time": 68.227882
         },
         {
-            "time": 71.358047,
+            "dataset": "adult",
+            "accuracy": 0.85200554,
             "fold": 3,
-            "accuracy": 85.200554,
-            "dataset": "adult",
             "depth": 6,
-            "leaves": 13
+            "leaves": 13,
+            "time": 71.358047
         },
         {
-            "time": 70.204659,
-            "fold": 4,
-            "accuracy": 85.47718,
             "dataset": "adult",
+            "accuracy": 0.8547718000000001,
+            "fold": 4,
             "depth": 14,
-            "leaves": 28
+            "leaves": 28,
+            "time": 70.204659
         },
         {
-            "time": 64.316292,
-            "fold": 5,
-            "accuracy": 85.479408,
             "dataset": "adult",
+            "accuracy": 0.85479408,
+            "fold": 5,
             "depth": 11,
-            "leaves": 25
+            "leaves": 25,
+            "time": 64.316292
         },
         {
-            "time": 0.450339,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.8478260799999999,
             "fold": 1,
-            "accuracy": 84.782608,
-            "dataset": "ausc",
-            "leaves": 2
-        },
-        {
-            "time": 0.549841,
             "depth": 1,
-            "fold": 2,
-            "accuracy": 85.507248,
-            "dataset": "ausc",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.450339
         },
         {
-            "time": 0.356781,
+            "dataset": "ausc",
+            "accuracy": 0.85507248,
+            "fold": 2,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.549841
+        },
+        {
+            "dataset": "ausc",
+            "accuracy": 0.84057968,
+            "fold": 3,
             "depth": 2,
-            "fold": 3,
-            "accuracy": 84.057968,
-            "dataset": "ausc",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.356781
         },
         {
-            "time": 0.405027,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.8478260799999999,
             "fold": 4,
-            "accuracy": 84.782608,
-            "dataset": "ausc",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.405027
         },
         {
-            "time": 0.471007,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.85507248,
             "fold": 5,
-            "accuracy": 85.507248,
-            "dataset": "ausc",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.471007
         },
         {
-            "time": 0.448227,
-            "depth": 7,
+            "dataset": "ausc",
+            "accuracy": 0.78260872,
             "fold": 1,
-            "accuracy": 78.260872,
-            "dataset": "ausc",
-            "leaves": 19
+            "depth": 7,
+            "leaves": 19,
+            "time": 0.448227
         },
         {
-            "time": 0.322208,
-            "depth": 3,
+            "dataset": "ausc",
+            "accuracy": 0.81159424,
             "fold": 2,
-            "accuracy": 81.159424,
-            "dataset": "ausc",
-            "leaves": 4
+            "depth": 3,
+            "leaves": 4,
+            "time": 0.322208
         },
         {
-            "time": 0.451073,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.81884056,
             "fold": 3,
-            "accuracy": 81.884056,
-            "dataset": "ausc",
-            "leaves": 2
-        },
-        {
-            "time": 0.467451,
             "depth": 1,
-            "fold": 4,
-            "accuracy": 86.95652,
-            "dataset": "ausc",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.451073
         },
         {
-            "time": 0.392369,
+            "dataset": "ausc",
+            "accuracy": 0.8695651999999999,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.467451
+        },
+        {
+            "dataset": "ausc",
+            "accuracy": 0.8695651999999999,
+            "fold": 5,
             "depth": 6,
-            "fold": 5,
-            "accuracy": 86.95652,
-            "dataset": "ausc",
-            "leaves": 17
+            "leaves": 17,
+            "time": 0.392369
         },
         {
-            "time": 0.416102,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.7898550400000001,
             "fold": 1,
-            "accuracy": 78.985504,
-            "dataset": "ausc",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.416102
         },
         {
-            "time": 0.371316,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.89130432,
             "fold": 2,
-            "accuracy": 89.130432,
-            "dataset": "ausc",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.371316
         },
         {
-            "time": 0.450814,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.8260869599999999,
             "fold": 3,
-            "accuracy": 82.608696,
-            "dataset": "ausc",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.450814
         },
         {
-            "time": 0.497207,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.8695651999999999,
             "fold": 4,
-            "accuracy": 86.95652,
-            "dataset": "ausc",
-            "leaves": 2
-        },
-        {
-            "time": 0.420885,
-            "depth": 3,
-            "fold": 5,
-            "accuracy": 80.434784,
-            "dataset": "ausc",
-            "leaves": 5
-        },
-        {
-            "time": 0.494068,
             "depth": 1,
+            "leaves": 2,
+            "time": 0.497207
+        },
+        {
+            "dataset": "ausc",
+            "accuracy": 0.8043478399999999,
+            "fold": 5,
+            "depth": 3,
+            "leaves": 5,
+            "time": 0.420885
+        },
+        {
+            "dataset": "ausc",
+            "accuracy": 0.8478260799999999,
             "fold": 1,
-            "accuracy": 84.782608,
-            "dataset": "ausc",
-            "leaves": 2
-        },
-        {
-            "time": 0.421193,
-            "depth": 2,
-            "fold": 2,
-            "accuracy": 89.130432,
-            "dataset": "ausc",
-            "leaves": 3
-        },
-        {
-            "time": 0.610343,
             "depth": 1,
-            "fold": 3,
-            "accuracy": 80.434784,
-            "dataset": "ausc",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.494068
         },
         {
-            "time": 0.443795,
-            "depth": 3,
-            "fold": 4,
-            "accuracy": 78.260872,
             "dataset": "ausc",
-            "leaves": 5
-        },
-        {
-            "time": 0.449434,
+            "accuracy": 0.89130432,
+            "fold": 2,
             "depth": 2,
-            "fold": 5,
-            "accuracy": 86.231888,
-            "dataset": "ausc",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.421193
         },
         {
-            "time": 0.462343,
+            "dataset": "ausc",
+            "accuracy": 0.8043478399999999,
+            "fold": 3,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.610343
+        },
+        {
+            "dataset": "ausc",
+            "accuracy": 0.78260872,
+            "fold": 4,
+            "depth": 3,
+            "leaves": 5,
+            "time": 0.443795
+        },
+        {
+            "dataset": "ausc",
+            "accuracy": 0.86231888,
+            "fold": 5,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.449434
+        },
+        {
+            "dataset": "ausc",
+            "accuracy": 0.79710144,
+            "fold": 1,
             "depth": 5,
-            "fold": 1,
-            "accuracy": 79.710144,
-            "dataset": "ausc",
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.462343
         },
         {
-            "time": 0.475883,
+            "dataset": "ausc",
+            "accuracy": 0.81159424,
+            "fold": 2,
             "depth": 4,
-            "fold": 2,
-            "accuracy": 81.159424,
-            "dataset": "ausc",
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.475883
         },
         {
-            "time": 0.414666,
+            "dataset": "ausc",
+            "accuracy": 0.8478260799999999,
+            "fold": 3,
             "depth": 2,
-            "fold": 3,
-            "accuracy": 84.782608,
-            "dataset": "ausc",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.414666
         },
         {
-            "time": 0.430431,
+            "dataset": "ausc",
+            "accuracy": 0.78260872,
+            "fold": 4,
             "depth": 5,
-            "fold": 4,
-            "accuracy": 78.260872,
-            "dataset": "ausc",
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.430431
         },
         {
-            "time": 0.460842,
-            "depth": 1,
+            "dataset": "ausc",
+            "accuracy": 0.86231888,
             "fold": 5,
-            "accuracy": 86.231888,
-            "dataset": "ausc",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.460842
         },
         {
-            "time": 160.2155,
+            "dataset": "bank",
+            "accuracy": 0.89449234,
             "fold": 1,
-            "accuracy": 89.449234,
-            "dataset": "bank",
             "depth": 7,
-            "leaves": 12
+            "leaves": 12,
+            "time": 160.2155
         },
         {
-            "time": 149.00473,
+            "dataset": "bank",
+            "accuracy": 0.89924797,
             "fold": 2,
-            "accuracy": 89.924797,
-            "dataset": "bank",
             "depth": 8,
-            "leaves": 19
+            "leaves": 19,
+            "time": 149.00473
         },
         {
-            "time": 162.575058,
+            "dataset": "bank",
+            "accuracy": 0.89548775,
             "fold": 3,
-            "accuracy": 89.548775,
-            "dataset": "bank",
             "depth": 7,
-            "leaves": 14
+            "leaves": 14,
+            "time": 162.575058
         },
         {
-            "time": 158.492172,
-            "fold": 4,
-            "accuracy": 89.55983,
             "dataset": "bank",
+            "accuracy": 0.8955983000000001,
+            "fold": 4,
             "depth": 11,
-            "leaves": 23
+            "leaves": 23,
+            "time": 158.492172
         },
         {
-            "time": 152.715607,
+            "dataset": "bank",
+            "accuracy": 0.8989273799999999,
             "fold": 5,
-            "accuracy": 89.892738,
-            "dataset": "bank",
             "depth": 5,
-            "leaves": 11
+            "leaves": 11,
+            "time": 152.715607
         },
         {
-            "time": 149.145309,
+            "dataset": "bank",
+            "accuracy": 0.89515594,
             "fold": 1,
-            "accuracy": 89.515594,
-            "dataset": "bank",
             "depth": 6,
-            "leaves": 19
+            "leaves": 19,
+            "time": 149.145309
         },
         {
-            "time": 1638.741577,
-            "fold": 2,
-            "accuracy": 89.714668,
             "dataset": "bank",
+            "accuracy": 0.8971466800000001,
+            "fold": 2,
             "depth": 5,
-            "leaves": 6
+            "leaves": 6,
+            "time": 1638.741577
         },
         {
-            "time": 157.956955,
+            "dataset": "bank",
+            "accuracy": 0.89239105,
             "fold": 3,
-            "accuracy": 89.239105,
-            "dataset": "bank",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 157.956955
         },
         {
-            "time": 146.175385,
+            "dataset": "bank",
+            "accuracy": 0.89073212,
             "fold": 4,
-            "accuracy": 89.073212,
-            "dataset": "bank",
             "depth": 6,
-            "leaves": 13
+            "leaves": 13,
+            "time": 146.175385
         },
         {
-            "time": 152.15239,
+            "dataset": "bank",
+            "accuracy": 0.8976003300000001,
             "fold": 5,
-            "accuracy": 89.760033,
-            "dataset": "bank",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 152.15239
         },
         {
-            "time": 140.824188,
+            "dataset": "bank",
+            "accuracy": 0.8993585199999999,
             "fold": 1,
-            "accuracy": 89.935852,
-            "dataset": "bank",
             "depth": 6,
-            "leaves": 9
+            "leaves": 9,
+            "time": 140.824188
         },
         {
-            "time": 146.550446,
-            "fold": 2,
-            "accuracy": 88.940498,
             "dataset": "bank",
+            "accuracy": 0.88940498,
+            "fold": 2,
             "depth": 7,
-            "leaves": 17
+            "leaves": 17,
+            "time": 146.550446
         },
         {
-            "time": 145.571289,
+            "dataset": "bank",
+            "accuracy": 0.8950453199999999,
             "fold": 3,
-            "accuracy": 89.504532,
-            "dataset": "bank",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 145.571289
         },
         {
-            "time": 141.921097,
+            "dataset": "bank",
+            "accuracy": 0.8971466800000001,
             "fold": 4,
-            "accuracy": 89.714668,
-            "dataset": "bank",
             "depth": 5,
-            "leaves": 6
+            "leaves": 6,
+            "time": 141.921097
         },
         {
-            "time": 131.440262,
+            "dataset": "bank",
+            "accuracy": 0.89649452,
             "fold": 5,
-            "accuracy": 89.649452,
-            "dataset": "bank",
             "depth": 7,
-            "leaves": 20
+            "leaves": 20,
+            "time": 131.440262
         },
         {
-            "time": 138.499374,
+            "dataset": "bank",
+            "accuracy": 0.89382881,
             "fold": 1,
-            "accuracy": 89.382881,
-            "dataset": "bank",
             "depth": 7,
-            "leaves": 24
+            "leaves": 24,
+            "time": 138.499374
         },
         {
-            "time": 164.172958,
-            "fold": 2,
-            "accuracy": 89.028976,
             "dataset": "bank",
+            "accuracy": 0.89028976,
+            "fold": 2,
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 164.172958
         },
         {
-            "time": 155.06424,
+            "dataset": "bank",
+            "accuracy": 0.89692543,
             "fold": 3,
-            "accuracy": 89.692543,
-            "dataset": "bank",
             "depth": 8,
-            "leaves": 22
+            "leaves": 22,
+            "time": 155.06424
         },
         {
-            "time": 132.201309,
+            "dataset": "bank",
+            "accuracy": 0.8909532900000001,
             "fold": 4,
-            "accuracy": 89.095329,
-            "dataset": "bank",
             "depth": 6,
-            "leaves": 15
+            "leaves": 15,
+            "time": 132.201309
         },
         {
-            "time": 4466.416504,
-            "fold": 5,
-            "accuracy": 90.014374,
             "dataset": "bank",
+            "accuracy": 0.9001437400000001,
+            "fold": 5,
             "depth": 9,
-            "leaves": 36
+            "leaves": 36,
+            "time": 166.4165039999998
         },
         {
-            "time": 4444.311523,
-            "fold": 1,
-            "accuracy": 89.371819,
             "dataset": "bank",
+            "accuracy": 0.89371819,
+            "fold": 1,
             "depth": 12,
-            "leaves": 71
+            "leaves": 71,
+            "time": 144.3115230000003
         },
         {
-            "time": 4450.042969,
-            "fold": 2,
-            "accuracy": 89.438179,
             "dataset": "bank",
+            "accuracy": 0.8943817900000001,
+            "fold": 2,
             "depth": 11,
-            "leaves": 30
+            "leaves": 30,
+            "time": 150.04296900000008
         },
         {
-            "time": 4459.617188,
-            "fold": 3,
-            "accuracy": 89.604073,
             "dataset": "bank",
+            "accuracy": 0.89604073,
+            "fold": 3,
             "depth": 9,
-            "leaves": 17
+            "leaves": 17,
+            "time": 159.61718800000017
         },
         {
-            "time": 4434.225586,
-            "fold": 4,
-            "accuracy": 89.736786,
             "dataset": "bank",
+            "accuracy": 0.8973678599999999,
+            "fold": 4,
             "depth": 6,
-            "leaves": 11
+            "leaves": 11,
+            "time": 134.22558599999957
         },
         {
-            "time": 4441.535645,
-            "fold": 5,
-            "accuracy": 89.693687,
             "dataset": "bank",
+            "accuracy": 0.89693687,
+            "fold": 5,
             "depth": 5,
-            "leaves": 7
+            "leaves": 7,
+            "time": 141.53564499999993
         },
         {
-            "time": 0.143271,
-            "depth": 6,
+            "dataset": "bc",
+            "accuracy": 0.9280000300000001,
             "fold": 1,
-            "accuracy": 92.800003,
-            "dataset": "bc",
-            "leaves": 12
-        },
-        {
-            "time": 0.154141,
-            "depth": 5,
-            "fold": 2,
-            "accuracy": 92.0,
-            "dataset": "bc",
-            "leaves": 6
-        },
-        {
-            "time": 0.140889,
             "depth": 6,
-            "fold": 3,
-            "accuracy": 90.400002,
-            "dataset": "bc",
-            "leaves": 7
+            "leaves": 12,
+            "time": 0.143271
         },
         {
-            "time": 0.176106,
+            "dataset": "bc",
+            "accuracy": 0.92,
+            "fold": 2,
+            "depth": 5,
+            "leaves": 6,
+            "time": 0.154141
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.90400002,
+            "fold": 3,
+            "depth": 6,
+            "leaves": 7,
+            "time": 0.140889
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.9519999699999999,
+            "fold": 4,
             "depth": 2,
-            "fold": 4,
-            "accuracy": 95.199997,
-            "dataset": "bc",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.176106
         },
         {
-            "time": 0.120411,
+            "dataset": "bc",
+            "accuracy": 0.87199997,
+            "fold": 5,
             "depth": 2,
-            "fold": 5,
-            "accuracy": 87.199997,
-            "dataset": "bc",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.120411
         },
         {
-            "time": 0.141776,
+            "dataset": "bc",
+            "accuracy": 0.87199997,
+            "fold": 1,
             "depth": 8,
-            "fold": 1,
-            "accuracy": 87.199997,
-            "dataset": "bc",
-            "leaves": 15
+            "leaves": 15,
+            "time": 0.141776
         },
         {
-            "time": 0.144855,
-            "depth": 6,
+            "dataset": "bc",
+            "accuracy": 0.96,
             "fold": 2,
-            "accuracy": 96.0,
-            "dataset": "bc",
-            "leaves": 9
+            "depth": 6,
+            "leaves": 9,
+            "time": 0.144855
         },
         {
-            "time": 0.157333,
-            "depth": 6,
+            "dataset": "bc",
+            "accuracy": 0.94400002,
             "fold": 3,
-            "accuracy": 94.400002,
-            "dataset": "bc",
-            "leaves": 7
-        },
-        {
-            "time": 0.145914,
             "depth": 6,
+            "leaves": 7,
+            "time": 0.157333
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.90400002,
             "fold": 4,
-            "accuracy": 90.400002,
-            "dataset": "bc",
-            "leaves": 8
+            "depth": 6,
+            "leaves": 8,
+            "time": 0.145914
         },
         {
-            "time": 0.162123,
-            "depth": 5,
+            "dataset": "bc",
+            "accuracy": 0.92,
             "fold": 5,
-            "accuracy": 92.0,
-            "dataset": "bc",
-            "leaves": 6
+            "depth": 5,
+            "leaves": 6,
+            "time": 0.162123
         },
         {
-            "time": 0.185472,
+            "dataset": "bc",
+            "accuracy": 0.9280000300000001,
+            "fold": 1,
             "depth": 8,
-            "fold": 1,
-            "accuracy": 92.800003,
-            "dataset": "bc",
-            "leaves": 21
+            "leaves": 21,
+            "time": 0.185472
         },
         {
-            "time": 0.179081,
-            "depth": 5,
+            "dataset": "bc",
+            "accuracy": 0.9280000300000001,
             "fold": 2,
-            "accuracy": 92.800003,
-            "dataset": "bc",
-            "leaves": 6
+            "depth": 5,
+            "leaves": 6,
+            "time": 0.179081
         },
         {
-            "time": 0.144795,
-            "depth": 5,
+            "dataset": "bc",
+            "accuracy": 0.89599998,
             "fold": 3,
-            "accuracy": 89.599998,
-            "dataset": "bc",
-            "leaves": 7
-        },
-        {
-            "time": 0.157372,
-            "depth": 6,
-            "fold": 4,
-            "accuracy": 88.800003,
-            "dataset": "bc",
-            "leaves": 9
-        },
-        {
-            "time": 0.133445,
-            "depth": 6,
-            "fold": 5,
-            "accuracy": 96.800003,
-            "dataset": "bc",
-            "leaves": 11
-        },
-        {
-            "time": 0.174327,
             "depth": 5,
-            "fold": 1,
-            "accuracy": 96.800003,
-            "dataset": "bc",
-            "leaves": 6
+            "leaves": 7,
+            "time": 0.144795
         },
         {
-            "time": 0.188451,
+            "dataset": "bc",
+            "accuracy": 0.88800003,
+            "fold": 4,
+            "depth": 6,
+            "leaves": 9,
+            "time": 0.157372
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.96800003,
+            "fold": 5,
+            "depth": 6,
+            "leaves": 11,
+            "time": 0.133445
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.96800003,
+            "fold": 1,
+            "depth": 5,
+            "leaves": 6,
+            "time": 0.174327
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.90400002,
+            "fold": 2,
             "depth": 7,
-            "fold": 2,
-            "accuracy": 90.400002,
-            "dataset": "bc",
-            "leaves": 12
+            "leaves": 12,
+            "time": 0.188451
         },
         {
-            "time": 0.165487,
-            "depth": 2,
+            "dataset": "bc",
+            "accuracy": 0.92,
             "fold": 3,
-            "accuracy": 92.0,
-            "dataset": "bc",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.165487
         },
         {
-            "time": 0.152063,
+            "dataset": "bc",
+            "accuracy": 0.89599998,
+            "fold": 4,
             "depth": 4,
-            "fold": 4,
-            "accuracy": 89.599998,
-            "dataset": "bc",
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.152063
         },
         {
-            "time": 0.168931,
-            "depth": 5,
+            "dataset": "bc",
+            "accuracy": 0.9280000300000001,
             "fold": 5,
-            "accuracy": 92.800003,
-            "dataset": "bc",
-            "leaves": 6
-        },
-        {
-            "time": 0.136613,
             "depth": 5,
+            "leaves": 6,
+            "time": 0.168931
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.90400002,
             "fold": 1,
-            "accuracy": 90.400002,
-            "dataset": "bc",
-            "leaves": 8
+            "depth": 5,
+            "leaves": 8,
+            "time": 0.136613
         },
         {
-            "time": 0.183248,
-            "depth": 6,
+            "dataset": "bc",
+            "accuracy": 0.90400002,
             "fold": 2,
-            "accuracy": 90.400002,
-            "dataset": "bc",
-            "leaves": 16
+            "depth": 6,
+            "leaves": 16,
+            "time": 0.183248
         },
         {
-            "time": 0.199415,
-            "depth": 6,
+            "dataset": "bc",
+            "accuracy": 0.92,
             "fold": 3,
-            "accuracy": 92.0,
-            "dataset": "bc",
-            "leaves": 11
-        },
-        {
-            "time": 0.152047,
             "depth": 6,
+            "leaves": 11,
+            "time": 0.199415
+        },
+        {
+            "dataset": "bc",
+            "accuracy": 0.9519999699999999,
             "fold": 4,
-            "accuracy": 95.199997,
-            "dataset": "bc",
-            "leaves": 8
+            "depth": 6,
+            "leaves": 8,
+            "time": 0.152047
         },
         {
-            "time": 0.174674,
-            "depth": 3,
+            "dataset": "bc",
+            "accuracy": 0.90400002,
             "fold": 5,
-            "accuracy": 90.400002,
-            "dataset": "bc",
-            "leaves": 4
+            "depth": 3,
+            "leaves": 4,
+            "time": 0.174674
         },
         {
-            "time": 22.53335,
+            "dataset": "bch",
+            "accuracy": 0.11058601,
             "fold": 1,
-            "accuracy": 11.058601,
-            "dataset": "bch",
             "depth": 7,
-            "leaves": 30
+            "leaves": 30,
+            "time": 22.53335
         },
         {
-            "time": 23.274343,
-            "fold": 2,
-            "accuracy": 14.083176,
             "dataset": "bch",
+            "accuracy": 0.14083176,
+            "fold": 2,
             "depth": 10,
-            "leaves": 88
+            "leaves": 88,
+            "time": 23.274343
         },
         {
-            "time": 23.946959,
-            "fold": 3,
-            "accuracy": 13.043478,
             "dataset": "bch",
+            "accuracy": 0.13043478,
+            "fold": 3,
             "depth": 8,
-            "leaves": 49
+            "leaves": 49,
+            "time": 23.946959
         },
         {
-            "time": 22.969292,
+            "dataset": "bch",
+            "accuracy": 0.12476371,
             "fold": 4,
-            "accuracy": 12.476371,
-            "dataset": "bch",
             "depth": 12,
-            "leaves": 171
+            "leaves": 171,
+            "time": 22.969292
         },
         {
-            "time": 24.21316,
+            "dataset": "bch",
+            "accuracy": 0.13962264,
             "fold": 5,
-            "accuracy": 13.962264,
-            "dataset": "bch",
             "depth": 7,
-            "leaves": 35
+            "leaves": 35,
+            "time": 24.21316
         },
         {
-            "time": 24.632122,
+            "dataset": "bch",
+            "accuracy": 0.12948959999999998,
             "fold": 1,
-            "accuracy": 12.94896,
-            "dataset": "bch",
             "depth": 8,
-            "leaves": 50
+            "leaves": 50,
+            "time": 24.632122
         },
         {
-            "time": 23.650108,
+            "dataset": "bch",
+            "accuracy": 0.12381852,
             "fold": 2,
-            "accuracy": 12.381852,
-            "dataset": "bch",
             "depth": 12,
-            "leaves": 192
+            "leaves": 192,
+            "time": 23.650108
         },
         {
-            "time": 23.372816,
-            "fold": 3,
-            "accuracy": 10.964083,
             "dataset": "bch",
+            "accuracy": 0.10964083000000001,
+            "fold": 3,
             "depth": 17,
-            "leaves": 1121
+            "leaves": 1121,
+            "time": 23.372816
         },
         {
-            "time": 24.541353,
+            "dataset": "bch",
+            "accuracy": 0.13043478,
             "fold": 4,
-            "accuracy": 13.043478,
-            "dataset": "bch",
             "depth": 10,
-            "leaves": 97
+            "leaves": 97,
+            "time": 24.541353
         },
         {
-            "time": 22.921844,
+            "dataset": "bch",
+            "accuracy": 0.12735849,
             "fold": 5,
-            "accuracy": 12.735849,
-            "dataset": "bch",
             "depth": 10,
-            "leaves": 123
+            "leaves": 123,
+            "time": 22.921844
         },
         {
-            "time": 23.823879,
-            "fold": 1,
-            "accuracy": 13.137997,
             "dataset": "bch",
+            "accuracy": 0.13137997,
+            "fold": 1,
             "depth": 14,
-            "leaves": 375
+            "leaves": 375,
+            "time": 23.823879
         },
         {
-            "time": 22.965872,
+            "dataset": "bch",
+            "accuracy": 0.12003780000000001,
             "fold": 2,
-            "accuracy": 12.00378,
-            "dataset": "bch",
             "depth": 9,
-            "leaves": 67
+            "leaves": 67,
+            "time": 22.965872
         },
         {
-            "time": 22.650309,
+            "dataset": "bch",
+            "accuracy": 0.11436673000000001,
             "fold": 3,
-            "accuracy": 11.436673,
-            "dataset": "bch",
             "depth": 11,
-            "leaves": 185
+            "leaves": 185,
+            "time": 22.650309
         },
         {
-            "time": 22.059624,
+            "dataset": "bch",
+            "accuracy": 0.12287334,
             "fold": 4,
-            "accuracy": 12.287334,
-            "dataset": "bch",
             "depth": 14,
-            "leaves": 331
+            "leaves": 331,
+            "time": 22.059624
         },
         {
-            "time": 22.76494,
+            "dataset": "bch",
+            "accuracy": 0.10660378,
             "fold": 5,
-            "accuracy": 10.660378,
-            "dataset": "bch",
             "depth": 14,
-            "leaves": 354
+            "leaves": 354,
+            "time": 22.76494
         },
         {
-            "time": 21.687679,
-            "fold": 1,
-            "accuracy": 12.098299,
             "dataset": "bch",
+            "accuracy": 0.12098299000000001,
+            "fold": 1,
             "depth": 15,
-            "leaves": 659
+            "leaves": 659,
+            "time": 21.687679
         },
         {
-            "time": 23.330528,
-            "fold": 2,
-            "accuracy": 12.476371,
             "dataset": "bch",
+            "accuracy": 0.12476371,
+            "fold": 2,
             "depth": 11,
-            "leaves": 141
+            "leaves": 141,
+            "time": 23.330528
         },
         {
-            "time": 23.111713,
-            "fold": 3,
-            "accuracy": 12.476371,
             "dataset": "bch",
+            "accuracy": 0.12476371,
+            "fold": 3,
             "depth": 10,
-            "leaves": 122
+            "leaves": 122,
+            "time": 23.111713
         },
         {
-            "time": 23.510649,
+            "dataset": "bch",
+            "accuracy": 0.12665406,
             "fold": 4,
-            "accuracy": 12.665406,
-            "dataset": "bch",
             "depth": 8,
-            "leaves": 54
+            "leaves": 54,
+            "time": 23.510649
         },
         {
-            "time": 22.794418,
+            "dataset": "bch",
+            "accuracy": 0.13113208,
             "fold": 5,
-            "accuracy": 13.113208,
-            "dataset": "bch",
             "depth": 9,
-            "leaves": 63
+            "leaves": 63,
+            "time": 22.794418
         },
         {
-            "time": 23.95924,
+            "dataset": "bch",
+            "accuracy": 0.14177693,
             "fold": 1,
-            "accuracy": 14.177693,
-            "dataset": "bch",
             "depth": 12,
-            "leaves": 196
+            "leaves": 196,
+            "time": 23.95924
         },
         {
-            "time": 24.641356,
+            "dataset": "bch",
+            "accuracy": 0.12476371,
             "fold": 2,
-            "accuracy": 12.476371,
-            "dataset": "bch",
             "depth": 14,
-            "leaves": 307
+            "leaves": 307,
+            "time": 24.641356
         },
         {
-            "time": 23.874121,
-            "fold": 3,
-            "accuracy": 11.814745,
             "dataset": "bch",
+            "accuracy": 0.11814745,
+            "fold": 3,
             "depth": 19,
-            "leaves": 1448
+            "leaves": 1448,
+            "time": 23.874121
         },
         {
-            "time": 22.363123,
-            "fold": 4,
-            "accuracy": 11.814745,
             "dataset": "bch",
+            "accuracy": 0.11814745,
+            "fold": 4,
             "depth": 15,
-            "leaves": 531
+            "leaves": 531,
+            "time": 22.363123
         },
         {
-            "time": 23.567169,
-            "fold": 5,
-            "accuracy": 12.169811,
             "dataset": "bch",
+            "accuracy": 0.12169811,
+            "fold": 5,
             "depth": 13,
-            "leaves": 348
+            "leaves": 348,
+            "time": 23.567169
         },
         {
-            "time": 0.124819,
-            "depth": 2,
+            "dataset": "bcw",
+            "accuracy": 0.91304344,
             "fold": 1,
-            "accuracy": 91.304344,
-            "dataset": "bcw",
-            "leaves": 3
-        },
-        {
-            "time": 0.174527,
-            "depth": 1,
-            "fold": 2,
-            "accuracy": 94.565216,
-            "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.132748,
             "depth": 2,
+            "leaves": 3,
+            "time": 0.124819
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.9456521600000001,
+            "fold": 2,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.174527
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.95652176,
             "fold": 3,
-            "accuracy": 95.652176,
-            "dataset": "bcw",
-            "leaves": 3
-        },
-        {
-            "time": 0.1599,
-            "depth": 1,
-            "fold": 4,
-            "accuracy": 94.565216,
-            "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.102451,
-            "depth": 1,
-            "fold": 5,
-            "accuracy": 95.789474,
-            "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.14284,
             "depth": 2,
-            "fold": 1,
-            "accuracy": 92.391304,
-            "dataset": "bcw",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.132748
         },
         {
-            "time": 0.129974,
-            "depth": 1,
-            "fold": 2,
-            "accuracy": 89.130432,
             "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.130304,
-            "depth": 1,
-            "fold": 3,
-            "accuracy": 96.739128,
-            "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.124881,
-            "depth": 5,
+            "accuracy": 0.9456521600000001,
             "fold": 4,
-            "accuracy": 94.565216,
-            "dataset": "bcw",
-            "leaves": 8
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.1599
         },
         {
-            "time": 0.172564,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.95789474,
             "fold": 5,
-            "accuracy": 95.789474,
-            "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.145734,
-            "depth": 5,
-            "fold": 1,
-            "accuracy": 94.565216,
-            "dataset": "bcw",
-            "leaves": 8
-        },
-        {
-            "time": 0.117524,
             "depth": 1,
-            "fold": 2,
-            "accuracy": 93.478264,
-            "dataset": "bcw",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.102451
         },
         {
-            "time": 0.143286,
+            "dataset": "bcw",
+            "accuracy": 0.9239130400000001,
+            "fold": 1,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.14284
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.89130432,
+            "fold": 2,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.129974
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.96739128,
+            "fold": 3,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.130304
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.9456521600000001,
+            "fold": 4,
+            "depth": 5,
+            "leaves": 8,
+            "time": 0.124881
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.95789474,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.172564
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.9456521600000001,
+            "fold": 1,
+            "depth": 5,
+            "leaves": 8,
+            "time": 0.145734
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.93478264,
+            "fold": 2,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.117524
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.8478260799999999,
+            "fold": 3,
             "depth": 7,
-            "fold": 3,
-            "accuracy": 84.782608,
-            "dataset": "bcw",
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.143286
         },
         {
-            "time": 0.147807,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.9456521600000001,
             "fold": 4,
-            "accuracy": 94.565216,
-            "dataset": "bcw",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.147807
         },
         {
-            "time": 0.146816,
+            "dataset": "bcw",
+            "accuracy": 0.93684212,
+            "fold": 5,
             "depth": 6,
-            "fold": 5,
-            "accuracy": 93.684212,
-            "dataset": "bcw",
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.146816
         },
         {
-            "time": 0.110568,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.96739128,
             "fold": 1,
-            "accuracy": 96.739128,
-            "dataset": "bcw",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.110568
         },
         {
-            "time": 0.11878,
-            "depth": 2,
+            "dataset": "bcw",
+            "accuracy": 0.9456521600000001,
             "fold": 2,
-            "accuracy": 94.565216,
-            "dataset": "bcw",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.11878
         },
         {
-            "time": 0.150582,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.9239130400000001,
             "fold": 3,
-            "accuracy": 92.391304,
-            "dataset": "bcw",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.150582
         },
         {
-            "time": 0.144241,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.96739128,
             "fold": 4,
-            "accuracy": 96.739128,
-            "dataset": "bcw",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.144241
         },
         {
-            "time": 0.162607,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.90526314,
             "fold": 5,
-            "accuracy": 90.526314,
-            "dataset": "bcw",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.162607
         },
         {
-            "time": 0.15168,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.9239130400000001,
             "fold": 1,
-            "accuracy": 92.391304,
-            "dataset": "bcw",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.15168
         },
         {
-            "time": 0.161892,
-            "depth": 1,
+            "dataset": "bcw",
+            "accuracy": 0.95652176,
             "fold": 2,
-            "accuracy": 95.652176,
-            "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.185727,
             "depth": 1,
-            "fold": 3,
-            "accuracy": 96.739128,
-            "dataset": "bcw",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.161892
         },
         {
-            "time": 0.136524,
-            "depth": 2,
+            "dataset": "bcw",
+            "accuracy": 0.96739128,
+            "fold": 3,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.185727
+        },
+        {
+            "dataset": "bcw",
+            "accuracy": 0.9456521600000001,
             "fold": 4,
-            "accuracy": 94.565216,
-            "dataset": "bcw",
-            "leaves": 3
-        },
-        {
-            "time": 0.152699,
-            "depth": 1,
-            "fold": 5,
-            "accuracy": 94.736839,
-            "dataset": "bcw",
-            "leaves": 2
-        },
-        {
-            "time": 0.532146,
-            "fold": 1,
-            "accuracy": 84.057968,
-            "dataset": "ca",
-            "depth": 1,
-            "leaves": 2
-        },
-        {
-            "time": 0.4074,
-            "fold": 2,
-            "accuracy": 79.710144,
-            "dataset": "ca",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.136524
         },
         {
-            "time": 0.422037,
-            "fold": 3,
-            "accuracy": 85.507248,
+            "dataset": "bcw",
+            "accuracy": 0.9473683900000001,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.152699
+        },
+        {
             "dataset": "ca",
+            "accuracy": 0.84057968,
+            "fold": 1,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.532146
+        },
+        {
+            "dataset": "ca",
+            "accuracy": 0.79710144,
+            "fold": 2,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.4074
+        },
+        {
+            "dataset": "ca",
+            "accuracy": 0.85507248,
+            "fold": 3,
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.422037
         },
         {
-            "time": 0.34216,
+            "dataset": "ca",
+            "accuracy": 0.8260869599999999,
             "fold": 4,
-            "accuracy": 82.608696,
-            "dataset": "ca",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.34216
         },
         {
-            "time": 0.523959,
+            "dataset": "ca",
+            "accuracy": 0.84057968,
             "fold": 5,
-            "accuracy": 84.057968,
-            "dataset": "ca",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.523959
         },
         {
-            "time": 0.381332,
+            "dataset": "ca",
+            "accuracy": 0.7898550400000001,
             "fold": 1,
-            "accuracy": 78.985504,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.381332
         },
         {
-            "time": 0.457137,
+            "dataset": "ca",
+            "accuracy": 0.84057968,
             "fold": 2,
-            "accuracy": 84.057968,
-            "dataset": "ca",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.457137
         },
         {
-            "time": 0.503465,
+            "dataset": "ca",
+            "accuracy": 0.81159424,
             "fold": 3,
-            "accuracy": 81.159424,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.503465
         },
         {
-            "time": 0.539564,
+            "dataset": "ca",
+            "accuracy": 0.884058,
             "fold": 4,
-            "accuracy": 88.4058,
-            "dataset": "ca",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.539564
         },
         {
-            "time": 0.471756,
-            "fold": 5,
-            "accuracy": 88.4058,
             "dataset": "ca",
+            "accuracy": 0.884058,
+            "fold": 5,
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.471756
         },
         {
-            "time": 0.475764,
+            "dataset": "ca",
+            "accuracy": 0.81159424,
             "fold": 1,
-            "accuracy": 81.159424,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.475764
         },
         {
-            "time": 0.48151,
+            "dataset": "ca",
+            "accuracy": 0.89855072,
             "fold": 2,
-            "accuracy": 89.855072,
-            "dataset": "ca",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.48151
         },
         {
-            "time": 0.453239,
+            "dataset": "ca",
+            "accuracy": 0.83333336,
             "fold": 3,
-            "accuracy": 83.333336,
-            "dataset": "ca",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.453239
         },
         {
-            "time": 0.491972,
+            "dataset": "ca",
+            "accuracy": 0.8695651999999999,
             "fold": 4,
-            "accuracy": 86.95652,
-            "dataset": "ca",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.491972
         },
         {
-            "time": 0.48699,
-            "fold": 5,
-            "accuracy": 81.884056,
             "dataset": "ca",
+            "accuracy": 0.81884056,
+            "fold": 5,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.48699
         },
         {
-            "time": 0.421697,
+            "dataset": "ca",
+            "accuracy": 0.8043478399999999,
             "fold": 1,
-            "accuracy": 80.434784,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.421697
         },
         {
-            "time": 0.501923,
+            "dataset": "ca",
+            "accuracy": 0.8695651999999999,
             "fold": 2,
-            "accuracy": 86.95652,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.501923
         },
         {
-            "time": 0.471594,
+            "dataset": "ca",
+            "accuracy": 0.884058,
             "fold": 3,
-            "accuracy": 88.4058,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.471594
         },
         {
-            "time": 0.400051,
+            "dataset": "ca",
+            "accuracy": 0.79710144,
             "fold": 4,
-            "accuracy": 79.710144,
-            "dataset": "ca",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.400051
         },
         {
-            "time": 0.532153,
-            "fold": 5,
-            "accuracy": 87.68116,
             "dataset": "ca",
+            "accuracy": 0.8768116,
+            "fold": 5,
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.532153
         },
         {
-            "time": 0.479954,
-            "fold": 1,
-            "accuracy": 83.333336,
             "dataset": "ca",
+            "accuracy": 0.83333336,
+            "fold": 1,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.479954
         },
         {
-            "time": 0.508198,
+            "dataset": "ca",
+            "accuracy": 0.8260869599999999,
             "fold": 2,
-            "accuracy": 82.608696,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.508198
         },
         {
-            "time": 0.541006,
+            "dataset": "ca",
+            "accuracy": 0.86231888,
             "fold": 3,
-            "accuracy": 86.231888,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.541006
         },
         {
-            "time": 0.463438,
+            "dataset": "ca",
+            "accuracy": 0.85507248,
             "fold": 4,
-            "accuracy": 85.507248,
-            "dataset": "ca",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.463438
         },
         {
-            "time": 0.398249,
-            "fold": 5,
-            "accuracy": 82.608696,
             "dataset": "ca",
+            "accuracy": 0.8260869599999999,
+            "fold": 5,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.398249
         },
         {
-            "time": 0.723395,
-            "depth": 8,
+            "dataset": "car",
+            "accuracy": 0.9043478399999999,
             "fold": 1,
-            "accuracy": 90.434784,
-            "dataset": "car",
-            "leaves": 16
-        },
-        {
-            "time": 0.89278,
             "depth": 8,
+            "leaves": 16,
+            "time": 0.723395
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.93333336,
             "fold": 2,
-            "accuracy": 93.333336,
-            "dataset": "car",
-            "leaves": 29
+            "depth": 8,
+            "leaves": 29,
+            "time": 0.89278
         },
         {
-            "time": 0.648752,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.89855072,
             "fold": 3,
-            "accuracy": 89.855072,
-            "dataset": "car",
-            "leaves": 33
-        },
-        {
-            "time": 0.850452,
             "depth": 9,
-            "fold": 4,
-            "accuracy": 93.333336,
-            "dataset": "car",
-            "leaves": 40
+            "leaves": 33,
+            "time": 0.648752
         },
         {
-            "time": 0.618863,
+            "dataset": "car",
+            "accuracy": 0.93333336,
+            "fold": 4,
+            "depth": 9,
+            "leaves": 40,
+            "time": 0.850452
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.94827583,
+            "fold": 5,
             "depth": 11,
-            "fold": 5,
-            "accuracy": 94.827583,
-            "dataset": "car",
-            "leaves": 37
+            "leaves": 37,
+            "time": 0.618863
         },
         {
-            "time": 0.764597,
+            "dataset": "car",
+            "accuracy": 0.9536232,
+            "fold": 1,
             "depth": 11,
-            "fold": 1,
-            "accuracy": 95.36232,
-            "dataset": "car",
-            "leaves": 37
+            "leaves": 37,
+            "time": 0.764597
         },
         {
-            "time": 0.58377,
-            "depth": 7,
+            "dataset": "car",
+            "accuracy": 0.91884056,
             "fold": 2,
-            "accuracy": 91.884056,
-            "dataset": "car",
-            "leaves": 17
+            "depth": 7,
+            "leaves": 17,
+            "time": 0.58377
         },
         {
-            "time": 0.624376,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.93623192,
             "fold": 3,
-            "accuracy": 93.623192,
-            "dataset": "car",
-            "leaves": 34
-        },
-        {
-            "time": 0.743918,
-            "depth": 10,
-            "fold": 4,
-            "accuracy": 93.333336,
-            "dataset": "car",
-            "leaves": 31
-        },
-        {
-            "time": 0.52816,
-            "depth": 7,
-            "fold": 5,
-            "accuracy": 93.103447,
-            "dataset": "car",
-            "leaves": 19
-        },
-        {
-            "time": 0.790284,
-            "depth": 7,
-            "fold": 1,
-            "accuracy": 90.434784,
-            "dataset": "car",
-            "leaves": 14
-        },
-        {
-            "time": 0.56971,
             "depth": 9,
-            "fold": 2,
-            "accuracy": 95.072464,
-            "dataset": "car",
-            "leaves": 23
+            "leaves": 34,
+            "time": 0.624376
         },
         {
-            "time": 0.777083,
+            "dataset": "car",
+            "accuracy": 0.93333336,
+            "fold": 4,
+            "depth": 10,
+            "leaves": 31,
+            "time": 0.743918
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.9310344700000001,
+            "fold": 5,
+            "depth": 7,
+            "leaves": 19,
+            "time": 0.52816
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.9043478399999999,
+            "fold": 1,
+            "depth": 7,
+            "leaves": 14,
+            "time": 0.790284
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.95072464,
+            "fold": 2,
+            "depth": 9,
+            "leaves": 23,
+            "time": 0.56971
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.92173912,
+            "fold": 3,
             "depth": 8,
-            "fold": 3,
-            "accuracy": 92.173912,
-            "dataset": "car",
-            "leaves": 25
+            "leaves": 25,
+            "time": 0.777083
         },
         {
-            "time": 0.668507,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.9304348,
             "fold": 4,
-            "accuracy": 93.04348,
-            "dataset": "car",
-            "leaves": 44
+            "depth": 9,
+            "leaves": 44,
+            "time": 0.668507
         },
         {
-            "time": 0.75851,
-            "depth": 10,
+            "dataset": "car",
+            "accuracy": 0.90229881,
             "fold": 5,
-            "accuracy": 90.229881,
-            "dataset": "car",
-            "leaves": 25
+            "depth": 10,
+            "leaves": 25,
+            "time": 0.75851
         },
         {
-            "time": 0.730287,
+            "dataset": "car",
+            "accuracy": 0.95072464,
+            "fold": 1,
             "depth": 11,
-            "fold": 1,
-            "accuracy": 95.072464,
-            "dataset": "car",
-            "leaves": 39
+            "leaves": 39,
+            "time": 0.730287
         },
         {
-            "time": 0.666994,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.94782608,
             "fold": 2,
-            "accuracy": 94.782608,
-            "dataset": "car",
-            "leaves": 26
+            "depth": 9,
+            "leaves": 26,
+            "time": 0.666994
         },
         {
-            "time": 0.729057,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.92173912,
             "fold": 3,
-            "accuracy": 92.173912,
-            "dataset": "car",
-            "leaves": 22
+            "depth": 9,
+            "leaves": 22,
+            "time": 0.729057
         },
         {
-            "time": 0.7342,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.93333336,
             "fold": 4,
-            "accuracy": 93.333336,
-            "dataset": "car",
-            "leaves": 23
+            "depth": 9,
+            "leaves": 23,
+            "time": 0.7342
         },
         {
-            "time": 0.81688,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.9224137899999999,
             "fold": 5,
-            "accuracy": 92.241379,
-            "dataset": "car",
-            "leaves": 42
+            "depth": 9,
+            "leaves": 42,
+            "time": 0.81688
         },
         {
-            "time": 0.835233,
-            "depth": 9,
+            "dataset": "car",
+            "accuracy": 0.9304348,
             "fold": 1,
-            "accuracy": 93.04348,
-            "dataset": "car",
-            "leaves": 30
-        },
-        {
-            "time": 0.615085,
-            "depth": 8,
-            "fold": 2,
-            "accuracy": 95.942032,
-            "dataset": "car",
-            "leaves": 23
-        },
-        {
-            "time": 0.583435,
-            "depth": 8,
-            "fold": 3,
-            "accuracy": 97.68116,
-            "dataset": "car",
-            "leaves": 23
-        },
-        {
-            "time": 0.728172,
-            "depth": 8,
-            "fold": 4,
-            "accuracy": 91.5942,
-            "dataset": "car",
-            "leaves": 16
-        },
-        {
-            "time": 0.862264,
             "depth": 9,
+            "leaves": 30,
+            "time": 0.835233
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.95942032,
+            "fold": 2,
+            "depth": 8,
+            "leaves": 23,
+            "time": 0.615085
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.9768116,
+            "fold": 3,
+            "depth": 8,
+            "leaves": 23,
+            "time": 0.583435
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.915942,
+            "fold": 4,
+            "depth": 8,
+            "leaves": 16,
+            "time": 0.728172
+        },
+        {
+            "dataset": "car",
+            "accuracy": 0.9310344700000001,
             "fold": 5,
-            "accuracy": 93.103447,
-            "dataset": "car",
-            "leaves": 26
-        },
-        {
-            "time": 0.864762,
-            "fold": 1,
-            "accuracy": 50.184502,
-            "dataset": "cmc",
-            "depth": 10,
-            "leaves": 38
-        },
-        {
-            "time": 0.881756,
-            "fold": 2,
-            "accuracy": 51.660515,
-            "dataset": "cmc",
-            "depth": 10,
-            "leaves": 34
-        },
-        {
-            "time": 0.969273,
-            "fold": 3,
-            "accuracy": 54.981548,
-            "dataset": "cmc",
             "depth": 9,
-            "leaves": 14
+            "leaves": 26,
+            "time": 0.862264
         },
         {
-            "time": 0.946035,
-            "fold": 4,
-            "accuracy": 54.981548,
             "dataset": "cmc",
+            "accuracy": 0.50184502,
+            "fold": 1,
+            "depth": 10,
+            "leaves": 38,
+            "time": 0.864762
+        },
+        {
+            "dataset": "cmc",
+            "accuracy": 0.51660515,
+            "fold": 2,
+            "depth": 10,
+            "leaves": 34,
+            "time": 0.881756
+        },
+        {
+            "dataset": "cmc",
+            "accuracy": 0.5498154799999999,
+            "fold": 3,
+            "depth": 9,
+            "leaves": 14,
+            "time": 0.969273
+        },
+        {
+            "dataset": "cmc",
+            "accuracy": 0.5498154799999999,
+            "fold": 4,
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.946035
         },
         {
-            "time": 0.90282,
-            "fold": 5,
-            "accuracy": 54.014599,
             "dataset": "cmc",
+            "accuracy": 0.54014599,
+            "fold": 5,
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.90282
         },
         {
-            "time": 0.873335,
-            "fold": 1,
-            "accuracy": 60.147602,
             "dataset": "cmc",
+            "accuracy": 0.60147602,
+            "fold": 1,
             "depth": 6,
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.873335
         },
         {
-            "time": 0.904713,
+            "dataset": "cmc",
+            "accuracy": 0.50553505,
             "fold": 2,
-            "accuracy": 50.553505,
-            "dataset": "cmc",
             "depth": 9,
-            "leaves": 17
+            "leaves": 17,
+            "time": 0.904713
         },
         {
-            "time": 0.914093,
-            "fold": 3,
-            "accuracy": 47.601475,
             "dataset": "cmc",
+            "accuracy": 0.47601475,
+            "fold": 3,
             "depth": 11,
-            "leaves": 40
+            "leaves": 40,
+            "time": 0.914093
         },
         {
-            "time": 0.974067,
+            "dataset": "cmc",
+            "accuracy": 0.56457565,
             "fold": 4,
-            "accuracy": 56.457565,
-            "dataset": "cmc",
             "depth": 9,
-            "leaves": 19
+            "leaves": 19,
+            "time": 0.974067
         },
         {
-            "time": 0.959109,
+            "dataset": "cmc",
+            "accuracy": 0.54744526,
             "fold": 5,
-            "accuracy": 54.744526,
-            "dataset": "cmc",
             "depth": 7,
-            "leaves": 13
+            "leaves": 13,
+            "time": 0.959109
         },
         {
-            "time": 0.926856,
+            "dataset": "cmc",
+            "accuracy": 0.55719559,
             "fold": 1,
-            "accuracy": 55.719559,
-            "dataset": "cmc",
             "depth": 8,
-            "leaves": 15
+            "leaves": 15,
+            "time": 0.926856
         },
         {
-            "time": 0.919226,
+            "dataset": "cmc",
+            "accuracy": 0.52029522,
             "fold": 2,
-            "accuracy": 52.029522,
-            "dataset": "cmc",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.919226
         },
         {
-            "time": 0.850116,
-            "fold": 3,
-            "accuracy": 55.719559,
             "dataset": "cmc",
+            "accuracy": 0.55719559,
+            "fold": 3,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.850116
         },
         {
-            "time": 0.79849,
+            "dataset": "cmc",
+            "accuracy": 0.49815497999999997,
             "fold": 4,
-            "accuracy": 49.815498,
-            "dataset": "cmc",
             "depth": 8,
-            "leaves": 15
+            "leaves": 15,
+            "time": 0.79849
         },
         {
-            "time": 0.826036,
+            "dataset": "cmc",
+            "accuracy": 0.57664234,
             "fold": 5,
-            "accuracy": 57.664234,
-            "dataset": "cmc",
             "depth": 7,
-            "leaves": 14
+            "leaves": 14,
+            "time": 0.826036
         },
         {
-            "time": 0.911222,
-            "fold": 1,
-            "accuracy": 50.184502,
             "dataset": "cmc",
+            "accuracy": 0.50184502,
+            "fold": 1,
             "depth": 11,
-            "leaves": 23
+            "leaves": 23,
+            "time": 0.911222
         },
         {
-            "time": 0.851145,
+            "dataset": "cmc",
+            "accuracy": 0.53874538,
             "fold": 2,
-            "accuracy": 53.874538,
-            "dataset": "cmc",
             "depth": 8,
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.851145
         },
         {
-            "time": 1.004256,
+            "dataset": "cmc",
+            "accuracy": 0.54612545,
             "fold": 3,
-            "accuracy": 54.612545,
-            "dataset": "cmc",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 1.004256
         },
         {
-            "time": 0.9053,
+            "dataset": "cmc",
+            "accuracy": 0.53874538,
             "fold": 4,
-            "accuracy": 53.874538,
-            "dataset": "cmc",
             "depth": 7,
-            "leaves": 11
+            "leaves": 11,
+            "time": 0.9053
         },
         {
-            "time": 0.974954,
+            "dataset": "cmc",
+            "accuracy": 0.53284672,
             "fold": 5,
-            "accuracy": 53.284672,
-            "dataset": "cmc",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.974954
         },
         {
-            "time": 0.820851,
-            "fold": 1,
-            "accuracy": 45.756458,
             "dataset": "cmc",
+            "accuracy": 0.45756458,
+            "fold": 1,
             "depth": 13,
-            "leaves": 106
+            "leaves": 106,
+            "time": 0.820851
         },
         {
-            "time": 0.997227,
+            "dataset": "cmc",
+            "accuracy": 0.5608856200000001,
             "fold": 2,
-            "accuracy": 56.088562,
-            "dataset": "cmc",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.997227
         },
         {
-            "time": 0.917592,
-            "fold": 3,
-            "accuracy": 47.970478,
             "dataset": "cmc",
+            "accuracy": 0.47970478,
+            "fold": 3,
             "depth": 15,
-            "leaves": 120
+            "leaves": 120,
+            "time": 0.917592
         },
         {
-            "time": 0.979377,
-            "fold": 4,
-            "accuracy": 52.398525,
             "dataset": "cmc",
+            "accuracy": 0.52398525,
+            "fold": 4,
             "depth": 10,
-            "leaves": 22
+            "leaves": 22,
+            "time": 0.979377
         },
         {
-            "time": 0.928435,
-            "fold": 5,
-            "accuracy": 51.824818,
             "dataset": "cmc",
+            "accuracy": 0.5182481800000001,
+            "fold": 5,
             "depth": 16,
-            "leaves": 71
+            "leaves": 71,
+            "time": 0.928435
         },
         {
-            "time": 4.185694,
-            "depth": 7,
+            "dataset": "ctg",
+            "accuracy": 0.7985781900000001,
             "fold": 1,
-            "accuracy": 79.857819,
-            "dataset": "ctg",
-            "leaves": 15
+            "depth": 7,
+            "leaves": 15,
+            "time": 4.185694
         },
         {
-            "time": 3.776904,
-            "depth": 7,
+            "dataset": "ctg",
+            "accuracy": 0.76540283,
             "fold": 2,
-            "accuracy": 76.540283,
-            "dataset": "ctg",
-            "leaves": 22
-        },
-        {
-            "time": 3.955981,
-            "depth": 8,
-            "fold": 3,
-            "accuracy": 85.545021,
-            "dataset": "ctg",
-            "leaves": 24
-        },
-        {
-            "time": 3.77997,
-            "depth": 9,
-            "fold": 4,
-            "accuracy": 79.857819,
-            "dataset": "ctg",
-            "leaves": 52
-        },
-        {
-            "time": 3.892018,
             "depth": 7,
-            "fold": 5,
-            "accuracy": 82.07547,
-            "dataset": "ctg",
-            "leaves": 21
+            "leaves": 22,
+            "time": 3.776904
         },
         {
-            "time": 3.402235,
+            "dataset": "ctg",
+            "accuracy": 0.8554502100000001,
+            "fold": 3,
+            "depth": 8,
+            "leaves": 24,
+            "time": 3.955981
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.7985781900000001,
+            "fold": 4,
+            "depth": 9,
+            "leaves": 52,
+            "time": 3.77997
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.8207547,
+            "fold": 5,
+            "depth": 7,
+            "leaves": 21,
+            "time": 3.892018
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.77725121,
+            "fold": 1,
             "depth": 11,
-            "fold": 1,
-            "accuracy": 77.725121,
-            "dataset": "ctg",
-            "leaves": 87
+            "leaves": 87,
+            "time": 3.402235
         },
         {
-            "time": 4.069831,
+            "dataset": "ctg",
+            "accuracy": 0.79383888,
+            "fold": 2,
             "depth": 5,
-            "fold": 2,
-            "accuracy": 79.383888,
-            "dataset": "ctg",
-            "leaves": 9
+            "leaves": 9,
+            "time": 4.069831
         },
         {
-            "time": 3.886354,
-            "depth": 7,
+            "dataset": "ctg",
+            "accuracy": 0.7606635300000001,
             "fold": 3,
-            "accuracy": 76.066353,
-            "dataset": "ctg",
-            "leaves": 11
+            "depth": 7,
+            "leaves": 11,
+            "time": 3.886354
         },
         {
-            "time": 4.289017,
+            "dataset": "ctg",
+            "accuracy": 0.78199051,
+            "fold": 4,
             "depth": 5,
-            "fold": 4,
-            "accuracy": 78.199051,
-            "dataset": "ctg",
-            "leaves": 10
+            "leaves": 10,
+            "time": 4.289017
         },
         {
-            "time": 4.086477,
+            "dataset": "ctg",
+            "accuracy": 0.83254715,
+            "fold": 5,
             "depth": 9,
-            "fold": 5,
-            "accuracy": 83.254715,
-            "dataset": "ctg",
-            "leaves": 29
+            "leaves": 29,
+            "time": 4.086477
         },
         {
-            "time": 3.838402,
-            "depth": 7,
+            "dataset": "ctg",
+            "accuracy": 0.78672989,
             "fold": 1,
-            "accuracy": 78.672989,
-            "dataset": "ctg",
-            "leaves": 19
+            "depth": 7,
+            "leaves": 19,
+            "time": 3.838402
         },
         {
-            "time": 4.006208,
-            "depth": 7,
+            "dataset": "ctg",
+            "accuracy": 0.80805687,
             "fold": 2,
-            "accuracy": 80.805687,
-            "dataset": "ctg",
-            "leaves": 19
-        },
-        {
-            "time": 3.532916,
             "depth": 7,
+            "leaves": 19,
+            "time": 4.006208
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.8104265599999999,
             "fold": 3,
-            "accuracy": 81.042656,
-            "dataset": "ctg",
-            "leaves": 30
+            "depth": 7,
+            "leaves": 30,
+            "time": 3.532916
         },
         {
-            "time": 4.017288,
-            "depth": 6,
+            "dataset": "ctg",
+            "accuracy": 0.7914691899999999,
             "fold": 4,
-            "accuracy": 79.146919,
-            "dataset": "ctg",
-            "leaves": 13
+            "depth": 6,
+            "leaves": 13,
+            "time": 4.017288
         },
         {
-            "time": 3.963839,
-            "depth": 8,
+            "dataset": "ctg",
+            "accuracy": 0.77122643,
             "fold": 5,
-            "accuracy": 77.122643,
-            "dataset": "ctg",
-            "leaves": 40
-        },
-        {
-            "time": 3.77034,
-            "depth": 7,
-            "fold": 1,
-            "accuracy": 83.175354,
-            "dataset": "ctg",
-            "leaves": 16
-        },
-        {
-            "time": 4.006938,
             "depth": 8,
-            "fold": 2,
-            "accuracy": 78.90995,
-            "dataset": "ctg",
-            "leaves": 38
+            "leaves": 40,
+            "time": 3.963839
         },
         {
-            "time": 3.625251,
-            "depth": 6,
-            "fold": 3,
-            "accuracy": 76.777252,
             "dataset": "ctg",
-            "leaves": 15
-        },
-        {
-            "time": 3.629264,
+            "accuracy": 0.83175354,
+            "fold": 1,
             "depth": 7,
-            "fold": 4,
-            "accuracy": 81.753555,
-            "dataset": "ctg",
-            "leaves": 15
+            "leaves": 16,
+            "time": 3.77034
         },
         {
-            "time": 3.884129,
+            "dataset": "ctg",
+            "accuracy": 0.7890995,
+            "fold": 2,
+            "depth": 8,
+            "leaves": 38,
+            "time": 4.006938
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.7677725200000001,
+            "fold": 3,
+            "depth": 6,
+            "leaves": 15,
+            "time": 3.625251
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.8175355500000001,
+            "fold": 4,
+            "depth": 7,
+            "leaves": 15,
+            "time": 3.629264
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.8419811199999999,
+            "fold": 5,
             "depth": 9,
-            "fold": 5,
-            "accuracy": 84.198112,
-            "dataset": "ctg",
-            "leaves": 44
+            "leaves": 44,
+            "time": 3.884129
         },
         {
-            "time": 3.919785,
-            "depth": 7,
+            "dataset": "ctg",
+            "accuracy": 0.7962085000000001,
             "fold": 1,
-            "accuracy": 79.62085,
-            "dataset": "ctg",
-            "leaves": 22
+            "depth": 7,
+            "leaves": 22,
+            "time": 3.919785
         },
         {
-            "time": 4.152088,
+            "dataset": "ctg",
+            "accuracy": 0.77725121,
+            "fold": 2,
             "depth": 16,
-            "fold": 2,
-            "accuracy": 77.725121,
-            "dataset": "ctg",
-            "leaves": 96
+            "leaves": 96,
+            "time": 4.152088
         },
         {
-            "time": 3.925114,
-            "depth": 7,
+            "dataset": "ctg",
+            "accuracy": 0.7914691899999999,
             "fold": 3,
-            "accuracy": 79.146919,
-            "dataset": "ctg",
-            "leaves": 33
-        },
-        {
-            "time": 4.138497,
             "depth": 7,
-            "fold": 4,
-            "accuracy": 79.383888,
-            "dataset": "ctg",
-            "leaves": 24
+            "leaves": 33,
+            "time": 3.925114
         },
         {
-            "time": 3.388705,
+            "dataset": "ctg",
+            "accuracy": 0.79383888,
+            "fold": 4,
+            "depth": 7,
+            "leaves": 24,
+            "time": 4.138497
+        },
+        {
+            "dataset": "ctg",
+            "accuracy": 0.80896225,
+            "fold": 5,
             "depth": 6,
-            "fold": 5,
-            "accuracy": 80.896225,
-            "dataset": "ctg",
-            "leaves": 15
+            "leaves": 15,
+            "time": 3.388705
         },
         {
-            "time": 16.004917,
+            "dataset": "cvf",
+            "accuracy": 0.75508133,
             "fold": 1,
-            "accuracy": 75.508133,
-            "dataset": "cvf",
             "depth": 10,
-            "leaves": 56
+            "leaves": 56,
+            "time": 16.004917
         },
         {
-            "time": 15.797971,
+            "dataset": "cvf",
+            "accuracy": 0.7667682600000001,
             "fold": 2,
-            "accuracy": 76.676826,
-            "dataset": "cvf",
             "depth": 10,
-            "leaves": 32
+            "leaves": 32,
+            "time": 15.797971
         },
         {
-            "time": 16.094519,
-            "fold": 3,
-            "accuracy": 74.847565,
             "dataset": "cvf",
+            "accuracy": 0.74847565,
+            "fold": 3,
             "depth": 12,
-            "leaves": 62
+            "leaves": 62,
+            "time": 16.094519
         },
         {
-            "time": 16.372181,
+            "dataset": "cvf",
+            "accuracy": 0.75254066,
             "fold": 4,
-            "accuracy": 75.254066,
-            "dataset": "cvf",
             "depth": 7,
-            "leaves": 22
+            "leaves": 22,
+            "time": 16.372181
         },
         {
-            "time": 16.675076,
+            "dataset": "cvf",
+            "accuracy": 0.77727043,
             "fold": 5,
-            "accuracy": 77.727043,
-            "dataset": "cvf",
             "depth": 7,
-            "leaves": 13
+            "leaves": 13,
+            "time": 16.675076
         },
         {
-            "time": 14.80382,
+            "dataset": "cvf",
+            "accuracy": 0.73882111,
             "fold": 1,
-            "accuracy": 73.882111,
-            "dataset": "cvf",
             "depth": 9,
-            "leaves": 61
+            "leaves": 61,
+            "time": 14.80382
         },
         {
-            "time": 14.185382,
-            "fold": 2,
-            "accuracy": 76.473579,
             "dataset": "cvf",
+            "accuracy": 0.76473579,
+            "fold": 2,
             "depth": 11,
-            "leaves": 46
+            "leaves": 46,
+            "time": 14.185382
         },
         {
-            "time": 14.892505,
-            "fold": 3,
-            "accuracy": 75.457314,
             "dataset": "cvf",
+            "accuracy": 0.75457314,
+            "fold": 3,
             "depth": 9,
-            "leaves": 34
+            "leaves": 34,
+            "time": 14.892505
         },
         {
-            "time": 15.22143,
+            "dataset": "cvf",
+            "accuracy": 0.74695122,
             "fold": 4,
-            "accuracy": 74.695122,
-            "dataset": "cvf",
             "depth": 10,
-            "leaves": 84
+            "leaves": 84,
+            "time": 15.22143
         },
         {
-            "time": 15.660991,
+            "dataset": "cvf",
+            "accuracy": 0.7625570700000001,
             "fold": 5,
-            "accuracy": 76.255707,
-            "dataset": "cvf",
             "depth": 8,
-            "leaves": 18
+            "leaves": 18,
+            "time": 15.660991
         },
         {
-            "time": 16.045021,
+            "dataset": "cvf",
+            "accuracy": 0.75152435,
             "fold": 1,
-            "accuracy": 75.152435,
-            "dataset": "cvf",
             "depth": 9,
-            "leaves": 41
+            "leaves": 41,
+            "time": 16.045021
         },
         {
-            "time": 17.074617,
+            "dataset": "cvf",
+            "accuracy": 0.75660568,
             "fold": 2,
-            "accuracy": 75.660568,
-            "dataset": "cvf",
             "depth": 10,
-            "leaves": 88
+            "leaves": 88,
+            "time": 17.074617
         },
         {
-            "time": 16.349415,
-            "fold": 3,
-            "accuracy": 75.914635,
             "dataset": "cvf",
+            "accuracy": 0.7591463500000001,
+            "fold": 3,
             "depth": 12,
-            "leaves": 64
+            "leaves": 64,
+            "time": 16.349415
         },
         {
-            "time": 16.837893,
+            "dataset": "cvf",
+            "accuracy": 0.74796745,
             "fold": 4,
-            "accuracy": 74.796745,
-            "dataset": "cvf",
             "depth": 8,
-            "leaves": 26
+            "leaves": 26,
+            "time": 16.837893
         },
         {
-            "time": 14.857255,
+            "dataset": "cvf",
+            "accuracy": 0.7762557200000001,
             "fold": 5,
-            "accuracy": 77.625572,
-            "dataset": "cvf",
             "depth": 9,
-            "leaves": 30
+            "leaves": 30,
+            "time": 14.857255
         },
         {
-            "time": 17.890411,
-            "fold": 1,
-            "accuracy": 75.660568,
             "dataset": "cvf",
+            "accuracy": 0.75660568,
+            "fold": 1,
             "depth": 7,
-            "leaves": 15
+            "leaves": 15,
+            "time": 17.890411
         },
         {
-            "time": 16.349394,
+            "dataset": "cvf",
+            "accuracy": 0.76321136,
             "fold": 2,
-            "accuracy": 76.321136,
-            "dataset": "cvf",
             "depth": 9,
-            "leaves": 27
+            "leaves": 27,
+            "time": 16.349394
         },
         {
-            "time": 16.134792,
+            "dataset": "cvf",
+            "accuracy": 0.79014229,
             "fold": 3,
-            "accuracy": 79.014229,
-            "dataset": "cvf",
             "depth": 8,
-            "leaves": 17
+            "leaves": 17,
+            "time": 16.134792
         },
         {
-            "time": 14.454353,
+            "dataset": "cvf",
+            "accuracy": 0.73780487,
             "fold": 4,
-            "accuracy": 73.780487,
-            "dataset": "cvf",
             "depth": 7,
-            "leaves": 26
+            "leaves": 26,
+            "time": 14.454353
         },
         {
-            "time": 14.737363,
+            "dataset": "cvf",
+            "accuracy": 0.7630644200000001,
             "fold": 5,
-            "accuracy": 76.306442,
-            "dataset": "cvf",
             "depth": 11,
-            "leaves": 55
+            "leaves": 55,
+            "time": 14.737363
         },
         {
-            "time": 16.059727,
-            "fold": 1,
-            "accuracy": 75.304878,
             "dataset": "cvf",
+            "accuracy": 0.75304878,
+            "fold": 1,
             "depth": 5,
-            "leaves": 7
+            "leaves": 7,
+            "time": 16.059727
         },
         {
-            "time": 17.733234,
-            "fold": 2,
-            "accuracy": 77.134148,
             "dataset": "cvf",
+            "accuracy": 0.7713414799999999,
+            "fold": 2,
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 17.733234
         },
         {
-            "time": 16.430687,
+            "dataset": "cvf",
+            "accuracy": 0.75558945,
             "fold": 3,
-            "accuracy": 75.558945,
-            "dataset": "cvf",
             "depth": 7,
-            "leaves": 14
+            "leaves": 14,
+            "time": 16.430687
         },
         {
-            "time": 14.462003,
+            "dataset": "cvf",
+            "accuracy": 0.7540650200000001,
             "fold": 4,
-            "accuracy": 75.406502,
-            "dataset": "cvf",
             "depth": 10,
-            "leaves": 53
+            "leaves": 53,
+            "time": 14.462003
         },
         {
-            "time": 16.822409,
+            "dataset": "cvf",
+            "accuracy": 0.74530693,
             "fold": 5,
-            "accuracy": 74.530693,
-            "dataset": "cvf",
             "depth": 10,
-            "leaves": 30
+            "leaves": 30,
+            "time": 16.822409
         },
         {
-            "time": 133.976608,
-            "depth": 6,
+            "dataset": "eb",
+            "accuracy": 0.6502839699999999,
             "fold": 1,
-            "accuracy": 65.028397,
-            "dataset": "eb",
-            "leaves": 25
+            "depth": 6,
+            "leaves": 25,
+            "time": 133.976608
         },
         {
-            "time": 132.732681,
-            "depth": 5,
+            "dataset": "eb",
+            "accuracy": 0.6508300800000001,
             "fold": 2,
-            "accuracy": 65.083008,
-            "dataset": "eb",
-            "leaves": 24
+            "depth": 5,
+            "leaves": 24,
+            "time": 132.732681
         },
         {
-            "time": 119.956383,
+            "dataset": "eb",
+            "accuracy": 0.65323288,
+            "fold": 3,
             "depth": 21,
-            "fold": 3,
-            "accuracy": 65.323288,
-            "dataset": "eb",
-            "leaves": 139
+            "leaves": 139,
+            "time": 119.956383
         },
         {
-            "time": 123.273125,
-            "depth": 49,
+            "dataset": "eb",
+            "accuracy": 0.6558541099999999,
             "fold": 4,
-            "accuracy": 65.585411,
-            "dataset": "eb",
-            "leaves": 3955
+            "depth": 49,
+            "leaves": 3955,
+            "time": 123.273125
         },
         {
-            "time": 120.096504,
+            "dataset": "eb",
+            "accuracy": 0.6521786500000001,
+            "fold": 5,
             "depth": 39,
-            "fold": 5,
-            "accuracy": 65.217865,
-            "dataset": "eb",
-            "leaves": 440
+            "leaves": 440,
+            "time": 120.096504
         },
         {
-            "time": 131.069031,
-            "depth": 49,
+            "dataset": "eb",
+            "accuracy": 0.6615334300000001,
             "fold": 1,
-            "accuracy": 66.153343,
-            "dataset": "eb",
-            "leaves": 526
+            "depth": 49,
+            "leaves": 526,
+            "time": 131.069031
         },
         {
-            "time": 123.862976,
+            "dataset": "eb",
+            "accuracy": 0.65399734,
+            "fold": 2,
             "depth": 35,
-            "fold": 2,
-            "accuracy": 65.399734,
-            "dataset": "eb",
-            "leaves": 397
+            "leaves": 397,
+            "time": 123.862976
         },
         {
-            "time": 129.870483,
-            "depth": 50,
+            "dataset": "eb",
+            "accuracy": 0.6529052,
             "fold": 3,
-            "accuracy": 65.29052,
-            "dataset": "eb",
-            "leaves": 1344
-        },
-        {
-            "time": 128.009491,
-            "depth": 21,
-            "fold": 4,
-            "accuracy": 65.661858,
-            "dataset": "eb",
-            "leaves": 110
-        },
-        {
-            "time": 131.20549,
-            "depth": 49,
-            "fold": 5,
-            "accuracy": 65.381676,
-            "dataset": "eb",
-            "leaves": 342
-        },
-        {
-            "time": 142.636734,
             "depth": 50,
+            "leaves": 1344,
+            "time": 129.870483
+        },
+        {
+            "dataset": "eb",
+            "accuracy": 0.65661858,
+            "fold": 4,
+            "depth": 21,
+            "leaves": 110,
+            "time": 128.009491
+        },
+        {
+            "dataset": "eb",
+            "accuracy": 0.65381676,
+            "fold": 5,
+            "depth": 49,
+            "leaves": 342,
+            "time": 131.20549
+        },
+        {
+            "dataset": "eb",
+            "accuracy": 0.6514853700000001,
             "fold": 1,
-            "accuracy": 65.148537,
-            "dataset": "eb",
-            "leaves": 1711
+            "depth": 50,
+            "leaves": 1711,
+            "time": 142.636734
         },
         {
-            "time": 134.902176,
-            "depth": 30,
+            "dataset": "eb",
+            "accuracy": 0.65781998,
             "fold": 2,
-            "accuracy": 65.781998,
-            "dataset": "eb",
-            "leaves": 122
+            "depth": 30,
+            "leaves": 122,
+            "time": 134.902176
         },
         {
-            "time": 127.461525,
+            "dataset": "eb",
+            "accuracy": 0.65541718,
+            "fold": 3,
             "depth": 27,
-            "fold": 3,
-            "accuracy": 65.541718,
-            "dataset": "eb",
-            "leaves": 129
+            "leaves": 129,
+            "time": 127.461525
         },
         {
-            "time": 131.933685,
-            "depth": 50,
+            "dataset": "eb",
+            "accuracy": 0.6544342799999999,
             "fold": 4,
-            "accuracy": 65.443428,
-            "dataset": "eb",
-            "leaves": 5445
-        },
-        {
-            "time": 120.859245,
             "depth": 50,
-            "fold": 5,
-            "accuracy": 64.923012,
-            "dataset": "eb",
-            "leaves": 600
+            "leaves": 5445,
+            "time": 131.933685
         },
         {
-            "time": 121.793808,
+            "dataset": "eb",
+            "accuracy": 0.64923012,
+            "fold": 5,
+            "depth": 50,
+            "leaves": 600,
+            "time": 120.859245
+        },
+        {
+            "dataset": "eb",
+            "accuracy": 0.6582569100000001,
+            "fold": 1,
             "depth": 47,
-            "fold": 1,
-            "accuracy": 65.825691,
-            "dataset": "eb",
-            "leaves": 861
+            "leaves": 861,
+            "time": 121.793808
         },
         {
-            "time": 135.229919,
-            "depth": 50,
+            "dataset": "eb",
+            "accuracy": 0.65257751,
             "fold": 2,
-            "accuracy": 65.257751,
-            "dataset": "eb",
-            "leaves": 540
+            "depth": 50,
+            "leaves": 540,
+            "time": 135.229919
         },
         {
-            "time": 115.693916,
-            "depth": 30,
+            "dataset": "eb",
+            "accuracy": 0.65760155,
             "fold": 3,
-            "accuracy": 65.760155,
-            "dataset": "eb",
-            "leaves": 267
+            "depth": 30,
+            "leaves": 267,
+            "time": 115.693916
         },
         {
-            "time": 117.100601,
-            "depth": 30,
+            "dataset": "eb",
+            "accuracy": 0.6447138200000001,
             "fold": 4,
-            "accuracy": 64.471382,
-            "dataset": "eb",
-            "leaves": 291
+            "depth": 30,
+            "leaves": 291,
+            "time": 117.100601
         },
         {
-            "time": 130.34671,
-            "depth": 14,
+            "dataset": "eb",
+            "accuracy": 0.6535983299999999,
             "fold": 5,
-            "accuracy": 65.359833,
-            "dataset": "eb",
-            "leaves": 78
+            "depth": 14,
+            "leaves": 78,
+            "time": 130.34671
         },
         {
-            "time": 125.796371,
-            "depth": 22,
+            "dataset": "eb",
+            "accuracy": 0.6589122000000001,
             "fold": 1,
-            "accuracy": 65.89122,
-            "dataset": "eb",
-            "leaves": 135
+            "depth": 22,
+            "leaves": 135,
+            "time": 125.796371
         },
         {
-            "time": 131.599274,
-            "depth": 50,
+            "dataset": "eb",
+            "accuracy": 0.66437309,
             "fold": 2,
-            "accuracy": 66.437309,
-            "dataset": "eb",
-            "leaves": 2445
-        },
-        {
-            "time": 124.352318,
             "depth": 50,
-            "fold": 3,
-            "accuracy": 65.836609,
-            "dataset": "eb",
-            "leaves": 3764
+            "leaves": 2445,
+            "time": 131.599274
         },
         {
-            "time": 127.530663,
+            "dataset": "eb",
+            "accuracy": 0.6583660899999999,
+            "fold": 3,
+            "depth": 50,
+            "leaves": 3764,
+            "time": 124.352318
+        },
+        {
+            "dataset": "eb",
+            "accuracy": 0.6582569100000001,
+            "fold": 4,
             "depth": 49,
-            "fold": 4,
-            "accuracy": 65.825691,
-            "dataset": "eb",
-            "leaves": 1260
+            "leaves": 1260,
+            "time": 127.530663
         },
         {
-            "time": 124.404617,
+            "dataset": "eb",
+            "accuracy": 0.6567652900000001,
+            "fold": 5,
             "depth": 40,
-            "fold": 5,
-            "accuracy": 65.676529,
-            "dataset": "eb",
-            "leaves": 388
+            "leaves": 388,
+            "time": 124.404617
         },
         {
-            "time": 15.331679,
+            "dataset": "eye",
+            "accuracy": 0.8494659400000001,
             "fold": 1,
-            "accuracy": 84.946594,
-            "dataset": "eye",
             "depth": 17,
-            "leaves": 356
+            "leaves": 356,
+            "time": 15.331679
         },
         {
-            "time": 14.653937,
-            "fold": 2,
-            "accuracy": 85.04673,
             "dataset": "eye",
+            "accuracy": 0.8504672999999999,
+            "fold": 2,
             "depth": 19,
-            "leaves": 433
+            "leaves": 433,
+            "time": 14.653937
         },
         {
-            "time": 16.139347,
+            "dataset": "eye",
+            "accuracy": 0.8444593,
             "fold": 3,
-            "accuracy": 84.44593,
-            "dataset": "eye",
             "depth": 21,
-            "leaves": 383
+            "leaves": 383,
+            "time": 16.139347
         },
         {
-            "time": 15.353644,
+            "dataset": "eye",
+            "accuracy": 0.84546059,
             "fold": 4,
-            "accuracy": 84.546059,
-            "dataset": "eye",
             "depth": 17,
-            "leaves": 287
+            "leaves": 287,
+            "time": 15.353644
         },
         {
-            "time": 16.552357,
+            "dataset": "eye",
+            "accuracy": 0.8421228000000001,
             "fold": 5,
-            "accuracy": 84.21228,
-            "dataset": "eye",
             "depth": 21,
-            "leaves": 439
+            "leaves": 439,
+            "time": 16.552357
         },
         {
-            "time": 15.208263,
+            "dataset": "eye",
+            "accuracy": 0.8267690299999999,
             "fold": 1,
-            "accuracy": 82.676903,
-            "dataset": "eye",
             "depth": 20,
-            "leaves": 210
+            "leaves": 210,
+            "time": 15.208263
         },
         {
-            "time": 15.885275,
-            "fold": 2,
-            "accuracy": 84.712952,
             "dataset": "eye",
+            "accuracy": 0.84712952,
+            "fold": 2,
             "depth": 26,
-            "leaves": 699
+            "leaves": 699,
+            "time": 15.885275
         },
         {
-            "time": 15.546627,
+            "dataset": "eye",
+            "accuracy": 0.8294392399999999,
             "fold": 3,
-            "accuracy": 82.943924,
-            "dataset": "eye",
             "depth": 20,
-            "leaves": 319
+            "leaves": 319,
+            "time": 15.546627
         },
         {
-            "time": 15.485655,
+            "dataset": "eye",
+            "accuracy": 0.85013351,
             "fold": 4,
-            "accuracy": 85.013351,
-            "dataset": "eye",
             "depth": 19,
-            "leaves": 386
+            "leaves": 386,
+            "time": 15.485655
         },
         {
-            "time": 16.120104,
+            "dataset": "eye",
+            "accuracy": 0.8591455100000001,
             "fold": 5,
-            "accuracy": 85.914551,
-            "dataset": "eye",
             "depth": 19,
-            "leaves": 325
+            "leaves": 325,
+            "time": 16.120104
         },
         {
-            "time": 15.531169,
-            "fold": 1,
-            "accuracy": 84.879837,
             "dataset": "eye",
+            "accuracy": 0.8487983699999999,
+            "fold": 1,
             "depth": 18,
-            "leaves": 384
+            "leaves": 384,
+            "time": 15.531169
         },
         {
-            "time": 16.961176,
+            "dataset": "eye",
+            "accuracy": 0.85680908,
             "fold": 2,
-            "accuracy": 85.680908,
-            "dataset": "eye",
             "depth": 21,
-            "leaves": 396
+            "leaves": 396,
+            "time": 16.961176
         },
         {
-            "time": 15.481921,
-            "fold": 3,
-            "accuracy": 84.74633,
             "dataset": "eye",
+            "accuracy": 0.8474633,
+            "fold": 3,
             "depth": 19,
-            "leaves": 230
+            "leaves": 230,
+            "time": 15.481921
         },
         {
-            "time": 14.618889,
+            "dataset": "eye",
+            "accuracy": 0.8461281599999999,
             "fold": 4,
-            "accuracy": 84.612816,
-            "dataset": "eye",
             "depth": 21,
-            "leaves": 431
+            "leaves": 431,
+            "time": 14.618889
         },
         {
-            "time": 14.466249,
-            "fold": 5,
-            "accuracy": 84.779709,
             "dataset": "eye",
+            "accuracy": 0.8477970899999999,
+            "fold": 5,
             "depth": 16,
-            "leaves": 351
+            "leaves": 351,
+            "time": 14.466249
         },
         {
-            "time": 14.940611,
+            "dataset": "eye",
+            "accuracy": 0.85480644,
             "fold": 1,
-            "accuracy": 85.480644,
-            "dataset": "eye",
             "depth": 20,
-            "leaves": 385
+            "leaves": 385,
+            "time": 14.940611
         },
         {
-            "time": 16.279745,
+            "dataset": "eye",
+            "accuracy": 0.8474633,
             "fold": 2,
-            "accuracy": 84.74633,
-            "dataset": "eye",
             "depth": 21,
-            "leaves": 392
+            "leaves": 392,
+            "time": 16.279745
         },
         {
-            "time": 15.482297,
+            "dataset": "eye",
+            "accuracy": 0.84913216,
             "fold": 3,
-            "accuracy": 84.913216,
-            "dataset": "eye",
             "depth": 24,
-            "leaves": 668
+            "leaves": 668,
+            "time": 15.482297
         },
         {
-            "time": 15.805758,
+            "dataset": "eye",
+            "accuracy": 0.86381844,
             "fold": 4,
-            "accuracy": 86.381844,
-            "dataset": "eye",
             "depth": 24,
-            "leaves": 636
+            "leaves": 636,
+            "time": 15.805758
         },
         {
-            "time": 16.441399,
-            "fold": 5,
-            "accuracy": 86.014687,
             "dataset": "eye",
+            "accuracy": 0.8601468699999999,
+            "fold": 5,
             "depth": 22,
-            "leaves": 292
+            "leaves": 292,
+            "time": 16.441399
         },
         {
-            "time": 15.557224,
+            "dataset": "eye",
+            "accuracy": 0.84379173,
             "fold": 1,
-            "accuracy": 84.379173,
-            "dataset": "eye",
             "depth": 23,
-            "leaves": 598
+            "leaves": 598,
+            "time": 15.557224
         },
         {
-            "time": 16.205313,
+            "dataset": "eye",
+            "accuracy": 0.83978638,
             "fold": 2,
-            "accuracy": 83.978638,
-            "dataset": "eye",
             "depth": 23,
-            "leaves": 455
+            "leaves": 455,
+            "time": 16.205313
         },
         {
-            "time": 14.949949,
-            "fold": 3,
-            "accuracy": 83.711617,
             "dataset": "eye",
+            "accuracy": 0.83711617,
+            "fold": 3,
             "depth": 20,
-            "leaves": 407
+            "leaves": 407,
+            "time": 14.949949
         },
         {
-            "time": 15.399296,
-            "fold": 4,
-            "accuracy": 83.91188,
             "dataset": "eye",
+            "accuracy": 0.8391187999999999,
+            "fold": 4,
             "depth": 21,
-            "leaves": 632
+            "leaves": 632,
+            "time": 15.399296
         },
         {
-            "time": 15.776134,
-            "fold": 5,
-            "accuracy": 85.280373,
             "dataset": "eye",
+            "accuracy": 0.85280373,
+            "fold": 5,
             "depth": 23,
-            "leaves": 677
+            "leaves": 677,
+            "time": 15.776134
         },
         {
-            "time": 0.347842,
+            "dataset": "ger",
+            "accuracy": 0.935,
+            "fold": 1,
             "depth": 7,
-            "fold": 1,
-            "accuracy": 93.5,
-            "dataset": "ger",
-            "leaves": 15
+            "leaves": 15,
+            "time": 0.347842
         },
         {
-            "time": 0.382455,
-            "depth": 3,
+            "dataset": "ger",
+            "accuracy": 0.95,
             "fold": 2,
-            "accuracy": 95.0,
-            "dataset": "ger",
-            "leaves": 4
-        },
-        {
-            "time": 0.296503,
-            "depth": 1,
-            "fold": 3,
-            "accuracy": 97.5,
-            "dataset": "ger",
-            "leaves": 2
-        },
-        {
-            "time": 0.30774,
-            "depth": 1,
-            "fold": 4,
-            "accuracy": 89.0,
-            "dataset": "ger",
-            "leaves": 2
-        },
-        {
-            "time": 0.328806,
-            "depth": 2,
-            "fold": 5,
-            "accuracy": 95.5,
-            "dataset": "ger",
-            "leaves": 3
-        },
-        {
-            "time": 0.218576,
-            "depth": 1,
-            "fold": 1,
-            "accuracy": 94.5,
-            "dataset": "ger",
-            "leaves": 2
-        },
-        {
-            "time": 0.278718,
-            "depth": 2,
-            "fold": 2,
-            "accuracy": 92.5,
-            "dataset": "ger",
-            "leaves": 3
-        },
-        {
-            "time": 0.279707,
-            "depth": 2,
-            "fold": 3,
-            "accuracy": 95.0,
-            "dataset": "ger",
-            "leaves": 3
-        },
-        {
-            "time": 0.323982,
-            "depth": 1,
-            "fold": 4,
-            "accuracy": 97.5,
-            "dataset": "ger",
-            "leaves": 2
-        },
-        {
-            "time": 0.314324,
             "depth": 3,
-            "fold": 5,
-            "accuracy": 96.5,
-            "dataset": "ger",
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.382455
         },
         {
-            "time": 0.319658,
+            "dataset": "ger",
+            "accuracy": 0.975,
+            "fold": 3,
             "depth": 1,
-            "fold": 1,
-            "accuracy": 98.0,
-            "dataset": "ger",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.296503
         },
         {
-            "time": 0.367485,
+            "dataset": "ger",
+            "accuracy": 0.89,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.30774
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.955,
+            "fold": 5,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.328806
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.945,
+            "fold": 1,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.218576
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.925,
+            "fold": 2,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.278718
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.95,
+            "fold": 3,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.279707
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.975,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.323982
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.965,
+            "fold": 5,
+            "depth": 3,
+            "leaves": 4,
+            "time": 0.314324
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.98,
+            "fold": 1,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.319658
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.915,
+            "fold": 2,
             "depth": 5,
-            "fold": 2,
-            "accuracy": 91.5,
-            "dataset": "ger",
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.367485
         },
         {
-            "time": 0.233564,
-            "depth": 1,
+            "dataset": "ger",
+            "accuracy": 0.945,
             "fold": 3,
-            "accuracy": 94.5,
-            "dataset": "ger",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.233564
         },
         {
-            "time": 0.424299,
+            "dataset": "ger",
+            "accuracy": 0.91,
+            "fold": 4,
             "depth": 4,
-            "fold": 4,
-            "accuracy": 91.0,
-            "dataset": "ger",
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.424299
         },
         {
-            "time": 0.389781,
-            "depth": 2,
+            "dataset": "ger",
+            "accuracy": 0.93,
             "fold": 5,
-            "accuracy": 93.0,
-            "dataset": "ger",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.389781
         },
         {
-            "time": 0.378184,
-            "depth": 2,
+            "dataset": "ger",
+            "accuracy": 0.95,
             "fold": 1,
-            "accuracy": 95.0,
-            "dataset": "ger",
-            "leaves": 4
+            "depth": 2,
+            "leaves": 4,
+            "time": 0.378184
         },
         {
-            "time": 0.321247,
-            "depth": 1,
+            "dataset": "ger",
+            "accuracy": 0.965,
             "fold": 2,
-            "accuracy": 96.5,
-            "dataset": "ger",
-            "leaves": 2
-        },
-        {
-            "time": 0.242053,
-            "depth": 2,
-            "fold": 3,
-            "accuracy": 96.5,
-            "dataset": "ger",
-            "leaves": 4
-        },
-        {
-            "time": 0.219695,
             "depth": 1,
-            "fold": 4,
-            "accuracy": 94.0,
-            "dataset": "ger",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.321247
         },
         {
-            "time": 0.338728,
+            "dataset": "ger",
+            "accuracy": 0.965,
+            "fold": 3,
             "depth": 2,
+            "leaves": 4,
+            "time": 0.242053
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.94,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.219695
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.955,
             "fold": 5,
-            "accuracy": 95.5,
-            "dataset": "ger",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.338728
         },
         {
-            "time": 0.492824,
-            "depth": 2,
+            "dataset": "ger",
+            "accuracy": 0.94,
             "fold": 1,
-            "accuracy": 94.0,
-            "dataset": "ger",
-            "leaves": 4
-        },
-        {
-            "time": 0.352991,
-            "depth": 1,
-            "fold": 2,
-            "accuracy": 89.0,
-            "dataset": "ger",
-            "leaves": 2
-        },
-        {
-            "time": 0.368001,
             "depth": 2,
-            "fold": 3,
-            "accuracy": 91.5,
-            "dataset": "ger",
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.492824
         },
         {
-            "time": 0.211833,
+            "dataset": "ger",
+            "accuracy": 0.89,
+            "fold": 2,
             "depth": 1,
-            "fold": 4,
-            "accuracy": 96.0,
-            "dataset": "ger",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.352991
         },
         {
-            "time": 0.298501,
+            "dataset": "ger",
+            "accuracy": 0.915,
+            "fold": 3,
+            "depth": 2,
+            "leaves": 4,
+            "time": 0.368001
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.96,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.211833
+        },
+        {
+            "dataset": "ger",
+            "accuracy": 0.865,
+            "fold": 5,
             "depth": 5,
-            "fold": 5,
-            "accuracy": 86.5,
-            "dataset": "ger",
-            "leaves": 13
+            "leaves": 13,
+            "time": 0.298501
         },
         {
-            "time": 0.104625,
+            "dataset": "gls",
+            "accuracy": 0.57142857,
             "fold": 1,
-            "accuracy": 57.142857,
-            "dataset": "gls",
             "depth": 7,
-            "leaves": 18
+            "leaves": 18,
+            "time": 0.104625
         },
         {
-            "time": 0.08995,
-            "fold": 2,
-            "accuracy": 71.428574,
             "dataset": "gls",
+            "accuracy": 0.71428574,
+            "fold": 2,
             "depth": 8,
-            "leaves": 22
+            "leaves": 22,
+            "time": 0.08995
         },
         {
-            "time": 0.079286,
+            "dataset": "gls",
+            "accuracy": 0.64285713,
             "fold": 3,
-            "accuracy": 64.285713,
-            "dataset": "gls",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.079286
         },
         {
-            "time": 0.078723,
-            "fold": 4,
-            "accuracy": 59.523811,
             "dataset": "gls",
+            "accuracy": 0.59523811,
+            "fold": 4,
             "depth": 7,
-            "leaves": 20
+            "leaves": 20,
+            "time": 0.078723
         },
         {
-            "time": 0.067705,
+            "dataset": "gls",
+            "accuracy": 0.5777777900000001,
             "fold": 5,
-            "accuracy": 57.777779,
-            "dataset": "gls",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.067705
         },
         {
-            "time": 0.067966,
-            "fold": 1,
-            "accuracy": 50.0,
             "dataset": "gls",
+            "accuracy": 0.5,
+            "fold": 1,
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.067966
         },
         {
-            "time": 0.07947,
+            "dataset": "gls",
+            "accuracy": 0.57142857,
             "fold": 2,
-            "accuracy": 57.142857,
-            "dataset": "gls",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.07947
         },
         {
-            "time": 0.079878,
+            "dataset": "gls",
+            "accuracy": 0.64285713,
             "fold": 3,
-            "accuracy": 64.285713,
-            "dataset": "gls",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.079878
         },
         {
-            "time": 0.065521,
+            "dataset": "gls",
+            "accuracy": 0.61904762,
             "fold": 4,
-            "accuracy": 61.904762,
-            "dataset": "gls",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.065521
         },
         {
-            "time": 0.07626,
+            "dataset": "gls",
+            "accuracy": 0.66666664,
             "fold": 5,
-            "accuracy": 66.666664,
-            "dataset": "gls",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.07626
         },
         {
-            "time": 0.073357,
-            "fold": 1,
-            "accuracy": 73.809525,
             "dataset": "gls",
+            "accuracy": 0.73809525,
+            "fold": 1,
             "depth": 6,
-            "leaves": 19
+            "leaves": 19,
+            "time": 0.073357
         },
         {
-            "time": 0.080584,
+            "dataset": "gls",
+            "accuracy": 0.61904762,
             "fold": 2,
-            "accuracy": 61.904762,
-            "dataset": "gls",
             "depth": 5,
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.080584
         },
         {
-            "time": 0.077095,
+            "dataset": "gls",
+            "accuracy": 0.73809525,
             "fold": 3,
-            "accuracy": 73.809525,
-            "dataset": "gls",
             "depth": 4,
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.077095
         },
         {
-            "time": 0.073727,
+            "dataset": "gls",
+            "accuracy": 0.69047623,
             "fold": 4,
-            "accuracy": 69.047623,
-            "dataset": "gls",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.073727
         },
         {
-            "time": 0.066457,
-            "fold": 5,
-            "accuracy": 60.0,
             "dataset": "gls",
+            "accuracy": 0.6,
+            "fold": 5,
             "depth": 7,
-            "leaves": 16
+            "leaves": 16,
+            "time": 0.066457
         },
         {
-            "time": 0.076245,
+            "dataset": "gls",
+            "accuracy": 0.69047623,
             "fold": 1,
-            "accuracy": 69.047623,
-            "dataset": "gls",
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.076245
         },
         {
-            "time": 0.064838,
+            "dataset": "gls",
+            "accuracy": 0.45238093999999995,
             "fold": 2,
-            "accuracy": 45.238094,
-            "dataset": "gls",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.064838
         },
         {
-            "time": 0.076156,
-            "fold": 3,
-            "accuracy": 59.523811,
             "dataset": "gls",
+            "accuracy": 0.59523811,
+            "fold": 3,
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.076156
         },
         {
-            "time": 0.072889,
+            "dataset": "gls",
+            "accuracy": 0.54761906,
             "fold": 4,
-            "accuracy": 54.761906,
-            "dataset": "gls",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.072889
         },
         {
-            "time": 0.07476,
+            "dataset": "gls",
+            "accuracy": 0.75555557,
             "fold": 5,
-            "accuracy": 75.555557,
-            "dataset": "gls",
             "depth": 6,
-            "leaves": 14
+            "leaves": 14,
+            "time": 0.07476
         },
         {
-            "time": 0.06443,
+            "dataset": "gls",
+            "accuracy": 0.5,
             "fold": 1,
-            "accuracy": 50.0,
-            "dataset": "gls",
             "depth": 2,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.06443
         },
         {
-            "time": 0.071933,
+            "dataset": "gls",
+            "accuracy": 0.64285713,
             "fold": 2,
-            "accuracy": 64.285713,
-            "dataset": "gls",
             "depth": 6,
-            "leaves": 19
+            "leaves": 19,
+            "time": 0.071933
         },
         {
-            "time": 0.075895,
-            "fold": 3,
-            "accuracy": 64.285713,
             "dataset": "gls",
+            "accuracy": 0.64285713,
+            "fold": 3,
             "depth": 7,
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.075895
         },
         {
-            "time": 0.072085,
+            "dataset": "gls",
+            "accuracy": 0.64285713,
             "fold": 4,
-            "accuracy": 64.285713,
-            "dataset": "gls",
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.072085
         },
         {
-            "time": 0.070814,
-            "fold": 5,
-            "accuracy": 60.0,
             "dataset": "gls",
+            "accuracy": 0.6,
+            "fold": 5,
             "depth": 5,
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.070814
         },
         {
-            "time": 0.060053,
-            "depth": 4,
+            "dataset": "hep",
+            "accuracy": 0.6774193599999999,
             "fold": 1,
-            "accuracy": 67.741936,
-            "dataset": "hep",
-            "leaves": 7
+            "depth": 4,
+            "leaves": 7,
+            "time": 0.060053
         },
         {
-            "time": 0.03964,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.7419355,
             "fold": 2,
-            "accuracy": 74.19355,
-            "dataset": "hep",
-            "leaves": 2
-        },
-        {
-            "time": 0.062792,
             "depth": 1,
-            "fold": 3,
-            "accuracy": 74.19355,
-            "dataset": "hep",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.03964
         },
         {
-            "time": 0.04542,
+            "dataset": "hep",
+            "accuracy": 0.7419355,
+            "fold": 3,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.062792
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.83870964,
+            "fold": 4,
             "depth": 6,
-            "fold": 4,
-            "accuracy": 83.870964,
-            "dataset": "hep",
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.04542
         },
         {
-            "time": 0.044007,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.93548386,
             "fold": 5,
-            "accuracy": 93.548386,
-            "dataset": "hep",
-            "leaves": 2
-        },
-        {
-            "time": 0.039379,
             "depth": 1,
-            "fold": 1,
-            "accuracy": 70.967743,
-            "dataset": "hep",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.044007
         },
         {
-            "time": 0.030032,
-            "depth": 2,
+            "dataset": "hep",
+            "accuracy": 0.7096774299999999,
+            "fold": 1,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.039379
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.90322578,
             "fold": 2,
-            "accuracy": 90.322578,
-            "dataset": "hep",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.030032
         },
         {
-            "time": 0.051529,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.83870964,
             "fold": 3,
-            "accuracy": 83.870964,
-            "dataset": "hep",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.051529
         },
         {
-            "time": 0.030706,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.6774193599999999,
             "fold": 4,
-            "accuracy": 67.741936,
-            "dataset": "hep",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.030706
         },
         {
-            "time": 0.055772,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.6451612900000001,
             "fold": 5,
-            "accuracy": 64.516129,
-            "dataset": "hep",
-            "leaves": 2
-        },
-        {
-            "time": 0.027856,
             "depth": 1,
-            "fold": 1,
-            "accuracy": 70.967743,
-            "dataset": "hep",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.055772
         },
         {
-            "time": 0.02527,
+            "dataset": "hep",
+            "accuracy": 0.7096774299999999,
+            "fold": 1,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.027856
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.6451612900000001,
+            "fold": 2,
             "depth": 3,
-            "fold": 2,
-            "accuracy": 64.516129,
-            "dataset": "hep",
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.02527
         },
         {
-            "time": 0.036516,
-            "depth": 2,
+            "dataset": "hep",
+            "accuracy": 0.7419355,
             "fold": 3,
-            "accuracy": 74.19355,
-            "dataset": "hep",
-            "leaves": 4
-        },
-        {
-            "time": 0.036114,
             "depth": 2,
-            "fold": 4,
-            "accuracy": 74.19355,
-            "dataset": "hep",
-            "leaves": 3
+            "leaves": 4,
+            "time": 0.036516
         },
         {
-            "time": 0.026524,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.7419355,
+            "fold": 4,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.036114
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.90322578,
             "fold": 5,
-            "accuracy": 90.322578,
-            "dataset": "hep",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.026524
         },
         {
-            "time": 0.02576,
-            "depth": 4,
+            "dataset": "hep",
+            "accuracy": 0.8064516399999999,
             "fold": 1,
-            "accuracy": 80.645164,
-            "dataset": "hep",
-            "leaves": 6
-        },
-        {
-            "time": 0.026083,
-            "depth": 2,
-            "fold": 2,
-            "accuracy": 74.19355,
-            "dataset": "hep",
-            "leaves": 3
-        },
-        {
-            "time": 0.027136,
-            "depth": 2,
-            "fold": 3,
-            "accuracy": 80.645164,
-            "dataset": "hep",
-            "leaves": 3
-        },
-        {
-            "time": 0.022695,
             "depth": 4,
-            "fold": 4,
-            "accuracy": 80.645164,
-            "dataset": "hep",
-            "leaves": 7
+            "leaves": 6,
+            "time": 0.02576
         },
         {
-            "time": 0.033032,
+            "dataset": "hep",
+            "accuracy": 0.7419355,
+            "fold": 2,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.026083
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.8064516399999999,
+            "fold": 3,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.027136
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.8064516399999999,
+            "fold": 4,
+            "depth": 4,
+            "leaves": 7,
+            "time": 0.022695
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.7096774299999999,
+            "fold": 5,
             "depth": 10,
-            "fold": 5,
-            "accuracy": 70.967743,
-            "dataset": "hep",
-            "leaves": 14
+            "leaves": 14,
+            "time": 0.033032
         },
         {
-            "time": 0.051872,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.7419355,
             "fold": 1,
-            "accuracy": 74.19355,
-            "dataset": "hep",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.051872
         },
         {
-            "time": 0.029018,
-            "depth": 2,
+            "dataset": "hep",
+            "accuracy": 0.8064516399999999,
             "fold": 2,
-            "accuracy": 80.645164,
-            "dataset": "hep",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.029018
         },
         {
-            "time": 0.027438,
-            "depth": 1,
+            "dataset": "hep",
+            "accuracy": 0.77419357,
             "fold": 3,
-            "accuracy": 77.419357,
-            "dataset": "hep",
-            "leaves": 2
-        },
-        {
-            "time": 0.039792,
             "depth": 1,
-            "fold": 4,
-            "accuracy": 83.870964,
-            "dataset": "hep",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.027438
         },
         {
-            "time": 0.025969,
+            "dataset": "hep",
+            "accuracy": 0.83870964,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.039792
+        },
+        {
+            "dataset": "hep",
+            "accuracy": 0.83870964,
+            "fold": 5,
             "depth": 3,
-            "fold": 5,
-            "accuracy": 83.870964,
-            "dataset": "hep",
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.025969
         },
         {
-            "time": 0.167093,
+            "dataset": "hrtc",
+            "accuracy": 0.51666668,
             "fold": 1,
-            "accuracy": 51.666668,
-            "dataset": "hrtc",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.167093
         },
         {
-            "time": 0.154776,
+            "dataset": "hrtc",
+            "accuracy": 0.41666668,
             "fold": 2,
-            "accuracy": 41.666668,
-            "dataset": "hrtc",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.154776
         },
         {
-            "time": 0.118912,
+            "dataset": "hrtc",
+            "accuracy": 0.56666668,
             "fold": 3,
-            "accuracy": 56.666668,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.118912
         },
         {
-            "time": 0.116465,
-            "fold": 4,
-            "accuracy": 56.666668,
             "dataset": "hrtc",
+            "accuracy": 0.56666668,
+            "fold": 4,
             "depth": 5,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.116465
         },
         {
-            "time": 0.127301,
+            "dataset": "hrtc",
+            "accuracy": 0.47619048999999997,
             "fold": 5,
-            "accuracy": 47.619049,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.127301
         },
         {
-            "time": 0.101945,
-            "fold": 1,
-            "accuracy": 50.0,
             "dataset": "hrtc",
+            "accuracy": 0.5,
+            "fold": 1,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.101945
         },
         {
-            "time": 0.114598,
+            "dataset": "hrtc",
+            "accuracy": 0.56666668,
             "fold": 2,
-            "accuracy": 56.666668,
-            "dataset": "hrtc",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.114598
         },
         {
-            "time": 0.117274,
+            "dataset": "hrtc",
+            "accuracy": 0.63333332,
             "fold": 3,
-            "accuracy": 63.333332,
-            "dataset": "hrtc",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.117274
         },
         {
-            "time": 0.119957,
+            "dataset": "hrtc",
+            "accuracy": 0.46666668,
             "fold": 4,
-            "accuracy": 46.666668,
-            "dataset": "hrtc",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.119957
         },
         {
-            "time": 0.09562,
+            "dataset": "hrtc",
+            "accuracy": 0.55555557,
             "fold": 5,
-            "accuracy": 55.555557,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.09562
         },
         {
-            "time": 0.106082,
-            "fold": 1,
-            "accuracy": 50.0,
             "dataset": "hrtc",
+            "accuracy": 0.5,
+            "fold": 1,
             "depth": 9,
-            "leaves": 18
+            "leaves": 18,
+            "time": 0.106082
         },
         {
-            "time": 0.118647,
+            "dataset": "hrtc",
+            "accuracy": 0.48333332,
             "fold": 2,
-            "accuracy": 48.333332,
-            "dataset": "hrtc",
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.118647
         },
         {
-            "time": 0.109992,
+            "dataset": "hrtc",
+            "accuracy": 0.63333332,
             "fold": 3,
-            "accuracy": 63.333332,
-            "dataset": "hrtc",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.109992
         },
         {
-            "time": 0.199506,
+            "dataset": "hrtc",
+            "accuracy": 0.5833333199999999,
             "fold": 4,
-            "accuracy": 58.333332,
-            "dataset": "hrtc",
             "depth": 5,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.199506
         },
         {
-            "time": 0.108466,
+            "dataset": "hrtc",
+            "accuracy": 0.46031745999999996,
             "fold": 5,
-            "accuracy": 46.031746,
-            "dataset": "hrtc",
             "depth": 6,
-            "leaves": 15
+            "leaves": 15,
+            "time": 0.108466
         },
         {
-            "time": 0.134399,
-            "fold": 1,
-            "accuracy": 63.333332,
             "dataset": "hrtc",
+            "accuracy": 0.63333332,
+            "fold": 1,
             "depth": 8,
-            "leaves": 32
+            "leaves": 32,
+            "time": 0.134399
         },
         {
-            "time": 0.118557,
+            "dataset": "hrtc",
+            "accuracy": 0.51666668,
             "fold": 2,
-            "accuracy": 51.666668,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.118557
         },
         {
-            "time": 0.117712,
+            "dataset": "hrtc",
+            "accuracy": 0.41666668,
             "fold": 3,
-            "accuracy": 41.666668,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.117712
         },
         {
-            "time": 0.104104,
+            "dataset": "hrtc",
+            "accuracy": 0.53333332,
             "fold": 4,
-            "accuracy": 53.333332,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.104104
         },
         {
-            "time": 0.112731,
-            "fold": 5,
-            "accuracy": 49.206348,
             "dataset": "hrtc",
+            "accuracy": 0.49206348,
+            "fold": 5,
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.112731
         },
         {
-            "time": 0.153294,
+            "dataset": "hrtc",
+            "accuracy": 0.51666668,
             "fold": 1,
-            "accuracy": 51.666668,
-            "dataset": "hrtc",
             "depth": 5,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.153294
         },
         {
-            "time": 0.137453,
+            "dataset": "hrtc",
+            "accuracy": 0.51666668,
             "fold": 2,
-            "accuracy": 51.666668,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.137453
         },
         {
-            "time": 0.117155,
+            "dataset": "hrtc",
+            "accuracy": 0.71666664,
             "fold": 3,
-            "accuracy": 71.666664,
-            "dataset": "hrtc",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.117155
         },
         {
-            "time": 0.09865,
+            "dataset": "hrtc",
+            "accuracy": 0.46666668,
             "fold": 4,
-            "accuracy": 46.666668,
-            "dataset": "hrtc",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.09865
         },
         {
-            "time": 0.12544,
-            "fold": 5,
-            "accuracy": 44.444443,
             "dataset": "hrtc",
+            "accuracy": 0.44444443,
+            "fold": 5,
             "depth": 9,
-            "leaves": 32
+            "leaves": 32,
+            "time": 0.12544
         },
         {
-            "time": 0.102731,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
             "fold": 1,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.102731
         },
         {
-            "time": 0.095577,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
             "fold": 2,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 2
-        },
-        {
-            "time": 0.073552,
             "depth": 1,
-            "fold": 3,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.095577
         },
         {
-            "time": 0.063659,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
+            "fold": 3,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.073552
+        },
+        {
+            "dataset": "hrts",
+            "accuracy": 0.70370369,
+            "fold": 4,
             "depth": 4,
-            "fold": 4,
-            "accuracy": 70.370369,
-            "dataset": "hrts",
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.063659
         },
         {
-            "time": 0.079563,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.74074074,
             "fold": 5,
-            "accuracy": 74.074074,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.079563
         },
         {
-            "time": 0.074772,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
             "fold": 1,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.074772
         },
         {
-            "time": 0.075738,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.7777777899999999,
             "fold": 2,
-            "accuracy": 77.777779,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.075738
         },
         {
-            "time": 0.060968,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.79629631,
             "fold": 3,
-            "accuracy": 79.629631,
-            "dataset": "hrts",
-            "leaves": 2
-        },
-        {
-            "time": 0.074593,
             "depth": 1,
-            "fold": 4,
-            "accuracy": 68.518517,
-            "dataset": "hrts",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.060968
         },
         {
-            "time": 0.082076,
-            "depth": 2,
+            "dataset": "hrts",
+            "accuracy": 0.68518517,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.074593
+        },
+        {
+            "dataset": "hrts",
+            "accuracy": 0.7777777899999999,
             "fold": 5,
-            "accuracy": 77.777779,
-            "dataset": "hrts",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.082076
         },
         {
-            "time": 0.07104,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
             "fold": 1,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.07104
         },
         {
-            "time": 0.076268,
-            "depth": 2,
+            "dataset": "hrts",
+            "accuracy": 0.79629631,
             "fold": 2,
-            "accuracy": 79.629631,
-            "dataset": "hrts",
-            "leaves": 3
-        },
-        {
-            "time": 0.084171,
-            "depth": 1,
-            "fold": 3,
-            "accuracy": 77.777779,
-            "dataset": "hrts",
-            "leaves": 2
-        },
-        {
-            "time": 0.074174,
             "depth": 2,
-            "fold": 4,
-            "accuracy": 77.777779,
-            "dataset": "hrts",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.076268
         },
         {
-            "time": 0.065052,
+            "dataset": "hrts",
+            "accuracy": 0.7777777899999999,
+            "fold": 3,
             "depth": 1,
+            "leaves": 2,
+            "time": 0.084171
+        },
+        {
+            "dataset": "hrts",
+            "accuracy": 0.7777777899999999,
+            "fold": 4,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.074174
+        },
+        {
+            "dataset": "hrts",
+            "accuracy": 0.75925926,
             "fold": 5,
-            "accuracy": 75.925926,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.065052
         },
         {
-            "time": 0.078054,
-            "depth": 2,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
             "fold": 1,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 4
+            "depth": 2,
+            "leaves": 4,
+            "time": 0.078054
         },
         {
-            "time": 0.082133,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.85185188,
             "fold": 2,
-            "accuracy": 85.185188,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.082133
         },
         {
-            "time": 0.085767,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.8888888500000001,
             "fold": 3,
-            "accuracy": 88.888885,
-            "dataset": "hrts",
-            "leaves": 2
-        },
-        {
-            "time": 0.070832,
             "depth": 1,
-            "fold": 4,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.085767
         },
         {
-            "time": 0.077752,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.070832
+        },
+        {
+            "dataset": "hrts",
+            "accuracy": 0.70370369,
+            "fold": 5,
             "depth": 5,
-            "fold": 5,
-            "accuracy": 70.370369,
-            "dataset": "hrts",
-            "leaves": 11
+            "leaves": 11,
+            "time": 0.077752
         },
         {
-            "time": 0.072568,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.81481483,
             "fold": 1,
-            "accuracy": 81.481483,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.072568
         },
         {
-            "time": 0.065109,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.8888888500000001,
             "fold": 2,
-            "accuracy": 88.888885,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.065109
         },
         {
-            "time": 0.084687,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.79629631,
             "fold": 3,
-            "accuracy": 79.629631,
-            "dataset": "hrts",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.084687
         },
         {
-            "time": 0.066754,
-            "depth": 1,
+            "dataset": "hrts",
+            "accuracy": 0.79629631,
             "fold": 4,
-            "accuracy": 79.629631,
-            "dataset": "hrts",
-            "leaves": 2
-        },
-        {
-            "time": 0.057605,
             "depth": 1,
-            "fold": 5,
-            "accuracy": 81.481483,
+            "leaves": 2,
+            "time": 0.066754
+        },
+        {
             "dataset": "hrts",
-            "leaves": 2
+            "accuracy": 0.81481483,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.057605
         },
         {
-            "time": 0.34606,
+            "dataset": "ion",
+            "accuracy": 0.8714286,
             "fold": 1,
-            "accuracy": 87.14286,
-            "dataset": "ion",
             "depth": 6,
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.34606
         },
         {
-            "time": 0.233127,
-            "fold": 2,
-            "accuracy": 92.85714,
             "dataset": "ion",
+            "accuracy": 0.9285714,
+            "fold": 2,
             "depth": 7,
-            "leaves": 11
+            "leaves": 11,
+            "time": 0.233127
         },
         {
-            "time": 0.173554,
+            "dataset": "ion",
+            "accuracy": 0.8714286,
             "fold": 3,
-            "accuracy": 87.14286,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.173554
         },
         {
-            "time": 0.152382,
+            "dataset": "ion",
+            "accuracy": 0.8285714,
             "fold": 4,
-            "accuracy": 82.85714,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.152382
         },
         {
-            "time": 0.206751,
+            "dataset": "ion",
+            "accuracy": 0.8285714,
             "fold": 5,
-            "accuracy": 82.85714,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.206751
         },
         {
-            "time": 0.229098,
+            "dataset": "ion",
+            "accuracy": 0.8285714,
             "fold": 1,
-            "accuracy": 82.85714,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.229098
         },
         {
-            "time": 0.195595,
-            "fold": 2,
-            "accuracy": 84.285713,
             "dataset": "ion",
+            "accuracy": 0.8428571300000001,
+            "fold": 2,
             "depth": 6,
-            "leaves": 11
+            "leaves": 11,
+            "time": 0.195595
         },
         {
-            "time": 0.287165,
-            "fold": 3,
-            "accuracy": 94.285713,
             "dataset": "ion",
+            "accuracy": 0.94285713,
+            "fold": 3,
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.287165
         },
         {
-            "time": 0.262072,
+            "dataset": "ion",
+            "accuracy": 0.88571426,
             "fold": 4,
-            "accuracy": 88.571426,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.262072
         },
         {
-            "time": 0.277357,
+            "dataset": "ion",
+            "accuracy": 0.8428571300000001,
             "fold": 5,
-            "accuracy": 84.285713,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.277357
         },
         {
-            "time": 0.256028,
+            "dataset": "ion",
+            "accuracy": 0.8428571300000001,
             "fold": 1,
-            "accuracy": 84.285713,
-            "dataset": "ion",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.256028
         },
         {
-            "time": 0.263938,
+            "dataset": "ion",
+            "accuracy": 0.78571426,
             "fold": 2,
-            "accuracy": 78.571426,
-            "dataset": "ion",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.263938
         },
         {
-            "time": 0.202231,
+            "dataset": "ion",
+            "accuracy": 0.75714287,
             "fold": 3,
-            "accuracy": 75.714287,
-            "dataset": "ion",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.202231
         },
         {
-            "time": 0.222279,
+            "dataset": "ion",
+            "accuracy": 0.8714286,
             "fold": 4,
-            "accuracy": 87.14286,
-            "dataset": "ion",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.222279
         },
         {
-            "time": 0.294329,
+            "dataset": "ion",
+            "accuracy": 0.8428571300000001,
             "fold": 5,
-            "accuracy": 84.285713,
-            "dataset": "ion",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.294329
         },
         {
-            "time": 0.234402,
+            "dataset": "ion",
+            "accuracy": 0.85714287,
             "fold": 1,
-            "accuracy": 85.714287,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.234402
         },
         {
-            "time": 0.268224,
-            "fold": 2,
-            "accuracy": 90.0,
             "dataset": "ion",
+            "accuracy": 0.9,
+            "fold": 2,
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.268224
         },
         {
-            "time": 0.280674,
-            "fold": 3,
-            "accuracy": 91.428574,
             "dataset": "ion",
+            "accuracy": 0.91428574,
+            "fold": 3,
             "depth": 5,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.280674
         },
         {
-            "time": 0.232227,
+            "dataset": "ion",
+            "accuracy": 0.91428574,
             "fold": 4,
-            "accuracy": 91.428574,
-            "dataset": "ion",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.232227
         },
         {
-            "time": 0.260425,
-            "fold": 5,
-            "accuracy": 90.0,
             "dataset": "ion",
+            "accuracy": 0.9,
+            "fold": 5,
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.260425
         },
         {
-            "time": 0.247268,
+            "dataset": "ion",
+            "accuracy": 0.9,
             "fold": 1,
-            "accuracy": 90.0,
-            "dataset": "ion",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.247268
         },
         {
-            "time": 0.225921,
-            "fold": 2,
-            "accuracy": 85.714287,
             "dataset": "ion",
+            "accuracy": 0.85714287,
+            "fold": 2,
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.225921
         },
         {
-            "time": 0.198943,
-            "fold": 3,
-            "accuracy": 87.14286,
             "dataset": "ion",
+            "accuracy": 0.8714286,
+            "fold": 3,
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.198943
         },
         {
-            "time": 0.261282,
+            "dataset": "ion",
+            "accuracy": 0.95714287,
             "fold": 4,
-            "accuracy": 95.714287,
-            "dataset": "ion",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.261282
         },
         {
-            "time": 0.250211,
+            "dataset": "ion",
+            "accuracy": 0.8714286,
             "fold": 5,
-            "accuracy": 87.14286,
-            "dataset": "ion",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.250211
         },
         {
-            "time": 0.028697,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.96551727,
             "fold": 1,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.028697
         },
         {
-            "time": 0.017614,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.96551727,
             "fold": 2,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.017614
         },
         {
-            "time": 0.026469,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 3,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.026469
         },
         {
-            "time": 0.022835,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 4,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.022835
         },
         {
-            "time": 0.015087,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.015087
         },
         {
-            "time": 0.017753,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.96551727,
             "fold": 1,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.017753
         },
         {
-            "time": 0.021393,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.9310344700000001,
             "fold": 2,
-            "accuracy": 93.103447,
-            "dataset": "irs",
-            "leaves": 3
-        },
-        {
-            "time": 0.017163,
             "depth": 2,
-            "fold": 3,
-            "accuracy": 93.103447,
-            "dataset": "irs",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.021393
         },
         {
-            "time": 0.017386,
+            "dataset": "irs",
+            "accuracy": 0.9310344700000001,
+            "fold": 3,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.017163
+        },
+        {
+            "dataset": "irs",
+            "accuracy": 0.96551727,
+            "fold": 4,
             "depth": 3,
-            "fold": 4,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.017386
         },
         {
-            "time": 0.010513,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.010513
         },
         {
-            "time": 0.016961,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.96551727,
             "fold": 1,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.016961
         },
         {
-            "time": 0.007682,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.9310344700000001,
             "fold": 2,
-            "accuracy": 93.103447,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.007682
         },
         {
-            "time": 0.014961,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.9310344700000001,
             "fold": 3,
-            "accuracy": 93.103447,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.014961
         },
         {
-            "time": 0.01557,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.9310344700000001,
             "fold": 4,
-            "accuracy": 93.103447,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.01557
         },
         {
-            "time": 0.015015,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.015015
         },
         {
-            "time": 0.01775,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.89655174,
             "fold": 1,
-            "accuracy": 89.655174,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.01775
         },
         {
-            "time": 0.009055,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 2,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.009055
         },
         {
-            "time": 0.0141,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.96551727,
             "fold": 3,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.0141
         },
         {
-            "time": 0.013757,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.96551727,
             "fold": 4,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.013757
         },
         {
-            "time": 0.015028,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.015028
         },
         {
-            "time": 0.011676,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 1.0,
             "fold": 1,
-            "accuracy": 100.0,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.011676
         },
         {
-            "time": 0.013806,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.89655174,
             "fold": 2,
-            "accuracy": 89.655174,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.013806
         },
         {
-            "time": 0.017595,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.9310344700000001,
             "fold": 3,
-            "accuracy": 93.103447,
-            "dataset": "irs",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.017595
         },
         {
-            "time": 0.013513,
-            "depth": 2,
+            "dataset": "irs",
+            "accuracy": 0.96551727,
             "fold": 4,
-            "accuracy": 96.551727,
-            "dataset": "irs",
-            "leaves": 3
-        },
-        {
-            "time": 0.007813,
             "depth": 2,
-            "fold": 5,
-            "accuracy": 93.548386,
-            "dataset": "irs",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.013513
         },
         {
-            "time": 28.214411,
-            "fold": 1,
-            "accuracy": 90.61245,
+            "dataset": "irs",
+            "accuracy": 0.93548386,
+            "fold": 5,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.007813
+        },
+        {
             "dataset": "jvow",
+            "accuracy": 0.9061245,
+            "fold": 1,
             "depth": 14,
-            "leaves": 243
+            "leaves": 243,
+            "time": 28.214411
         },
         {
-            "time": 27.831348,
-            "fold": 2,
-            "accuracy": 90.662651,
             "dataset": "jvow",
+            "accuracy": 0.9066265099999999,
+            "fold": 2,
             "depth": 16,
-            "leaves": 265
+            "leaves": 265,
+            "time": 27.831348
         },
         {
-            "time": 26.580378,
+            "dataset": "jvow",
+            "accuracy": 0.91114456,
             "fold": 3,
-            "accuracy": 91.114456,
-            "dataset": "jvow",
             "depth": 12,
-            "leaves": 160
+            "leaves": 160,
+            "time": 26.580378
         },
         {
-            "time": 26.335436,
-            "fold": 4,
-            "accuracy": 90.562248,
             "dataset": "jvow",
+            "accuracy": 0.90562248,
+            "fold": 4,
             "depth": 15,
-            "leaves": 283
+            "leaves": 283,
+            "time": 26.335436
         },
         {
-            "time": 27.670631,
+            "dataset": "jvow",
+            "accuracy": 0.91018562,
             "fold": 5,
-            "accuracy": 91.018562,
-            "dataset": "jvow",
             "depth": 15,
-            "leaves": 222
+            "leaves": 222,
+            "time": 27.670631
         },
         {
-            "time": 27.017233,
+            "dataset": "jvow",
+            "accuracy": 0.90763054,
             "fold": 1,
-            "accuracy": 90.763054,
-            "dataset": "jvow",
             "depth": 12,
-            "leaves": 149
+            "leaves": 149,
+            "time": 27.017233
         },
         {
-            "time": 30.158464,
+            "dataset": "jvow",
+            "accuracy": 0.89859436,
             "fold": 2,
-            "accuracy": 89.859436,
-            "dataset": "jvow",
             "depth": 17,
-            "leaves": 263
+            "leaves": 263,
+            "time": 30.158464
         },
         {
-            "time": 27.564957,
+            "dataset": "jvow",
+            "accuracy": 0.90060242,
             "fold": 3,
-            "accuracy": 90.060242,
-            "dataset": "jvow",
             "depth": 15,
-            "leaves": 251
+            "leaves": 251,
+            "time": 27.564957
         },
         {
-            "time": 29.77158,
-            "fold": 4,
-            "accuracy": 92.520081,
             "dataset": "jvow",
+            "accuracy": 0.9252008100000001,
+            "fold": 4,
             "depth": 14,
-            "leaves": 264
+            "leaves": 264,
+            "time": 29.77158
         },
         {
-            "time": 28.56917,
+            "dataset": "jvow",
+            "accuracy": 0.92323128,
             "fold": 5,
-            "accuracy": 92.323128,
-            "dataset": "jvow",
             "depth": 15,
-            "leaves": 265
+            "leaves": 265,
+            "time": 28.56917
         },
         {
-            "time": 28.046455,
+            "dataset": "jvow",
+            "accuracy": 0.90210846,
             "fold": 1,
-            "accuracy": 90.210846,
-            "dataset": "jvow",
             "depth": 16,
-            "leaves": 272
+            "leaves": 272,
+            "time": 28.046455
         },
         {
-            "time": 28.550983,
-            "fold": 2,
-            "accuracy": 90.210846,
             "dataset": "jvow",
+            "accuracy": 0.90210846,
+            "fold": 2,
             "depth": 12,
-            "leaves": 166
+            "leaves": 166,
+            "time": 28.550983
         },
         {
-            "time": 28.533092,
+            "dataset": "jvow",
+            "accuracy": 0.90060242,
             "fold": 3,
-            "accuracy": 90.060242,
-            "dataset": "jvow",
             "depth": 16,
-            "leaves": 152
+            "leaves": 152,
+            "time": 28.533092
         },
         {
-            "time": 27.640072,
+            "dataset": "jvow",
+            "accuracy": 0.91917671,
             "fold": 4,
-            "accuracy": 91.917671,
-            "dataset": "jvow",
             "depth": 17,
-            "leaves": 244
+            "leaves": 244,
+            "time": 27.640072
         },
         {
-            "time": 31.600525,
+            "dataset": "jvow",
+            "accuracy": 0.92272957,
             "fold": 5,
-            "accuracy": 92.272957,
-            "dataset": "jvow",
             "depth": 17,
-            "leaves": 263
+            "leaves": 263,
+            "time": 31.600525
         },
         {
-            "time": 27.777887,
+            "dataset": "jvow",
+            "accuracy": 0.91415665,
             "fold": 1,
-            "accuracy": 91.415665,
-            "dataset": "jvow",
             "depth": 15,
-            "leaves": 230
+            "leaves": 230,
+            "time": 27.777887
         },
         {
-            "time": 27.875919,
-            "fold": 2,
-            "accuracy": 90.110443,
             "dataset": "jvow",
+            "accuracy": 0.9011044300000001,
+            "fold": 2,
             "depth": 18,
-            "leaves": 299
+            "leaves": 299,
+            "time": 27.875919
         },
         {
-            "time": 28.86964,
-            "fold": 3,
-            "accuracy": 88.905624,
             "dataset": "jvow",
+            "accuracy": 0.88905624,
+            "fold": 3,
             "depth": 11,
-            "leaves": 84
+            "leaves": 84,
+            "time": 28.86964
         },
         {
-            "time": 28.029646,
-            "fold": 4,
-            "accuracy": 92.018074,
             "dataset": "jvow",
+            "accuracy": 0.9201807399999999,
+            "fold": 4,
             "depth": 16,
-            "leaves": 259
+            "leaves": 259,
+            "time": 28.029646
         },
         {
-            "time": 28.594318,
-            "fold": 5,
-            "accuracy": 91.068741,
             "dataset": "jvow",
+            "accuracy": 0.91068741,
+            "fold": 5,
             "depth": 17,
-            "leaves": 242
+            "leaves": 242,
+            "time": 28.594318
         },
         {
-            "time": 29.548512,
-            "fold": 1,
-            "accuracy": 90.61245,
             "dataset": "jvow",
+            "accuracy": 0.9061245,
+            "fold": 1,
             "depth": 20,
-            "leaves": 280
+            "leaves": 280,
+            "time": 29.548512
         },
         {
-            "time": 31.192213,
+            "dataset": "jvow",
+            "accuracy": 0.91114456,
             "fold": 2,
-            "accuracy": 91.114456,
-            "dataset": "jvow",
             "depth": 18,
-            "leaves": 253
+            "leaves": 253,
+            "time": 31.192213
         },
         {
-            "time": 27.06883,
+            "dataset": "jvow",
+            "accuracy": 0.90512047,
             "fold": 3,
-            "accuracy": 90.512047,
-            "dataset": "jvow",
             "depth": 18,
-            "leaves": 252
+            "leaves": 252,
+            "time": 27.06883
         },
         {
-            "time": 26.378981,
+            "dataset": "jvow",
+            "accuracy": 0.91365463,
             "fold": 4,
-            "accuracy": 91.365463,
-            "dataset": "jvow",
             "depth": 13,
-            "leaves": 184
+            "leaves": 184,
+            "time": 26.378981
         },
         {
-            "time": 26.325468,
+            "dataset": "jvow",
+            "accuracy": 0.90316109,
             "fold": 5,
-            "accuracy": 90.316109,
-            "dataset": "jvow",
             "depth": 13,
-            "leaves": 278
+            "leaves": 278,
+            "time": 26.325468
         },
         {
-            "time": 73.165054,
+            "dataset": "krkopt",
+            "accuracy": 0.7155587,
+            "fold": 1,
             "depth": 25,
-            "fold": 1,
-            "accuracy": 71.55587,
-            "dataset": "krkopt",
-            "leaves": 2516
+            "leaves": 2516,
+            "time": 73.165054
         },
         {
-            "time": 72.978104,
+            "dataset": "krkopt",
+            "accuracy": 0.7264302100000001,
+            "fold": 2,
             "depth": 22,
-            "fold": 2,
-            "accuracy": 72.643021,
-            "dataset": "krkopt",
-            "leaves": 2794
+            "leaves": 2794,
+            "time": 72.978104
         },
         {
-            "time": 72.723839,
-            "depth": 24,
+            "dataset": "krkopt",
+            "accuracy": 0.6931028,
             "fold": 3,
-            "accuracy": 69.31028,
-            "dataset": "krkopt",
-            "leaves": 3208
+            "depth": 24,
+            "leaves": 3208,
+            "time": 72.723839
         },
         {
-            "time": 73.333656,
-            "depth": 23,
+            "dataset": "krkopt",
+            "accuracy": 0.72322227,
             "fold": 4,
-            "accuracy": 72.322227,
-            "dataset": "krkopt",
-            "leaves": 2686
+            "depth": 23,
+            "leaves": 2686,
+            "time": 73.333656
         },
         {
-            "time": 71.71254,
-            "depth": 23,
+            "dataset": "krkopt",
+            "accuracy": 0.7223806,
             "fold": 5,
-            "accuracy": 72.23806,
-            "dataset": "krkopt",
-            "leaves": 2462
-        },
-        {
-            "time": 73.897713,
-            "depth": 24,
-            "fold": 1,
-            "accuracy": 71.912315,
-            "dataset": "krkopt",
-            "leaves": 2627
-        },
-        {
-            "time": 72.806885,
             "depth": 23,
+            "leaves": 2462,
+            "time": 71.71254
+        },
+        {
+            "dataset": "krkopt",
+            "accuracy": 0.71912315,
+            "fold": 1,
+            "depth": 24,
+            "leaves": 2627,
+            "time": 73.897713
+        },
+        {
+            "dataset": "krkopt",
+            "accuracy": 0.7157369199999999,
             "fold": 2,
-            "accuracy": 71.573692,
-            "dataset": "krkopt",
-            "leaves": 3096
+            "depth": 23,
+            "leaves": 3096,
+            "time": 72.806885
         },
         {
-            "time": 71.894859,
-            "depth": 21,
+            "dataset": "krkopt",
+            "accuracy": 0.70201393,
             "fold": 3,
-            "accuracy": 70.201393,
-            "dataset": "krkopt",
-            "leaves": 2490
+            "depth": 21,
+            "leaves": 2490,
+            "time": 71.894859
         },
         {
-            "time": 71.351852,
+            "dataset": "krkopt",
+            "accuracy": 0.71145966,
+            "fold": 4,
             "depth": 26,
-            "fold": 4,
-            "accuracy": 71.145966,
-            "dataset": "krkopt",
-            "leaves": 2744
+            "leaves": 2744,
+            "time": 71.351852
         },
         {
-            "time": 71.673309,
-            "depth": 23,
+            "dataset": "krkopt",
+            "accuracy": 0.72576622,
             "fold": 5,
-            "accuracy": 72.576622,
-            "dataset": "krkopt",
-            "leaves": 2763
+            "depth": 23,
+            "leaves": 2763,
+            "time": 71.673309
         },
         {
-            "time": 71.622658,
-            "depth": 22,
+            "dataset": "krkopt",
+            "accuracy": 0.70914276,
             "fold": 1,
-            "accuracy": 70.914276,
-            "dataset": "krkopt",
-            "leaves": 2780
-        },
-        {
-            "time": 72.399544,
             "depth": 22,
-            "fold": 2,
-            "accuracy": 70.379608,
-            "dataset": "krkopt",
-            "leaves": 2719
+            "leaves": 2780,
+            "time": 71.622658
         },
         {
-            "time": 73.892204,
+            "dataset": "krkopt",
+            "accuracy": 0.70379608,
+            "fold": 2,
+            "depth": 22,
+            "leaves": 2719,
+            "time": 72.399544
+        },
+        {
+            "dataset": "krkopt",
+            "accuracy": 0.71145966,
+            "fold": 3,
             "depth": 25,
-            "fold": 3,
-            "accuracy": 71.145966,
-            "dataset": "krkopt",
-            "leaves": 3081
+            "leaves": 3081,
+            "time": 73.892204
         },
         {
-            "time": 71.73983,
-            "depth": 22,
+            "dataset": "krkopt",
+            "accuracy": 0.7119943200000001,
             "fold": 4,
-            "accuracy": 71.199432,
-            "dataset": "krkopt",
-            "leaves": 2687
+            "depth": 22,
+            "leaves": 2687,
+            "time": 71.73983
         },
         {
-            "time": 71.332291,
+            "dataset": "krkopt",
+            "accuracy": 0.69173203,
+            "fold": 5,
             "depth": 25,
-            "fold": 5,
-            "accuracy": 69.173203,
-            "dataset": "krkopt",
-            "leaves": 3159
+            "leaves": 3159,
+            "time": 71.332291
         },
         {
-            "time": 70.806305,
-            "depth": 22,
+            "dataset": "krkopt",
+            "accuracy": 0.71965782,
             "fold": 1,
-            "accuracy": 71.965782,
-            "dataset": "krkopt",
-            "leaves": 2964
+            "depth": 22,
+            "leaves": 2964,
+            "time": 70.806305
         },
         {
-            "time": 72.496277,
-            "depth": 23,
+            "dataset": "krkopt",
+            "accuracy": 0.7346283699999999,
             "fold": 2,
-            "accuracy": 73.462837,
-            "dataset": "krkopt",
-            "leaves": 2654
+            "depth": 23,
+            "leaves": 2654,
+            "time": 72.496277
         },
         {
-            "time": 74.085098,
-            "depth": 21,
+            "dataset": "krkopt",
+            "accuracy": 0.7036178599999999,
             "fold": 3,
-            "accuracy": 70.361786,
-            "dataset": "krkopt",
-            "leaves": 2523
+            "depth": 21,
+            "leaves": 2523,
+            "time": 74.085098
         },
         {
-            "time": 74.316994,
-            "depth": 23,
+            "dataset": "krkopt",
+            "accuracy": 0.70825165,
             "fold": 4,
-            "accuracy": 70.825165,
-            "dataset": "krkopt",
-            "leaves": 2754
-        },
-        {
-            "time": 70.7677,
             "depth": 23,
-            "fold": 5,
-            "accuracy": 70.634354,
-            "dataset": "krkopt",
-            "leaves": 2517
+            "leaves": 2754,
+            "time": 74.316994
         },
         {
-            "time": 74.215881,
+            "dataset": "krkopt",
+            "accuracy": 0.70634354,
+            "fold": 5,
+            "depth": 23,
+            "leaves": 2517,
+            "time": 70.7677
+        },
+        {
+            "dataset": "krkopt",
+            "accuracy": 0.7283906600000001,
+            "fold": 1,
             "depth": 25,
-            "fold": 1,
-            "accuracy": 72.839066,
-            "dataset": "krkopt",
-            "leaves": 2754
+            "leaves": 2754,
+            "time": 74.215881
         },
         {
-            "time": 70.469139,
+            "dataset": "krkopt",
+            "accuracy": 0.71876671,
+            "fold": 2,
             "depth": 23,
-            "fold": 2,
-            "accuracy": 71.876671,
-            "dataset": "krkopt",
-            "leaves": 2441
+            "leaves": 2441,
+            "time": 70.469139
         },
         {
-            "time": 71.167419,
+            "dataset": "krkopt",
+            "accuracy": 0.72411331,
+            "fold": 3,
             "depth": 24,
-            "fold": 3,
-            "accuracy": 72.411331,
-            "dataset": "krkopt",
-            "leaves": 2700
+            "leaves": 2700,
+            "time": 71.167419
         },
         {
-            "time": 69.544525,
-            "depth": 22,
+            "dataset": "krkopt",
+            "accuracy": 0.70860809,
             "fold": 4,
-            "accuracy": 70.860809,
-            "dataset": "krkopt",
-            "leaves": 3007
+            "depth": 22,
+            "leaves": 3007,
+            "time": 69.544525
         },
         {
-            "time": 74.127182,
+            "dataset": "krkopt",
+            "accuracy": 0.71650032,
+            "fold": 5,
             "depth": 24,
-            "fold": 5,
-            "accuracy": 71.650032,
-            "dataset": "krkopt",
-            "leaves": 2331
+            "leaves": 2331,
+            "time": 74.127182
         },
         {
-            "time": 130.717957,
+            "dataset": "letter",
+            "accuracy": 0.82159119,
             "fold": 1,
-            "accuracy": 82.159119,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 1042
+            "leaves": 1042,
+            "time": 130.717957
         },
         {
-            "time": 124.53067,
+            "dataset": "letter",
+            "accuracy": 0.82748459,
             "fold": 2,
-            "accuracy": 82.748459,
-            "dataset": "letter",
             "depth": 18,
-            "leaves": 1055
+            "leaves": 1055,
+            "time": 124.53067
         },
         {
-            "time": 132.800812,
+            "dataset": "letter",
+            "accuracy": 0.82373428,
             "fold": 3,
-            "accuracy": 82.373428,
-            "dataset": "letter",
             "depth": 18,
-            "leaves": 1023
+            "leaves": 1023,
+            "time": 132.800812
         },
         {
-            "time": 130.367386,
+            "dataset": "letter",
+            "accuracy": 0.8015001700000001,
             "fold": 4,
-            "accuracy": 80.150017,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 677
+            "leaves": 677,
+            "time": 130.367386
         },
         {
-            "time": 126.991203,
-            "fold": 5,
-            "accuracy": 81.316917,
             "dataset": "letter",
+            "accuracy": 0.81316917,
+            "fold": 5,
             "depth": 19,
-            "leaves": 1121
+            "leaves": 1121,
+            "time": 126.991203
         },
         {
-            "time": 127.090187,
-            "fold": 1,
-            "accuracy": 83.096703,
             "dataset": "letter",
+            "accuracy": 0.83096703,
+            "fold": 1,
             "depth": 17,
-            "leaves": 1054
+            "leaves": 1054,
+            "time": 127.090187
         },
         {
-            "time": 123.140877,
+            "dataset": "letter",
+            "accuracy": 0.83230644,
             "fold": 2,
-            "accuracy": 83.230644,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 1068
+            "leaves": 1068,
+            "time": 123.140877
         },
         {
-            "time": 124.381538,
+            "dataset": "letter",
+            "accuracy": 0.81248329,
             "fold": 3,
-            "accuracy": 81.248329,
-            "dataset": "letter",
             "depth": 18,
-            "leaves": 1062
+            "leaves": 1062,
+            "time": 124.381538
         },
         {
-            "time": 125.675758,
+            "dataset": "letter",
+            "accuracy": 0.8298955499999999,
             "fold": 4,
-            "accuracy": 82.989555,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 1061
+            "leaves": 1061,
+            "time": 125.675758
         },
         {
-            "time": 130.041367,
+            "dataset": "letter",
+            "accuracy": 0.81905785,
             "fold": 5,
-            "accuracy": 81.905785,
-            "dataset": "letter",
             "depth": 18,
-            "leaves": 1050
+            "leaves": 1050,
+            "time": 130.041367
         },
         {
-            "time": 125.15432,
-            "fold": 1,
-            "accuracy": 82.855614,
             "dataset": "letter",
+            "accuracy": 0.82855614,
+            "fold": 1,
             "depth": 19,
-            "leaves": 1002
+            "leaves": 1002,
+            "time": 125.15432
         },
         {
-            "time": 124.991699,
+            "dataset": "letter",
+            "accuracy": 0.8229306,
             "fold": 2,
-            "accuracy": 82.29306,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 1010
+            "leaves": 1010,
+            "time": 124.991699
         },
         {
-            "time": 128.667847,
+            "dataset": "letter",
+            "accuracy": 0.81650146,
             "fold": 3,
-            "accuracy": 81.650146,
-            "dataset": "letter",
             "depth": 16,
-            "leaves": 619
+            "leaves": 619,
+            "time": 128.667847
         },
         {
-            "time": 118.93071,
-            "fold": 4,
-            "accuracy": 81.730515,
             "dataset": "letter",
+            "accuracy": 0.8173051499999999,
+            "fold": 4,
             "depth": 18,
-            "leaves": 1055
+            "leaves": 1055,
+            "time": 118.93071
         },
         {
-            "time": 131.599716,
+            "dataset": "letter",
+            "accuracy": 0.82253746,
             "fold": 5,
-            "accuracy": 82.253746,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 602
+            "leaves": 602,
+            "time": 131.599716
         },
         {
-            "time": 129.838699,
+            "dataset": "letter",
+            "accuracy": 0.81007233,
             "fold": 1,
-            "accuracy": 81.007233,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 609
+            "leaves": 609,
+            "time": 129.838699
         },
         {
-            "time": 128.289597,
-            "fold": 2,
-            "accuracy": 81.810875,
             "dataset": "letter",
+            "accuracy": 0.8181087499999999,
+            "fold": 2,
             "depth": 19,
-            "leaves": 1115
+            "leaves": 1115,
+            "time": 128.289597
         },
         {
-            "time": 127.28418,
+            "dataset": "letter",
+            "accuracy": 0.83391373,
             "fold": 3,
-            "accuracy": 83.391373,
-            "dataset": "letter",
             "depth": 16,
-            "leaves": 644
+            "leaves": 644,
+            "time": 127.28418
         },
         {
-            "time": 126.958893,
+            "dataset": "letter",
+            "accuracy": 0.8280203199999999,
             "fold": 4,
-            "accuracy": 82.802032,
-            "dataset": "letter",
             "depth": 16,
-            "leaves": 614
+            "leaves": 614,
+            "time": 126.958893
         },
         {
-            "time": 121.398232,
+            "dataset": "letter",
+            "accuracy": 0.80353317,
             "fold": 5,
-            "accuracy": 80.353317,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 1087
+            "leaves": 1087,
+            "time": 121.398232
         },
         {
-            "time": 130.292252,
+            "dataset": "letter",
+            "accuracy": 0.82641304,
             "fold": 1,
-            "accuracy": 82.641304,
-            "dataset": "letter",
             "depth": 17,
-            "leaves": 627
+            "leaves": 627,
+            "time": 130.292252
         },
         {
-            "time": 127.178307,
-            "fold": 2,
-            "accuracy": 83.444954,
             "dataset": "letter",
+            "accuracy": 0.8344495399999999,
+            "fold": 2,
             "depth": 14,
-            "leaves": 578
+            "leaves": 578,
+            "time": 127.178307
         },
         {
-            "time": 130.144806,
-            "fold": 3,
-            "accuracy": 81.221535,
             "dataset": "letter",
+            "accuracy": 0.81221535,
+            "fold": 3,
             "depth": 15,
-            "leaves": 623
+            "leaves": 623,
+            "time": 130.144806
         },
         {
-            "time": 126.311035,
-            "fold": 4,
-            "accuracy": 81.91803,
             "dataset": "letter",
+            "accuracy": 0.8191803,
+            "fold": 4,
             "depth": 16,
-            "leaves": 612
+            "leaves": 612,
+            "time": 126.311035
         },
         {
-            "time": 130.539368,
-            "fold": 5,
-            "accuracy": 81.959312,
             "dataset": "letter",
+            "accuracy": 0.81959312,
+            "fold": 5,
             "depth": 17,
-            "leaves": 1061
+            "leaves": 1061,
+            "time": 130.539368
         },
         {
-            "time": 0.16277,
+            "dataset": "liv",
+            "accuracy": 0.6521739200000001,
+            "fold": 1,
             "depth": 3,
-            "fold": 1,
-            "accuracy": 65.217392,
-            "dataset": "liv",
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.16277
         },
         {
-            "time": 0.12248,
-            "depth": 2,
+            "dataset": "liv",
+            "accuracy": 0.7246376800000001,
             "fold": 2,
-            "accuracy": 72.463768,
-            "dataset": "liv",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.12248
         },
         {
-            "time": 0.12986,
-            "depth": 1,
+            "dataset": "liv",
+            "accuracy": 0.63768116,
             "fold": 3,
-            "accuracy": 63.768116,
-            "dataset": "liv",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.12986
         },
         {
-            "time": 0.107615,
-            "depth": 2,
+            "dataset": "liv",
+            "accuracy": 0.63768116,
             "fold": 4,
-            "accuracy": 63.768116,
-            "dataset": "liv",
-            "leaves": 3
-        },
-        {
-            "time": 0.119085,
-            "depth": 1,
-            "fold": 5,
-            "accuracy": 69.565216,
-            "dataset": "liv",
-            "leaves": 2
-        },
-        {
-            "time": 0.117504,
             "depth": 2,
-            "fold": 1,
-            "accuracy": 68.115944,
-            "dataset": "liv",
-            "leaves": 4
+            "leaves": 3,
+            "time": 0.107615
         },
         {
-            "time": 0.093687,
+            "dataset": "liv",
+            "accuracy": 0.6956521600000001,
+            "fold": 5,
             "depth": 1,
-            "fold": 2,
-            "accuracy": 65.217392,
-            "dataset": "liv",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.119085
         },
         {
-            "time": 0.127443,
+            "dataset": "liv",
+            "accuracy": 0.68115944,
+            "fold": 1,
+            "depth": 2,
+            "leaves": 4,
+            "time": 0.117504
+        },
+        {
+            "dataset": "liv",
+            "accuracy": 0.6521739200000001,
+            "fold": 2,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.093687
+        },
+        {
+            "dataset": "liv",
+            "accuracy": 0.5652174,
+            "fold": 3,
             "depth": 6,
-            "fold": 3,
-            "accuracy": 56.52174,
-            "dataset": "liv",
-            "leaves": 14
+            "leaves": 14,
+            "time": 0.127443
         },
         {
-            "time": 0.148764,
-            "depth": 1,
+            "dataset": "liv",
+            "accuracy": 0.60869564,
             "fold": 4,
-            "accuracy": 60.869564,
-            "dataset": "liv",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.148764
         },
         {
-            "time": 0.112392,
-            "depth": 7,
+            "dataset": "liv",
+            "accuracy": 0.6521739200000001,
             "fold": 5,
-            "accuracy": 65.217392,
-            "dataset": "liv",
-            "leaves": 13
+            "depth": 7,
+            "leaves": 13,
+            "time": 0.112392
         },
         {
-            "time": 0.114407,
+            "dataset": "liv",
+            "accuracy": 0.5652174,
+            "fold": 1,
             "depth": 10,
-            "fold": 1,
-            "accuracy": 56.52174,
-            "dataset": "liv",
-            "leaves": 34
+            "leaves": 34,
+            "time": 0.114407
         },
         {
-            "time": 0.107605,
+            "dataset": "liv",
+            "accuracy": 0.6521739200000001,
+            "fold": 2,
             "depth": 5,
-            "fold": 2,
-            "accuracy": 65.217392,
-            "dataset": "liv",
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.107605
         },
         {
-            "time": 0.114378,
-            "depth": 1,
+            "dataset": "liv",
+            "accuracy": 0.66666664,
             "fold": 3,
-            "accuracy": 66.666664,
-            "dataset": "liv",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.114378
         },
         {
-            "time": 0.124552,
-            "depth": 3,
+            "dataset": "liv",
+            "accuracy": 0.7246376800000001,
             "fold": 4,
-            "accuracy": 72.463768,
-            "dataset": "liv",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 0.124552
         },
         {
-            "time": 0.131105,
+            "dataset": "liv",
+            "accuracy": 0.6956521600000001,
+            "fold": 5,
             "depth": 7,
-            "fold": 5,
-            "accuracy": 69.565216,
-            "dataset": "liv",
-            "leaves": 13
+            "leaves": 13,
+            "time": 0.131105
         },
         {
-            "time": 0.138267,
-            "depth": 2,
+            "dataset": "liv",
+            "accuracy": 0.6521739200000001,
             "fold": 1,
-            "accuracy": 65.217392,
-            "dataset": "liv",
-            "leaves": 3
-        },
-        {
-            "time": 0.119379,
             "depth": 2,
-            "fold": 2,
-            "accuracy": 66.666664,
-            "dataset": "liv",
-            "leaves": 4
+            "leaves": 3,
+            "time": 0.138267
         },
         {
-            "time": 0.103292,
-            "depth": 4,
+            "dataset": "liv",
+            "accuracy": 0.66666664,
+            "fold": 2,
+            "depth": 2,
+            "leaves": 4,
+            "time": 0.119379
+        },
+        {
+            "dataset": "liv",
+            "accuracy": 0.6231884,
             "fold": 3,
-            "accuracy": 62.31884,
-            "dataset": "liv",
-            "leaves": 7
+            "depth": 4,
+            "leaves": 7,
+            "time": 0.103292
         },
         {
-            "time": 0.119653,
-            "depth": 3,
+            "dataset": "liv",
+            "accuracy": 0.7246376800000001,
             "fold": 4,
-            "accuracy": 72.463768,
-            "dataset": "liv",
-            "leaves": 4
-        },
-        {
-            "time": 0.134631,
-            "depth": 1,
-            "fold": 5,
-            "accuracy": 60.869564,
-            "dataset": "liv",
-            "leaves": 2
-        },
-        {
-            "time": 0.119851,
             "depth": 3,
+            "leaves": 4,
+            "time": 0.119653
+        },
+        {
+            "dataset": "liv",
+            "accuracy": 0.60869564,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.134631
+        },
+        {
+            "dataset": "liv",
+            "accuracy": 0.6956521600000001,
             "fold": 1,
-            "accuracy": 69.565216,
-            "dataset": "liv",
-            "leaves": 6
+            "depth": 3,
+            "leaves": 6,
+            "time": 0.119851
         },
         {
-            "time": 0.131796,
-            "depth": 2,
+            "dataset": "liv",
+            "accuracy": 0.7246376800000001,
             "fold": 2,
-            "accuracy": 72.463768,
-            "dataset": "liv",
-            "leaves": 4
+            "depth": 2,
+            "leaves": 4,
+            "time": 0.131796
         },
         {
-            "time": 0.133809,
+            "dataset": "liv",
+            "accuracy": 0.6231884,
+            "fold": 3,
             "depth": 13,
-            "fold": 3,
-            "accuracy": 62.31884,
-            "dataset": "liv",
-            "leaves": 31
+            "leaves": 31,
+            "time": 0.133809
         },
         {
-            "time": 0.107311,
-            "depth": 1,
+            "dataset": "liv",
+            "accuracy": 0.63768116,
             "fold": 4,
-            "accuracy": 63.768116,
-            "dataset": "liv",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.107311
         },
         {
-            "time": 0.113139,
+            "dataset": "liv",
+            "accuracy": 0.6521739200000001,
+            "fold": 5,
             "depth": 6,
-            "fold": 5,
-            "accuracy": 65.217392,
-            "dataset": "liv",
-            "leaves": 12
+            "leaves": 12,
+            "time": 0.113139
         },
         {
-            "time": 0.048075,
+            "dataset": "lym",
+            "accuracy": 0.7586206799999999,
             "fold": 1,
-            "accuracy": 75.862068,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.048075
         },
         {
-            "time": 0.039683,
+            "dataset": "lym",
+            "accuracy": 0.79310349,
             "fold": 2,
-            "accuracy": 79.310349,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.039683
         },
         {
-            "time": 0.035965,
+            "dataset": "lym",
+            "accuracy": 0.65517242,
             "fold": 3,
-            "accuracy": 65.517242,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.035965
         },
         {
-            "time": 0.030929,
+            "dataset": "lym",
+            "accuracy": 0.7586206799999999,
             "fold": 4,
-            "accuracy": 75.862068,
-            "dataset": "lym",
             "depth": 3,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.030929
         },
         {
-            "time": 0.026161,
+            "dataset": "lym",
+            "accuracy": 0.75,
             "fold": 5,
-            "accuracy": 75.0,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.026161
         },
         {
-            "time": 0.028982,
+            "dataset": "lym",
+            "accuracy": 0.8275862100000001,
             "fold": 1,
-            "accuracy": 82.758621,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.028982
         },
         {
-            "time": 0.035527,
-            "fold": 2,
-            "accuracy": 72.413795,
             "dataset": "lym",
+            "accuracy": 0.7241379499999999,
+            "fold": 2,
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.035527
         },
         {
-            "time": 0.026163,
+            "dataset": "lym",
+            "accuracy": 0.7586206799999999,
             "fold": 3,
-            "accuracy": 75.862068,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.026163
         },
         {
-            "time": 0.026312,
+            "dataset": "lym",
+            "accuracy": 0.7241379499999999,
             "fold": 4,
-            "accuracy": 72.413795,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.026312
         },
         {
-            "time": 0.032632,
-            "fold": 5,
-            "accuracy": 71.875,
             "dataset": "lym",
+            "accuracy": 0.71875,
+            "fold": 5,
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.032632
         },
         {
-            "time": 0.028517,
-            "fold": 1,
-            "accuracy": 68.965515,
             "dataset": "lym",
+            "accuracy": 0.68965515,
+            "fold": 1,
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.028517
         },
         {
-            "time": 0.03554,
+            "dataset": "lym",
+            "accuracy": 0.86206894,
             "fold": 2,
-            "accuracy": 86.206894,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.03554
         },
         {
-            "time": 0.028025,
+            "dataset": "lym",
+            "accuracy": 0.79310349,
             "fold": 3,
-            "accuracy": 79.310349,
-            "dataset": "lym",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.028025
         },
         {
-            "time": 0.025692,
+            "dataset": "lym",
+            "accuracy": 0.86206894,
             "fold": 4,
-            "accuracy": 86.206894,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.025692
         },
         {
-            "time": 0.030481,
+            "dataset": "lym",
+            "accuracy": 0.78125,
             "fold": 5,
-            "accuracy": 78.125,
-            "dataset": "lym",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.030481
         },
         {
-            "time": 0.029321,
-            "fold": 1,
-            "accuracy": 72.413795,
             "dataset": "lym",
+            "accuracy": 0.7241379499999999,
+            "fold": 1,
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.029321
         },
         {
-            "time": 0.032925,
+            "dataset": "lym",
+            "accuracy": 0.7586206799999999,
             "fold": 2,
-            "accuracy": 75.862068,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.032925
         },
         {
-            "time": 0.032775,
+            "dataset": "lym",
+            "accuracy": 0.8275862100000001,
             "fold": 3,
-            "accuracy": 82.758621,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.032775
         },
         {
-            "time": 0.027695,
+            "dataset": "lym",
+            "accuracy": 0.79310349,
             "fold": 4,
-            "accuracy": 79.310349,
-            "dataset": "lym",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.027695
         },
         {
-            "time": 0.030785,
+            "dataset": "lym",
+            "accuracy": 0.71875,
             "fold": 5,
-            "accuracy": 71.875,
-            "dataset": "lym",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.030785
         },
         {
-            "time": 0.032248,
-            "fold": 1,
-            "accuracy": 86.206894,
             "dataset": "lym",
+            "accuracy": 0.86206894,
+            "fold": 1,
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.032248
         },
         {
-            "time": 0.030533,
-            "fold": 2,
-            "accuracy": 82.758621,
             "dataset": "lym",
+            "accuracy": 0.8275862100000001,
+            "fold": 2,
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.030533
         },
         {
-            "time": 0.021804,
+            "dataset": "lym",
+            "accuracy": 0.7586206799999999,
             "fold": 3,
-            "accuracy": 75.862068,
-            "dataset": "lym",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.021804
         },
         {
-            "time": 0.036201,
+            "dataset": "lym",
+            "accuracy": 0.79310349,
             "fold": 4,
-            "accuracy": 79.310349,
-            "dataset": "lym",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.036201
         },
         {
-            "time": 0.026533,
-            "fold": 5,
-            "accuracy": 75.0,
             "dataset": "lym",
+            "accuracy": 0.75,
+            "fold": 5,
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.026533
         },
         {
-            "time": 46.832104,
+            "dataset": "magic",
+            "accuracy": 0.8574451399999999,
+            "fold": 1,
             "depth": 22,
-            "fold": 1,
-            "accuracy": 85.744514,
-            "dataset": "magic",
-            "leaves": 276
+            "leaves": 276,
+            "time": 46.832104
         },
         {
-            "time": 46.691273,
+            "dataset": "magic",
+            "accuracy": 0.8632637,
+            "fold": 2,
             "depth": 15,
-            "fold": 2,
-            "accuracy": 86.32637,
-            "dataset": "magic",
-            "leaves": 45
+            "leaves": 45,
+            "time": 46.691273
         },
         {
-            "time": 50.365631,
-            "depth": 17,
+            "dataset": "magic",
+            "accuracy": 0.85374237,
             "fold": 3,
-            "accuracy": 85.374237,
-            "dataset": "magic",
-            "leaves": 167
-        },
-        {
-            "time": 51.088772,
-            "depth": 13,
-            "fold": 4,
-            "accuracy": 86.485054,
-            "dataset": "magic",
-            "leaves": 62
-        },
-        {
-            "time": 54.010235,
-            "depth": 8,
-            "fold": 5,
-            "accuracy": 86.723091,
-            "dataset": "magic",
-            "leaves": 40
-        },
-        {
-            "time": 50.354828,
-            "depth": 8,
-            "fold": 1,
-            "accuracy": 86.69664,
-            "dataset": "magic",
-            "leaves": 21
-        },
-        {
-            "time": 54.058182,
             "depth": 17,
-            "fold": 2,
-            "accuracy": 85.903198,
-            "dataset": "magic",
-            "leaves": 147
+            "leaves": 167,
+            "time": 50.365631
         },
         {
-            "time": 52.460705,
+            "dataset": "magic",
+            "accuracy": 0.8648505400000001,
+            "fold": 4,
+            "depth": 13,
+            "leaves": 62,
+            "time": 51.088772
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.86723091,
+            "fold": 5,
+            "depth": 8,
+            "leaves": 40,
+            "time": 54.010235
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.8669664,
+            "fold": 1,
+            "depth": 8,
+            "leaves": 21,
+            "time": 50.354828
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.85903198,
+            "fold": 2,
+            "depth": 17,
+            "leaves": 147,
+            "time": 54.058182
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.85850304,
+            "fold": 3,
             "depth": 14,
-            "fold": 3,
-            "accuracy": 85.850304,
-            "dataset": "magic",
-            "leaves": 93
+            "leaves": 93,
+            "time": 52.460705
         },
         {
-            "time": 52.711937,
-            "depth": 8,
+            "dataset": "magic",
+            "accuracy": 0.8534779399999999,
             "fold": 4,
-            "accuracy": 85.347794,
-            "dataset": "magic",
-            "leaves": 22
+            "depth": 8,
+            "leaves": 22,
+            "time": 52.711937
         },
         {
-            "time": 46.09446,
-            "depth": 13,
+            "dataset": "magic",
+            "accuracy": 0.8653795599999999,
             "fold": 5,
-            "accuracy": 86.537956,
-            "dataset": "magic",
-            "leaves": 62
-        },
-        {
-            "time": 49.400021,
             "depth": 13,
-            "fold": 1,
-            "accuracy": 86.220573,
-            "dataset": "magic",
-            "leaves": 88
+            "leaves": 62,
+            "time": 46.09446
         },
         {
-            "time": 52.846241,
+            "dataset": "magic",
+            "accuracy": 0.86220573,
+            "fold": 1,
+            "depth": 13,
+            "leaves": 88,
+            "time": 49.400021
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.87410736,
+            "fold": 2,
             "depth": 12,
-            "fold": 2,
-            "accuracy": 87.410736,
-            "dataset": "magic",
-            "leaves": 45
+            "leaves": 45,
+            "time": 52.846241
         },
         {
-            "time": 46.285378,
-            "depth": 10,
+            "dataset": "magic",
+            "accuracy": 0.8555938000000001,
             "fold": 3,
-            "accuracy": 85.55938,
-            "dataset": "magic",
-            "leaves": 50
+            "depth": 10,
+            "leaves": 50,
+            "time": 46.285378
         },
         {
-            "time": 53.144569,
-            "depth": 14,
+            "dataset": "magic",
+            "accuracy": 0.85215553,
             "fold": 4,
-            "accuracy": 85.215553,
-            "dataset": "magic",
-            "leaves": 58
+            "depth": 14,
+            "leaves": 58,
+            "time": 53.144569
         },
         {
-            "time": 51.399632,
-            "depth": 13,
+            "dataset": "magic",
+            "accuracy": 0.8719915,
             "fold": 5,
-            "accuracy": 87.19915,
-            "dataset": "magic",
-            "leaves": 42
-        },
-        {
-            "time": 56.58844,
             "depth": 13,
-            "fold": 1,
-            "accuracy": 85.797409,
-            "dataset": "magic",
-            "leaves": 31
+            "leaves": 42,
+            "time": 51.399632
         },
         {
-            "time": 50.61528,
+            "dataset": "magic",
+            "accuracy": 0.85797409,
+            "fold": 1,
+            "depth": 13,
+            "leaves": 31,
+            "time": 56.58844
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.8614123499999999,
+            "fold": 2,
             "depth": 4,
-            "fold": 2,
-            "accuracy": 86.141235,
-            "dataset": "magic",
-            "leaves": 10
+            "leaves": 10,
+            "time": 50.61528
         },
         {
-            "time": 46.104378,
-            "depth": 12,
+            "dataset": "magic",
+            "accuracy": 0.8616767900000001,
             "fold": 3,
-            "accuracy": 86.167679,
-            "dataset": "magic",
-            "leaves": 49
-        },
-        {
-            "time": 51.581982,
-            "depth": 7,
-            "fold": 4,
-            "accuracy": 86.643745,
-            "dataset": "magic",
-            "leaves": 28
-        },
-        {
-            "time": 43.243553,
-            "depth": 14,
-            "fold": 5,
-            "accuracy": 86.485054,
-            "dataset": "magic",
-            "leaves": 77
-        },
-        {
-            "time": 49.135448,
             "depth": 12,
-            "fold": 1,
-            "accuracy": 86.749535,
-            "dataset": "magic",
-            "leaves": 45
+            "leaves": 49,
+            "time": 46.104378
         },
         {
-            "time": 52.823666,
+            "dataset": "magic",
+            "accuracy": 0.8664374499999999,
+            "fold": 4,
+            "depth": 7,
+            "leaves": 28,
+            "time": 51.581982
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.8648505400000001,
+            "fold": 5,
+            "depth": 14,
+            "leaves": 77,
+            "time": 43.243553
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.86749535,
+            "fold": 1,
+            "depth": 12,
+            "leaves": 45,
+            "time": 49.135448
+        },
+        {
+            "dataset": "magic",
+            "accuracy": 0.86670197,
+            "fold": 2,
             "depth": 15,
-            "fold": 2,
-            "accuracy": 86.670197,
-            "dataset": "magic",
-            "leaves": 57
+            "leaves": 57,
+            "time": 52.823666
         },
         {
-            "time": 50.323399,
+            "dataset": "magic",
+            "accuracy": 0.8653795599999999,
+            "fold": 3,
             "depth": 14,
-            "fold": 3,
-            "accuracy": 86.537956,
-            "dataset": "magic",
-            "leaves": 70
+            "leaves": 70,
+            "time": 50.323399
         },
         {
-            "time": 42.508015,
-            "depth": 10,
+            "dataset": "magic",
+            "accuracy": 0.86723091,
             "fold": 4,
-            "accuracy": 86.723091,
-            "dataset": "magic",
-            "leaves": 47
+            "depth": 10,
+            "leaves": 47,
+            "time": 42.508015
         },
         {
-            "time": 48.885193,
-            "depth": 8,
+            "dataset": "magic",
+            "accuracy": 0.85109756,
             "fold": 5,
-            "accuracy": 85.109756,
-            "dataset": "magic",
-            "leaves": 23
+            "depth": 8,
+            "leaves": 23,
+            "time": 48.885193
         },
         {
-            "time": 8.406031,
+            "dataset": "msh",
+            "accuracy": 0.99445816,
             "fold": 1,
-            "accuracy": 99.445816,
-            "dataset": "msh",
             "depth": 7,
-            "leaves": 14
+            "leaves": 14,
+            "time": 8.406031
         },
         {
-            "time": 6.922437,
+            "dataset": "msh",
+            "accuracy": 0.99692116,
             "fold": 2,
-            "accuracy": 99.692116,
-            "dataset": "msh",
             "depth": 5,
-            "leaves": 9
+            "leaves": 9,
+            "time": 6.922437
         },
         {
-            "time": 5.133995,
-            "fold": 3,
-            "accuracy": 99.692116,
             "dataset": "msh",
+            "accuracy": 0.99692116,
+            "fold": 3,
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 5.133995
         },
         {
-            "time": 7.104013,
+            "dataset": "msh",
+            "accuracy": 0.99753693,
             "fold": 4,
-            "accuracy": 99.753693,
-            "dataset": "msh",
             "depth": 5,
-            "leaves": 11
+            "leaves": 11,
+            "time": 7.104013
         },
         {
-            "time": 5.941504,
-            "fold": 5,
-            "accuracy": 99.877151,
             "dataset": "msh",
+            "accuracy": 0.99877151,
+            "fold": 5,
             "depth": 6,
-            "leaves": 10
+            "leaves": 10,
+            "time": 5.941504
         },
         {
-            "time": 8.178473,
-            "fold": 1,
-            "accuracy": 99.692116,
             "dataset": "msh",
+            "accuracy": 0.99692116,
+            "fold": 1,
             "depth": 4,
-            "leaves": 9
+            "leaves": 9,
+            "time": 8.178473
         },
         {
-            "time": 9.624621,
+            "dataset": "msh",
+            "accuracy": 0.99815269,
             "fold": 2,
-            "accuracy": 99.815269,
-            "dataset": "msh",
             "depth": 9,
-            "leaves": 13
+            "leaves": 13,
+            "time": 9.624621
         },
         {
-            "time": 6.205718,
+            "dataset": "msh",
+            "accuracy": 0.99938423,
             "fold": 3,
-            "accuracy": 99.938423,
-            "dataset": "msh",
             "depth": 7,
-            "leaves": 12
+            "leaves": 12,
+            "time": 6.205718
         },
         {
-            "time": 6.25143,
+            "dataset": "msh",
+            "accuracy": 0.99692116,
             "fold": 4,
-            "accuracy": 99.692116,
-            "dataset": "msh",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 6.25143
         },
         {
-            "time": 8.136316,
-            "fold": 5,
-            "accuracy": 99.754303,
             "dataset": "msh",
+            "accuracy": 0.9975430299999999,
+            "fold": 5,
             "depth": 9,
-            "leaves": 13
+            "leaves": 13,
+            "time": 8.136316
         },
         {
-            "time": 7.623514,
+            "dataset": "msh",
+            "accuracy": 0.99815269,
             "fold": 1,
-            "accuracy": 99.815269,
-            "dataset": "msh",
             "depth": 7,
-            "leaves": 14
+            "leaves": 14,
+            "time": 7.623514
         },
         {
-            "time": 6.34059,
+            "dataset": "msh",
+            "accuracy": 0.99630539,
             "fold": 2,
-            "accuracy": 99.630539,
-            "dataset": "msh",
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 6.34059
         },
         {
-            "time": 7.540763,
+            "dataset": "msh",
+            "accuracy": 0.99630539,
             "fold": 3,
-            "accuracy": 99.630539,
-            "dataset": "msh",
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 7.540763
         },
         {
-            "time": 6.775115,
+            "dataset": "msh",
+            "accuracy": 0.99692116,
             "fold": 4,
-            "accuracy": 99.692116,
-            "dataset": "msh",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 6.775115
         },
         {
-            "time": 7.383642,
-            "fold": 5,
-            "accuracy": 100.0,
             "dataset": "msh",
+            "accuracy": 1.0,
+            "fold": 5,
             "depth": 8,
-            "leaves": 11
+            "leaves": 11,
+            "time": 7.383642
         },
         {
-            "time": 9.366735,
-            "fold": 1,
-            "accuracy": 99.938423,
             "dataset": "msh",
+            "accuracy": 0.99938423,
+            "fold": 1,
             "depth": 10,
-            "leaves": 15
+            "leaves": 15,
+            "time": 9.366735
         },
         {
-            "time": 5.136978,
+            "dataset": "msh",
+            "accuracy": 0.9956896199999999,
             "fold": 2,
-            "accuracy": 99.568962,
-            "dataset": "msh",
             "depth": 6,
-            "leaves": 13
+            "leaves": 13,
+            "time": 5.136978
         },
         {
-            "time": 4.572356,
-            "fold": 3,
-            "accuracy": 99.815269,
             "dataset": "msh",
+            "accuracy": 0.99815269,
+            "fold": 3,
             "depth": 3,
-            "leaves": 7
+            "leaves": 7,
+            "time": 4.572356
         },
         {
-            "time": 5.540756,
+            "dataset": "msh",
+            "accuracy": 0.99630539,
             "fold": 4,
-            "accuracy": 99.630539,
-            "dataset": "msh",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 5.540756
         },
         {
-            "time": 5.807003,
-            "fold": 5,
-            "accuracy": 99.631447,
             "dataset": "msh",
+            "accuracy": 0.99631447,
+            "fold": 5,
             "depth": 4,
-            "leaves": 9
+            "leaves": 9,
+            "time": 5.807003
         },
         {
-            "time": 7.630702,
+            "dataset": "msh",
+            "accuracy": 0.99815269,
             "fold": 1,
-            "accuracy": 99.815269,
-            "dataset": "msh",
             "depth": 6,
-            "leaves": 13
+            "leaves": 13,
+            "time": 7.630702
         },
         {
-            "time": 10.334682,
-            "fold": 2,
-            "accuracy": 99.261086,
             "dataset": "msh",
+            "accuracy": 0.9926108600000001,
+            "fold": 2,
             "depth": 5,
-            "leaves": 9
+            "leaves": 9,
+            "time": 10.334682
         },
         {
-            "time": 6.747109,
-            "fold": 3,
-            "accuracy": 99.630539,
             "dataset": "msh",
+            "accuracy": 0.99630539,
+            "fold": 3,
             "depth": 6,
-            "leaves": 9
+            "leaves": 9,
+            "time": 6.747109
         },
         {
-            "time": 7.801359,
-            "fold": 4,
-            "accuracy": 99.815269,
             "dataset": "msh",
+            "accuracy": 0.99815269,
+            "fold": 4,
             "depth": 9,
-            "leaves": 11
+            "leaves": 11,
+            "time": 7.801359
         },
         {
-            "time": 5.653266,
-            "fold": 5,
-            "accuracy": 99.938576,
             "dataset": "msh",
+            "accuracy": 0.99938576,
+            "fold": 5,
             "depth": 7,
-            "leaves": 9
+            "leaves": 9,
+            "time": 5.653266
         },
         {
-            "time": 11.119134,
-            "depth": 16,
+            "dataset": "nurse",
+            "accuracy": 0.97492287,
             "fold": 1,
-            "accuracy": 97.492287,
-            "dataset": "nurse",
-            "leaves": 113
+            "depth": 16,
+            "leaves": 113,
+            "time": 11.119134
         },
         {
-            "time": 12.360804,
-            "depth": 14,
+            "dataset": "nurse",
+            "accuracy": 0.96219139,
             "fold": 2,
-            "accuracy": 96.219139,
-            "dataset": "nurse",
-            "leaves": 140
-        },
-        {
-            "time": 10.917196,
             "depth": 14,
-            "fold": 3,
-            "accuracy": 95.331787,
-            "dataset": "nurse",
-            "leaves": 168
+            "leaves": 140,
+            "time": 12.360804
         },
         {
-            "time": 12.224595,
+            "dataset": "nurse",
+            "accuracy": 0.95331787,
+            "fold": 3,
+            "depth": 14,
+            "leaves": 168,
+            "time": 10.917196
+        },
+        {
+            "dataset": "nurse",
+            "accuracy": 0.9633487700000001,
+            "fold": 4,
             "depth": 13,
-            "fold": 4,
-            "accuracy": 96.334877,
-            "dataset": "nurse",
-            "leaves": 78
+            "leaves": 78,
+            "time": 12.224595
         },
         {
-            "time": 11.948574,
-            "depth": 15,
+            "dataset": "nurse",
+            "accuracy": 0.95601852,
             "fold": 5,
-            "accuracy": 95.601852,
-            "dataset": "nurse",
-            "leaves": 96
+            "depth": 15,
+            "leaves": 96,
+            "time": 11.948574
         },
         {
-            "time": 11.301407,
-            "depth": 17,
+            "dataset": "nurse",
+            "accuracy": 0.94791664,
             "fold": 1,
-            "accuracy": 94.791664,
-            "dataset": "nurse",
-            "leaves": 213
+            "depth": 17,
+            "leaves": 213,
+            "time": 11.301407
         },
         {
-            "time": 12.123593,
-            "depth": 16,
+            "dataset": "nurse",
+            "accuracy": 0.9548611499999999,
             "fold": 2,
-            "accuracy": 95.486115,
-            "dataset": "nurse",
-            "leaves": 104
-        },
-        {
-            "time": 10.991166,
-            "depth": 15,
-            "fold": 3,
-            "accuracy": 97.18364,
-            "dataset": "nurse",
-            "leaves": 118
-        },
-        {
-            "time": 11.946741,
             "depth": 16,
+            "leaves": 104,
+            "time": 12.123593
+        },
+        {
+            "dataset": "nurse",
+            "accuracy": 0.9718363999999999,
+            "fold": 3,
+            "depth": 15,
+            "leaves": 118,
+            "time": 10.991166
+        },
+        {
+            "dataset": "nurse",
+            "accuracy": 0.9459876300000001,
             "fold": 4,
-            "accuracy": 94.598763,
-            "dataset": "nurse",
-            "leaves": 161
+            "depth": 16,
+            "leaves": 161,
+            "time": 11.946741
         },
         {
-            "time": 11.862993,
-            "depth": 14,
+            "dataset": "nurse",
+            "accuracy": 0.96489197,
             "fold": 5,
-            "accuracy": 96.489197,
-            "dataset": "nurse",
-            "leaves": 136
+            "depth": 14,
+            "leaves": 136,
+            "time": 11.862993
         },
         {
-            "time": 10.607612,
+            "dataset": "nurse",
+            "accuracy": 0.9475309,
+            "fold": 1,
             "depth": 19,
-            "fold": 1,
-            "accuracy": 94.75309,
-            "dataset": "nurse",
-            "leaves": 207
+            "leaves": 207,
+            "time": 10.607612
         },
         {
-            "time": 13.006059,
-            "depth": 16,
+            "dataset": "nurse",
+            "accuracy": 0.9587191,
             "fold": 2,
-            "accuracy": 95.87191,
-            "dataset": "nurse",
-            "leaves": 96
+            "depth": 16,
+            "leaves": 96,
+            "time": 13.006059
         },
         {
-            "time": 11.501546,
-            "depth": 14,
+            "dataset": "nurse",
+            "accuracy": 0.95640434,
             "fold": 3,
-            "accuracy": 95.640434,
-            "dataset": "nurse",
-            "leaves": 161
+            "depth": 14,
+            "leaves": 161,
+            "time": 11.501546
         },
         {
-            "time": 11.23202,
-            "depth": 11,
+            "dataset": "nurse",
+            "accuracy": 0.95524689,
             "fold": 4,
-            "accuracy": 95.524689,
-            "dataset": "nurse",
-            "leaves": 81
+            "depth": 11,
+            "leaves": 81,
+            "time": 11.23202
         },
         {
-            "time": 13.410374,
+            "dataset": "nurse",
+            "accuracy": 0.9587191,
+            "fold": 5,
             "depth": 13,
-            "fold": 5,
-            "accuracy": 95.87191,
-            "dataset": "nurse",
-            "leaves": 86
+            "leaves": 86,
+            "time": 13.410374
         },
         {
-            "time": 11.689924,
-            "depth": 16,
+            "dataset": "nurse",
+            "accuracy": 0.95949074,
             "fold": 1,
-            "accuracy": 95.949074,
-            "dataset": "nurse",
-            "leaves": 154
+            "depth": 16,
+            "leaves": 154,
+            "time": 11.689924
         },
         {
-            "time": 11.490445,
+            "dataset": "nurse",
+            "accuracy": 0.94251541,
+            "fold": 2,
             "depth": 11,
-            "fold": 2,
-            "accuracy": 94.251541,
-            "dataset": "nurse",
-            "leaves": 55
+            "leaves": 55,
+            "time": 11.490445
         },
         {
-            "time": 12.142867,
-            "depth": 15,
+            "dataset": "nurse",
+            "accuracy": 0.96296295,
             "fold": 3,
-            "accuracy": 96.296295,
-            "dataset": "nurse",
-            "leaves": 62
+            "depth": 15,
+            "leaves": 62,
+            "time": 12.142867
         },
         {
-            "time": 12.205957,
+            "dataset": "nurse",
+            "accuracy": 0.95563271,
+            "fold": 4,
             "depth": 12,
-            "fold": 4,
-            "accuracy": 95.563271,
-            "dataset": "nurse",
-            "leaves": 67
+            "leaves": 67,
+            "time": 12.205957
         },
         {
-            "time": 12.885692,
-            "depth": 14,
+            "dataset": "nurse",
+            "accuracy": 0.9575617200000001,
             "fold": 5,
-            "accuracy": 95.756172,
-            "dataset": "nurse",
-            "leaves": 163
-        },
-        {
-            "time": 10.565728,
-            "depth": 15,
-            "fold": 1,
-            "accuracy": 95.987656,
-            "dataset": "nurse",
-            "leaves": 128
-        },
-        {
-            "time": 11.195968,
             "depth": 14,
+            "leaves": 163,
+            "time": 12.885692
+        },
+        {
+            "dataset": "nurse",
+            "accuracy": 0.95987656,
+            "fold": 1,
+            "depth": 15,
+            "leaves": 128,
+            "time": 10.565728
+        },
+        {
+            "dataset": "nurse",
+            "accuracy": 0.95293213,
             "fold": 2,
-            "accuracy": 95.293213,
-            "dataset": "nurse",
-            "leaves": 113
+            "depth": 14,
+            "leaves": 113,
+            "time": 11.195968
         },
         {
-            "time": 12.467379,
-            "depth": 16,
+            "dataset": "nurse",
+            "accuracy": 0.95563271,
             "fold": 3,
-            "accuracy": 95.563271,
-            "dataset": "nurse",
-            "leaves": 120
+            "depth": 16,
+            "leaves": 120,
+            "time": 12.467379
         },
         {
-            "time": 11.482946,
-            "depth": 10,
+            "dataset": "nurse",
+            "accuracy": 0.96450615,
             "fold": 4,
-            "accuracy": 96.450615,
-            "dataset": "nurse",
-            "leaves": 72
+            "depth": 10,
+            "leaves": 72,
+            "time": 11.482946
         },
         {
-            "time": 12.253725,
+            "dataset": "nurse",
+            "accuracy": 0.9494598399999999,
+            "fold": 5,
             "depth": 18,
-            "fold": 5,
-            "accuracy": 94.945984,
-            "dataset": "nurse",
-            "leaves": 111
+            "leaves": 111,
+            "time": 12.253725
         },
         {
-            "time": 7.83381,
-            "fold": 1,
-            "accuracy": 96.567719,
             "dataset": "page",
+            "accuracy": 0.96567719,
+            "fold": 1,
             "depth": 7,
-            "leaves": 17
+            "leaves": 17,
+            "time": 7.83381
         },
         {
-            "time": 7.682564,
+            "dataset": "page",
+            "accuracy": 0.9777365100000001,
             "fold": 2,
-            "accuracy": 97.773651,
-            "dataset": "page",
             "depth": 6,
-            "leaves": 15
+            "leaves": 15,
+            "time": 7.682564
         },
         {
-            "time": 8.259102,
+            "dataset": "page",
+            "accuracy": 0.96567719,
             "fold": 3,
-            "accuracy": 96.567719,
-            "dataset": "page",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 8.259102
         },
         {
-            "time": 7.712281,
+            "dataset": "page",
+            "accuracy": 0.97124306,
             "fold": 4,
-            "accuracy": 97.124306,
-            "dataset": "page",
             "depth": 6,
-            "leaves": 20
+            "leaves": 20,
+            "time": 7.712281
         },
         {
-            "time": 9.348288,
-            "fold": 5,
-            "accuracy": 96.669754,
             "dataset": "page",
+            "accuracy": 0.96669754,
+            "fold": 5,
             "depth": 7,
-            "leaves": 29
+            "leaves": 29,
+            "time": 9.348288
         },
         {
-            "time": 6.7704,
-            "fold": 1,
-            "accuracy": 97.495361,
             "dataset": "page",
+            "accuracy": 0.97495361,
+            "fold": 1,
             "depth": 7,
-            "leaves": 21
+            "leaves": 21,
+            "time": 6.7704
         },
         {
-            "time": 7.875755,
+            "dataset": "page",
+            "accuracy": 0.9573284099999999,
             "fold": 2,
-            "accuracy": 95.732841,
-            "dataset": "page",
             "depth": 5,
-            "leaves": 12
+            "leaves": 12,
+            "time": 7.875755
         },
         {
-            "time": 8.004649,
+            "dataset": "page",
+            "accuracy": 0.9740259600000001,
             "fold": 3,
-            "accuracy": 97.402596,
-            "dataset": "page",
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 8.004649
         },
         {
-            "time": 7.872942,
+            "dataset": "page",
+            "accuracy": 0.96382187,
             "fold": 4,
-            "accuracy": 96.382187,
-            "dataset": "page",
             "depth": 4,
-            "leaves": 9
+            "leaves": 9,
+            "time": 7.872942
         },
         {
-            "time": 7.509889,
+            "dataset": "page",
+            "accuracy": 0.9676226,
             "fold": 5,
-            "accuracy": 96.76226,
-            "dataset": "page",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 7.509889
         },
         {
-            "time": 6.783657,
+            "dataset": "page",
+            "accuracy": 0.96567719,
             "fold": 1,
-            "accuracy": 96.567719,
-            "dataset": "page",
             "depth": 5,
-            "leaves": 12
+            "leaves": 12,
+            "time": 6.783657
         },
         {
-            "time": 7.239803,
+            "dataset": "page",
+            "accuracy": 0.9777365100000001,
             "fold": 2,
-            "accuracy": 97.773651,
-            "dataset": "page",
             "depth": 6,
-            "leaves": 18
+            "leaves": 18,
+            "time": 7.239803
         },
         {
-            "time": 6.383043,
+            "dataset": "page",
+            "accuracy": 0.96567719,
             "fold": 3,
-            "accuracy": 96.567719,
-            "dataset": "page",
             "depth": 6,
-            "leaves": 22
+            "leaves": 22,
+            "time": 6.383043
         },
         {
-            "time": 7.236956,
-            "fold": 4,
-            "accuracy": 96.289421,
             "dataset": "page",
+            "accuracy": 0.9628942100000001,
+            "fold": 4,
             "depth": 4,
-            "leaves": 9
+            "leaves": 9,
+            "time": 7.236956
         },
         {
-            "time": 8.522603,
+            "dataset": "page",
+            "accuracy": 0.9657724000000001,
             "fold": 5,
-            "accuracy": 96.57724,
-            "dataset": "page",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 8.522603
         },
         {
-            "time": 10.161455,
+            "dataset": "page",
+            "accuracy": 0.96474953,
             "fold": 1,
-            "accuracy": 96.474953,
-            "dataset": "page",
             "depth": 5,
-            "leaves": 14
+            "leaves": 14,
+            "time": 10.161455
         },
         {
-            "time": 8.280021,
+            "dataset": "page",
+            "accuracy": 0.9730983000000001,
             "fold": 2,
-            "accuracy": 97.30983,
-            "dataset": "page",
             "depth": 5,
-            "leaves": 11
+            "leaves": 11,
+            "time": 8.280021
         },
         {
-            "time": 6.268588,
+            "dataset": "page",
+            "accuracy": 0.9786641699999999,
             "fold": 3,
-            "accuracy": 97.866417,
-            "dataset": "page",
             "depth": 4,
-            "leaves": 9
+            "leaves": 9,
+            "time": 6.268588
         },
         {
-            "time": 8.282431,
-            "fold": 4,
-            "accuracy": 96.011131,
             "dataset": "page",
+            "accuracy": 0.96011131,
+            "fold": 4,
             "depth": 7,
-            "leaves": 21
+            "leaves": 21,
+            "time": 8.282431
         },
         {
-            "time": 8.305685,
+            "dataset": "page",
+            "accuracy": 0.9703978,
             "fold": 5,
-            "accuracy": 97.03978,
-            "dataset": "page",
             "depth": 6,
-            "leaves": 20
+            "leaves": 20,
+            "time": 8.305685
         },
         {
-            "time": 6.864019,
+            "dataset": "page",
+            "accuracy": 0.96660484,
             "fold": 1,
-            "accuracy": 96.660484,
-            "dataset": "page",
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 6.864019
         },
         {
-            "time": 5.434558,
-            "fold": 2,
-            "accuracy": 97.124306,
             "dataset": "page",
+            "accuracy": 0.97124306,
+            "fold": 2,
             "depth": 8,
-            "leaves": 31
+            "leaves": 31,
+            "time": 5.434558
         },
         {
-            "time": 7.860308,
-            "fold": 3,
-            "accuracy": 96.382187,
             "dataset": "page",
+            "accuracy": 0.96382187,
+            "fold": 3,
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 7.860308
         },
         {
-            "time": 9.278772,
+            "dataset": "page",
+            "accuracy": 0.9693877399999999,
             "fold": 4,
-            "accuracy": 96.938774,
-            "dataset": "page",
             "depth": 5,
-            "leaves": 19
+            "leaves": 19,
+            "time": 9.278772
         },
         {
-            "time": 5.818429,
+            "dataset": "page",
+            "accuracy": 0.9713228599999999,
             "fold": 5,
-            "accuracy": 97.132286,
-            "dataset": "page",
             "depth": 5,
-            "leaves": 17
+            "leaves": 17,
+            "time": 5.818429
         },
         {
-            "time": 23.698277,
-            "depth": 10,
+            "dataset": "pen",
+            "accuracy": 0.96451317,
             "fold": 1,
-            "accuracy": 96.451317,
-            "dataset": "pen",
-            "leaves": 110
-        },
-        {
-            "time": 24.37958,
-            "depth": 11,
-            "fold": 2,
-            "accuracy": 96.587807,
-            "dataset": "pen",
-            "leaves": 75
-        },
-        {
-            "time": 24.304918,
             "depth": 10,
+            "leaves": 110,
+            "time": 23.698277
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.96587807,
+            "fold": 2,
+            "depth": 11,
+            "leaves": 75,
+            "time": 24.37958
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.97179253,
             "fold": 3,
-            "accuracy": 97.179253,
-            "dataset": "pen",
-            "leaves": 94
+            "depth": 10,
+            "leaves": 94,
+            "time": 24.304918
         },
         {
-            "time": 25.536034,
-            "depth": 9,
+            "dataset": "pen",
+            "accuracy": 0.96496819,
             "fold": 4,
-            "accuracy": 96.496819,
-            "dataset": "pen",
-            "leaves": 54
+            "depth": 9,
+            "leaves": 54,
+            "time": 25.536034
         },
         {
-            "time": 23.288635,
-            "depth": 7,
+            "dataset": "pen",
+            "accuracy": 0.9586364,
             "fold": 5,
-            "accuracy": 95.86364,
-            "dataset": "pen",
-            "leaves": 38
+            "depth": 7,
+            "leaves": 38,
+            "time": 23.288635
         },
         {
-            "time": 26.001141,
+            "dataset": "pen",
+            "accuracy": 0.95677887,
+            "fold": 1,
             "depth": 12,
-            "fold": 1,
-            "accuracy": 95.677887,
-            "dataset": "pen",
-            "leaves": 116
+            "leaves": 116,
+            "time": 26.001141
         },
         {
-            "time": 23.503519,
-            "depth": 9,
+            "dataset": "pen",
+            "accuracy": 0.95996361,
             "fold": 2,
-            "accuracy": 95.996361,
-            "dataset": "pen",
-            "leaves": 68
+            "depth": 9,
+            "leaves": 68,
+            "time": 23.503519
         },
         {
-            "time": 23.979069,
-            "depth": 9,
+            "dataset": "pen",
+            "accuracy": 0.96724297,
             "fold": 3,
-            "accuracy": 96.724297,
-            "dataset": "pen",
-            "leaves": 76
+            "depth": 9,
+            "leaves": 76,
+            "time": 23.979069
         },
         {
-            "time": 24.991516,
-            "depth": 9,
+            "dataset": "pen",
+            "accuracy": 0.96314835,
             "fold": 4,
-            "accuracy": 96.314835,
-            "dataset": "pen",
-            "leaves": 49
-        },
-        {
-            "time": 26.438843,
             "depth": 9,
+            "leaves": 49,
+            "time": 24.991516
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.96181816,
             "fold": 5,
-            "accuracy": 96.181816,
-            "dataset": "pen",
-            "leaves": 73
+            "depth": 9,
+            "leaves": 73,
+            "time": 26.438843
         },
         {
-            "time": 23.004295,
-            "depth": 10,
+            "dataset": "pen",
+            "accuracy": 0.96405823,
             "fold": 1,
-            "accuracy": 96.405823,
-            "dataset": "pen",
-            "leaves": 96
+            "depth": 10,
+            "leaves": 96,
+            "time": 23.004295
         },
         {
-            "time": 24.784073,
+            "dataset": "pen",
+            "accuracy": 0.95814377,
+            "fold": 2,
             "depth": 8,
-            "fold": 2,
-            "accuracy": 95.814377,
-            "dataset": "pen",
-            "leaves": 53
+            "leaves": 53,
+            "time": 24.784073
         },
         {
-            "time": 24.359777,
-            "depth": 9,
+            "dataset": "pen",
+            "accuracy": 0.9777069899999999,
             "fold": 3,
-            "accuracy": 97.770699,
-            "dataset": "pen",
-            "leaves": 97
-        },
-        {
-            "time": 23.460005,
-            "depth": 10,
-            "fold": 4,
-            "accuracy": 96.269333,
-            "dataset": "pen",
-            "leaves": 101
-        },
-        {
-            "time": 23.872662,
             "depth": 9,
-            "fold": 5,
-            "accuracy": 96.818184,
-            "dataset": "pen",
-            "leaves": 74
+            "leaves": 97,
+            "time": 24.359777
         },
         {
-            "time": 25.011902,
+            "dataset": "pen",
+            "accuracy": 0.96269333,
+            "fold": 4,
             "depth": 10,
+            "leaves": 101,
+            "time": 23.460005
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.9681818400000001,
+            "fold": 5,
+            "depth": 9,
+            "leaves": 74,
+            "time": 23.872662
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.96405823,
             "fold": 1,
-            "accuracy": 96.405823,
-            "dataset": "pen",
-            "leaves": 77
+            "depth": 10,
+            "leaves": 77,
+            "time": 25.011902
         },
         {
-            "time": 24.984028,
-            "depth": 10,
+            "dataset": "pen",
+            "accuracy": 0.96496819,
             "fold": 2,
-            "accuracy": 96.496819,
-            "dataset": "pen",
-            "leaves": 84
-        },
-        {
-            "time": 25.044369,
             "depth": 10,
+            "leaves": 84,
+            "time": 24.984028
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.95359421,
             "fold": 3,
-            "accuracy": 95.359421,
-            "dataset": "pen",
-            "leaves": 99
+            "depth": 10,
+            "leaves": 99,
+            "time": 25.044369
         },
         {
-            "time": 25.766001,
-            "depth": 9,
+            "dataset": "pen",
+            "accuracy": 0.9699726900000001,
             "fold": 4,
-            "accuracy": 96.997269,
-            "dataset": "pen",
-            "leaves": 85
-        },
-        {
-            "time": 24.377317,
             "depth": 9,
-            "fold": 5,
-            "accuracy": 97.13636,
-            "dataset": "pen",
-            "leaves": 89
+            "leaves": 85,
+            "time": 25.766001
         },
         {
-            "time": 23.458549,
+            "dataset": "pen",
+            "accuracy": 0.9713636,
+            "fold": 5,
+            "depth": 9,
+            "leaves": 89,
+            "time": 24.377317
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.96451317,
+            "fold": 1,
             "depth": 8,
-            "fold": 1,
-            "accuracy": 96.451317,
-            "dataset": "pen",
-            "leaves": 47
+            "leaves": 47,
+            "time": 23.458549
         },
         {
-            "time": 24.158352,
+            "dataset": "pen",
+            "accuracy": 0.96633301,
+            "fold": 2,
             "depth": 7,
-            "fold": 2,
-            "accuracy": 96.633301,
-            "dataset": "pen",
-            "leaves": 53
+            "leaves": 53,
+            "time": 24.158352
         },
         {
-            "time": 23.215233,
-            "depth": 9,
+            "dataset": "pen",
+            "accuracy": 0.9699726900000001,
             "fold": 3,
-            "accuracy": 96.997269,
-            "dataset": "pen",
-            "leaves": 106
-        },
-        {
-            "time": 25.992716,
             "depth": 9,
-            "fold": 4,
-            "accuracy": 96.496819,
-            "dataset": "pen",
-            "leaves": 76
+            "leaves": 106,
+            "time": 23.215233
         },
         {
-            "time": 25.008589,
+            "dataset": "pen",
+            "accuracy": 0.96496819,
+            "fold": 4,
+            "depth": 9,
+            "leaves": 76,
+            "time": 25.992716
+        },
+        {
+            "dataset": "pen",
+            "accuracy": 0.96681816,
+            "fold": 5,
             "depth": 11,
-            "fold": 5,
-            "accuracy": 96.681816,
-            "dataset": "pen",
-            "leaves": 120
+            "leaves": 120,
+            "time": 25.008589
         },
         {
-            "time": 0.494254,
+            "dataset": "pid",
+            "accuracy": 0.70588234,
             "fold": 1,
-            "accuracy": 70.588234,
-            "dataset": "pid",
             "depth": 8,
-            "leaves": 16
+            "leaves": 16,
+            "time": 0.494254
         },
         {
-            "time": 0.362402,
+            "dataset": "pid",
+            "accuracy": 0.7385620900000001,
             "fold": 2,
-            "accuracy": 73.856209,
-            "dataset": "pid",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.362402
         },
         {
-            "time": 0.330337,
+            "dataset": "pid",
+            "accuracy": 0.7385620900000001,
             "fold": 3,
-            "accuracy": 73.856209,
-            "dataset": "pid",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.330337
         },
         {
-            "time": 0.342527,
+            "dataset": "pid",
+            "accuracy": 0.74509804,
             "fold": 4,
-            "accuracy": 74.509804,
-            "dataset": "pid",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.342527
         },
         {
-            "time": 0.351712,
-            "fold": 5,
-            "accuracy": 73.717949,
             "dataset": "pid",
+            "accuracy": 0.73717949,
+            "fold": 5,
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.351712
         },
         {
-            "time": 0.389191,
+            "dataset": "pid",
+            "accuracy": 0.6993463900000001,
             "fold": 1,
-            "accuracy": 69.934639,
-            "dataset": "pid",
             "depth": 8,
-            "leaves": 12
+            "leaves": 12,
+            "time": 0.389191
         },
         {
-            "time": 0.329848,
+            "dataset": "pid",
+            "accuracy": 0.71241829,
             "fold": 2,
-            "accuracy": 71.241829,
-            "dataset": "pid",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.329848
         },
         {
-            "time": 0.378824,
-            "fold": 3,
-            "accuracy": 73.202614,
             "dataset": "pid",
+            "accuracy": 0.73202614,
+            "fold": 3,
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.378824
         },
         {
-            "time": 0.364892,
-            "fold": 4,
-            "accuracy": 77.124184,
             "dataset": "pid",
+            "accuracy": 0.77124184,
+            "fold": 4,
             "depth": 10,
-            "leaves": 14
+            "leaves": 14,
+            "time": 0.364892
         },
         {
-            "time": 0.34262,
-            "fold": 5,
-            "accuracy": 78.205132,
             "dataset": "pid",
+            "accuracy": 0.7820513200000001,
+            "fold": 5,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.34262
         },
         {
-            "time": 0.374989,
+            "dataset": "pid",
+            "accuracy": 0.7843137400000001,
             "fold": 1,
-            "accuracy": 78.431374,
-            "dataset": "pid",
             "depth": 7,
-            "leaves": 17
+            "leaves": 17,
+            "time": 0.374989
         },
         {
-            "time": 0.316291,
+            "dataset": "pid",
+            "accuracy": 0.66013069,
             "fold": 2,
-            "accuracy": 66.013069,
-            "dataset": "pid",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.316291
         },
         {
-            "time": 0.358125,
+            "dataset": "pid",
+            "accuracy": 0.77124184,
             "fold": 3,
-            "accuracy": 77.124184,
-            "dataset": "pid",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.358125
         },
         {
-            "time": 0.417125,
+            "dataset": "pid",
+            "accuracy": 0.73202614,
             "fold": 4,
-            "accuracy": 73.202614,
-            "dataset": "pid",
             "depth": 5,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.417125
         },
         {
-            "time": 0.361843,
-            "fold": 5,
-            "accuracy": 79.487183,
             "dataset": "pid",
+            "accuracy": 0.7948718300000001,
+            "fold": 5,
             "depth": 8,
-            "leaves": 21
+            "leaves": 21,
+            "time": 0.361843
         },
         {
-            "time": 0.344013,
+            "dataset": "pid",
+            "accuracy": 0.62091503,
             "fold": 1,
-            "accuracy": 62.091503,
-            "dataset": "pid",
             "depth": 7,
-            "leaves": 26
+            "leaves": 26,
+            "time": 0.344013
         },
         {
-            "time": 0.351633,
+            "dataset": "pid",
+            "accuracy": 0.7385620900000001,
             "fold": 2,
-            "accuracy": 73.856209,
-            "dataset": "pid",
             "depth": 7,
-            "leaves": 13
+            "leaves": 13,
+            "time": 0.351633
         },
         {
-            "time": 0.392552,
+            "dataset": "pid",
+            "accuracy": 0.68627449,
             "fold": 3,
-            "accuracy": 68.627449,
-            "dataset": "pid",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.392552
         },
         {
-            "time": 0.363806,
-            "fold": 4,
-            "accuracy": 81.045753,
             "dataset": "pid",
+            "accuracy": 0.8104575300000001,
+            "fold": 4,
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.363806
         },
         {
-            "time": 0.331122,
-            "fold": 5,
-            "accuracy": 65.384613,
             "dataset": "pid",
+            "accuracy": 0.65384613,
+            "fold": 5,
             "depth": 9,
-            "leaves": 40
+            "leaves": 40,
+            "time": 0.331122
         },
         {
-            "time": 0.446598,
-            "fold": 1,
-            "accuracy": 75.816994,
             "dataset": "pid",
+            "accuracy": 0.7581699399999999,
+            "fold": 1,
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.446598
         },
         {
-            "time": 0.343509,
+            "dataset": "pid",
+            "accuracy": 0.7843137400000001,
             "fold": 2,
-            "accuracy": 78.431374,
-            "dataset": "pid",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.343509
         },
         {
-            "time": 0.310936,
-            "fold": 3,
-            "accuracy": 79.738564,
             "dataset": "pid",
+            "accuracy": 0.79738564,
+            "fold": 3,
             "depth": 7,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.310936
         },
         {
-            "time": 0.353781,
-            "fold": 4,
-            "accuracy": 69.934639,
             "dataset": "pid",
+            "accuracy": 0.6993463900000001,
+            "fold": 4,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.353781
         },
         {
-            "time": 0.387135,
-            "fold": 5,
-            "accuracy": 70.512817,
             "dataset": "pid",
-            "depth": 1,
-            "leaves": 2
-        },
-        {
-            "time": 0.006493,
-            "depth": 1,
-            "fold": 1,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
-        },
-        {
-            "time": 0.005839,
-            "depth": 1,
-            "fold": 2,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
-        },
-        {
-            "time": 0.005754,
-            "depth": 1,
-            "fold": 3,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
-        },
-        {
-            "time": 0.005488,
-            "depth": 1,
-            "fold": 4,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
-        },
-        {
-            "time": 0.005477,
-            "depth": 1,
+            "accuracy": 0.7051281699999999,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.387135
         },
         {
-            "time": 0.005349,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 1,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.006493
         },
         {
-            "time": 0.005293,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 2,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.005839
         },
         {
-            "time": 0.005016,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 3,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.005754
         },
         {
-            "time": 0.00499,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 4,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.005488
         },
         {
-            "time": 0.004831,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.005477
         },
         {
-            "time": 0.004861,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 1,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.005349
         },
         {
-            "time": 0.004758,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 2,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.005293
         },
         {
-            "time": 0.004503,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 3,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.005016
         },
         {
-            "time": 0.004517,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 4,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.00499
         },
         {
-            "time": 0.004441,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004831
         },
         {
-            "time": 0.004437,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 1,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004861
         },
         {
-            "time": 0.004328,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 2,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004758
         },
         {
-            "time": 0.004206,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 3,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004503
         },
         {
-            "time": 0.004145,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 4,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004517
         },
         {
-            "time": 0.004152,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004441
         },
         {
-            "time": 0.00412,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 1,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004437
         },
         {
-            "time": 0.004124,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 2,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004328
         },
         {
-            "time": 0.004009,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 3,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004206
         },
         {
-            "time": 0.00385,
-            "depth": 1,
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 4,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
-        },
-        {
-            "time": 0.003823,
             "depth": 1,
-            "fold": 5,
-            "accuracy": 100.0,
-            "dataset": "psd",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.004145
         },
         {
-            "time": 1.833756,
+            "dataset": "psd",
+            "accuracy": 1.0,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004152
+        },
+        {
+            "dataset": "psd",
+            "accuracy": 1.0,
             "fold": 1,
-            "accuracy": 91.456314,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.00412
+        },
+        {
+            "dataset": "psd",
+            "accuracy": 1.0,
+            "fold": 2,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004124
+        },
+        {
+            "dataset": "psd",
+            "accuracy": 1.0,
+            "fold": 3,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.004009
+        },
+        {
+            "dataset": "psd",
+            "accuracy": 1.0,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.00385
+        },
+        {
+            "dataset": "psd",
+            "accuracy": 1.0,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.003823
+        },
+        {
             "dataset": "sb",
+            "accuracy": 0.91456314,
+            "fold": 1,
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.833756
         },
         {
-            "time": 1.585294,
-            "fold": 2,
-            "accuracy": 92.621361,
             "dataset": "sb",
+            "accuracy": 0.9262136099999999,
+            "fold": 2,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 1.585294
         },
         {
-            "time": 2.084504,
-            "fold": 3,
-            "accuracy": 93.20388,
             "dataset": "sb",
+            "accuracy": 0.9320388,
+            "fold": 3,
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 2.084504
         },
         {
-            "time": 1.680328,
+            "dataset": "sb",
+            "accuracy": 0.9456311,
             "fold": 4,
-            "accuracy": 94.56311,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.680328
         },
         {
-            "time": 1.542109,
+            "dataset": "sb",
+            "accuracy": 0.93436295,
             "fold": 5,
-            "accuracy": 93.436295,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.542109
         },
         {
-            "time": 1.825919,
+            "dataset": "sb",
+            "accuracy": 0.94368935,
             "fold": 1,
-            "accuracy": 94.368935,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.825919
         },
         {
-            "time": 1.858106,
+            "dataset": "sb",
+            "accuracy": 0.93980583,
             "fold": 2,
-            "accuracy": 93.980583,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.858106
         },
         {
-            "time": 2.167567,
+            "dataset": "sb",
+            "accuracy": 0.94368935,
             "fold": 3,
-            "accuracy": 94.368935,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.167567
         },
         {
-            "time": 2.517911,
+            "dataset": "sb",
+            "accuracy": 0.9203883399999999,
             "fold": 4,
-            "accuracy": 92.038834,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.517911
         },
         {
-            "time": 2.24481,
+            "dataset": "sb",
+            "accuracy": 0.92277992,
             "fold": 5,
-            "accuracy": 92.277992,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.24481
         },
         {
-            "time": 1.777355,
+            "dataset": "sb",
+            "accuracy": 0.9378640699999999,
             "fold": 1,
-            "accuracy": 93.786407,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.777355
         },
         {
-            "time": 2.018389,
+            "dataset": "sb",
+            "accuracy": 0.9320388,
             "fold": 2,
-            "accuracy": 93.20388,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.018389
         },
         {
-            "time": 1.665792,
+            "dataset": "sb",
+            "accuracy": 0.93592232,
             "fold": 3,
-            "accuracy": 93.592232,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.665792
         },
         {
-            "time": 1.696463,
+            "dataset": "sb",
+            "accuracy": 0.9456311,
             "fold": 4,
-            "accuracy": 94.56311,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.696463
         },
         {
-            "time": 2.363075,
+            "dataset": "sb",
+            "accuracy": 0.91891891,
             "fold": 5,
-            "accuracy": 91.891891,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.363075
         },
         {
-            "time": 1.86988,
+            "dataset": "sb",
+            "accuracy": 0.9320388,
             "fold": 1,
-            "accuracy": 93.20388,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.86988
         },
         {
-            "time": 1.741896,
+            "dataset": "sb",
+            "accuracy": 0.93980583,
             "fold": 2,
-            "accuracy": 93.980583,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.741896
         },
         {
-            "time": 1.818154,
+            "dataset": "sb",
+            "accuracy": 0.9262136099999999,
             "fold": 3,
-            "accuracy": 92.621361,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.818154
         },
         {
-            "time": 2.617378,
+            "dataset": "sb",
+            "accuracy": 0.93592232,
             "fold": 4,
-            "accuracy": 93.592232,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.617378
         },
         {
-            "time": 2.682969,
+            "dataset": "sb",
+            "accuracy": 0.93629341,
             "fold": 5,
-            "accuracy": 93.629341,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.682969
         },
         {
-            "time": 2.018277,
-            "fold": 1,
-            "accuracy": 92.815536,
             "dataset": "sb",
+            "accuracy": 0.92815536,
+            "fold": 1,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 2.018277
         },
         {
-            "time": 2.408895,
+            "dataset": "sb",
+            "accuracy": 0.9300971199999999,
             "fold": 2,
-            "accuracy": 93.009712,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.408895
         },
         {
-            "time": 2.675011,
+            "dataset": "sb",
+            "accuracy": 0.94368935,
             "fold": 3,
-            "accuracy": 94.368935,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.675011
         },
         {
-            "time": 2.348226,
+            "dataset": "sb",
+            "accuracy": 0.9320388,
             "fold": 4,
-            "accuracy": 93.20388,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 2.348226
         },
         {
-            "time": 1.583939,
+            "dataset": "sb",
+            "accuracy": 0.9324324,
             "fold": 5,
-            "accuracy": 93.24324,
-            "dataset": "sb",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 1.583939
         },
         {
-            "time": 2.209432,
+            "dataset": "seg",
+            "accuracy": 0.93525177,
+            "fold": 1,
             "depth": 6,
-            "fold": 1,
-            "accuracy": 93.525177,
-            "dataset": "seg",
-            "leaves": 20
+            "leaves": 20,
+            "time": 2.209432
         },
         {
-            "time": 1.715919,
-            "depth": 5,
+            "dataset": "seg",
+            "accuracy": 0.9568345600000001,
             "fold": 2,
-            "accuracy": 95.683456,
-            "dataset": "seg",
-            "leaves": 15
+            "depth": 5,
+            "leaves": 15,
+            "time": 1.715919
         },
         {
-            "time": 1.820298,
-            "depth": 9,
+            "dataset": "seg",
+            "accuracy": 0.91606712,
             "fold": 3,
-            "accuracy": 91.606712,
-            "dataset": "seg",
-            "leaves": 37
+            "depth": 9,
+            "leaves": 37,
+            "time": 1.820298
         },
         {
-            "time": 2.184486,
-            "depth": 10,
+            "dataset": "seg",
+            "accuracy": 0.9496402700000001,
             "fold": 4,
-            "accuracy": 94.964027,
-            "dataset": "seg",
-            "leaves": 43
+            "depth": 10,
+            "leaves": 43,
+            "time": 2.184486
         },
         {
-            "time": 1.61204,
-            "depth": 5,
+            "dataset": "seg",
+            "accuracy": 0.93540672,
             "fold": 5,
-            "accuracy": 93.540672,
-            "dataset": "seg",
-            "leaves": 10
+            "depth": 5,
+            "leaves": 10,
+            "time": 1.61204
         },
         {
-            "time": 1.900516,
-            "depth": 8,
+            "dataset": "seg",
+            "accuracy": 0.9232614100000001,
             "fold": 1,
-            "accuracy": 92.326141,
-            "dataset": "seg",
-            "leaves": 28
+            "depth": 8,
+            "leaves": 28,
+            "time": 1.900516
         },
         {
-            "time": 1.888061,
-            "depth": 7,
+            "dataset": "seg",
+            "accuracy": 0.96402878,
             "fold": 2,
-            "accuracy": 96.402878,
-            "dataset": "seg",
-            "leaves": 19
+            "depth": 7,
+            "leaves": 19,
+            "time": 1.888061
         },
         {
-            "time": 1.870367,
+            "dataset": "seg",
+            "accuracy": 0.91606712,
+            "fold": 3,
             "depth": 4,
-            "fold": 3,
-            "accuracy": 91.606712,
-            "dataset": "seg",
-            "leaves": 9
+            "leaves": 9,
+            "time": 1.870367
         },
         {
-            "time": 2.182865,
-            "depth": 6,
+            "dataset": "seg",
+            "accuracy": 0.9256594800000001,
             "fold": 4,
-            "accuracy": 92.565948,
-            "dataset": "seg",
-            "leaves": 13
+            "depth": 6,
+            "leaves": 13,
+            "time": 2.182865
         },
         {
-            "time": 1.882237,
+            "dataset": "seg",
+            "accuracy": 0.89473686,
+            "fold": 5,
             "depth": 3,
-            "fold": 5,
-            "accuracy": 89.473686,
-            "dataset": "seg",
-            "leaves": 7
+            "leaves": 7,
+            "time": 1.882237
         },
         {
-            "time": 1.832429,
+            "dataset": "seg",
+            "accuracy": 0.96642685,
+            "fold": 1,
             "depth": 7,
-            "fold": 1,
-            "accuracy": 96.642685,
-            "dataset": "seg",
-            "leaves": 27
+            "leaves": 27,
+            "time": 1.832429
         },
         {
-            "time": 2.032098,
-            "depth": 6,
+            "dataset": "seg",
+            "accuracy": 0.95203835,
             "fold": 2,
-            "accuracy": 95.203835,
-            "dataset": "seg",
-            "leaves": 13
-        },
-        {
-            "time": 2.119229,
-            "depth": 8,
-            "fold": 3,
-            "accuracy": 93.764992,
-            "dataset": "seg",
-            "leaves": 27
-        },
-        {
-            "time": 1.834162,
-            "depth": 8,
-            "fold": 4,
-            "accuracy": 94.484413,
-            "dataset": "seg",
-            "leaves": 17
-        },
-        {
-            "time": 1.890871,
-            "depth": 8,
-            "fold": 5,
-            "accuracy": 95.215309,
-            "dataset": "seg",
-            "leaves": 30
-        },
-        {
-            "time": 1.897846,
             "depth": 6,
-            "fold": 1,
-            "accuracy": 93.045563,
-            "dataset": "seg",
-            "leaves": 14
+            "leaves": 13,
+            "time": 2.032098
         },
         {
-            "time": 2.258094,
+            "dataset": "seg",
+            "accuracy": 0.93764992,
+            "fold": 3,
+            "depth": 8,
+            "leaves": 27,
+            "time": 2.119229
+        },
+        {
+            "dataset": "seg",
+            "accuracy": 0.94484413,
+            "fold": 4,
+            "depth": 8,
+            "leaves": 17,
+            "time": 1.834162
+        },
+        {
+            "dataset": "seg",
+            "accuracy": 0.95215309,
+            "fold": 5,
+            "depth": 8,
+            "leaves": 30,
+            "time": 1.890871
+        },
+        {
+            "dataset": "seg",
+            "accuracy": 0.93045563,
+            "fold": 1,
+            "depth": 6,
+            "leaves": 14,
+            "time": 1.897846
+        },
+        {
+            "dataset": "seg",
+            "accuracy": 0.94004799,
+            "fold": 2,
             "depth": 10,
-            "fold": 2,
-            "accuracy": 94.004799,
-            "dataset": "seg",
-            "leaves": 37
+            "leaves": 37,
+            "time": 2.258094
         },
         {
-            "time": 1.797423,
-            "depth": 7,
+            "dataset": "seg",
+            "accuracy": 0.95203835,
             "fold": 3,
-            "accuracy": 95.203835,
-            "dataset": "seg",
-            "leaves": 20
+            "depth": 7,
+            "leaves": 20,
+            "time": 1.797423
         },
         {
-            "time": 1.778376,
+            "dataset": "seg",
+            "accuracy": 0.9256594800000001,
+            "fold": 4,
             "depth": 9,
-            "fold": 4,
-            "accuracy": 92.565948,
-            "dataset": "seg",
-            "leaves": 32
+            "leaves": 32,
+            "time": 1.778376
         },
         {
-            "time": 2.031019,
-            "depth": 7,
+            "dataset": "seg",
+            "accuracy": 0.9330143700000001,
             "fold": 5,
-            "accuracy": 93.301437,
-            "dataset": "seg",
-            "leaves": 24
-        },
-        {
-            "time": 1.908434,
-            "depth": 6,
-            "fold": 1,
-            "accuracy": 93.525177,
-            "dataset": "seg",
-            "leaves": 17
-        },
-        {
-            "time": 1.921326,
             "depth": 7,
-            "fold": 2,
-            "accuracy": 93.525177,
-            "dataset": "seg",
-            "leaves": 18
+            "leaves": 24,
+            "time": 2.031019
         },
         {
-            "time": 1.739226,
+            "dataset": "seg",
+            "accuracy": 0.93525177,
+            "fold": 1,
+            "depth": 6,
+            "leaves": 17,
+            "time": 1.908434
+        },
+        {
+            "dataset": "seg",
+            "accuracy": 0.93525177,
+            "fold": 2,
+            "depth": 7,
+            "leaves": 18,
+            "time": 1.921326
+        },
+        {
+            "dataset": "seg",
+            "accuracy": 0.94484413,
+            "fold": 3,
             "depth": 9,
-            "fold": 3,
-            "accuracy": 94.484413,
-            "dataset": "seg",
-            "leaves": 23
+            "leaves": 23,
+            "time": 1.739226
         },
         {
-            "time": 2.111522,
-            "depth": 6,
+            "dataset": "seg",
+            "accuracy": 0.9280575600000001,
             "fold": 4,
-            "accuracy": 92.805756,
-            "dataset": "seg",
-            "leaves": 11
-        },
-        {
-            "time": 1.931976,
             "depth": 6,
-            "fold": 5,
-            "accuracy": 93.779907,
-            "dataset": "seg",
-            "leaves": 16
+            "leaves": 11,
+            "time": 2.111522
         },
         {
-            "time": 37.573944,
+            "dataset": "seg",
+            "accuracy": 0.93779907,
+            "fold": 5,
+            "depth": 6,
+            "leaves": 16,
+            "time": 1.931976
+        },
+        {
+            "dataset": "shuttle",
+            "accuracy": 0.9995689400000001,
             "fold": 1,
-            "accuracy": 99.956894,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 25
+            "leaves": 25,
+            "time": 37.573944
         },
         {
-            "time": 44.563019,
+            "dataset": "shuttle",
+            "accuracy": 0.9995689400000001,
             "fold": 2,
-            "accuracy": 99.956894,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 26
+            "leaves": 26,
+            "time": 44.563019
         },
         {
-            "time": 40.263924,
+            "dataset": "shuttle",
+            "accuracy": 0.99948273,
             "fold": 3,
-            "accuracy": 99.948273,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 27
+            "leaves": 27,
+            "time": 40.263924
         },
         {
-            "time": 39.568302,
+            "dataset": "shuttle",
+            "accuracy": 0.99948273,
             "fold": 4,
-            "accuracy": 99.948273,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 22
+            "leaves": 22,
+            "time": 39.568302
         },
         {
-            "time": 53.959179,
-            "fold": 5,
-            "accuracy": 99.931038,
             "dataset": "shuttle",
+            "accuracy": 0.99931038,
+            "fold": 5,
             "depth": 8,
-            "leaves": 32
+            "leaves": 32,
+            "time": 53.959179
         },
         {
-            "time": 38.742504,
+            "dataset": "shuttle",
+            "accuracy": 0.99939651,
             "fold": 1,
-            "accuracy": 99.939651,
-            "dataset": "shuttle",
             "depth": 6,
-            "leaves": 16
+            "leaves": 16,
+            "time": 38.742504
         },
         {
-            "time": 55.212353,
+            "dataset": "shuttle",
+            "accuracy": 0.9991379499999999,
             "fold": 2,
-            "accuracy": 99.913795,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 29
+            "leaves": 29,
+            "time": 55.212353
         },
         {
-            "time": 37.797825,
+            "dataset": "shuttle",
+            "accuracy": 0.9991379499999999,
             "fold": 3,
-            "accuracy": 99.913795,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 23
+            "leaves": 23,
+            "time": 37.797825
         },
         {
-            "time": 34.514771,
+            "dataset": "shuttle",
+            "accuracy": 0.9996551499999999,
             "fold": 4,
-            "accuracy": 99.965515,
-            "dataset": "shuttle",
             "depth": 8,
-            "leaves": 23
+            "leaves": 23,
+            "time": 34.514771
         },
         {
-            "time": 46.056568,
-            "fold": 5,
-            "accuracy": 99.948273,
             "dataset": "shuttle",
+            "accuracy": 0.99948273,
+            "fold": 5,
             "depth": 9,
-            "leaves": 36
+            "leaves": 36,
+            "time": 46.056568
         },
         {
-            "time": 46.447906,
+            "dataset": "shuttle",
+            "accuracy": 0.99974136,
             "fold": 1,
-            "accuracy": 99.974136,
-            "dataset": "shuttle",
             "depth": 8,
-            "leaves": 32
+            "leaves": 32,
+            "time": 46.447906
         },
         {
-            "time": 41.24136,
+            "dataset": "shuttle",
+            "accuracy": 0.99931038,
             "fold": 2,
-            "accuracy": 99.931038,
-            "dataset": "shuttle",
             "depth": 8,
-            "leaves": 32
+            "leaves": 32,
+            "time": 41.24136
         },
         {
-            "time": 47.901222,
-            "fold": 3,
-            "accuracy": 99.956894,
             "dataset": "shuttle",
+            "accuracy": 0.9995689400000001,
+            "fold": 3,
             "depth": 10,
-            "leaves": 38
+            "leaves": 38,
+            "time": 47.901222
         },
         {
-            "time": 31.622915,
+            "dataset": "shuttle",
+            "accuracy": 0.99948273,
             "fold": 4,
-            "accuracy": 99.948273,
-            "dataset": "shuttle",
             "depth": 6,
-            "leaves": 21
+            "leaves": 21,
+            "time": 31.622915
         },
         {
-            "time": 31.907972,
+            "dataset": "shuttle",
+            "accuracy": 0.99982758,
             "fold": 5,
-            "accuracy": 99.982758,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 26
+            "leaves": 26,
+            "time": 31.907972
         },
         {
-            "time": 57.558407,
-            "fold": 1,
-            "accuracy": 99.948273,
             "dataset": "shuttle",
+            "accuracy": 0.99948273,
+            "fold": 1,
             "depth": 12,
-            "leaves": 41
+            "leaves": 41,
+            "time": 57.558407
         },
         {
-            "time": 43.656296,
+            "dataset": "shuttle",
+            "accuracy": 0.9995689400000001,
             "fold": 2,
-            "accuracy": 99.956894,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 22
+            "leaves": 22,
+            "time": 43.656296
         },
         {
-            "time": 41.852417,
+            "dataset": "shuttle",
+            "accuracy": 0.99948273,
             "fold": 3,
-            "accuracy": 99.948273,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 31
+            "leaves": 31,
+            "time": 41.852417
         },
         {
-            "time": 47.430073,
+            "dataset": "shuttle",
+            "accuracy": 0.99922417,
             "fold": 4,
-            "accuracy": 99.922417,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 37
+            "leaves": 37,
+            "time": 47.430073
         },
         {
-            "time": 52.431862,
+            "dataset": "shuttle",
+            "accuracy": 0.9995689400000001,
             "fold": 5,
-            "accuracy": 99.956894,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 25
+            "leaves": 25,
+            "time": 52.431862
         },
         {
-            "time": 47.419922,
+            "dataset": "shuttle",
+            "accuracy": 0.9996551499999999,
             "fold": 1,
-            "accuracy": 99.965515,
-            "dataset": "shuttle",
             "depth": 7,
-            "leaves": 24
+            "leaves": 24,
+            "time": 47.419922
         },
         {
-            "time": 40.691017,
+            "dataset": "shuttle",
+            "accuracy": 0.99870689,
             "fold": 2,
-            "accuracy": 99.870689,
-            "dataset": "shuttle",
             "depth": 5,
-            "leaves": 13
+            "leaves": 13,
+            "time": 40.691017
         },
         {
-            "time": 53.320698,
-            "fold": 3,
-            "accuracy": 99.965515,
             "dataset": "shuttle",
+            "accuracy": 0.9996551499999999,
+            "fold": 3,
             "depth": 10,
-            "leaves": 33
+            "leaves": 33,
+            "time": 53.320698
         },
         {
-            "time": 44.964352,
+            "dataset": "shuttle",
+            "accuracy": 0.99896553,
             "fold": 4,
-            "accuracy": 99.896553,
-            "dataset": "shuttle",
             "depth": 8,
-            "leaves": 37
+            "leaves": 37,
+            "time": 44.964352
         },
         {
-            "time": 39.34623,
-            "fold": 5,
-            "accuracy": 99.939651,
             "dataset": "shuttle",
+            "accuracy": 0.99939651,
+            "fold": 5,
             "depth": 7,
-            "leaves": 26
+            "leaves": 26,
+            "time": 39.34623
         },
         {
-            "time": 2.82041,
-            "depth": 5,
+            "dataset": "sick",
+            "accuracy": 0.96765495,
             "fold": 1,
-            "accuracy": 96.765495,
-            "dataset": "sick",
-            "leaves": 13
+            "depth": 5,
+            "leaves": 13,
+            "time": 2.82041
         },
         {
-            "time": 3.28512,
-            "depth": 6,
+            "dataset": "sick",
+            "accuracy": 0.96495956,
             "fold": 2,
-            "accuracy": 96.495956,
-            "dataset": "sick",
-            "leaves": 11
+            "depth": 6,
+            "leaves": 11,
+            "time": 3.28512
         },
         {
-            "time": 2.439789,
+            "dataset": "sick",
+            "accuracy": 0.9582210499999999,
+            "fold": 3,
             "depth": 9,
-            "fold": 3,
-            "accuracy": 95.822105,
-            "dataset": "sick",
-            "leaves": 41
+            "leaves": 41,
+            "time": 2.439789
         },
         {
-            "time": 2.914116,
-            "depth": 4,
+            "dataset": "sick",
+            "accuracy": 0.97169815,
             "fold": 4,
-            "accuracy": 97.169815,
-            "dataset": "sick",
-            "leaves": 7
+            "depth": 4,
+            "leaves": 7,
+            "time": 2.914116
         },
         {
-            "time": 3.13726,
-            "depth": 5,
+            "dataset": "sick",
+            "accuracy": 0.9717362199999999,
             "fold": 5,
-            "accuracy": 97.173622,
-            "dataset": "sick",
-            "leaves": 9
+            "depth": 5,
+            "leaves": 9,
+            "time": 3.13726
         },
         {
-            "time": 3.232781,
-            "depth": 4,
+            "dataset": "sick",
+            "accuracy": 0.9743935399999999,
             "fold": 1,
-            "accuracy": 97.439354,
-            "dataset": "sick",
-            "leaves": 7
-        },
-        {
-            "time": 3.194197,
-            "depth": 2,
-            "fold": 2,
-            "accuracy": 95.687332,
-            "dataset": "sick",
-            "leaves": 3
-        },
-        {
-            "time": 2.419457,
             "depth": 4,
-            "fold": 3,
-            "accuracy": 96.63073,
-            "dataset": "sick",
-            "leaves": 7
+            "leaves": 7,
+            "time": 3.232781
         },
         {
-            "time": 2.362321,
+            "dataset": "sick",
+            "accuracy": 0.95687332,
+            "fold": 2,
+            "depth": 2,
+            "leaves": 3,
+            "time": 3.194197
+        },
+        {
+            "dataset": "sick",
+            "accuracy": 0.9663073,
+            "fold": 3,
+            "depth": 4,
+            "leaves": 7,
+            "time": 2.419457
+        },
+        {
+            "dataset": "sick",
+            "accuracy": 0.97574127,
+            "fold": 4,
             "depth": 8,
-            "fold": 4,
-            "accuracy": 97.574127,
-            "dataset": "sick",
-            "leaves": 32
+            "leaves": 32,
+            "time": 2.362321
         },
         {
-            "time": 2.093528,
-            "depth": 2,
+            "dataset": "sick",
+            "accuracy": 0.9650067099999999,
             "fold": 5,
-            "accuracy": 96.500671,
-            "dataset": "sick",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 2.093528
         },
         {
-            "time": 3.603021,
-            "depth": 7,
+            "dataset": "sick",
+            "accuracy": 0.96361183,
             "fold": 1,
-            "accuracy": 96.361183,
-            "dataset": "sick",
-            "leaves": 24
+            "depth": 7,
+            "leaves": 24,
+            "time": 3.603021
         },
         {
-            "time": 2.3885,
+            "dataset": "sick",
+            "accuracy": 0.95552559,
+            "fold": 2,
             "depth": 4,
-            "fold": 2,
-            "accuracy": 95.552559,
-            "dataset": "sick",
-            "leaves": 6
+            "leaves": 6,
+            "time": 2.3885
         },
         {
-            "time": 3.780568,
-            "depth": 3,
+            "dataset": "sick",
+            "accuracy": 0.96495956,
             "fold": 3,
-            "accuracy": 96.495956,
-            "dataset": "sick",
-            "leaves": 4
-        },
-        {
-            "time": 3.245586,
             "depth": 3,
+            "leaves": 4,
+            "time": 3.780568
+        },
+        {
+            "dataset": "sick",
+            "accuracy": 0.97574127,
             "fold": 4,
-            "accuracy": 97.574127,
-            "dataset": "sick",
-            "leaves": 4
+            "depth": 3,
+            "leaves": 4,
+            "time": 3.245586
         },
         {
-            "time": 3.129655,
-            "depth": 6,
+            "dataset": "sick",
+            "accuracy": 0.96769852,
             "fold": 5,
-            "accuracy": 96.769852,
-            "dataset": "sick",
-            "leaves": 12
+            "depth": 6,
+            "leaves": 12,
+            "time": 3.129655
         },
         {
-            "time": 3.947813,
-            "depth": 5,
+            "dataset": "sick",
+            "accuracy": 0.9595687100000001,
             "fold": 1,
-            "accuracy": 95.956871,
-            "dataset": "sick",
-            "leaves": 8
+            "depth": 5,
+            "leaves": 8,
+            "time": 3.947813
         },
         {
-            "time": 2.519722,
+            "dataset": "sick",
+            "accuracy": 0.9743935399999999,
+            "fold": 2,
             "depth": 4,
-            "fold": 2,
-            "accuracy": 97.439354,
-            "dataset": "sick",
-            "leaves": 8
+            "leaves": 8,
+            "time": 2.519722
         },
         {
-            "time": 3.443989,
-            "depth": 2,
+            "dataset": "sick",
+            "accuracy": 0.9595687100000001,
             "fold": 3,
-            "accuracy": 95.956871,
-            "dataset": "sick",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 3.443989
         },
         {
-            "time": 3.280634,
-            "depth": 7,
+            "dataset": "sick",
+            "accuracy": 0.96361183,
             "fold": 4,
-            "accuracy": 96.361183,
-            "dataset": "sick",
-            "leaves": 19
-        },
-        {
-            "time": 3.76715,
             "depth": 7,
+            "leaves": 19,
+            "time": 3.280634
+        },
+        {
+            "dataset": "sick",
+            "accuracy": 0.9582772799999999,
             "fold": 5,
-            "accuracy": 95.827728,
-            "dataset": "sick",
-            "leaves": 27
+            "depth": 7,
+            "leaves": 27,
+            "time": 3.76715
         },
         {
-            "time": 3.023347,
-            "depth": 6,
+            "dataset": "sick",
+            "accuracy": 0.9595687100000001,
             "fold": 1,
-            "accuracy": 95.956871,
-            "dataset": "sick",
-            "leaves": 15
+            "depth": 6,
+            "leaves": 15,
+            "time": 3.023347
         },
         {
-            "time": 4.118743,
+            "dataset": "sick",
+            "accuracy": 0.96091644,
+            "fold": 2,
             "depth": 5,
-            "fold": 2,
-            "accuracy": 96.091644,
-            "dataset": "sick",
-            "leaves": 11
+            "leaves": 11,
+            "time": 4.118743
         },
         {
-            "time": 3.175906,
+            "dataset": "sick",
+            "accuracy": 0.97169815,
+            "fold": 3,
             "depth": 7,
-            "fold": 3,
-            "accuracy": 97.169815,
-            "dataset": "sick",
-            "leaves": 17
+            "leaves": 17,
+            "time": 3.175906
         },
         {
-            "time": 3.099448,
-            "depth": 3,
+            "dataset": "sick",
+            "accuracy": 0.96765495,
             "fold": 4,
-            "accuracy": 96.765495,
-            "dataset": "sick",
-            "leaves": 4
+            "depth": 3,
+            "leaves": 4,
+            "time": 3.099448
         },
         {
-            "time": 2.862987,
-            "depth": 2,
+            "dataset": "sick",
+            "accuracy": 0.96769852,
             "fold": 5,
-            "accuracy": 96.769852,
-            "dataset": "sick",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 2.862987
         },
         {
-            "time": 0.123904,
-            "fold": 1,
-            "accuracy": 70.731705,
             "dataset": "son",
+            "accuracy": 0.70731705,
+            "fold": 1,
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.123904
         },
         {
-            "time": 0.088584,
+            "dataset": "son",
+            "accuracy": 0.63414635,
             "fold": 2,
-            "accuracy": 63.414635,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.088584
         },
         {
-            "time": 0.090201,
+            "dataset": "son",
+            "accuracy": 0.68292686,
             "fold": 3,
-            "accuracy": 68.292686,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.090201
         },
         {
-            "time": 0.085532,
+            "dataset": "son",
+            "accuracy": 0.6585366100000001,
             "fold": 4,
-            "accuracy": 65.853661,
-            "dataset": "son",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.085532
         },
         {
-            "time": 0.085997,
-            "fold": 5,
-            "accuracy": 65.909088,
             "dataset": "son",
+            "accuracy": 0.6590908799999999,
+            "fold": 5,
             "depth": 6,
-            "leaves": 10
+            "leaves": 10,
+            "time": 0.085997
         },
         {
-            "time": 0.084124,
-            "fold": 1,
-            "accuracy": 78.048782,
             "dataset": "son",
+            "accuracy": 0.78048782,
+            "fold": 1,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.084124
         },
         {
-            "time": 0.10127,
+            "dataset": "son",
+            "accuracy": 0.63414635,
             "fold": 2,
-            "accuracy": 63.414635,
-            "dataset": "son",
             "depth": 2,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.10127
         },
         {
-            "time": 0.07945,
+            "dataset": "son",
+            "accuracy": 0.68292686,
             "fold": 3,
-            "accuracy": 68.292686,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.07945
         },
         {
-            "time": 0.098728,
+            "dataset": "son",
+            "accuracy": 0.6585366100000001,
             "fold": 4,
-            "accuracy": 65.853661,
-            "dataset": "son",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.098728
         },
         {
-            "time": 0.094089,
+            "dataset": "son",
+            "accuracy": 0.72727272,
             "fold": 5,
-            "accuracy": 72.727272,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.094089
         },
         {
-            "time": 0.093372,
+            "dataset": "son",
+            "accuracy": 0.60975609,
             "fold": 1,
-            "accuracy": 60.975609,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.093372
         },
         {
-            "time": 0.084984,
+            "dataset": "son",
+            "accuracy": 0.68292686,
             "fold": 2,
-            "accuracy": 68.292686,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.084984
         },
         {
-            "time": 0.085874,
+            "dataset": "son",
+            "accuracy": 0.63414635,
             "fold": 3,
-            "accuracy": 63.414635,
-            "dataset": "son",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.085874
         },
         {
-            "time": 0.089119,
+            "dataset": "son",
+            "accuracy": 0.73170731,
             "fold": 4,
-            "accuracy": 73.170731,
-            "dataset": "son",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.089119
         },
         {
-            "time": 0.098547,
+            "dataset": "son",
+            "accuracy": 0.72727272,
             "fold": 5,
-            "accuracy": 72.727272,
-            "dataset": "son",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.098547
         },
         {
-            "time": 0.090204,
-            "fold": 1,
-            "accuracy": 63.414635,
             "dataset": "son",
+            "accuracy": 0.63414635,
+            "fold": 1,
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.090204
         },
         {
-            "time": 0.089062,
+            "dataset": "son",
+            "accuracy": 0.78048782,
             "fold": 2,
-            "accuracy": 78.048782,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.089062
         },
         {
-            "time": 0.092141,
+            "dataset": "son",
+            "accuracy": 0.6585366100000001,
             "fold": 3,
-            "accuracy": 65.853661,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.092141
         },
         {
-            "time": 0.081632,
+            "dataset": "son",
+            "accuracy": 0.7560975600000001,
             "fold": 4,
-            "accuracy": 75.609756,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.081632
         },
         {
-            "time": 0.092974,
+            "dataset": "son",
+            "accuracy": 0.79545456,
             "fold": 5,
-            "accuracy": 79.545456,
-            "dataset": "son",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.092974
         },
         {
-            "time": 0.077112,
-            "fold": 1,
-            "accuracy": 80.487808,
             "dataset": "son",
+            "accuracy": 0.80487808,
+            "fold": 1,
             "depth": 6,
-            "leaves": 11
+            "leaves": 11,
+            "time": 0.077112
         },
         {
-            "time": 0.096759,
+            "dataset": "son",
+            "accuracy": 0.60975609,
             "fold": 2,
-            "accuracy": 60.975609,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.096759
         },
         {
-            "time": 0.08993,
+            "dataset": "son",
+            "accuracy": 0.7560975600000001,
             "fold": 3,
-            "accuracy": 75.609756,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.08993
         },
         {
-            "time": 0.091164,
+            "dataset": "son",
+            "accuracy": 0.73170731,
             "fold": 4,
-            "accuracy": 73.170731,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.091164
         },
         {
-            "time": 0.08913,
+            "dataset": "son",
+            "accuracy": 0.6590908799999999,
             "fold": 5,
-            "accuracy": 65.909088,
-            "dataset": "son",
             "depth": 1,
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.08913
         },
         {
-            "time": 0.055177,
+            "dataset": "spect",
+            "accuracy": 0.76744186,
+            "fold": 1,
             "depth": 4,
-            "fold": 1,
-            "accuracy": 76.744186,
-            "dataset": "spect",
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.055177
         },
         {
-            "time": 0.05467,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.7441860200000001,
             "fold": 2,
-            "accuracy": 74.418602,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.05467
         },
         {
-            "time": 0.025422,
+            "dataset": "spect",
+            "accuracy": 0.83720932,
+            "fold": 3,
             "depth": 3,
-            "fold": 3,
-            "accuracy": 83.720932,
-            "dataset": "spect",
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.025422
         },
         {
-            "time": 0.054335,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.86046509,
             "fold": 4,
-            "accuracy": 86.046509,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.054335
         },
         {
-            "time": 0.046711,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.9148936500000001,
             "fold": 5,
-            "accuracy": 91.489365,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.046711
         },
         {
-            "time": 0.037497,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.81395348,
             "fold": 1,
-            "accuracy": 81.395348,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.037497
         },
         {
-            "time": 0.046089,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.7441860200000001,
             "fold": 2,
-            "accuracy": 74.418602,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.046089
         },
         {
-            "time": 0.033888,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.9069767799999999,
             "fold": 3,
-            "accuracy": 90.697678,
-            "dataset": "spect",
-            "leaves": 2
-        },
-        {
-            "time": 0.03271,
             "depth": 1,
-            "fold": 4,
-            "accuracy": 81.395348,
-            "dataset": "spect",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.033888
         },
         {
-            "time": 0.029046,
+            "dataset": "spect",
+            "accuracy": 0.81395348,
+            "fold": 4,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.03271
+        },
+        {
+            "dataset": "spect",
+            "accuracy": 0.80851067,
+            "fold": 5,
             "depth": 3,
-            "fold": 5,
-            "accuracy": 80.851067,
-            "dataset": "spect",
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.029046
         },
         {
-            "time": 0.032778,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.8837209300000001,
             "fold": 1,
-            "accuracy": 88.372093,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.032778
         },
         {
-            "time": 0.033975,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.76744186,
             "fold": 2,
-            "accuracy": 76.744186,
-            "dataset": "spect",
-            "leaves": 2
-        },
-        {
-            "time": 0.033571,
             "depth": 1,
-            "fold": 3,
-            "accuracy": 81.395348,
-            "dataset": "spect",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.033975
         },
         {
-            "time": 0.037354,
+            "dataset": "spect",
+            "accuracy": 0.81395348,
+            "fold": 3,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.033571
+        },
+        {
+            "dataset": "spect",
+            "accuracy": 0.7441860200000001,
+            "fold": 4,
             "depth": 5,
-            "fold": 4,
-            "accuracy": 74.418602,
-            "dataset": "spect",
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.037354
         },
         {
-            "time": 0.03373,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.80851067,
             "fold": 5,
-            "accuracy": 80.851067,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.03373
         },
         {
-            "time": 0.034237,
-            "depth": 2,
+            "dataset": "spect",
+            "accuracy": 0.86046509,
             "fold": 1,
-            "accuracy": 86.046509,
-            "dataset": "spect",
-            "leaves": 4
+            "depth": 2,
+            "leaves": 4,
+            "time": 0.034237
         },
         {
-            "time": 0.034912,
+            "dataset": "spect",
+            "accuracy": 0.7441860200000001,
+            "fold": 2,
             "depth": 7,
-            "fold": 2,
-            "accuracy": 74.418602,
-            "dataset": "spect",
-            "leaves": 14
+            "leaves": 14,
+            "time": 0.034912
         },
         {
-            "time": 0.033561,
-            "depth": 2,
+            "dataset": "spect",
+            "accuracy": 0.81395348,
             "fold": 3,
-            "accuracy": 81.395348,
-            "dataset": "spect",
-            "leaves": 3
-        },
-        {
-            "time": 0.022425,
             "depth": 2,
-            "fold": 4,
-            "accuracy": 76.744186,
-            "dataset": "spect",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.033561
         },
         {
-            "time": 0.033416,
+            "dataset": "spect",
+            "accuracy": 0.76744186,
+            "fold": 4,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.022425
+        },
+        {
+            "dataset": "spect",
+            "accuracy": 0.80851067,
+            "fold": 5,
             "depth": 3,
-            "fold": 5,
-            "accuracy": 80.851067,
-            "dataset": "spect",
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.033416
         },
         {
-            "time": 0.029345,
+            "dataset": "spect",
+            "accuracy": 0.86046509,
+            "fold": 1,
             "depth": 2,
-            "fold": 1,
-            "accuracy": 86.046509,
-            "dataset": "spect",
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.029345
         },
         {
-            "time": 0.050596,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.9069767799999999,
             "fold": 2,
-            "accuracy": 90.697678,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.050596
         },
         {
-            "time": 0.039095,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.8837209300000001,
             "fold": 3,
-            "accuracy": 88.372093,
-            "dataset": "spect",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.039095
         },
         {
-            "time": 0.035571,
-            "depth": 1,
+            "dataset": "spect",
+            "accuracy": 0.86046509,
             "fold": 4,
-            "accuracy": 86.046509,
-            "dataset": "spect",
-            "leaves": 2
-        },
-        {
-            "time": 0.021164,
             "depth": 1,
-            "fold": 5,
-            "accuracy": 70.212769,
-            "dataset": "spect",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.035571
         },
         {
-            "time": 3.920575,
-            "fold": 1,
-            "accuracy": 69.072166,
+            "dataset": "spect",
+            "accuracy": 0.70212769,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.021164
+        },
+        {
             "dataset": "spf",
+            "accuracy": 0.6907216599999999,
+            "fold": 1,
             "depth": 11,
-            "leaves": 39
+            "leaves": 39,
+            "time": 3.920575
         },
         {
-            "time": 3.361002,
+            "dataset": "spf",
+            "accuracy": 0.70876289,
             "fold": 2,
-            "accuracy": 70.876289,
-            "dataset": "spf",
             "depth": 9,
-            "leaves": 32
+            "leaves": 32,
+            "time": 3.361002
         },
         {
-            "time": 4.091822,
-            "fold": 3,
-            "accuracy": 63.659794,
             "dataset": "spf",
+            "accuracy": 0.63659794,
+            "fold": 3,
             "depth": 5,
-            "leaves": 11
+            "leaves": 11,
+            "time": 4.091822
         },
         {
-            "time": 3.910163,
+            "dataset": "spf",
+            "accuracy": 0.6623711400000001,
             "fold": 4,
-            "accuracy": 66.237114,
-            "dataset": "spf",
             "depth": 6,
-            "leaves": 12
+            "leaves": 12,
+            "time": 3.910163
         },
         {
-            "time": 4.135832,
+            "dataset": "spf",
+            "accuracy": 0.72493576,
             "fold": 5,
-            "accuracy": 72.493576,
-            "dataset": "spf",
             "depth": 9,
-            "leaves": 18
+            "leaves": 18,
+            "time": 4.135832
         },
         {
-            "time": 4.310165,
+            "dataset": "spf",
+            "accuracy": 0.6984536,
             "fold": 1,
-            "accuracy": 69.84536,
-            "dataset": "spf",
             "depth": 9,
-            "leaves": 27
+            "leaves": 27,
+            "time": 4.310165
         },
         {
-            "time": 4.355627,
+            "dataset": "spf",
+            "accuracy": 0.71907219,
             "fold": 2,
-            "accuracy": 71.907219,
-            "dataset": "spf",
             "depth": 9,
-            "leaves": 22
+            "leaves": 22,
+            "time": 4.355627
         },
         {
-            "time": 3.809705,
+            "dataset": "spf",
+            "accuracy": 0.70360825,
             "fold": 3,
-            "accuracy": 70.360825,
-            "dataset": "spf",
             "depth": 6,
-            "leaves": 10
+            "leaves": 10,
+            "time": 3.809705
         },
         {
-            "time": 3.688961,
+            "dataset": "spf",
+            "accuracy": 0.68041237,
             "fold": 4,
-            "accuracy": 68.041237,
-            "dataset": "spf",
             "depth": 7,
-            "leaves": 22
+            "leaves": 22,
+            "time": 3.688961
         },
         {
-            "time": 3.650506,
+            "dataset": "spf",
+            "accuracy": 0.6915167200000001,
             "fold": 5,
-            "accuracy": 69.151672,
-            "dataset": "spf",
             "depth": 8,
-            "leaves": 18
+            "leaves": 18,
+            "time": 3.650506
         },
         {
-            "time": 3.678224,
-            "fold": 1,
-            "accuracy": 72.164948,
             "dataset": "spf",
+            "accuracy": 0.72164948,
+            "fold": 1,
             "depth": 15,
-            "leaves": 119
+            "leaves": 119,
+            "time": 3.678224
         },
         {
-            "time": 3.657172,
-            "fold": 2,
-            "accuracy": 70.103096,
             "dataset": "spf",
+            "accuracy": 0.70103096,
+            "fold": 2,
             "depth": 8,
-            "leaves": 28
+            "leaves": 28,
+            "time": 3.657172
         },
         {
-            "time": 3.29626,
-            "fold": 3,
-            "accuracy": 70.618553,
             "dataset": "spf",
+            "accuracy": 0.7061855300000001,
+            "fold": 3,
             "depth": 7,
-            "leaves": 21
+            "leaves": 21,
+            "time": 3.29626
         },
         {
-            "time": 3.546851,
-            "fold": 4,
-            "accuracy": 67.010307,
             "dataset": "spf",
+            "accuracy": 0.67010307,
+            "fold": 4,
             "depth": 10,
-            "leaves": 46
+            "leaves": 46,
+            "time": 3.546851
         },
         {
-            "time": 4.160183,
+            "dataset": "spf",
+            "accuracy": 0.70179947,
             "fold": 5,
-            "accuracy": 70.179947,
-            "dataset": "spf",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 4.160183
         },
         {
-            "time": 3.467667,
+            "dataset": "spf",
+            "accuracy": 0.6778350799999999,
             "fold": 1,
-            "accuracy": 67.783508,
-            "dataset": "spf",
             "depth": 10,
-            "leaves": 44
+            "leaves": 44,
+            "time": 3.467667
         },
         {
-            "time": 3.719979,
+            "dataset": "spf",
+            "accuracy": 0.68556702,
             "fold": 2,
-            "accuracy": 68.556702,
-            "dataset": "spf",
             "depth": 6,
-            "leaves": 15
+            "leaves": 15,
+            "time": 3.719979
         },
         {
-            "time": 3.446338,
+            "dataset": "spf",
+            "accuracy": 0.68041237,
             "fold": 3,
-            "accuracy": 68.041237,
-            "dataset": "spf",
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 3.446338
         },
         {
-            "time": 4.099117,
-            "fold": 4,
-            "accuracy": 69.329895,
             "dataset": "spf",
+            "accuracy": 0.69329895,
+            "fold": 4,
             "depth": 14,
-            "leaves": 120
+            "leaves": 120,
+            "time": 4.099117
         },
         {
-            "time": 3.779129,
+            "dataset": "spf",
+            "accuracy": 0.69922882,
             "fold": 5,
-            "accuracy": 69.922882,
-            "dataset": "spf",
             "depth": 8,
-            "leaves": 26
+            "leaves": 26,
+            "time": 3.779129
         },
         {
-            "time": 3.810329,
+            "dataset": "spf",
+            "accuracy": 0.6752577200000001,
             "fold": 1,
-            "accuracy": 67.525772,
-            "dataset": "spf",
             "depth": 15,
-            "leaves": 70
+            "leaves": 70,
+            "time": 3.810329
         },
         {
-            "time": 4.337354,
-            "fold": 2,
-            "accuracy": 69.329895,
             "dataset": "spf",
+            "accuracy": 0.69329895,
+            "fold": 2,
             "depth": 21,
-            "leaves": 144
+            "leaves": 144,
+            "time": 4.337354
         },
         {
-            "time": 5.198557,
-            "fold": 3,
-            "accuracy": 73.96907,
             "dataset": "spf",
+            "accuracy": 0.7396907,
+            "fold": 3,
             "depth": 10,
-            "leaves": 33
+            "leaves": 33,
+            "time": 5.198557
         },
         {
-            "time": 3.714949,
-            "fold": 4,
-            "accuracy": 70.360825,
             "dataset": "spf",
+            "accuracy": 0.70360825,
+            "fold": 4,
             "depth": 14,
-            "leaves": 130
+            "leaves": 130,
+            "time": 3.714949
         },
         {
-            "time": 4.00619,
-            "fold": 5,
-            "accuracy": 71.722366,
             "dataset": "spf",
+            "accuracy": 0.7172236599999999,
+            "fold": 5,
             "depth": 12,
-            "leaves": 61
+            "leaves": 61,
+            "time": 4.00619
         },
         {
-            "time": 0.887527,
+            "dataset": "thy",
+            "accuracy": 0.97843666,
+            "fold": 1,
             "depth": 6,
-            "fold": 1,
-            "accuracy": 97.843666,
-            "dataset": "thy",
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.887527
         },
         {
-            "time": 1.909872,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.97574127,
             "fold": 2,
-            "accuracy": 97.574127,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 1.909872
         },
         {
-            "time": 2.443055,
+            "dataset": "thy",
+            "accuracy": 0.9865229,
+            "fold": 3,
             "depth": 2,
-            "fold": 3,
-            "accuracy": 98.65229,
-            "dataset": "thy",
-            "leaves": 3
+            "leaves": 3,
+            "time": 2.443055
         },
         {
-            "time": 2.35301,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.9905660199999999,
             "fold": 4,
-            "accuracy": 99.056602,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 2.35301
         },
         {
-            "time": 2.892513,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.97577393,
             "fold": 5,
-            "accuracy": 97.577393,
-            "dataset": "thy",
-            "leaves": 6
+            "depth": 3,
+            "leaves": 6,
+            "time": 2.892513
         },
         {
-            "time": 1.818336,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.99460915,
             "fold": 1,
-            "accuracy": 99.460915,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 1.818336
         },
         {
-            "time": 1.812425,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.98382751,
             "fold": 2,
-            "accuracy": 98.382751,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 1.812425
         },
         {
-            "time": 1.499098,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.9892182900000001,
             "fold": 3,
-            "accuracy": 98.921829,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 1.499098
         },
         {
-            "time": 1.741372,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.9865229,
             "fold": 4,
-            "accuracy": 98.65229,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 1.741372
         },
         {
-            "time": 1.769063,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.98250336,
             "fold": 5,
-            "accuracy": 98.250336,
-            "dataset": "thy",
-            "leaves": 4
+            "depth": 3,
+            "leaves": 4,
+            "time": 1.769063
         },
         {
-            "time": 2.985853,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.99326149,
             "fold": 1,
-            "accuracy": 99.326149,
-            "dataset": "thy",
-            "leaves": 5
-        },
-        {
-            "time": 2.447263,
             "depth": 3,
-            "fold": 2,
-            "accuracy": 98.247978,
-            "dataset": "thy",
-            "leaves": 5
+            "leaves": 5,
+            "time": 2.985853
         },
         {
-            "time": 2.224747,
+            "dataset": "thy",
+            "accuracy": 0.98247978,
+            "fold": 2,
+            "depth": 3,
+            "leaves": 5,
+            "time": 2.447263
+        },
+        {
+            "dataset": "thy",
+            "accuracy": 0.9892182900000001,
+            "fold": 3,
             "depth": 2,
-            "fold": 3,
-            "accuracy": 98.921829,
-            "dataset": "thy",
-            "leaves": 3
+            "leaves": 3,
+            "time": 2.224747
         },
         {
-            "time": 1.937184,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.9743935399999999,
             "fold": 4,
-            "accuracy": 97.439354,
-            "dataset": "thy",
-            "leaves": 4
+            "depth": 3,
+            "leaves": 4,
+            "time": 1.937184
         },
         {
-            "time": 2.916981,
+            "dataset": "thy",
+            "accuracy": 0.98250336,
+            "fold": 5,
             "depth": 4,
-            "fold": 5,
-            "accuracy": 98.250336,
-            "dataset": "thy",
-            "leaves": 6
+            "leaves": 6,
+            "time": 2.916981
         },
         {
-            "time": 1.836386,
-            "depth": 2,
+            "dataset": "thy",
+            "accuracy": 0.9811320499999999,
             "fold": 1,
-            "accuracy": 98.113205,
-            "dataset": "thy",
-            "leaves": 3
-        },
-        {
-            "time": 0.796745,
             "depth": 2,
+            "leaves": 3,
+            "time": 1.836386
+        },
+        {
+            "dataset": "thy",
+            "accuracy": 0.97978439,
             "fold": 2,
-            "accuracy": 97.978439,
-            "dataset": "thy",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.796745
         },
         {
-            "time": 2.408151,
-            "depth": 4,
+            "dataset": "thy",
+            "accuracy": 0.97035042,
             "fold": 3,
-            "accuracy": 97.035042,
-            "dataset": "thy",
-            "leaves": 6
+            "depth": 4,
+            "leaves": 6,
+            "time": 2.408151
         },
         {
-            "time": 2.478335,
+            "dataset": "thy",
+            "accuracy": 0.9905660199999999,
+            "fold": 4,
             "depth": 6,
-            "fold": 4,
-            "accuracy": 99.056602,
-            "dataset": "thy",
-            "leaves": 8
+            "leaves": 8,
+            "time": 2.478335
         },
         {
-            "time": 2.81128,
+            "dataset": "thy",
+            "accuracy": 0.98115746,
+            "fold": 5,
             "depth": 2,
-            "fold": 5,
-            "accuracy": 98.115746,
-            "dataset": "thy",
-            "leaves": 3
+            "leaves": 3,
+            "time": 2.81128
         },
         {
-            "time": 1.756652,
+            "dataset": "thy",
+            "accuracy": 0.9905660199999999,
+            "fold": 1,
             "depth": 4,
-            "fold": 1,
-            "accuracy": 99.056602,
-            "dataset": "thy",
-            "leaves": 6
+            "leaves": 6,
+            "time": 1.756652
         },
         {
-            "time": 1.281725,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.98787064,
             "fold": 2,
-            "accuracy": 98.787064,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 1.281725
         },
         {
-            "time": 2.780553,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.9919137600000001,
             "fold": 3,
-            "accuracy": 99.191376,
-            "dataset": "thy",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 2.780553
         },
         {
-            "time": 1.74833,
-            "depth": 3,
+            "dataset": "thy",
+            "accuracy": 0.9892182900000001,
             "fold": 4,
-            "accuracy": 98.921829,
-            "dataset": "thy",
-            "leaves": 5
-        },
-        {
-            "time": 2.121404,
             "depth": 3,
-            "fold": 5,
-            "accuracy": 99.192467,
-            "dataset": "thy",
-            "leaves": 5
+            "leaves": 5,
+            "time": 1.74833
         },
         {
-            "time": 0.543476,
-            "fold": 1,
-            "accuracy": 74.345551,
+            "dataset": "thy",
+            "accuracy": 0.99192467,
+            "fold": 5,
+            "depth": 3,
+            "leaves": 5,
+            "time": 2.121404
+        },
+        {
             "dataset": "ttt",
+            "accuracy": 0.74345551,
+            "fold": 1,
             "depth": 5,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.543476
         },
         {
-            "time": 0.569595,
+            "dataset": "ttt",
+            "accuracy": 0.7486911,
             "fold": 2,
-            "accuracy": 74.86911,
-            "dataset": "ttt",
             "depth": 8,
-            "leaves": 13
+            "leaves": 13,
+            "time": 0.569595
         },
         {
-            "time": 0.618307,
+            "dataset": "ttt",
+            "accuracy": 0.75916229,
             "fold": 3,
-            "accuracy": 75.916229,
-            "dataset": "ttt",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.618307
         },
         {
-            "time": 0.723598,
-            "fold": 4,
-            "accuracy": 80.628273,
             "dataset": "ttt",
+            "accuracy": 0.80628273,
+            "fold": 4,
             "depth": 16,
-            "leaves": 52
+            "leaves": 52,
+            "time": 0.723598
         },
         {
-            "time": 0.627562,
+            "dataset": "ttt",
+            "accuracy": 0.73711342,
             "fold": 5,
-            "accuracy": 73.711342,
-            "dataset": "ttt",
             "depth": 6,
-            "leaves": 14
+            "leaves": 14,
+            "time": 0.627562
         },
         {
-            "time": 0.64625,
-            "fold": 1,
-            "accuracy": 75.916229,
             "dataset": "ttt",
+            "accuracy": 0.75916229,
+            "fold": 1,
             "depth": 15,
-            "leaves": 54
+            "leaves": 54,
+            "time": 0.64625
         },
         {
-            "time": 0.711867,
-            "fold": 2,
-            "accuracy": 77.486908,
             "dataset": "ttt",
+            "accuracy": 0.77486908,
+            "fold": 2,
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.711867
         },
         {
-            "time": 0.532985,
+            "dataset": "ttt",
+            "accuracy": 0.66492149,
             "fold": 3,
-            "accuracy": 66.492149,
-            "dataset": "ttt",
             "depth": 8,
-            "leaves": 26
+            "leaves": 26,
+            "time": 0.532985
         },
         {
-            "time": 0.487532,
+            "dataset": "ttt",
+            "accuracy": 0.75916229,
             "fold": 4,
-            "accuracy": 75.916229,
-            "dataset": "ttt",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.487532
         },
         {
-            "time": 0.680814,
+            "dataset": "ttt",
+            "accuracy": 0.78350517,
             "fold": 5,
-            "accuracy": 78.350517,
-            "dataset": "ttt",
             "depth": 5,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.680814
         },
         {
-            "time": 0.594024,
-            "fold": 1,
-            "accuracy": 75.916229,
             "dataset": "ttt",
+            "accuracy": 0.75916229,
+            "fold": 1,
             "depth": 11,
-            "leaves": 48
+            "leaves": 48,
+            "time": 0.594024
         },
         {
-            "time": 0.705394,
+            "dataset": "ttt",
+            "accuracy": 0.81151833,
             "fold": 2,
-            "accuracy": 81.151833,
-            "dataset": "ttt",
             "depth": 8,
-            "leaves": 22
+            "leaves": 22,
+            "time": 0.705394
         },
         {
-            "time": 0.508655,
+            "dataset": "ttt",
+            "accuracy": 0.79057594,
             "fold": 3,
-            "accuracy": 79.057594,
-            "dataset": "ttt",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.508655
         },
         {
-            "time": 0.437191,
+            "dataset": "ttt",
+            "accuracy": 0.74345551,
             "fold": 4,
-            "accuracy": 74.345551,
-            "dataset": "ttt",
             "depth": 10,
-            "leaves": 33
+            "leaves": 33,
+            "time": 0.437191
         },
         {
-            "time": 0.415353,
+            "dataset": "ttt",
+            "accuracy": 0.77319588,
             "fold": 5,
-            "accuracy": 77.319588,
-            "dataset": "ttt",
             "depth": 9,
-            "leaves": 37
+            "leaves": 37,
+            "time": 0.415353
         },
         {
-            "time": 0.648116,
-            "fold": 1,
-            "accuracy": 65.96859,
             "dataset": "ttt",
+            "accuracy": 0.6596859,
+            "fold": 1,
             "depth": 6,
-            "leaves": 11
+            "leaves": 11,
+            "time": 0.648116
         },
         {
-            "time": 0.419892,
+            "dataset": "ttt",
+            "accuracy": 0.74345551,
             "fold": 2,
-            "accuracy": 74.345551,
-            "dataset": "ttt",
             "depth": 9,
-            "leaves": 35
+            "leaves": 35,
+            "time": 0.419892
         },
         {
-            "time": 0.705044,
-            "fold": 3,
-            "accuracy": 71.204185,
             "dataset": "ttt",
+            "accuracy": 0.71204185,
+            "fold": 3,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.705044
         },
         {
-            "time": 0.67335,
-            "fold": 4,
-            "accuracy": 76.963348,
             "dataset": "ttt",
+            "accuracy": 0.76963348,
+            "fold": 4,
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.67335
         },
         {
-            "time": 0.573612,
+            "dataset": "ttt",
+            "accuracy": 0.76288658,
             "fold": 5,
-            "accuracy": 76.288658,
-            "dataset": "ttt",
             "depth": 7,
-            "leaves": 20
+            "leaves": 20,
+            "time": 0.573612
         },
         {
-            "time": 0.507545,
+            "dataset": "ttt",
+            "accuracy": 0.77486908,
             "fold": 1,
-            "accuracy": 77.486908,
-            "dataset": "ttt",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.507545
         },
         {
-            "time": 0.43147,
+            "dataset": "ttt",
+            "accuracy": 0.74345551,
             "fold": 2,
-            "accuracy": 74.345551,
-            "dataset": "ttt",
             "depth": 12,
-            "leaves": 54
+            "leaves": 54,
+            "time": 0.43147
         },
         {
-            "time": 0.53361,
+            "dataset": "ttt",
+            "accuracy": 0.81151833,
             "fold": 3,
-            "accuracy": 81.151833,
-            "dataset": "ttt",
             "depth": 9,
-            "leaves": 17
+            "leaves": 17,
+            "time": 0.53361
         },
         {
-            "time": 0.521531,
-            "fold": 4,
-            "accuracy": 82.198952,
             "dataset": "ttt",
+            "accuracy": 0.82198952,
+            "fold": 4,
             "depth": 8,
-            "leaves": 20
+            "leaves": 20,
+            "time": 0.521531
         },
         {
-            "time": 0.584961,
-            "fold": 5,
-            "accuracy": 70.618553,
             "dataset": "ttt",
-            "depth": 3,
-            "leaves": 5
-        },
-        {
-            "time": 0.839789,
-            "depth": 10,
-            "fold": 1,
-            "accuracy": 74.556213,
-            "dataset": "veh",
-            "leaves": 27
-        },
-        {
-            "time": 0.753491,
-            "depth": 9,
-            "fold": 2,
-            "accuracy": 72.189346,
-            "dataset": "veh",
-            "leaves": 29
-        },
-        {
-            "time": 0.844148,
-            "depth": 12,
-            "fold": 3,
-            "accuracy": 74.556213,
-            "dataset": "veh",
-            "leaves": 57
-        },
-        {
-            "time": 0.780192,
-            "depth": 10,
-            "fold": 4,
-            "accuracy": 72.189346,
-            "dataset": "veh",
-            "leaves": 56
-        },
-        {
-            "time": 0.852808,
-            "depth": 3,
+            "accuracy": 0.7061855300000001,
             "fold": 5,
-            "accuracy": 69.411766,
-            "dataset": "veh",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 0.584961
         },
         {
-            "time": 0.820087,
-            "depth": 7,
+            "dataset": "veh",
+            "accuracy": 0.74556213,
             "fold": 1,
-            "accuracy": 72.189346,
-            "dataset": "veh",
-            "leaves": 14
+            "depth": 10,
+            "leaves": 27,
+            "time": 0.839789
         },
         {
-            "time": 0.795273,
+            "dataset": "veh",
+            "accuracy": 0.72189346,
+            "fold": 2,
+            "depth": 9,
+            "leaves": 29,
+            "time": 0.753491
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.74556213,
+            "fold": 3,
+            "depth": 12,
+            "leaves": 57,
+            "time": 0.844148
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.72189346,
+            "fold": 4,
+            "depth": 10,
+            "leaves": 56,
+            "time": 0.780192
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.69411766,
+            "fold": 5,
+            "depth": 3,
+            "leaves": 5,
+            "time": 0.852808
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.72189346,
+            "fold": 1,
+            "depth": 7,
+            "leaves": 14,
+            "time": 0.820087
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.69230766,
+            "fold": 2,
             "depth": 13,
-            "fold": 2,
-            "accuracy": 69.230766,
-            "dataset": "veh",
-            "leaves": 40
+            "leaves": 40,
+            "time": 0.795273
         },
         {
-            "time": 0.810238,
-            "depth": 3,
+            "dataset": "veh",
+            "accuracy": 0.69230766,
             "fold": 3,
-            "accuracy": 69.230766,
-            "dataset": "veh",
-            "leaves": 6
+            "depth": 3,
+            "leaves": 6,
+            "time": 0.810238
         },
         {
-            "time": 0.803746,
-            "depth": 8,
+            "dataset": "veh",
+            "accuracy": 0.7278106699999999,
             "fold": 4,
-            "accuracy": 72.781067,
-            "dataset": "veh",
-            "leaves": 20
+            "depth": 8,
+            "leaves": 20,
+            "time": 0.803746
         },
         {
-            "time": 0.883886,
-            "depth": 12,
+            "dataset": "veh",
+            "accuracy": 0.62941177,
             "fold": 5,
-            "accuracy": 62.941177,
-            "dataset": "veh",
-            "leaves": 53
-        },
-        {
-            "time": 0.794029,
             "depth": 12,
-            "fold": 1,
-            "accuracy": 76.92308,
-            "dataset": "veh",
-            "leaves": 47
+            "leaves": 53,
+            "time": 0.883886
         },
         {
-            "time": 0.710085,
+            "dataset": "veh",
+            "accuracy": 0.7692308,
+            "fold": 1,
+            "depth": 12,
+            "leaves": 47,
+            "time": 0.794029
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.6508875999999999,
+            "fold": 2,
             "depth": 11,
-            "fold": 2,
-            "accuracy": 65.08876,
-            "dataset": "veh",
-            "leaves": 56
+            "leaves": 56,
+            "time": 0.710085
         },
         {
-            "time": 0.81212,
+            "dataset": "veh",
+            "accuracy": 0.7100592,
+            "fold": 3,
             "depth": 10,
-            "fold": 3,
-            "accuracy": 71.00592,
-            "dataset": "veh",
-            "leaves": 25
+            "leaves": 25,
+            "time": 0.81212
         },
         {
-            "time": 0.821717,
-            "depth": 7,
+            "dataset": "veh",
+            "accuracy": 0.7100592,
             "fold": 4,
-            "accuracy": 71.00592,
-            "dataset": "veh",
-            "leaves": 17
+            "depth": 7,
+            "leaves": 17,
+            "time": 0.821717
         },
         {
-            "time": 0.762767,
+            "dataset": "veh",
+            "accuracy": 0.74117645,
+            "fold": 5,
             "depth": 5,
-            "fold": 5,
-            "accuracy": 74.117645,
-            "dataset": "veh",
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.762767
         },
         {
-            "time": 0.905357,
-            "depth": 7,
+            "dataset": "veh",
+            "accuracy": 0.7337278,
             "fold": 1,
-            "accuracy": 73.37278,
-            "dataset": "veh",
-            "leaves": 21
+            "depth": 7,
+            "leaves": 21,
+            "time": 0.905357
         },
         {
-            "time": 0.810368,
-            "depth": 3,
+            "dataset": "veh",
+            "accuracy": 0.6213017700000001,
             "fold": 2,
-            "accuracy": 62.130177,
-            "dataset": "veh",
-            "leaves": 5
-        },
-        {
-            "time": 0.906439,
             "depth": 3,
+            "leaves": 5,
+            "time": 0.810368
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.71597633,
             "fold": 3,
-            "accuracy": 71.597633,
-            "dataset": "veh",
-            "leaves": 5
+            "depth": 3,
+            "leaves": 5,
+            "time": 0.906439
         },
         {
-            "time": 0.827527,
-            "depth": 7,
+            "dataset": "veh",
+            "accuracy": 0.6508875999999999,
             "fold": 4,
-            "accuracy": 65.08876,
-            "dataset": "veh",
-            "leaves": 10
-        },
-        {
-            "time": 0.862264,
-            "depth": 8,
-            "fold": 5,
-            "accuracy": 65.882355,
-            "dataset": "veh",
-            "leaves": 19
-        },
-        {
-            "time": 0.807215,
             "depth": 7,
-            "fold": 1,
-            "accuracy": 72.781067,
-            "dataset": "veh",
-            "leaves": 19
+            "leaves": 10,
+            "time": 0.827527
         },
         {
-            "time": 0.669021,
+            "dataset": "veh",
+            "accuracy": 0.65882355,
+            "fold": 5,
+            "depth": 8,
+            "leaves": 19,
+            "time": 0.862264
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.7278106699999999,
+            "fold": 1,
+            "depth": 7,
+            "leaves": 19,
+            "time": 0.807215
+        },
+        {
+            "dataset": "veh",
+            "accuracy": 0.7041419999999999,
+            "fold": 2,
             "depth": 9,
-            "fold": 2,
-            "accuracy": 70.4142,
-            "dataset": "veh",
-            "leaves": 59
+            "leaves": 59,
+            "time": 0.669021
         },
         {
-            "time": 0.822028,
-            "depth": 7,
+            "dataset": "veh",
+            "accuracy": 0.6568047300000001,
             "fold": 3,
-            "accuracy": 65.680473,
-            "dataset": "veh",
-            "leaves": 33
+            "depth": 7,
+            "leaves": 33,
+            "time": 0.822028
         },
         {
-            "time": 0.779766,
-            "depth": 8,
+            "dataset": "veh",
+            "accuracy": 0.66863907,
             "fold": 4,
-            "accuracy": 66.863907,
-            "dataset": "veh",
-            "leaves": 35
+            "depth": 8,
+            "leaves": 35,
+            "time": 0.779766
         },
         {
-            "time": 0.793176,
+            "dataset": "veh",
+            "accuracy": 0.64705879,
+            "fold": 5,
             "depth": 14,
-            "fold": 5,
-            "accuracy": 64.705879,
-            "dataset": "veh",
-            "leaves": 56
+            "leaves": 56,
+            "time": 0.793176
         },
         {
-            "time": 0.068704,
+            "dataset": "vene",
+            "accuracy": 0.8,
             "fold": 1,
-            "accuracy": 80.0,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.068704
         },
         {
-            "time": 0.054952,
+            "dataset": "vene",
+            "accuracy": 0.91666664,
             "fold": 2,
-            "accuracy": 91.666664,
-            "dataset": "vene",
             "depth": 7,
-            "leaves": 15
+            "leaves": 15,
+            "time": 0.054952
         },
         {
-            "time": 0.046422,
+            "dataset": "vene",
+            "accuracy": 0.93333336,
             "fold": 3,
-            "accuracy": 93.333336,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.046422
         },
         {
-            "time": 0.044129,
-            "fold": 4,
-            "accuracy": 90.0,
             "dataset": "vene",
+            "accuracy": 0.9,
+            "fold": 4,
             "depth": 5,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.044129
         },
         {
-            "time": 0.033212,
+            "dataset": "vene",
+            "accuracy": 0.85,
             "fold": 5,
-            "accuracy": 85.0,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.033212
         },
         {
-            "time": 0.032937,
+            "dataset": "vene",
+            "accuracy": 0.8833333600000001,
             "fold": 1,
-            "accuracy": 88.333336,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.032937
         },
         {
-            "time": 0.035151,
+            "dataset": "vene",
+            "accuracy": 0.8666666399999999,
             "fold": 2,
-            "accuracy": 86.666664,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.035151
         },
         {
-            "time": 0.037772,
-            "fold": 3,
-            "accuracy": 90.0,
             "dataset": "vene",
+            "accuracy": 0.9,
+            "fold": 3,
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.037772
         },
         {
-            "time": 0.039653,
+            "dataset": "vene",
+            "accuracy": 0.8666666399999999,
             "fold": 4,
-            "accuracy": 86.666664,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.039653
         },
         {
-            "time": 0.029232,
-            "fold": 5,
-            "accuracy": 91.666664,
             "dataset": "vene",
+            "accuracy": 0.91666664,
+            "fold": 5,
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.029232
         },
         {
-            "time": 0.033773,
+            "dataset": "vene",
+            "accuracy": 0.85,
             "fold": 1,
-            "accuracy": 85.0,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.033773
         },
         {
-            "time": 0.033657,
+            "dataset": "vene",
+            "accuracy": 0.91666664,
             "fold": 2,
-            "accuracy": 91.666664,
-            "dataset": "vene",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.033657
         },
         {
-            "time": 0.044142,
+            "dataset": "vene",
+            "accuracy": 0.95,
             "fold": 3,
-            "accuracy": 95.0,
-            "dataset": "vene",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.044142
         },
         {
-            "time": 0.034443,
-            "fold": 4,
-            "accuracy": 90.0,
             "dataset": "vene",
+            "accuracy": 0.9,
+            "fold": 4,
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.034443
         },
         {
-            "time": 0.04321,
+            "dataset": "vene",
+            "accuracy": 0.91666664,
             "fold": 5,
-            "accuracy": 91.666664,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.04321
         },
         {
-            "time": 0.040143,
+            "dataset": "vene",
+            "accuracy": 0.91666664,
             "fold": 1,
-            "accuracy": 91.666664,
-            "dataset": "vene",
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.040143
         },
         {
-            "time": 0.038807,
+            "dataset": "vene",
+            "accuracy": 0.85,
             "fold": 2,
-            "accuracy": 85.0,
-            "dataset": "vene",
             "depth": 6,
-            "leaves": 8
+            "leaves": 8,
+            "time": 0.038807
         },
         {
-            "time": 0.034055,
+            "dataset": "vene",
+            "accuracy": 0.95,
             "fold": 3,
-            "accuracy": 95.0,
-            "dataset": "vene",
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.034055
         },
         {
-            "time": 0.043728,
-            "fold": 4,
-            "accuracy": 95.0,
             "dataset": "vene",
+            "accuracy": 0.95,
+            "fold": 4,
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.043728
         },
         {
-            "time": 0.039664,
+            "dataset": "vene",
+            "accuracy": 0.85,
             "fold": 5,
-            "accuracy": 85.0,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.039664
         },
         {
-            "time": 0.034309,
+            "dataset": "vene",
+            "accuracy": 0.8666666399999999,
             "fold": 1,
-            "accuracy": 86.666664,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.034309
         },
         {
-            "time": 0.03816,
+            "dataset": "vene",
+            "accuracy": 0.9,
             "fold": 2,
-            "accuracy": 90.0,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.03816
         },
         {
-            "time": 0.033147,
+            "dataset": "vene",
+            "accuracy": 0.8666666399999999,
             "fold": 3,
-            "accuracy": 86.666664,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.033147
         },
         {
-            "time": 0.039556,
+            "dataset": "vene",
+            "accuracy": 0.95,
             "fold": 4,
-            "accuracy": 95.0,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.039556
         },
         {
-            "time": 0.039889,
+            "dataset": "vene",
+            "accuracy": 0.8833333600000001,
             "fold": 5,
-            "accuracy": 88.333336,
-            "dataset": "vene",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 0.039889
         },
         {
-            "time": 0.124528,
-            "depth": 1,
-            "fold": 1,
-            "accuracy": 89.705879,
             "dataset": "vote",
-            "leaves": 2
+            "accuracy": 0.89705879,
+            "fold": 1,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.124528
         },
         {
-            "time": 0.113496,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.9411764499999999,
             "fold": 2,
-            "accuracy": 94.117645,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.113496
         },
         {
-            "time": 0.085013,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.95588234,
             "fold": 3,
-            "accuracy": 95.588234,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.085013
         },
         {
-            "time": 0.102538,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.95588234,
             "fold": 4,
-            "accuracy": 95.588234,
-            "dataset": "vote",
-            "leaves": 2
-        },
-        {
-            "time": 0.120227,
-            "depth": 2,
-            "fold": 5,
-            "accuracy": 91.428574,
-            "dataset": "vote",
-            "leaves": 3
-        },
-        {
-            "time": 0.132118,
             "depth": 1,
-            "fold": 1,
-            "accuracy": 97.058823,
-            "dataset": "vote",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.102538
         },
         {
-            "time": 0.097515,
+            "dataset": "vote",
+            "accuracy": 0.91428574,
+            "fold": 5,
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.120227
+        },
+        {
+            "dataset": "vote",
+            "accuracy": 0.97058823,
+            "fold": 1,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.132118
+        },
+        {
+            "dataset": "vote",
+            "accuracy": 0.9411764499999999,
+            "fold": 2,
             "depth": 3,
-            "fold": 2,
-            "accuracy": 94.117645,
-            "dataset": "vote",
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.097515
         },
         {
-            "time": 0.101233,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.91176468,
             "fold": 3,
-            "accuracy": 91.176468,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.101233
         },
         {
-            "time": 0.107245,
+            "dataset": "vote",
+            "accuracy": 0.92647057,
+            "fold": 4,
             "depth": 4,
-            "fold": 4,
-            "accuracy": 92.647057,
-            "dataset": "vote",
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.107245
         },
         {
-            "time": 0.099143,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.94285713,
             "fold": 5,
-            "accuracy": 94.285713,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.099143
         },
         {
-            "time": 0.067805,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.88235291,
             "fold": 1,
-            "accuracy": 88.235291,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.067805
         },
         {
-            "time": 0.127354,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.91176468,
             "fold": 2,
-            "accuracy": 91.176468,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.127354
         },
         {
-            "time": 0.116899,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.95588234,
             "fold": 3,
-            "accuracy": 95.588234,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.116899
         },
         {
-            "time": 0.061039,
-            "depth": 2,
+            "dataset": "vote",
+            "accuracy": 0.86764709,
             "fold": 4,
-            "accuracy": 86.764709,
-            "dataset": "vote",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.061039
         },
         {
-            "time": 0.069967,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.91428574,
             "fold": 5,
-            "accuracy": 91.428574,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.069967
         },
         {
-            "time": 0.111707,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.97058823,
             "fold": 1,
-            "accuracy": 97.058823,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.111707
         },
         {
-            "time": 0.070572,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.9411764499999999,
             "fold": 2,
-            "accuracy": 94.117645,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.070572
         },
         {
-            "time": 0.10672,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.88235291,
             "fold": 3,
-            "accuracy": 88.235291,
-            "dataset": "vote",
-            "leaves": 2
-        },
-        {
-            "time": 0.104946,
             "depth": 1,
+            "leaves": 2,
+            "time": 0.10672
+        },
+        {
+            "dataset": "vote",
+            "accuracy": 0.9411764499999999,
             "fold": 4,
-            "accuracy": 94.117645,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.104946
         },
         {
-            "time": 0.081863,
-            "depth": 2,
+            "dataset": "vote",
+            "accuracy": 0.9285714,
             "fold": 5,
-            "accuracy": 92.85714,
-            "dataset": "vote",
-            "leaves": 3
+            "depth": 2,
+            "leaves": 3,
+            "time": 0.081863
         },
         {
-            "time": 0.098951,
+            "dataset": "vote",
+            "accuracy": 0.9411764499999999,
+            "fold": 1,
             "depth": 4,
-            "fold": 1,
-            "accuracy": 94.117645,
-            "dataset": "vote",
-            "leaves": 9
+            "leaves": 9,
+            "time": 0.098951
         },
         {
-            "time": 0.092791,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.88235291,
             "fold": 2,
-            "accuracy": 88.235291,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.092791
         },
         {
-            "time": 0.09297,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.89705879,
             "fold": 3,
-            "accuracy": 89.705879,
-            "dataset": "vote",
-            "leaves": 2
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.09297
         },
         {
-            "time": 0.11913,
-            "depth": 1,
+            "dataset": "vote",
+            "accuracy": 0.92647057,
             "fold": 4,
-            "accuracy": 92.647057,
-            "dataset": "vote",
-            "leaves": 2
-        },
-        {
-            "time": 0.090654,
             "depth": 1,
-            "fold": 5,
-            "accuracy": 87.14286,
-            "dataset": "vote",
-            "leaves": 2
+            "leaves": 2,
+            "time": 0.11913
         },
         {
-            "time": 1.141262,
+            "dataset": "vote",
+            "accuracy": 0.8714286,
+            "fold": 5,
+            "depth": 1,
+            "leaves": 2,
+            "time": 0.090654
+        },
+        {
+            "dataset": "vow",
+            "accuracy": 0.7626262699999999,
             "fold": 1,
-            "accuracy": 76.262627,
-            "dataset": "vow",
             "depth": 9,
-            "leaves": 51
+            "leaves": 51,
+            "time": 1.141262
         },
         {
-            "time": 0.999129,
+            "dataset": "vow",
+            "accuracy": 0.73232323,
             "fold": 2,
-            "accuracy": 73.232323,
-            "dataset": "vow",
             "depth": 8,
-            "leaves": 39
+            "leaves": 39,
+            "time": 0.999129
         },
         {
-            "time": 1.116187,
+            "dataset": "vow",
+            "accuracy": 0.83333336,
             "fold": 3,
-            "accuracy": 83.333336,
-            "dataset": "vow",
             "depth": 9,
-            "leaves": 68
+            "leaves": 68,
+            "time": 1.116187
         },
         {
-            "time": 1.066326,
+            "dataset": "vow",
+            "accuracy": 0.79797981,
             "fold": 4,
-            "accuracy": 79.797981,
-            "dataset": "vow",
             "depth": 8,
-            "leaves": 37
+            "leaves": 37,
+            "time": 1.066326
         },
         {
-            "time": 1.153574,
-            "fold": 5,
-            "accuracy": 80.303032,
             "dataset": "vow",
+            "accuracy": 0.80303032,
+            "fold": 5,
             "depth": 10,
-            "leaves": 65
+            "leaves": 65,
+            "time": 1.153574
         },
         {
-            "time": 1.161174,
+            "dataset": "vow",
+            "accuracy": 0.79292931,
             "fold": 1,
-            "accuracy": 79.292931,
-            "dataset": "vow",
             "depth": 7,
-            "leaves": 36
+            "leaves": 36,
+            "time": 1.161174
         },
         {
-            "time": 1.009256,
-            "fold": 2,
-            "accuracy": 74.242424,
             "dataset": "vow",
+            "accuracy": 0.74242424,
+            "fold": 2,
             "depth": 6,
-            "leaves": 19
+            "leaves": 19,
+            "time": 1.009256
         },
         {
-            "time": 1.067154,
+            "dataset": "vow",
+            "accuracy": 0.79292931,
             "fold": 3,
-            "accuracy": 79.292931,
-            "dataset": "vow",
             "depth": 7,
-            "leaves": 43
+            "leaves": 43,
+            "time": 1.067154
         },
         {
-            "time": 0.981012,
+            "dataset": "vow",
+            "accuracy": 0.73232323,
             "fold": 4,
-            "accuracy": 73.232323,
-            "dataset": "vow",
             "depth": 7,
-            "leaves": 29
+            "leaves": 29,
+            "time": 0.981012
         },
         {
-            "time": 1.071628,
-            "fold": 5,
-            "accuracy": 76.262627,
             "dataset": "vow",
+            "accuracy": 0.7626262699999999,
+            "fold": 5,
             "depth": 9,
-            "leaves": 58
+            "leaves": 58,
+            "time": 1.071628
         },
         {
-            "time": 1.058327,
+            "dataset": "vow",
+            "accuracy": 0.7828282900000001,
             "fold": 1,
-            "accuracy": 78.282829,
-            "dataset": "vow",
             "depth": 8,
-            "leaves": 49
+            "leaves": 49,
+            "time": 1.058327
         },
         {
-            "time": 1.095953,
+            "dataset": "vow",
+            "accuracy": 0.77272728,
             "fold": 2,
-            "accuracy": 77.272728,
-            "dataset": "vow",
             "depth": 8,
-            "leaves": 35
+            "leaves": 35,
+            "time": 1.095953
         },
         {
-            "time": 1.064228,
+            "dataset": "vow",
+            "accuracy": 0.8282828499999999,
             "fold": 3,
-            "accuracy": 82.828285,
-            "dataset": "vow",
             "depth": 9,
-            "leaves": 61
+            "leaves": 61,
+            "time": 1.064228
         },
         {
-            "time": 0.988515,
+            "dataset": "vow",
+            "accuracy": 0.77272728,
             "fold": 4,
-            "accuracy": 77.272728,
-            "dataset": "vow",
             "depth": 10,
-            "leaves": 75
+            "leaves": 75,
+            "time": 0.988515
         },
         {
-            "time": 1.03629,
-            "fold": 5,
-            "accuracy": 72.727272,
             "dataset": "vow",
+            "accuracy": 0.72727272,
+            "fold": 5,
             "depth": 6,
-            "leaves": 36
+            "leaves": 36,
+            "time": 1.03629
         },
         {
-            "time": 1.128225,
+            "dataset": "vow",
+            "accuracy": 0.8383838699999999,
             "fold": 1,
-            "accuracy": 83.838387,
-            "dataset": "vow",
             "depth": 10,
-            "leaves": 48
+            "leaves": 48,
+            "time": 1.128225
         },
         {
-            "time": 1.030645,
+            "dataset": "vow",
+            "accuracy": 0.7777777899999999,
             "fold": 2,
-            "accuracy": 77.777779,
-            "dataset": "vow",
             "depth": 8,
-            "leaves": 40
+            "leaves": 40,
+            "time": 1.030645
         },
         {
-            "time": 1.091646,
+            "dataset": "vow",
+            "accuracy": 0.8737374099999999,
             "fold": 3,
-            "accuracy": 87.373741,
-            "dataset": "vow",
             "depth": 8,
-            "leaves": 47
+            "leaves": 47,
+            "time": 1.091646
         },
         {
-            "time": 1.088285,
-            "fold": 4,
-            "accuracy": 74.747475,
             "dataset": "vow",
+            "accuracy": 0.74747475,
+            "fold": 4,
             "depth": 7,
-            "leaves": 45
+            "leaves": 45,
+            "time": 1.088285
         },
         {
-            "time": 1.077673,
-            "fold": 5,
-            "accuracy": 71.717171,
             "dataset": "vow",
+            "accuracy": 0.7171717099999999,
+            "fold": 5,
             "depth": 8,
-            "leaves": 48
+            "leaves": 48,
+            "time": 1.077673
         },
         {
-            "time": 1.04437,
+            "dataset": "vow",
+            "accuracy": 0.7828282900000001,
             "fold": 1,
-            "accuracy": 78.282829,
-            "dataset": "vow",
             "depth": 9,
-            "leaves": 53
+            "leaves": 53,
+            "time": 1.04437
         },
         {
-            "time": 1.106478,
+            "dataset": "vow",
+            "accuracy": 0.79292931,
             "fold": 2,
-            "accuracy": 79.292931,
-            "dataset": "vow",
             "depth": 8,
-            "leaves": 37
+            "leaves": 37,
+            "time": 1.106478
         },
         {
-            "time": 0.963551,
+            "dataset": "vow",
+            "accuracy": 0.79797981,
             "fold": 3,
-            "accuracy": 79.797981,
-            "dataset": "vow",
             "depth": 10,
-            "leaves": 71
+            "leaves": 71,
+            "time": 0.963551
         },
         {
-            "time": 0.959991,
+            "dataset": "vow",
+            "accuracy": 0.77272728,
             "fold": 4,
-            "accuracy": 77.272728,
-            "dataset": "vow",
             "depth": 9,
-            "leaves": 52
+            "leaves": 52,
+            "time": 0.959991
         },
         {
-            "time": 1.056198,
-            "fold": 5,
-            "accuracy": 81.313133,
             "dataset": "vow",
+            "accuracy": 0.8131313299999999,
+            "fold": 5,
             "depth": 11,
-            "leaves": 71
+            "leaves": 71,
+            "time": 1.056198
         },
         {
-            "time": 21.034628,
+            "dataset": "w21",
+            "accuracy": 0.8080000300000001,
+            "fold": 1,
             "depth": 2,
-            "fold": 1,
-            "accuracy": 80.800003,
-            "dataset": "w21",
-            "leaves": 3
+            "leaves": 3,
+            "time": 21.034628
         },
         {
-            "time": 17.171247,
-            "depth": 5,
+            "dataset": "w21",
+            "accuracy": 0.83,
             "fold": 2,
-            "accuracy": 83.0,
-            "dataset": "w21",
-            "leaves": 13
-        },
-        {
-            "time": 18.781853,
             "depth": 5,
-            "fold": 3,
-            "accuracy": 80.800003,
-            "dataset": "w21",
-            "leaves": 15
+            "leaves": 13,
+            "time": 17.171247
         },
         {
-            "time": 19.624352,
+            "dataset": "w21",
+            "accuracy": 0.8080000300000001,
+            "fold": 3,
+            "depth": 5,
+            "leaves": 15,
+            "time": 18.781853
+        },
+        {
+            "dataset": "w21",
+            "accuracy": 0.83099998,
+            "fold": 4,
             "depth": 4,
-            "fold": 4,
-            "accuracy": 83.099998,
-            "dataset": "w21",
-            "leaves": 9
+            "leaves": 9,
+            "time": 19.624352
         },
         {
-            "time": 16.202776,
-            "depth": 10,
+            "dataset": "w21",
+            "accuracy": 0.825,
             "fold": 5,
-            "accuracy": 82.5,
-            "dataset": "w21",
-            "leaves": 38
-        },
-        {
-            "time": 17.021276,
-            "depth": 8,
-            "fold": 1,
-            "accuracy": 83.099998,
-            "dataset": "w21",
-            "leaves": 18
-        },
-        {
-            "time": 18.487648,
             "depth": 10,
+            "leaves": 38,
+            "time": 16.202776
+        },
+        {
+            "dataset": "w21",
+            "accuracy": 0.83099998,
+            "fold": 1,
+            "depth": 8,
+            "leaves": 18,
+            "time": 17.021276
+        },
+        {
+            "dataset": "w21",
+            "accuracy": 0.8269999699999999,
             "fold": 2,
-            "accuracy": 82.699997,
-            "dataset": "w21",
-            "leaves": 65
+            "depth": 10,
+            "leaves": 65,
+            "time": 18.487648
         },
         {
-            "time": 17.64362,
-            "depth": 6,
+            "dataset": "w21",
+            "accuracy": 0.815,
             "fold": 3,
-            "accuracy": 81.5,
-            "dataset": "w21",
-            "leaves": 15
-        },
-        {
-            "time": 17.084801,
             "depth": 6,
-            "fold": 4,
-            "accuracy": 79.0,
-            "dataset": "w21",
-            "leaves": 13
+            "leaves": 15,
+            "time": 17.64362
         },
         {
-            "time": 19.771223,
+            "dataset": "w21",
+            "accuracy": 0.79,
+            "fold": 4,
+            "depth": 6,
+            "leaves": 13,
+            "time": 17.084801
+        },
+        {
+            "dataset": "w21",
+            "accuracy": 0.80900002,
+            "fold": 5,
             "depth": 3,
-            "fold": 5,
-            "accuracy": 80.900002,
-            "dataset": "w21",
-            "leaves": 6
+            "leaves": 6,
+            "time": 19.771223
         },
         {
-            "time": 20.247538,
-            "depth": 5,
+            "dataset": "w21",
+            "accuracy": 0.83400002,
             "fold": 1,
-            "accuracy": 83.400002,
-            "dataset": "w21",
-            "leaves": 9
+            "depth": 5,
+            "leaves": 9,
+            "time": 20.247538
         },
         {
-            "time": 19.399096,
-            "depth": 7,
+            "dataset": "w21",
+            "accuracy": 0.83800003,
             "fold": 2,
-            "accuracy": 83.800003,
-            "dataset": "w21",
-            "leaves": 27
+            "depth": 7,
+            "leaves": 27,
+            "time": 19.399096
         },
         {
-            "time": 18.859308,
-            "depth": 5,
+            "dataset": "w21",
+            "accuracy": 0.82300003,
             "fold": 3,
-            "accuracy": 82.300003,
-            "dataset": "w21",
-            "leaves": 14
-        },
-        {
-            "time": 19.090656,
             "depth": 5,
-            "fold": 4,
-            "accuracy": 83.099998,
-            "dataset": "w21",
-            "leaves": 15
+            "leaves": 14,
+            "time": 18.859308
         },
         {
-            "time": 18.132353,
+            "dataset": "w21",
+            "accuracy": 0.83099998,
+            "fold": 4,
+            "depth": 5,
+            "leaves": 15,
+            "time": 19.090656
+        },
+        {
+            "dataset": "w21",
+            "accuracy": 0.83800003,
+            "fold": 5,
             "depth": 9,
-            "fold": 5,
-            "accuracy": 83.800003,
-            "dataset": "w21",
-            "leaves": 29
+            "leaves": 29,
+            "time": 18.132353
         },
         {
-            "time": 17.755104,
-            "depth": 6,
+            "dataset": "w21",
+            "accuracy": 0.82300003,
             "fold": 1,
-            "accuracy": 82.300003,
-            "dataset": "w21",
-            "leaves": 15
+            "depth": 6,
+            "leaves": 15,
+            "time": 17.755104
         },
         {
-            "time": 17.807135,
-            "depth": 6,
+            "dataset": "w21",
+            "accuracy": 0.82800003,
             "fold": 2,
-            "accuracy": 82.800003,
-            "dataset": "w21",
-            "leaves": 15
+            "depth": 6,
+            "leaves": 15,
+            "time": 17.807135
         },
         {
-            "time": 17.902536,
-            "depth": 7,
+            "dataset": "w21",
+            "accuracy": 0.805,
             "fold": 3,
-            "accuracy": 80.5,
-            "dataset": "w21",
-            "leaves": 16
+            "depth": 7,
+            "leaves": 16,
+            "time": 17.902536
         },
         {
-            "time": 18.019642,
-            "depth": 7,
+            "dataset": "w21",
+            "accuracy": 0.80900002,
             "fold": 4,
-            "accuracy": 80.900002,
-            "dataset": "w21",
-            "leaves": 25
-        },
-        {
-            "time": 21.429665,
-            "depth": 4,
-            "fold": 5,
-            "accuracy": 81.300003,
-            "dataset": "w21",
-            "leaves": 7
-        },
-        {
-            "time": 18.72394,
             "depth": 7,
-            "fold": 1,
-            "accuracy": 80.400002,
-            "dataset": "w21",
-            "leaves": 24
+            "leaves": 25,
+            "time": 18.019642
         },
         {
-            "time": 17.849159,
+            "dataset": "w21",
+            "accuracy": 0.81300003,
+            "fold": 5,
+            "depth": 4,
+            "leaves": 7,
+            "time": 21.429665
+        },
+        {
+            "dataset": "w21",
+            "accuracy": 0.80400002,
+            "fold": 1,
+            "depth": 7,
+            "leaves": 24,
+            "time": 18.72394
+        },
+        {
+            "dataset": "w21",
+            "accuracy": 0.8290000200000001,
+            "fold": 2,
             "depth": 9,
-            "fold": 2,
-            "accuracy": 82.900002,
-            "dataset": "w21",
-            "leaves": 31
+            "leaves": 31,
+            "time": 17.849159
         },
         {
-            "time": 18.184044,
-            "depth": 6,
+            "dataset": "w21",
+            "accuracy": 0.81599998,
             "fold": 3,
-            "accuracy": 81.599998,
-            "dataset": "w21",
-            "leaves": 12
+            "depth": 6,
+            "leaves": 12,
+            "time": 18.184044
         },
         {
-            "time": 16.673395,
-            "depth": 4,
+            "dataset": "w21",
+            "accuracy": 0.83800003,
             "fold": 4,
-            "accuracy": 83.800003,
-            "dataset": "w21",
-            "leaves": 8
-        },
-        {
-            "time": 17.114077,
             "depth": 4,
-            "fold": 5,
-            "accuracy": 79.400002,
+            "leaves": 8,
+            "time": 16.673395
+        },
+        {
             "dataset": "w21",
-            "leaves": 6
+            "accuracy": 0.79400002,
+            "fold": 5,
+            "depth": 4,
+            "leaves": 6,
+            "time": 17.114077
         },
         {
-            "time": 29.081636,
+            "dataset": "w40",
+            "accuracy": 0.81400002,
             "fold": 1,
-            "accuracy": 81.400002,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 16
+            "leaves": 16,
+            "time": 29.081636
         },
         {
-            "time": 27.217537,
-            "fold": 2,
-            "accuracy": 81.800003,
             "dataset": "w40",
+            "accuracy": 0.81800003,
+            "fold": 2,
             "depth": 9,
-            "leaves": 23
+            "leaves": 23,
+            "time": 27.217537
         },
         {
-            "time": 26.122713,
+            "dataset": "w40",
+            "accuracy": 0.82,
             "fold": 3,
-            "accuracy": 82.0,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 11
+            "leaves": 11,
+            "time": 26.122713
         },
         {
-            "time": 30.102924,
+            "dataset": "w40",
+            "accuracy": 0.80199997,
             "fold": 4,
-            "accuracy": 80.199997,
-            "dataset": "w40",
             "depth": 6,
-            "leaves": 16
+            "leaves": 16,
+            "time": 30.102924
         },
         {
-            "time": 28.756733,
-            "fold": 5,
-            "accuracy": 80.599998,
             "dataset": "w40",
+            "accuracy": 0.80599998,
+            "fold": 5,
             "depth": 9,
-            "leaves": 35
+            "leaves": 35,
+            "time": 28.756733
         },
         {
-            "time": 25.409992,
-            "fold": 1,
-            "accuracy": 81.300003,
             "dataset": "w40",
+            "accuracy": 0.81300003,
+            "fold": 1,
             "depth": 5,
-            "leaves": 13
+            "leaves": 13,
+            "time": 25.409992
         },
         {
-            "time": 28.128803,
+            "dataset": "w40",
+            "accuracy": 0.83400002,
             "fold": 2,
-            "accuracy": 83.400002,
-            "dataset": "w40",
             "depth": 7,
-            "leaves": 15
+            "leaves": 15,
+            "time": 28.128803
         },
         {
-            "time": 27.927876,
+            "dataset": "w40",
+            "accuracy": 0.8030000300000001,
             "fold": 3,
-            "accuracy": 80.300003,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 15
+            "leaves": 15,
+            "time": 27.927876
         },
         {
-            "time": 26.921705,
+            "dataset": "w40",
+            "accuracy": 0.8269999699999999,
             "fold": 4,
-            "accuracy": 82.699997,
-            "dataset": "w40",
             "depth": 6,
-            "leaves": 15
+            "leaves": 15,
+            "time": 26.921705
         },
         {
-            "time": 31.586811,
+            "dataset": "w40",
+            "accuracy": 0.79900002,
             "fold": 5,
-            "accuracy": 79.900002,
-            "dataset": "w40",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 31.586811
         },
         {
-            "time": 30.309988,
-            "fold": 1,
-            "accuracy": 81.400002,
             "dataset": "w40",
+            "accuracy": 0.81400002,
+            "fold": 1,
             "depth": 6,
-            "leaves": 9
+            "leaves": 9,
+            "time": 30.309988
         },
         {
-            "time": 30.420448,
+            "dataset": "w40",
+            "accuracy": 0.81599998,
             "fold": 2,
-            "accuracy": 81.599998,
-            "dataset": "w40",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 30.420448
         },
         {
-            "time": 28.945656,
+            "dataset": "w40",
+            "accuracy": 0.7830000300000001,
             "fold": 3,
-            "accuracy": 78.300003,
-            "dataset": "w40",
             "depth": 7,
-            "leaves": 23
+            "leaves": 23,
+            "time": 28.945656
         },
         {
-            "time": 31.477568,
+            "dataset": "w40",
+            "accuracy": 0.795,
             "fold": 4,
-            "accuracy": 79.5,
-            "dataset": "w40",
             "depth": 4,
-            "leaves": 9
+            "leaves": 9,
+            "time": 31.477568
         },
         {
-            "time": 30.133881,
+            "dataset": "w40",
+            "accuracy": 0.8219999699999999,
             "fold": 5,
-            "accuracy": 82.199997,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 30.133881
         },
         {
-            "time": 26.253376,
-            "fold": 1,
-            "accuracy": 77.599998,
             "dataset": "w40",
+            "accuracy": 0.77599998,
+            "fold": 1,
             "depth": 8,
-            "leaves": 23
+            "leaves": 23,
+            "time": 26.253376
         },
         {
-            "time": 27.828341,
-            "fold": 2,
-            "accuracy": 80.599998,
             "dataset": "w40",
+            "accuracy": 0.80599998,
+            "fold": 2,
             "depth": 4,
-            "leaves": 12
+            "leaves": 12,
+            "time": 27.828341
         },
         {
-            "time": 28.347685,
+            "dataset": "w40",
+            "accuracy": 0.81,
             "fold": 3,
-            "accuracy": 81.0,
-            "dataset": "w40",
             "depth": 9,
-            "leaves": 35
+            "leaves": 35,
+            "time": 28.347685
         },
         {
-            "time": 26.609163,
+            "dataset": "w40",
+            "accuracy": 0.815,
             "fold": 4,
-            "accuracy": 81.5,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 14
+            "leaves": 14,
+            "time": 26.609163
         },
         {
-            "time": 29.943613,
+            "dataset": "w40",
+            "accuracy": 0.81800003,
             "fold": 5,
-            "accuracy": 81.800003,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 29.943613
         },
         {
-            "time": 29.159199,
+            "dataset": "w40",
+            "accuracy": 0.8030000300000001,
             "fold": 1,
-            "accuracy": 80.300003,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 9
+            "leaves": 9,
+            "time": 29.159199
         },
         {
-            "time": 27.823366,
+            "dataset": "w40",
+            "accuracy": 0.81,
             "fold": 2,
-            "accuracy": 81.0,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 12
+            "leaves": 12,
+            "time": 27.823366
         },
         {
-            "time": 29.352016,
+            "dataset": "w40",
+            "accuracy": 0.81800003,
             "fold": 3,
-            "accuracy": 81.800003,
-            "dataset": "w40",
             "depth": 9,
-            "leaves": 31
+            "leaves": 31,
+            "time": 29.352016
         },
         {
-            "time": 27.864576,
+            "dataset": "w40",
+            "accuracy": 0.81599998,
             "fold": 4,
-            "accuracy": 81.599998,
-            "dataset": "w40",
             "depth": 5,
-            "leaves": 8
+            "leaves": 8,
+            "time": 27.864576
         },
         {
-            "time": 27.783255,
-            "fold": 5,
-            "accuracy": 78.400002,
             "dataset": "w40",
+            "accuracy": 0.78400002,
+            "fold": 5,
             "depth": 7,
-            "leaves": 20
+            "leaves": 20,
+            "time": 27.783255
         },
         {
-            "time": 10.799329,
-            "depth": 7,
-            "fold": 1,
-            "accuracy": 98.075157,
             "dataset": "wfr",
-            "leaves": 19
+            "accuracy": 0.98075157,
+            "fold": 1,
+            "depth": 7,
+            "leaves": 19,
+            "time": 10.799329
         },
         {
-            "time": 12.206736,
+            "dataset": "wfr",
+            "accuracy": 0.9679193100000001,
+            "fold": 2,
             "depth": 12,
-            "fold": 2,
-            "accuracy": 96.791931,
-            "dataset": "wfr",
-            "leaves": 30
+            "leaves": 30,
+            "time": 12.206736
         },
         {
-            "time": 12.354385,
-            "depth": 8,
+            "dataset": "wfr",
+            "accuracy": 0.9578368399999999,
             "fold": 3,
-            "accuracy": 95.783684,
-            "dataset": "wfr",
-            "leaves": 20
+            "depth": 8,
+            "leaves": 20,
+            "time": 12.354385
         },
         {
-            "time": 11.664268,
-            "depth": 8,
+            "dataset": "wfr",
+            "accuracy": 0.9835013600000001,
             "fold": 4,
-            "accuracy": 98.350136,
-            "dataset": "wfr",
-            "leaves": 24
-        },
-        {
-            "time": 11.007866,
-            "depth": 7,
-            "fold": 5,
-            "accuracy": 97.893776,
-            "dataset": "wfr",
-            "leaves": 13
-        },
-        {
-            "time": 12.623154,
-            "depth": 7,
-            "fold": 1,
-            "accuracy": 96.97525,
-            "dataset": "wfr",
-            "leaves": 13
-        },
-        {
-            "time": 10.8849,
-            "depth": 7,
-            "fold": 2,
-            "accuracy": 95.783684,
-            "dataset": "wfr",
-            "leaves": 22
-        },
-        {
-            "time": 10.587175,
             "depth": 8,
-            "fold": 3,
-            "accuracy": 97.341888,
-            "dataset": "wfr",
-            "leaves": 19
+            "leaves": 24,
+            "time": 11.664268
         },
         {
-            "time": 11.558016,
+            "dataset": "wfr",
+            "accuracy": 0.97893776,
+            "fold": 5,
+            "depth": 7,
+            "leaves": 13,
+            "time": 11.007866
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.9697525,
+            "fold": 1,
+            "depth": 7,
+            "leaves": 13,
+            "time": 12.623154
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.9578368399999999,
+            "fold": 2,
+            "depth": 7,
+            "leaves": 22,
+            "time": 10.8849
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.97341888,
+            "fold": 3,
+            "depth": 8,
+            "leaves": 19,
+            "time": 10.587175
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.98166817,
+            "fold": 4,
             "depth": 9,
-            "fold": 4,
-            "accuracy": 98.166817,
-            "dataset": "wfr",
-            "leaves": 23
+            "leaves": 23,
+            "time": 11.558016
         },
         {
-            "time": 11.442323,
-            "depth": 8,
+            "dataset": "wfr",
+            "accuracy": 0.97619049,
             "fold": 5,
-            "accuracy": 97.619049,
-            "dataset": "wfr",
-            "leaves": 22
+            "depth": 8,
+            "leaves": 22,
+            "time": 11.442323
         },
         {
-            "time": 12.111305,
-            "depth": 10,
+            "dataset": "wfr",
+            "accuracy": 0.97433548,
             "fold": 1,
-            "accuracy": 97.433548,
-            "dataset": "wfr",
-            "leaves": 27
+            "depth": 10,
+            "leaves": 27,
+            "time": 12.111305
         },
         {
-            "time": 10.585475,
-            "depth": 7,
+            "dataset": "wfr",
+            "accuracy": 0.98441795,
             "fold": 2,
-            "accuracy": 98.441795,
-            "dataset": "wfr",
-            "leaves": 31
-        },
-        {
-            "time": 10.629531,
-            "depth": 10,
-            "fold": 3,
-            "accuracy": 98.808434,
-            "dataset": "wfr",
-            "leaves": 35
-        },
-        {
-            "time": 11.23009,
-            "depth": 8,
-            "fold": 4,
-            "accuracy": 97.433548,
-            "dataset": "wfr",
-            "leaves": 35
-        },
-        {
-            "time": 10.85982,
-            "depth": 8,
-            "fold": 5,
-            "accuracy": 97.527473,
-            "dataset": "wfr",
-            "leaves": 25
-        },
-        {
-            "time": 11.198302,
             "depth": 7,
-            "fold": 1,
-            "accuracy": 97.341888,
-            "dataset": "wfr",
-            "leaves": 19
+            "leaves": 31,
+            "time": 10.585475
         },
         {
-            "time": 13.535661,
+            "dataset": "wfr",
+            "accuracy": 0.98808434,
+            "fold": 3,
+            "depth": 10,
+            "leaves": 35,
+            "time": 10.629531
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.97433548,
+            "fold": 4,
+            "depth": 8,
+            "leaves": 35,
+            "time": 11.23009
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.97527473,
+            "fold": 5,
+            "depth": 8,
+            "leaves": 25,
+            "time": 10.85982
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.97341888,
+            "fold": 1,
+            "depth": 7,
+            "leaves": 19,
+            "time": 11.198302
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.9688359099999999,
+            "fold": 2,
             "depth": 6,
-            "fold": 2,
-            "accuracy": 96.883591,
-            "dataset": "wfr",
-            "leaves": 11
+            "leaves": 11,
+            "time": 13.535661
         },
         {
-            "time": 11.354954,
-            "depth": 7,
+            "dataset": "wfr",
+            "accuracy": 0.97983498,
             "fold": 3,
-            "accuracy": 97.983498,
-            "dataset": "wfr",
-            "leaves": 23
-        },
-        {
-            "time": 11.93658,
-            "depth": 8,
-            "fold": 4,
-            "accuracy": 97.525208,
-            "dataset": "wfr",
-            "leaves": 22
-        },
-        {
-            "time": 11.176242,
             "depth": 7,
+            "leaves": 23,
+            "time": 11.354954
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.9752520800000001,
+            "fold": 4,
+            "depth": 8,
+            "leaves": 22,
+            "time": 11.93658
+        },
+        {
+            "dataset": "wfr",
+            "accuracy": 0.97619049,
             "fold": 5,
-            "accuracy": 97.619049,
-            "dataset": "wfr",
-            "leaves": 15
+            "depth": 7,
+            "leaves": 15,
+            "time": 11.176242
         },
         {
-            "time": 10.945556,
-            "depth": 12,
+            "dataset": "wfr",
+            "accuracy": 0.97158569,
             "fold": 1,
-            "accuracy": 97.158569,
-            "dataset": "wfr",
-            "leaves": 42
+            "depth": 12,
+            "leaves": 42,
+            "time": 10.945556
         },
         {
-            "time": 13.300368,
+            "dataset": "wfr",
+            "accuracy": 0.9688359099999999,
+            "fold": 2,
             "depth": 13,
-            "fold": 2,
-            "accuracy": 96.883591,
-            "dataset": "wfr",
-            "leaves": 39
+            "leaves": 39,
+            "time": 13.300368
         },
         {
-            "time": 14.120321,
+            "dataset": "wfr",
+            "accuracy": 0.96700272,
+            "fold": 3,
             "depth": 8,
-            "fold": 3,
-            "accuracy": 96.700272,
-            "dataset": "wfr",
-            "leaves": 30
+            "leaves": 30,
+            "time": 14.120321
         },
         {
-            "time": 11.199264,
-            "depth": 9,
+            "dataset": "wfr",
+            "accuracy": 0.97158569,
             "fold": 4,
-            "accuracy": 97.158569,
-            "dataset": "wfr",
-            "leaves": 24
+            "depth": 9,
+            "leaves": 24,
+            "time": 11.199264
         },
         {
-            "time": 13.151502,
-            "depth": 6,
+            "dataset": "wfr",
+            "accuracy": 0.97344322,
             "fold": 5,
-            "accuracy": 97.344322,
-            "dataset": "wfr",
-            "leaves": 11
-        },
-        {
-            "time": 1.330977,
-            "fold": 1,
-            "accuracy": 97.923157,
-            "dataset": "wilt",
-            "depth": 3,
-            "leaves": 4
-        },
-        {
-            "time": 1.923214,
-            "fold": 2,
-            "accuracy": 97.819313,
-            "dataset": "wilt",
             "depth": 6,
-            "leaves": 13
+            "leaves": 11,
+            "time": 13.151502
         },
         {
-            "time": 1.38383,
-            "fold": 3,
-            "accuracy": 98.027,
             "dataset": "wilt",
+            "accuracy": 0.97923157,
+            "fold": 1,
+            "depth": 3,
+            "leaves": 4,
+            "time": 1.330977
+        },
+        {
+            "dataset": "wilt",
+            "accuracy": 0.97819313,
+            "fold": 2,
+            "depth": 6,
+            "leaves": 13,
+            "time": 1.923214
+        },
+        {
+            "dataset": "wilt",
+            "accuracy": 0.98027,
+            "fold": 3,
             "depth": 10,
-            "leaves": 33
+            "leaves": 33,
+            "time": 1.38383
         },
         {
-            "time": 1.260787,
+            "dataset": "wilt",
+            "accuracy": 0.9823468,
             "fold": 4,
-            "accuracy": 98.23468,
-            "dataset": "wilt",
             "depth": 6,
-            "leaves": 7
+            "leaves": 7,
+            "time": 1.260787
         },
         {
-            "time": 1.998575,
-            "fold": 5,
-            "accuracy": 97.104446,
             "dataset": "wilt",
+            "accuracy": 0.97104446,
+            "fold": 5,
             "depth": 9,
-            "leaves": 55
+            "leaves": 55,
+            "time": 1.998575
         },
         {
-            "time": 1.873181,
+            "dataset": "wilt",
+            "accuracy": 0.9875389099999999,
             "fold": 1,
-            "accuracy": 98.753891,
-            "dataset": "wilt",
             "depth": 6,
-            "leaves": 13
+            "leaves": 13,
+            "time": 1.873181
         },
         {
-            "time": 1.637309,
+            "dataset": "wilt",
+            "accuracy": 0.98442368,
             "fold": 2,
-            "accuracy": 98.442368,
-            "dataset": "wilt",
             "depth": 5,
-            "leaves": 13
+            "leaves": 13,
+            "time": 1.637309
         },
         {
-            "time": 1.170997,
+            "dataset": "wilt",
+            "accuracy": 0.97819313,
             "fold": 3,
-            "accuracy": 97.819313,
-            "dataset": "wilt",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 1.170997
         },
         {
-            "time": 1.35338,
-            "fold": 4,
-            "accuracy": 97.715469,
             "dataset": "wilt",
+            "accuracy": 0.97715469,
+            "fold": 4,
             "depth": 7,
-            "leaves": 17
+            "leaves": 17,
+            "time": 1.35338
         },
         {
-            "time": 1.826241,
+            "dataset": "wilt",
+            "accuracy": 0.9824198900000001,
             "fold": 5,
-            "accuracy": 98.241989,
-            "dataset": "wilt",
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 1.826241
         },
         {
-            "time": 1.522812,
+            "dataset": "wilt",
+            "accuracy": 0.97819313,
             "fold": 1,
-            "accuracy": 97.819313,
-            "dataset": "wilt",
             "depth": 5,
-            "leaves": 13
+            "leaves": 13,
+            "time": 1.522812
         },
         {
-            "time": 1.910727,
+            "dataset": "wilt",
+            "accuracy": 0.98338524,
             "fold": 2,
-            "accuracy": 98.338524,
-            "dataset": "wilt",
             "depth": 5,
-            "leaves": 12
+            "leaves": 12,
+            "time": 1.910727
         },
         {
-            "time": 1.82806,
+            "dataset": "wilt",
+            "accuracy": 0.98027,
             "fold": 3,
-            "accuracy": 98.027,
-            "dataset": "wilt",
             "depth": 6,
-            "leaves": 14
+            "leaves": 14,
+            "time": 1.82806
         },
         {
-            "time": 1.676302,
+            "dataset": "wilt",
+            "accuracy": 0.97611633,
             "fold": 4,
-            "accuracy": 97.611633,
-            "dataset": "wilt",
             "depth": 4,
-            "leaves": 10
+            "leaves": 10,
+            "time": 1.676302
         },
         {
-            "time": 1.629973,
+            "dataset": "wilt",
+            "accuracy": 0.9834539800000001,
             "fold": 5,
-            "accuracy": 98.345398,
-            "dataset": "wilt",
             "depth": 4,
-            "leaves": 8
+            "leaves": 8,
+            "time": 1.629973
         },
         {
-            "time": 1.438365,
-            "fold": 1,
-            "accuracy": 97.300102,
             "dataset": "wilt",
+            "accuracy": 0.97300102,
+            "fold": 1,
             "depth": 8,
-            "leaves": 26
+            "leaves": 26,
+            "time": 1.438365
         },
         {
-            "time": 1.439719,
+            "dataset": "wilt",
+            "accuracy": 0.9740394600000001,
             "fold": 2,
-            "accuracy": 97.403946,
-            "dataset": "wilt",
             "depth": 6,
-            "leaves": 12
+            "leaves": 12,
+            "time": 1.439719
         },
         {
-            "time": 1.662387,
+            "dataset": "wilt",
+            "accuracy": 0.98338524,
             "fold": 3,
-            "accuracy": 98.338524,
-            "dataset": "wilt",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 1.662387
         },
         {
-            "time": 1.481905,
-            "fold": 4,
-            "accuracy": 97.715469,
             "dataset": "wilt",
+            "accuracy": 0.97715469,
+            "fold": 4,
             "depth": 7,
-            "leaves": 21
+            "leaves": 21,
+            "time": 1.481905
         },
         {
-            "time": 1.335698,
-            "fold": 5,
-            "accuracy": 97.621513,
             "dataset": "wilt",
+            "accuracy": 0.9762151299999999,
+            "fold": 5,
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 1.335698
         },
         {
-            "time": 1.527113,
+            "dataset": "wilt",
+            "accuracy": 0.97611633,
             "fold": 1,
-            "accuracy": 97.611633,
-            "dataset": "wilt",
             "depth": 6,
-            "leaves": 12
+            "leaves": 12,
+            "time": 1.527113
         },
         {
-            "time": 1.490426,
+            "dataset": "wilt",
+            "accuracy": 0.98338524,
             "fold": 2,
-            "accuracy": 98.338524,
-            "dataset": "wilt",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 1.490426
         },
         {
-            "time": 1.318352,
+            "dataset": "wilt",
+            "accuracy": 0.98027,
             "fold": 3,
-            "accuracy": 98.027,
-            "dataset": "wilt",
             "depth": 2,
-            "leaves": 3
+            "leaves": 3,
+            "time": 1.318352
         },
         {
-            "time": 1.608632,
+            "dataset": "wilt",
+            "accuracy": 0.9865005499999999,
             "fold": 4,
-            "accuracy": 98.650055,
-            "dataset": "wilt",
             "depth": 5,
-            "leaves": 10
+            "leaves": 10,
+            "time": 1.608632
         },
         {
-            "time": 1.440727,
-            "fold": 5,
-            "accuracy": 97.104446,
             "dataset": "wilt",
+            "accuracy": 0.97104446,
+            "fold": 5,
             "depth": 4,
-            "leaves": 5
+            "leaves": 5,
+            "time": 1.440727
         },
         {
-            "time": 7.78448,
+            "dataset": "wine",
+            "accuracy": 0.58631256,
+            "fold": 1,
             "depth": 22,
-            "fold": 1,
-            "accuracy": 58.631256,
-            "dataset": "wine",
-            "leaves": 554
+            "leaves": 554,
+            "time": 7.78448
         },
         {
-            "time": 7.587762,
-            "depth": 13,
+            "dataset": "wine",
+            "accuracy": 0.55158325,
             "fold": 2,
-            "accuracy": 55.158325,
-            "dataset": "wine",
-            "leaves": 111
+            "depth": 13,
+            "leaves": 111,
+            "time": 7.587762
         },
         {
-            "time": 7.908581,
+            "dataset": "wine",
+            "accuracy": 0.58937691,
+            "fold": 3,
             "depth": 23,
-            "fold": 3,
-            "accuracy": 58.937691,
-            "dataset": "wine",
-            "leaves": 541
+            "leaves": 541,
+            "time": 7.908581
         },
         {
-            "time": 8.374945,
-            "depth": 22,
+            "dataset": "wine",
+            "accuracy": 0.59039837,
             "fold": 4,
-            "accuracy": 59.039837,
-            "dataset": "wine",
-            "leaves": 313
+            "depth": 22,
+            "leaves": 313,
+            "time": 8.374945
         },
         {
-            "time": 8.595394,
-            "depth": 5,
+            "dataset": "wine",
+            "accuracy": 0.53156822,
             "fold": 5,
-            "accuracy": 53.156822,
-            "dataset": "wine",
-            "leaves": 8
+            "depth": 5,
+            "leaves": 8,
+            "time": 8.595394
         },
         {
-            "time": 8.04001,
-            "depth": 21,
+            "dataset": "wine",
+            "accuracy": 0.58733402,
             "fold": 1,
-            "accuracy": 58.733402,
-            "dataset": "wine",
-            "leaves": 460
+            "depth": 21,
+            "leaves": 460,
+            "time": 8.04001
         },
         {
-            "time": 9.017297,
-            "depth": 24,
+            "dataset": "wine",
+            "accuracy": 0.59959141,
             "fold": 2,
-            "accuracy": 59.959141,
-            "dataset": "wine",
-            "leaves": 587
+            "depth": 24,
+            "leaves": 587,
+            "time": 9.017297
         },
         {
-            "time": 8.496101,
+            "dataset": "wine",
+            "accuracy": 0.57201225,
+            "fold": 3,
             "depth": 20,
-            "fold": 3,
-            "accuracy": 57.201225,
-            "dataset": "wine",
-            "leaves": 321
+            "leaves": 321,
+            "time": 8.496101
         },
         {
-            "time": 7.620118,
+            "dataset": "wine",
+            "accuracy": 0.53932583,
+            "fold": 4,
             "depth": 13,
-            "fold": 4,
-            "accuracy": 53.932583,
-            "dataset": "wine",
-            "leaves": 182
+            "leaves": 182,
+            "time": 7.620118
         },
         {
-            "time": 8.330159,
+            "dataset": "wine",
+            "accuracy": 0.58452137,
+            "fold": 5,
             "depth": 16,
-            "fold": 5,
-            "accuracy": 58.452137,
-            "dataset": "wine",
-            "leaves": 268
+            "leaves": 268,
+            "time": 8.330159
         },
         {
-            "time": 7.761365,
-            "depth": 23,
+            "dataset": "wine",
+            "accuracy": 0.57711952,
             "fold": 1,
-            "accuracy": 57.711952,
-            "dataset": "wine",
-            "leaves": 561
+            "depth": 23,
+            "leaves": 561,
+            "time": 7.761365
         },
         {
-            "time": 7.759922,
+            "dataset": "wine",
+            "accuracy": 0.53932583,
+            "fold": 2,
             "depth": 7,
-            "fold": 2,
-            "accuracy": 53.932583,
-            "dataset": "wine",
-            "leaves": 18
+            "leaves": 18,
+            "time": 7.759922
         },
         {
-            "time": 8.374403,
+            "dataset": "wine",
+            "accuracy": 0.56179775,
+            "fold": 3,
             "depth": 14,
-            "fold": 3,
-            "accuracy": 56.179775,
-            "dataset": "wine",
-            "leaves": 108
+            "leaves": 108,
+            "time": 8.374403
         },
         {
-            "time": 7.729826,
+            "dataset": "wine",
+            "accuracy": 0.55566906,
+            "fold": 4,
             "depth": 5,
-            "fold": 4,
-            "accuracy": 55.566906,
-            "dataset": "wine",
-            "leaves": 14
+            "leaves": 14,
+            "time": 7.729826
         },
         {
-            "time": 7.997459,
-            "depth": 24,
+            "dataset": "wine",
+            "accuracy": 0.5855397,
             "fold": 5,
-            "accuracy": 58.55397,
-            "dataset": "wine",
-            "leaves": 534
+            "depth": 24,
+            "leaves": 534,
+            "time": 7.997459
         },
         {
-            "time": 7.664066,
+            "dataset": "wine",
+            "accuracy": 0.57201225,
+            "fold": 1,
             "depth": 23,
-            "fold": 1,
-            "accuracy": 57.201225,
-            "dataset": "wine",
-            "leaves": 554
+            "leaves": 554,
+            "time": 7.664066
         },
         {
-            "time": 8.172721,
+            "dataset": "wine",
+            "accuracy": 0.6230847899999999,
+            "fold": 2,
             "depth": 25,
-            "fold": 2,
-            "accuracy": 62.308479,
-            "dataset": "wine",
-            "leaves": 466
+            "leaves": 466,
+            "time": 8.172721
         },
         {
-            "time": 7.772058,
+            "dataset": "wine",
+            "accuracy": 0.5607762900000001,
+            "fold": 3,
             "depth": 12,
-            "fold": 3,
-            "accuracy": 56.077629,
-            "dataset": "wine",
-            "leaves": 107
+            "leaves": 107,
+            "time": 7.772058
         },
         {
-            "time": 8.443381,
+            "dataset": "wine",
+            "accuracy": 0.57916241,
+            "fold": 4,
             "depth": 24,
-            "fold": 4,
-            "accuracy": 57.916241,
-            "dataset": "wine",
-            "leaves": 560
+            "leaves": 560,
+            "time": 8.443381
         },
         {
-            "time": 8.191217,
-            "depth": 22,
+            "dataset": "wine",
+            "accuracy": 0.5753564099999999,
             "fold": 5,
-            "accuracy": 57.535641,
-            "dataset": "wine",
-            "leaves": 529
+            "depth": 22,
+            "leaves": 529,
+            "time": 8.191217
         },
         {
-            "time": 8.263592,
-            "depth": 6,
+            "dataset": "wine",
+            "accuracy": 0.53830441,
             "fold": 1,
-            "accuracy": 53.830441,
-            "dataset": "wine",
-            "leaves": 9
+            "depth": 6,
+            "leaves": 9,
+            "time": 8.263592
         },
         {
-            "time": 8.017517,
-            "depth": 20,
+            "dataset": "wine",
+            "accuracy": 0.57609806,
             "fold": 2,
-            "accuracy": 57.609806,
-            "dataset": "wine",
-            "leaves": 470
+            "depth": 20,
+            "leaves": 470,
+            "time": 8.017517
         },
         {
-            "time": 8.170003,
-            "depth": 21,
+            "dataset": "wine",
+            "accuracy": 0.55975487,
             "fold": 3,
-            "accuracy": 55.975487,
-            "dataset": "wine",
-            "leaves": 525
-        },
-        {
-            "time": 8.142941,
             "depth": 21,
-            "fold": 4,
-            "accuracy": 57.201225,
-            "dataset": "wine",
-            "leaves": 469
+            "leaves": 525,
+            "time": 8.170003
         },
         {
-            "time": 7.798318,
+            "dataset": "wine",
+            "accuracy": 0.57201225,
+            "fold": 4,
+            "depth": 21,
+            "leaves": 469,
+            "time": 8.142941
+        },
+        {
+            "dataset": "wine",
+            "accuracy": 0.5855397,
+            "fold": 5,
             "depth": 26,
-            "fold": 5,
-            "accuracy": 58.55397,
-            "dataset": "wine",
-            "leaves": 547
+            "leaves": 547,
+            "time": 7.798318
         },
         {
-            "time": 0.013687,
+            "dataset": "zoo",
+            "accuracy": 0.9,
             "fold": 1,
-            "accuracy": 90.0,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.013687
         },
         {
-            "time": 0.009316,
+            "dataset": "zoo",
+            "accuracy": 0.95,
             "fold": 2,
-            "accuracy": 95.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.009316
         },
         {
-            "time": 0.010466,
+            "dataset": "zoo",
+            "accuracy": 0.85,
             "fold": 3,
-            "accuracy": 85.0,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.010466
         },
         {
-            "time": 0.015037,
+            "dataset": "zoo",
+            "accuracy": 0.9,
             "fold": 4,
-            "accuracy": 90.0,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.015037
         },
         {
-            "time": 0.013246,
-            "fold": 5,
-            "accuracy": 71.428574,
             "dataset": "zoo",
+            "accuracy": 0.71428574,
+            "fold": 5,
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.013246
         },
         {
-            "time": 0.013665,
+            "dataset": "zoo",
+            "accuracy": 0.7,
             "fold": 1,
-            "accuracy": 70.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.013665
         },
         {
-            "time": 0.008844,
+            "dataset": "zoo",
+            "accuracy": 0.9,
             "fold": 2,
-            "accuracy": 90.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.008844
         },
         {
-            "time": 0.014452,
+            "dataset": "zoo",
+            "accuracy": 0.8,
             "fold": 3,
-            "accuracy": 80.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.014452
         },
         {
-            "time": 0.012972,
+            "dataset": "zoo",
+            "accuracy": 0.85,
             "fold": 4,
-            "accuracy": 85.0,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.012972
         },
         {
-            "time": 0.011167,
-            "fold": 5,
-            "accuracy": 80.952377,
             "dataset": "zoo",
+            "accuracy": 0.80952377,
+            "fold": 5,
             "depth": 2,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.011167
         },
         {
-            "time": 0.014821,
+            "dataset": "zoo",
+            "accuracy": 0.85,
             "fold": 1,
-            "accuracy": 85.0,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.014821
         },
         {
-            "time": 0.012814,
-            "fold": 2,
-            "accuracy": 90.0,
             "dataset": "zoo",
+            "accuracy": 0.9,
+            "fold": 2,
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.012814
         },
         {
-            "time": 0.013754,
+            "dataset": "zoo",
+            "accuracy": 0.85,
             "fold": 3,
-            "accuracy": 85.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.013754
         },
         {
-            "time": 0.015939,
+            "dataset": "zoo",
+            "accuracy": 0.8,
             "fold": 4,
-            "accuracy": 80.0,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.015939
         },
         {
-            "time": 0.013481,
+            "dataset": "zoo",
+            "accuracy": 0.66666664,
             "fold": 5,
-            "accuracy": 66.666664,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.013481
         },
         {
-            "time": 0.018185,
+            "dataset": "zoo",
+            "accuracy": 1.0,
             "fold": 1,
-            "accuracy": 100.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.018185
         },
         {
-            "time": 0.014356,
-            "fold": 2,
-            "accuracy": 95.0,
             "dataset": "zoo",
+            "accuracy": 0.95,
+            "fold": 2,
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.014356
         },
         {
-            "time": 0.017414,
+            "dataset": "zoo",
+            "accuracy": 0.9,
             "fold": 3,
-            "accuracy": 90.0,
-            "dataset": "zoo",
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.017414
         },
         {
-            "time": 0.014537,
+            "dataset": "zoo",
+            "accuracy": 0.75,
             "fold": 4,
-            "accuracy": 75.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.014537
         },
         {
-            "time": 0.01321,
+            "dataset": "zoo",
+            "accuracy": 0.71428574,
             "fold": 5,
-            "accuracy": 71.428574,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.01321
         },
         {
-            "time": 0.017667,
+            "dataset": "zoo",
+            "accuracy": 0.9,
             "fold": 1,
-            "accuracy": 90.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 6
+            "leaves": 6,
+            "time": 0.017667
         },
         {
-            "time": 0.014021,
-            "fold": 2,
-            "accuracy": 65.0,
             "dataset": "zoo",
+            "accuracy": 0.65,
+            "fold": 2,
             "depth": 2,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.014021
         },
         {
-            "time": 0.013195,
+            "dataset": "zoo",
+            "accuracy": 0.8,
             "fold": 3,
-            "accuracy": 80.0,
-            "dataset": "zoo",
             "depth": 3,
-            "leaves": 5
+            "leaves": 5,
+            "time": 0.013195
         },
         {
-            "time": 0.009575,
+            "dataset": "zoo",
+            "accuracy": 0.6,
             "fold": 4,
-            "accuracy": 60.0,
-            "dataset": "zoo",
             "depth": 2,
-            "leaves": 4
+            "leaves": 4,
+            "time": 0.009575
         },
         {
-            "time": 0.013249,
-            "fold": 5,
-            "accuracy": 90.476189,
             "dataset": "zoo",
+            "accuracy": 0.9047618900000001,
+            "fold": 5,
             "depth": 4,
-            "leaves": 7
+            "leaves": 7,
+            "time": 0.013249
         }
     ]
 }

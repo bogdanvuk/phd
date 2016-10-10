@@ -17,3 +17,5 @@ sphinxtr: The Sphinx Thesis Resource
     dteep
     conclusion
     zreferences
+
+.. contents:: Table of Contents
