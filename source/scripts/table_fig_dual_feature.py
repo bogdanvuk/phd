@@ -54,8 +54,15 @@ def print_figures(table, feature, fplot, xvals, name, loc=1, figs=None, aspect=1
         # forceAspect(plt.gca(), 0.7)
         plt.gca().legend(legend_handle, legend_title, loc=loc, fontsize=30, labelspacing=0.1)
         plt.tick_params(axis='both', labelsize=30, pad=20)
-        plt.locator_params(axis='y', nbins=4)
+
+        if (fplot != plt.loglog) and (fplot != plt.semilogy):
+            plt.locator_params(axis='y', nbins=4)
+
+        if (fplot != plt.loglog) and (fplot != plt.semilogx):
+            plt.locator_params(axis='x', nbins=4)
+
         plt.tight_layout()
+        plt.autoscale(enable=True, axis='x', tight=True)
         plt.savefig("../images/{}/{}{}.pdf".format(name,feature,n), bbox_inches='tight')
 
 def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=None,
@@ -106,7 +113,7 @@ def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fi
 
     subfigs = []
     for i,f in enumerate(figs):
-        for feature in features:
+        for j, feature in enumerate(features):
             if isinstance(f[0],str):
                 datasets = ', '.join(f)
             else:
@@ -115,7 +122,7 @@ def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fi
             subfigs.append(subfig_tmpl.format(name=name,
                                               feature=feature,
                                               id=i,
-                                              caption=subfig_caption.format(feature=feature,
+                                              caption=subfig_caption[j].format(feature=feature,
                                                                             datasets=datasets)
             ))
 

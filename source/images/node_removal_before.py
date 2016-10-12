@@ -33,10 +33,12 @@ dt = conv2dttree(dt['0'], dt)
 buchheim(dt)
 root = draw_dt(dt)
 bb = root._bounding_box()
-canvas_size = p(12,12)
+canvas_size = p(12,12.5)
 fig << '\definecolor{emphcolor}{RGB}{235,106,135}\n'
 fig << '\definecolor{movecolor}{RGB}{135,206,235}\n'
 fig << block(border=False, p=p(midx(bb[0], bb[1])-canvas_size[0]/2, 0), size=canvas_size)
+
+root['left'].fill = 'emphcolor'
 root['left']['left'].fill = 'emphcolor'
 root['left']['right'].fill = 'movecolor'
 root['left']['right']['left'].fill = 'movecolor'
@@ -47,7 +49,9 @@ rem = root['left']['left']
 move = root['left']['right']
 parent = root['left']
 
-fig << path(rem.c() - (1.3,1.3), rem.c() + (1.3, 1.3), line_width=0.2)
-fig << path(rem.c() - (1.3,-1.3), rem.c() + (1.3, -1.3), line_width=0.2)
+fig << path(rem.c() - (1.3,1.2), rem.c() + (1.3, 1.2), line_width=0.2)
+fig << path(rem.c() - (1.3,-1.2), rem.c() + (1.3, -1.2), line_width=0.2)
+fig << path(parent.c() - (1.1,0.9), parent.c() + (1.1, 0.9), line_width=0.2)
+fig << path(parent.c() - (1.1,-0.9), parent.c() + (1.1, -0.9), line_width=0.2)
 fig << path(move.c(), parent.c(), route=['to [out=300,in=0, looseness=1.5]'], thick=True, shorten=(1.3, 1.3), style=('', '>'), draw='movecolor', line_width=0.2)
 # render_fig(fig)

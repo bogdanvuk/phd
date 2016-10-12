@@ -16,10 +16,10 @@
 \usepackage[none]{hyphenat}
 \usepackage{booktabs}
 \usepackage{hyperref}
-\usepackage{cprotect}
+\usepackage{cprotect} % Make possible syntax higlighting within the captions
 \usepackage{chngcntr}
-\counterwithin{figure}{section}
-\counterwithin{table}{section}
+\counterwithin{figure}{section} % Restart numbering in each section
+\counterwithin{table}{section} % Restart numbering in each section
 % for subfigure
 \usepackage{subcaption}
 \captionsetup{labelfont=bf}
@@ -28,6 +28,7 @@
 \definecolor{carnelian}{rgb}{0.7, 0.11, 0.11}
 \usepackage{fancyhdr}
 \usepackage{array}
+\usepackage{amsmath}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -65,3 +66,13 @@
 \lhead{}
 \chead{}
 \rhead{\fontsize{8pt}{12pt}\selectfont Hardware Acceleration of Nonincremental Algorithms for the Induction of Decision Trees and Decision Tree Ensembles \thepage}
+
+% Create a new list - a list of algorithms
+
+\usepackage{tocloft}% http://ctan.org/pkg/tocloft
+%\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+
+\newcommand{\listofalgoname}{List of Algorithms}
+\newlistof[section]{algos}{loe}{\listofalgoname}
+\counterwithin{algos}{section} % Restart numbering in each section
+% \newlistof[section]{algorithms}{loe}{\listofalgos}

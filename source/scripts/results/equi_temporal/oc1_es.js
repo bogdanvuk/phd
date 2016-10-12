@@ -1,4 +1,5 @@
 {
+    "desc": "OC1-ES",
     "cv_pc_run": [
         {
             "dataset": "adult",

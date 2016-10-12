@@ -57,4 +57,4 @@ draw_children_con(node3_ch[1], node7_ch)
 
 # path([root.s(), root_ch[0].s(), node2_ch[0].s(), node4_ch[1].n()], def_routing="edge[out=180,in=0,->]")()
 # path([root.s(), root_ch[0].s(), node2_ch[0].s(1.0), node4_ch[1].w(0.5) - (1, 1), node4_ch[1].w(0.5)], smooth=True, thick=True, style='->')()
-fig << path(root.c(), root_ch[0].s(), node2_ch[1].c(), node5_ch[0].n(0.5), rounded_corners=10, thick=True, shorten=(0.3, 0.5), style=('', '>'), draw='red')
+fig << path(root.c(), root_ch[0].s(), node2_ch[1].c(), node5_ch[0].n(0.5), rounded_corners=10, thick=True, line_width=0.2, shorten=(0.3, 0.5), style=('', '>'), draw='red')

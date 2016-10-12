@@ -31,7 +31,7 @@ dt = conv2dttree(dt['0'], dt)
 buchheim(dt)
 root = draw_dt(dt)
 bb = root._bounding_box()
-canvas_size = p(12,12)
+canvas_size = p(12,12.5)
 fig << '\definecolor{emphcolor}{RGB}{135,206,235}\n'
 fig << block(border=False, p=p(midx(bb[0], bb[1])-canvas_size[0]/2, 0), size=canvas_size)
 root['left'].fill = 'emphcolor'

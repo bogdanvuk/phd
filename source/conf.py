@@ -104,7 +104,19 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['tex','toc.rst','conf.rst']
+exclude_patterns = ['tex','toc.rst',
+                    'chapters',
+                    'conf.rst',
+                    'abstract.rst',
+                    'introduction.rst',
+                    'zreferences.rst',
+                    'introduction.rst',
+                    'efti.rst',
+                    'eftip.rst',
+                    'eefti.rst',
+                    'dteep.rst',
+                    'conclusion.rst',
+                    ]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -247,8 +259,16 @@ latex_title = ur'''
 Bogdan Vukobratović, mentor dr Rastistlav Struharik
 \vspace{50pt}
 \end{center}
+
 \pagebreak
-\listofffigures
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\listofalgos
+
 '''
 
 latex_elements = {

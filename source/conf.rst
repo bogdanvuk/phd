@@ -55,3 +55,7 @@
 .. role:: raw(raw)
    :format: latex
 
+.. role:: python(code)
+    :language: python
+
+.. highlight:: python

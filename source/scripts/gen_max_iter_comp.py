@@ -22,7 +22,7 @@ titles = ['{}k'.format(f) for f in max_iters]
 xvals = [i*1000 for i in max_iters]
 
 fig_caption =[
-    "Dependency of the induced DTs on the number of iterations the |algo| algorithm was run. Datasets 1-25.",
+    "Dependency of the induced DT sizes and accuracies on the number of iterations the |algo| algorithm was run. Datasets 1-25.",
     "Dependency of the induced DTs on the number of iterations the |algo| algorithm was run. Datasets 25-50."
     ]
 

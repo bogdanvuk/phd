@@ -1,5 +1,3 @@
-.. include:: conf.rst
-
 .. _ch-abstract:
 
 Abstract

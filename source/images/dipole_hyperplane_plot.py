@@ -7,7 +7,9 @@ import math
 attr, cls = attrspace_plot.load_arff("../data/vene.csv")
 ds = {'attr': attr, 'cls': cls}
 
-attrspace_plot.plot(ds, (0,1), alpha=0.1)
+plt = attrspace_plot.plot(ds, (0,1), alpha=0.1)
+plt.gca().axes.set_xticks([])
+plt.gca().axes.set_yticks([])
 
 #inst_index = [69, 113]
 inst_index = [69, 130]
@@ -44,8 +46,9 @@ plt.text(dpos[0]-0.01, dpos[1] - 0.1, r'$\delta$', size=30)
 dpos = np.add((1-(1-delta)/2)*inst[1], (1-delta)/2*inst[0])
 plt.text(dpos[0] - 0.05, dpos[1] - 0.1, r'$1-\delta$', size=30, multialignment='center')
 
-plt.xlabel('$x_1$', fontsize=20)
-plt.ylabel('$x_2$', fontsize=20, rotation=0, labelpad=10)
+plt.xlabel('$x_1$', fontsize=30)
+plt.ylabel('$x_2$', fontsize=30, rotation=0, labelpad=25)
+# plt.tick_params(axis='both', which='both', length=0)
 
 #plt.contour(x.ravel(), y.ravel(), y + 0.0767853*x, [0.712073], linewidth=2)
 #plt.show()

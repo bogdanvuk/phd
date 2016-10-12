@@ -1,21 +1,15 @@
-:orphan:
+==========
+PhD Thesis
+==========
 
-.. _doc-title:
+.. include:: conf.rst
+.. include:: abstract.rst
+.. include:: introduction.rst
+.. include:: efti.rst
+.. include:: zreferences.rst
 
-#########################################
-sphinxtr: The Sphinx Thesis Resource
-#########################################
-
-.. toctree::
-    :numbered:
-
-    abstract
-    introduction
-    efti
-    eftip
-    eefti
-    dteep
-    conclusion
-    zreferences
-
-.. contents:: Table of Contents
+..
+    .. include:: /eftip.rst
+    .. include:: /eefti.rst
+    .. include:: /dteep.rst
+    .. include:: /conclusion.rst
