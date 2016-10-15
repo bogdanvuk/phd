@@ -1,4 +1,3 @@
-.. include:: conf.rst
 
 Co-processor for the DT induction - the |cop|
 =============================================

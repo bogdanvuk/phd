@@ -17,9 +17,9 @@ def plot_topomut(max_size,
     fig = plt.figure(figsize=(w,h))
 
     if len(k) > 1:
-        legend_title = [r'$k_\rho = {}$'.format(kk) for kk in k]
+        legend_title = [r'$k_\beta = {}$'.format(kk) for kk in k]
     else:
-        legend_title = [r'$\rho_0 = {}$'.format(t) for t in topo_mut]
+        legend_title = [r'$\beta_0 = {}$'.format(t) for t in topo_mut]
 
     legend_handle = []
     for kk in k:
@@ -34,8 +34,9 @@ def plot_topomut(max_size,
     plt.locator_params(axis='x', nbins=4)
     plt.tight_layout()
     plt.autoscale(enable=True, axis='x', tight=True)
+    plt.gca().set_xlim(left=2)
     # plt.gca().set_ylim([0,1])
-    plt.ylabel(r'$\rho(N_l)$', size=30, rotation=0, labelpad=20)
+    plt.ylabel(r'$\beta(N_l)$', size=30, rotation=0, labelpad=20)
     plt.xlabel(r'DT size: $N_l$', size=30)
 
     return plt

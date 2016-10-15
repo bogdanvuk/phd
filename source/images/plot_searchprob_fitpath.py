@@ -12,7 +12,10 @@ def load_js_data(fname):
 
 @FuncFormatter
 def to_k(y, position):
-    return r"{}k".format(int(y/1000))
+    if y >= 1000:
+        return r"{}k".format(int(y/1000))
+    else:
+        return int(y)
 
 def reposition_search_points(data):
 
@@ -42,8 +45,9 @@ def reposition_search_points(data):
 def plot_markers(data):
     for d in data:
         if d['name'] == 'SP':
-            m = 'v'
-            c = 'y'
+            m = None
+            # m = 'v'
+            # c = 'y'
         elif d['name'] == 'RB':
             m = 'D'
             c = 'r'
@@ -63,10 +67,8 @@ def plot_fitpath(fn):
         x.append(d['iter'])
         y.append(d['fit'])
 
+    plot_markers(data)
     return plt.step(x, y, zorder=1, linewidth=3)
-
-    # plot_markers(data)
-
 
 def plot_fitpath_comp(fns, labels, aspect=1):
     w, h = matplotlib.figure.figaspect(aspect)
@@ -77,5 +79,5 @@ def plot_fitpath_comp(fns, labels, aspect=1):
         line, = plot_fitpath(fn)
         legend_handle.append(line)
 
-    plt.gca().legend(legend_handle, labels, loc='lower right')
+    plt.gca().legend(legend_handle, labels, fontsize=20, loc='lower right')
     return plt

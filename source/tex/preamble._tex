@@ -13,6 +13,7 @@
 \AtBeginEnvironment{figure}{\renewcommand{\phantomsection}{}}
 
 \nonstopmode
+\usepackage[final]{pdfpages}
 \usepackage[none]{hyphenat}
 \usepackage{booktabs}
 \usepackage{hyperref}
@@ -29,10 +30,16 @@
 \usepackage{fancyhdr}
 \usepackage{array}
 \usepackage{amsmath}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{siunitx}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
+\fancyhf{}% clear all header and footer fields
+\fancyhead[LE,RO]{\thechapter-\thechappage}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}% header rule
+\renewcommand{\footrulewidth}{0.4pt}% footer rule
 \pagestyle{fancy}
 
 \newcommand{\NA}{N_{A}}

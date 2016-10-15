@@ -8,18 +8,18 @@ from rank import load_data, form_mean_table, prepare_csv_table, write_csv_table
 from table_fig_dual_feature import make_feature_comp_tables
 import math
 
-algo_js_tmplt = 'results/equi_temporal/{}.js'
+algo_js_tmplt = 'results/{}.js'
 efti_compare_js_tmplt = 'results/equi_temporal/efti_vc_{}.js'
 
 def timing_table(algo):
     fn = algo_js_tmplt.format(algo)
     make_feature_comp_tables([fn], ['time'], algo, horizontal_splits=3, titles=None,
                              head_fmt=r":raw:`\multicolumn{{1}}{{c}}{{Ind. Time [s]}}`",
-                             data_fmt=r':math:`{0:0.3f} \pm {1:05.3f}`')
+                             data_fmt=r':math:`{0:0.2f} \pm {1:04.2f}`')
 
 number_formats = {
     'size': r':math:`{0:0.1f} \pm {1:>5.1f}`',
-    'acc': r':math:`{0:0.2f} \pm {1:04.2f}`',
+    'acc': r':math:`{0:0.2f}`',
     'fit': r':math:`{0:0.2f} \pm {1:>4.2f}`'
 }
 
@@ -32,6 +32,12 @@ def acc_size_compare_table(algo, algo_name, cw):
     csv_table_prep = {}
     for f in ['acc', 'size', 'fit']:
         tables[f] = form_mean_table(data[f])
+
+        if f == 'acc':
+            for ds in tables[f]:
+                for a in tables[f][ds]:
+                    tables[f][ds][a] = tuple(v*100 for v in tables[f][ds][a])
+
         csv_table_prep[f] = prepare_csv_table(tables[f], cvs,
                                               sort_by_desc=False,
                                               head_fmt=r":raw:`\multicolumn{{1}}{{c}}{{{}}}`",

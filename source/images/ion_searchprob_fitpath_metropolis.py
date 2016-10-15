@@ -3,13 +3,14 @@ from matplotlib.patches import Ellipse
 import matplotlib
 import os
 
-fns = ['../data/searchprob/jvow_fitpath_vanilla.js', '../data/searchprob/jvow_fitpath_hereboy.js']
-plt = plot_fitpath_comp(fns, labels=['Greedy', 'Hereboy'], aspect=0.8)
+# fns = ['../data/searchprob/ion_fitpath_metropolis.js', '../data/searchprob/ion_fitpath_metropolis_rp.js']
+fns = ['../data/searchprob/ion_fitpath_vanilla.js', '../data/searchprob/ion_fitpath_metropolis.js']
+plt = plot_fitpath_comp(fns, labels=['Greedy', 'Metropolis'], aspect=0.8)
 
 
 plt.gca().set_xlim([0,15000])
-plt.gca().set_ylim([0.65,0.9])
-# plt.gca().xaxis.set_major_formatter(to_k)
+plt.gca().set_ylim([0.75,0.92])
+plt.gca().xaxis.set_major_formatter(to_k)
 plt.xlabel('iteration', fontsize=16)
 plt.ylabel('fitness', fontsize=16)
 # plt.gca().add_patch(plt.Circle((2000, 0.58), 200, color='b', fill=False))
@@ -28,5 +29,5 @@ annot_opts = dict(xycoords='data',
 
 plt.locator_params(axis='both', nbins=6);
 plt.tick_params(axis='both', which='major', labelsize=16)
-plt.gca().text(1000, 0.77,'jvow', fontsize=30)
+plt.gca().text(1000, 0.9,'ion', fontsize=30)
 plt.show()

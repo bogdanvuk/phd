@@ -56,7 +56,7 @@ def run_equitemporal(algo):
         test_set['conf'].append(p)
 
         print("Running test for {} in {} time".format(ds, p['max_time']))
-        efti_test(path=os.path.expandvars('$EFTI/rel/efti_ms'), threads=0, tests=[test_set])
+        efti_test(path=os.path.expandvars('$EFTI/rel/efti'), threads=0, tests=[test_set])
 
 if __name__ == "__main__":
     run_equitemporal(sys.argv[1])

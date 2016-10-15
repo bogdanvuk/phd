@@ -28,20 +28,20 @@ def plot_searchprob(max_iter,
     w, h = matplotlib.figure.figaspect(aspect)
     fig = plt.figure(figsize=(w,h))
 
-    legend_title = [str(int(d*100)) + '%' for d in dists]
+    legend_title = [r'$\Delta_F = {}\%$'.format(int(d*100)) for d in dists]
     legend_handle = []
     for d in dists:
         y = list(cumul(prob, max_iter, d, si, sp))
         line, = plt.plot(x,y, linewidth=4)
         legend_handle.append(line)
 
-    plt.gca().legend(legend_handle, legend_title, loc=loc, fontsize=25, labelspacing=0.1)
+    plt.gca().legend(legend_handle, legend_title, loc=loc, fontsize=30, labelspacing=0.15)
     plt.tick_params(axis='both', labelsize=20, pad=10)
     plt.locator_params(axis='y', nbins=4)
     plt.locator_params(axis='x', nbins=4)
     plt.tight_layout()
     plt.gca().set_ylim([0,1])
-    plt.ylabel('p', size=30, rotation=0, labelpad=20)
-    plt.xlabel('iterations without advancement', size=30)
+    plt.ylabel('$p\'_s$', size=40, rotation=0, labelpad=30)
+    plt.xlabel('$D_s$', size=40)
 
     return plt

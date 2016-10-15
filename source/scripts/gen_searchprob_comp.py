@@ -9,7 +9,7 @@ files = [
     'EFTI_500k_vanilla.js',
     'EFTI_500k_hereboy_search.js',
     'EFTI_500k_norp.js',
-    'EFTI_500k_rp-1e-4.js',
+    'EFTI_500k_ow-0.01.js',
 ]
 
 files = [os.path.join('results', 'searchprob', f) for f in files]
@@ -32,7 +32,7 @@ def fit_compare_table(cw):
     csv_table_prep = prepare_csv_table(table, cvs,
                                        sort_by_desc=False,
                                        head_fmt=r":raw:`\multicolumn{{1}}{{c}}{{{}}}`",
-                                       data_fmt=r':math:`{0:0.2f} \pm {1:04.2f}`'
+                                       data_fmt=r':math:`{0:0.3f} \pm {1:05.3f}`'
     )
 
     csv_rank_prep = prepare_csv_table(rank, cvs,
@@ -60,8 +60,8 @@ def fit_compare_table(cw):
          ]
         )
 
-    csv_rank_prep.insert(3, ['bank', '0', '0', '0', '0'])
-    csv_rank_prep.insert(35, ['shuttle', '0', '0', '0', '0'])
+    # csv_rank_prep.insert(3, ['bank', '0', '0', '0', '0'])
+    # csv_rank_prep.insert(35, ['shuttle', '0', '0', '0', '0'])
     for frow, rrow in zip(csv_table_prep[1:],
                           csv_rank_prep[1:]):
         assert frow[0] == rrow[0]
@@ -75,4 +75,4 @@ def fit_compare_table(cw):
 
     write_csv_table('searchprob-comp-fit.csv', csv_table)
 
-fit_compare_table(0.02)
+fit_compare_table(0.01)

@@ -252,22 +252,23 @@ latex_preamble = ur'''
 
 latex_title = ur'''
 
-\begin{center}
-{\rm\Huge PhD Thesis } \par
-\vspace{25pt}
-{\Huge{Hardware Acceleration of Nonincremental Algorithms for the Induction of Decision Trees and Decision Tree Ensembles} \par}
-Bogdan Vukobratović, mentor dr Rastistlav Struharik
-\vspace{50pt}
-\end{center}
+%\begin{center}
+%{\rm\Huge PhD Thesis } \par
+%\vspace{25pt}
+%{\Huge{Hardware Acceleration of Nonincremental Algorithms for the Induction of Decision Trees and Decision Tree Ensembles} \par}
+%Bogdan Vukobratović, mentor dr Rastistlav Struharik
+%\vspace{50pt}
+%\end{center}
+\includepdf[pages=-]{front.pdf}
 
 \pagebreak
-\tableofcontents
+\tableofcontents\thispagestyle{fancy}
 \newpage
-\listoffigures
+\listoffigures\thispagestyle{fancy}
 \newpage
-\listoftables
+\listoftables\thispagestyle{fancy}
 \newpage
-\listofalgos
+\listofalgos\thispagestyle{fancy}
 
 '''
 
@@ -325,6 +326,7 @@ latex_documents = [
 
 latex_additional_files = [
     'tex/preamble._tex',
+    'front.pdf'
 ]
 
 # -- Options for manual page output ---------------------------------------

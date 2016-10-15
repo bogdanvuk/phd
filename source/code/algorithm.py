@@ -1,5 +1,5 @@
 def efti(train_set, max_iter):
-    initialize(dt)
+    dt = initialize()
     fit = fitness_eval(dt, train_set)
 
     for iter in range(max_iter):

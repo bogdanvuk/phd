@@ -9,7 +9,7 @@ PhD Thesis
 .. include:: zreferences.rst
 
 ..
-    .. include:: /eftip.rst
-    .. include:: /eefti.rst
-    .. include:: /dteep.rst
-    .. include:: /conclusion.rst
+    .. include:: eftip.rst
+    .. include:: eefti.rst
+    .. include:: dteep.rst
+    .. include:: conclusion.rst
