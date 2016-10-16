@@ -632,6 +632,8 @@ The selection task is responsible for deciding, in each iteration, which DT will
 .. literalinclude:: code/selection-vanilla.py
     :caption: The pseudo-code of the :literal:`selection()` function of the |algo| algorithm, that implements the basic individual selection procedure
 
+.. _sec-exp-struct:
+
 The structure of the experiments
 --------------------------------
 
@@ -645,19 +647,17 @@ This whole procedure is repeated 5 times, resulting in 25 inferred DTs for each 
 
 Usually, the aim of the experiment is to discover whether there is a statistical difference between the feature quality of the DTs induced by different algorithms (or the same algorithms with different parameters). The well known Student's t-test is used in statistics to determine if two sets of data are significantly different from each other. However, in the following experiments, there are usually more than two sets of data compared, hence the t-test cannot be applied. Instead, first for each feature and dataset, the one-way analysis of variance (ANOVA) :cite:`neter1996applied` test is applied on collected data, with the significance level set at 0.05. When ANOVA analysis indicates that at least one of the results is statistically different from the others, the Tukey multiple comparisons test :cite:`hochberg2009multiple` is used to group the algorithms into groups of statistically identical results. Hence, for each feature of interest and each dataset, a set of groups is obtained, where the algorithms within the group have similar performance for the that feature and dataset. Finally, for each feature and dataset, these groups are ranked with respect to their average performance on that feature and dataset, and each tested algorithm is assigned a number, representing the position of its group within the ranking. Usually, the average of all ranking numbers for the algorithm for one feature is taken to represent the overall performance of that algorithm on all datasets with respect to that feature. The average rankings are then compared between the algorithms per feature, to determine the benefits of using one over the other.
 
-Improvements to the |algo| algorithm basics
--------------------------------------------
+Improvements to the basic |algo| algorithm
+------------------------------------------
 
 In this section several additional features that can improve either the execution time or the quality of solutions produced by the |algo| algorithm are discussed:
 
-- **Test this!** Fitness dependence on the missing classes - number of classes that are not assigned to any leaf
-- Return to the best candidate - give a chance to the evolutionary process to abondon the current candidate solution and to return to the best solution yet.
-- **Test this!** Impurity
-- **Test this!** Increase in search probability
-- **Test this!** Delta classification
-- Mersenne twister was used to no avail
+- :num:`Section #sec-perc-missing-classes` - Make fitness dependent on the number of training set classes that are not assigned to any leaf
+- :num:`Section #sec-dyn-topomut-strength` - Implement dynamic topological mutation strength, as oposed to having constant |beta|
+- :num:`Section #sec-search-probability` - Introduce the search probability, i.e. the probability with which a less fit individual can be selected for the candidate solution
+- :num:`Section #sec-partial-reclass` - Keep track of the classification traversal paths, and try to reuse them between iterations
 
-In order to test whether |algo| really benefits from a new feature, the fitnesses of the DTs induced by the basic |algo| and |algo| with the feature included, were compared for all UCI datasets listed in the :num:`Table #tbl-uci`. For each dataset, five 5-fold cross-validations were performed. In order to discover whether there is a statistical difference between the fitnesses of the DTs, one-way analysis of variance (ANOVA) :cite:`neter1996applied` has been applied on collected data with the significance level set at 0.05. **When the ANOVA analysis indicated that at least one of the results was statistically different from the others, the Tukey multiple comparisons test :cite:`hochberg2009multiple` was used to group the algorithms into groups of statistically identical results.**
+.. _sec-perc-missing-classes:
 
 Percentage of missing classes
 .............................
@@ -865,7 +865,7 @@ It was observed that sometimes, for some datasets, after the poorer solution has
 Experiments
 ;;;;;;;;;;;
 
-The five 5-fold cross-validations were performed for all proposed approaches on all datasets from the :num:`Table #tbl-uci`, together with the Tukey HSD test to discover which of the approaches produce statistically significant improvements to the fitness.
+The experimental procedure explained in the :num:`Section #sec-exp-struct` was used to discover whether any of the proposed approaches statistically influences the induced DTs' finesses for the better. The values of the parameters relevant to the search probability that were used in the experiments are given in the :num:`Table #tbl-searchprob-exp-params` for all tested approaches.
 
 .. tabularcolumns:: L{0.3\linewidth} R{0.15\linewidth} R{0.15\linewidth} R{0.15\linewidth}
 
@@ -918,19 +918,21 @@ The results are given in the :num:`Table #tbl-searchprob-comp`, where for each o
 .. literalinclude:: code/selection.py
     :caption: The pseudo-code of the :samp:`selection()` function of the |algo| algorithm, that implement's the individual selection procedure
 
+.. _sec-partial-reclass:
+
 Partial reclassification
 ........................
 
-As it was already discussed in the :num:`Section #sec-mutation`, the DT mutations alter only a small portion of the DT in each iteration, hence only the classification of the instances on whose traversal paths the mutated nodes happen to reside, will be affected by the mutation. Therefore the majority of instances will travel along identical paths from iteration to iteration, meaning that all related computations will remain the same. Recomputation is thus only necessary for the instances whose paths contain a mutated node. Please also notice that even when the mutated node test coefficients change, only the elements of the vector scalar product sum (given in the equation :eq:`oblique-test`) that correspond to the muatted coefficients must be recomputed, while the computation of all other elements can be skipped.
+As it was already discussed in the :num:`Section #sec-mutation`, the DT mutations alter only a small portion of the DT individual in each iteration, hence only the classification of the instances on whose traversal paths the mutated nodes happen to reside, will be affected by the mutation. Therefore the majority of instances will travel along identical paths from iteration to iteration, meaning that all related computations will remain the same. Recomputation is thus only necessary for the instances whose paths contain a mutated node. Please also notice that even when the mutated node test coefficients change, only the elements of the vector scalar product sum (given in the equation :eq:`oblique-test`) that correspond to the mutated coefficients must be recomputed, while the computation of all other elements can be skipped.
 
-Therefore, the traversal paths could be memorized for the candidate DT individual in order to avoid unnecessary recalculations of the node tests during the classification of the mutated DT individual, for the instances whose paths do not cross the mutated nodes. Each instance could start the DT traversal by following its memorized path from the candidate DT individual classification, and checking whether it will encounter any of the mutated nodes while traversing the DT. While no mutated nodes are encountered, no test recalculations need to be executed and the instance moves through the DT as dictated by the path stored in memory. When the instance encounters a mutated node, its path in the mutated DT might diverge from its memorized path. If the topological mutation produced the changes in the encountered node, where either a new node was added in the place of a leaf (see :num:`Figure #fig-node-addition` for an example) or the node was removed and a different one took its place (see :num:`Figure #fig-node-removal` for an example), the subtree which the instance has reached has changed, and the rest of the traversal path needs to recomputed. If the node is encountered with only some of its coefficients |w| mutated, the dot product of the mutated node test (:math:`\mathbf{w^{mut}}\cdot \mathbf{x}`), can be calculated based on the dot product of the original node test (:math:`\mathbf{w}\cdot \mathbf{x}`) in the following way:
+Therefore, the traversal paths could be memorized for the candidate DT individual in order to avoid unnecessary recalculations of the node tests during the classification of the mutated DT individual, for the instances whose paths do not cross the mutated nodes. Each instance could start the DT traversal by following its memorized path from the candidate DT individual classification, and checking whether it will encounter any of the mutated nodes while traversing the DT. While no mutated nodes are encountered, no test recalculations need to be executed and the instance moves through the DT as dictated by the path stored in the memory. When the instance encounters a mutated node, its path in the mutated DT might diverge from its memorized path. If the topological mutation produced the changes in the encountered node, where either a new node was added in the place of a leaf (see :num:`Figure #fig-node-addition` for an example) or the node was removed and a different one took its place (see :num:`Figure #fig-node-removal` for an example), the subtree which the instance has reached has changed, and the rest of the traversal path needs to recomputed. If the instance encounteres a node with only some of its coefficients |w| mutated, the dot product of the mutated node test (:math:`\mathbf{w^{mut}}\cdot \mathbf{x}`), can be calculated based on the dot product of the original node test (:math:`\mathbf{w}\cdot \mathbf{x}`) in the following way:
 
 .. math:: \mathbf{w^{mut}}\cdot \mathbf{x} = \mathbf{w}\cdot \mathbf{x} + \sum_{i \in M}(w^{mut}_{i} - w_{i}) x_{i},
     :label: dot-product-recalc
 
-where *M* is the set of all indices of the mutated coefficients in that node. Furthermore, the mutation on the encountered node may not be strong enough to deflect the instance from its previous path. Hence, the outcome of the mutated node test is monitored whether it will align with the stored path, in which case the instance has not diverged and the instance can continue following the memorized path. Otherwise, the instance entered a new DT subtree and all subsequent node tests need to be recalculated.
+where *M* is the set of indices of all the mutated coefficients in that node. Furthermore, the mutation on the encountered node may not be strong enough to deflect the instance from its previous path. Hence, the outcome of the mutated node test is monitored whether it will align with the stored path, in which case the instance has not diverged and the instance can continue following the memorized path. Otherwise, the instance entered a new DT subtree and all subsequent node tests need to be recalculated.
 
-In the case the mutated individual is selected for the new candidate solution, the paths which have diverged in the classification run need to be updated to the memory. One possible way to implement this is to keep track of each deviation from the memorized paths during the classification run for the mutated DT individual, and apply all these changes to the stored traversal paths if the individual is selected for the new candidate solution. However, a different method that took advantage of the fact that usually less than 1% of the mutated individuals get selected, proved to be more efficient with respect to both time of execution and the memory resources. With this approach, the |algo| algorithm does not keep track of the deviations from the memorized paths in each classification run of a mutated DT, which in turn saves on memory access time and on the memory space for tracking the changes. Only once a mutated DT has been selected for the new candidate solution is the classification rerun with the instruction to change the stored traversal paths in the memory where needed.
+In the case the mutated individual is selected for the new candidate solution, the paths which have diverged in the classification run need to be updated to the memory. One possible way to implement this is to keep track of each deviation from the memorized paths during the classification run for the mutated DT individual, and apply all these changes to the stored traversal paths if the individual is selected for the new candidate solution. However, a different method that takes advantage of the fact that usually less than 1% of the mutated individuals get selected, proved to be more efficient with respect to both execution time and the memory resource consumption. In this approach, the |algo| algorithm does not keep track of the deviations from the memorized paths in each classification run of a mutated DT, which in turn saves on memory access time and on the memory space for tracking the changes. Only once a mutated DT has been selected for the new candidate solution is the classification rerun with the instruction to change the stored traversal paths in the memory where needed.
 
 The proposed partial reclassification algorithm has an additional performance issue with the small DT individuals. If the DT individual is only one or two levels deep, there is very large probability that many of the instance paths will be affected by the mutation, and the time consumption overhead of the partial reclassification exceeds its benefits. The |algo| algorithm implements a strategy to turn the partial reclassification off when it operates with small individuals.
 
@@ -939,9 +941,37 @@ The proposed partial reclassification algorithm has an additional performance is
 .. literalinclude:: code/find_dt_leaf_for_inst_delta.py
     :caption: The modified :samp:`find_dt_leaf_for_inst()` function that implements the partial reclassification method
 
-The pseudo-code in the :num:`Algorithm #fig-partial-find-dt-leaf-for-inst` describes the implementation of the partial reclassification method whithin ``find_dt_leaf_for_inst()`` function (the original implementation is given by the :num:`Algorithm #fig-find-dt-leaf-for-inst-pca`). If the partial classification is turned off by |algo| algorithm (by passing the value ``True`` for the argument ``recalc_all``), the paths of all the training set instances will be imediately considered to have diverged from the stored paths, and the partial classification algorithm will not be used and the classification procedure will be effectively same as the original one. Otherwise, the classification for an instance (variable ``instance``) starts by following the stored path (``path_diverged = recalc_all = False``) from the root node (``cur_node = dt.root``). The path is followed one node at a time (``cur_node = get_stored_next_node(instance, cur_node)``), in order to look out for mutated nodes along its length, by using the functions ``dt.is_topo_mutated(cur_node)`` and ``dt.is_coeff_mutated(cur_node)``, which signal, respectively, if the current node was mutated via topological mutation or only its test coefficients were mutated. If it was a topological mutation, the instance is facing completely different node, hence the dot product is calculated a new. On the other hand if the current node's test coefficients were mutated, the dot product is reconstructed from the stored value (retrieved via ``get_stored_psum(instance, cur_node)``), using the equation :eq:`dot-product-recalc`. In both cases, it is considered that the instance has diverged from the memorized path: ``path_diverged = True``. The rest of the node test is carried out by comparing the dot product with the threshold to obtain the next node in the path, and if that node corresponds to the next node in the stored path, instance can safely go back to following it (once again ``path_diverged = False``). Finally, in order not to update the memorized paths in each classification run, the argument ``store_paths`` is used to signal to the function whether the mutated DT individual has become the new candidate solution and the updates to the memory should take place.
+The pseudo-code in the :num:`Algorithm #fig-partial-find-dt-leaf-for-inst` describes the implementation of the partial reclassification method whithin ``find_dt_leaf_for_inst()`` function (the original implementation is given by the :num:`Algorithm #fig-find-dt-leaf-for-inst-pca`). If the partial reclassification is turned off by |algo| algorithm (by passing the value ``True`` for the argument ``recalc_all``), the paths of all the training set instances will be imediately considered to have diverged from the stored paths, and the partial classification algorithm will not be used, making the classification procedure effectively same as the original one. Otherwise, the classification for an instance (variable ``instance``) starts by following the stored path (``path_diverged = recalc_all = False``) from the root node (``cur_node = dt.root``). The path is followed one node at a time (``cur_node = get_stored_next_node(instance, cur_node)``), in order to look out for mutated nodes along its length, by using the functions ``dt.is_topo_mutated(cur_node)`` and ``dt.is_coeff_mutated(cur_node)``, which signal, respectively, if the current node was mutated via topological mutation or only its test coefficients were mutated. If it was changed by a topological mutation, the instance is facing completely different node, hence the dot product is calculated a new. On the other hand if the current node's test coefficients were mutated, the dot product is reconstructed from the stored value (retrieved via ``get_stored_psum(instance, cur_node)``), using the equation :eq:`dot-product-recalc`. In both cases, it is considered that the instance has diverged from the memorized path: ``path_diverged = True``. The rest of the node test is carried out by comparing the dot product with the threshold to obtain the next node in the path, and if that node corresponds to the next node in the stored path, instance can safely go back to following it (once again ``path_diverged = False``). Finally, in order not to update the memorized paths in each classification run, the argument ``store_paths`` is used to signal to ``find_dt_leaf_for_inst()`` function whether the mutated DT individual has become the new candidate solution and the updates to the memory should take place.
 
-In the :num:`Table #tbl-delta-time-comp`, the results of an experiment are shown, that tests the performance benefits of utilizing the partial reclassification procedure. The DT induction times were tested for all datasets from the :numref:`tbl-uci`, using the following configuration: ``max_iter=500k, Ko=0.02, Ss=0.05, Si=5e-5, Rp=1e-4``, on the |algo| algorithm implementations with and without partial reclassification. The results show that induction speedups differ between the datasets, and depend on the size of the induced DTs, as was expected and already discussed in this section. The speedups range from
+In the :num:`Table #tbl-delta-time-comp` the results of an experiment are shown that tests the performance benefits of utilizing the partial reclassification procedure, obtained by the cross-validation procedure explained in the :num:`Section #sec-exp-struct` and the set of parameters listed in the :num:`Table #tbl-partial-comp-exp-params`. The results show that the partial reclassification really shortens the execution time, but that the induction speedups differ between the datasets, and depend on the size of the induced DTs, as was expected and already discussed in this section.
+
+.. tabularcolumns:: R{0.15\linewidth} R{0.05\linewidth} R{0.05\linewidth} R{0.05\linewidth} R{0.05\linewidth} R{0.05\linewidth} R{0.05\linewidth} R{0.1\linewidth} R{0.05\linewidth} R{0.1\linewidth}
+
+.. _tbl-partial-comp-exp-params:
+
+.. list-table:: The parameter set used for to the |algo| algorithm for the comparison experiments
+    :header-rows: 1
+
+    * - ``max_iter``
+      - :math:`K_o`
+      - :math:`\alpha`
+      - :math:`\beta_0`
+      - :math:`k_{\beta}`
+      - :math:`\gamma_0`
+      - :math:`k_{\gamma}`
+      - :math:`\rho_0`
+      - :math:`S_T`
+      - :math:`p_R`
+    * - 500k
+      - 0.01
+      - 1
+      - 0.6
+      - 1
+      - 0.6
+      - 1
+      - :math:`\num{5e-5}`
+      - 0.05
+      - :math:`\num{1e-4}`
 
 .. raw:: latex
 
@@ -952,7 +982,7 @@ In the :num:`Table #tbl-delta-time-comp`, the results of an experiment are shown
 .. tabularcolumns:: L{0.09\linewidth} | R{0.18\linewidth} R{0.175\linewidth} | L{0.09\linewidth} | R{0.18\linewidth} R{0.175\linewidth}
 
 .. _tbl-delta-time-comp:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: The results of the experiments testing the benefits on the |algo| algorithm induction times of using the partial reclassification procedure
     :header-rows: 1
     :file: scripts/delta-comp-time.csv
 
@@ -963,9 +993,9 @@ In the :num:`Table #tbl-delta-time-comp`, the results of an experiment are shown
 Complexity of the |algo| algorithm
 ----------------------------------
 
-The computational complexity of the |algo| algorithm can be calculated using the algorithm pseudo-code. The computational complexity will be given in the big O notation, i.e. the worst-case complexity will be calculated. Since the individual selection is performed in constant time it can be omitted, and the total complexity can be computed as:
+The computational complexity of the |algo| algorithm can be calculated by following its pseudo-code. The computational complexity is given here in the big O notation, i.e. the worst-case complexity will be calculated. Since the individual selection is performed in constant time it can be omitted, and the total complexity can be computed as:
 
-.. math:: T(EFTI) = max\_iter\cdot(O(mutate) + O(fitness\_eval))
+.. math:: T(EFTI) = \texttt{max\_iter}\cdot(O(\texttt{mutate}) + O(\texttt{fitness\_eval}))
     :label: cplx_algo_tot_components
 
 The number of leaves, |Nl|, in binary DT is always by 1 larger then the number of non-leaf nodes. If *n* represents the number of non-leaf nodes in the DT, then:
@@ -978,62 +1008,60 @@ In the worst case, the depth of the DT equals the number of non-leaf nodes, henc
 .. math:: D = N_l - 1
 	:label: depth
 
-Let |NA| equal the size of the attribute (|x|) and the coefficient (|w|) vectors. Each non-leaf node in the DT has |NA| + 1 (:math:`\theta`) coefficients, and the portion |alpha| is mutated each iteration, so the complexity of mutating coefficients is:
+Each iteration |alpha| coefficients are mutated, so the complexity of mutating coefficients is constant:
 
-.. math:: T(coefficient\ mutation) = O(\alpha \cdot (N_l - 1) \cdot \NA)
-	:label: cplx_mut_coef
+.. math:: T(\texttt{coefficient\ mutation}) = O(1)
+  :label: cplx_mut_coef
 
 The topology can be mutated by either adding or removing the node from the DT. When the node is removed, only a pointer to the removed child is altered so the complexity is:
 
-.. math:: T(node\ removal) = O(1)
+.. math:: T(\texttt{node\ removal}) = O(1)
 	:label: cplx_rem_node
 
-When the node is added, the new set of node test coefficients needs to be calculated, hence the complexity is:
+When the node is added, the new set of node test coefficients needs to be calculated. hence the complexity is:
 
-.. math:: T(node\ addition) = O(\NA)
+.. math:: T(\texttt{node\ addition}) = O(\NA)
 	:label: cplx_add_node
 
-Since :math:`\rho\ll\alpha\cdot (N_l - 1) < \alpha\cdot N_l`, the complexity of the whole DT Mutation task sums to:
+Hence, the complexity of the whole DT Mutation task sums to:
 
-.. math:: T(mutation) = O(\alpha \cdot (N_l - 1) \cdot \NA + \rho (O(1)+O(\NA))) = O(\alpha \cdot N_l \cdot \NA)
+.. math:: T(\texttt{mutation}) = O(\NA)
     :label: cplx_mutation
 
 Once the number of hits is determined, the fitness can be calculated in constant time :math:`O(1)`, hence the complexity of the whole ``fitness_eval()`` function is:
 
-.. math:: T(fitness\_eval) = N_I\cdot O(find\_dt\_leaf\_for\_inst) + O(N_l\cdot N_c) + O(1)
+.. math:: T(\texttt{fitness\_eval}) = N_I\cdot O(\texttt{find\_dt\_leaf\_for\_inst}) + O(N_l\cdot N_c) + O(1)
     :label: fitness_eval
 
-where |NI| is the number of instances in the training set and |Nc| is the total number of classes in the classification problem. As for the ``find_dt_leaf_for_inst()`` function, the complexity can be calculated as:
+where |NI| is the number of instances in the training set and |Nc| is the total number of classes in the classification problem, and :math:`O(N_l\cdot N_c)` is for the dominant class calculation for each leaf. As for the ``find_dt_leaf_for_inst()`` function, the complexity can be calculated as:
 
-.. math:: T(find\_dt\_leaf\_for\_inst) = D\cdot O(calculate\_node\_test\_sum),
+.. math:: T(\texttt{find\_dt\_leaf\_for\_inst}) = D\cdot O(\texttt{dot\_product}),
     :label: find_dt_leaf
 
 and the complexity of the node test evaluation is:
 
-.. math:: T(calculate\_node\_test\_sum) = O(\NA)
+.. math:: T(\texttt{dot\_product}) = O(\NA)
     :label: node_test_eval
 
 By inserting the equation :eq:`node_test_eval` into the equation :eq:`find_dt_leaf`, and then both of them into the equation :eq:`fitness_eval`, we obtain the complexity for the ``fitness_eval()`` function:
 
-.. math:: T(fitness\_eval) = O(N_{I}\cdot D\cdot\NA + \Nl\cdot N_c)
+.. math:: T(\texttt{fitness\_eval}) = O(N_{I}\cdot D\cdot\NA + \Nl\cdot N_c)
     :label: fitness_eval_tot
 
 By inserting the equations :eq:`fitness_eval_tot`, :eq:`cplx_mutation`, :eq:`leaves_cnt` and :eq:`depth` into the equation :eq:`cplx_algo_tot_components`, we obtain the total complexity of the |algo| algorithm:
 
-.. math:: T(EFTI) = max\_iter\cdot(N_I\cdot N_l \cdot\NA + N_l\cdot N_c + \alpha \cdot N_l \cdot \NA)
+.. math:: T(EFTI) = \texttt{max\_iter}\cdot(N_I\cdot N_l \cdot\NA + N_l\cdot N_c + \NA)
     :label: cplx_all_together
 
-Since :math:`\alpha\cdot N_l \ll N_I\cdot N_l` the mutation insignificantly influences the complexity and can be disregarded. We finally obtain that complexity of the |algo| algorithm is dominated by the fitness evaluation task complexity, and sums up to:
+Since :math:`N_A \ll N_I\cdot N_l\cdot N_A` the mutation insignificantly influences the complexity and can be disregarded. We finally obtain that the complexity of the |algo| algorithm is dominated by the fitness evaluation task complexity, and sums up to:
 
-.. math:: T(EFTI) = O(max\_iter\cdot(N_I\cdot N_l\cdot\NA + N_l\cdot N_c))
+.. math:: T(EFTI) = O(\texttt{max\_iter}\cdot(N_I\cdot N_l\cdot\NA + N_l\cdot N_c))
     :label: cplx_final
-
-It is clear from the equation :eq:`cplx_final` that the ``fitness_eval()`` function is a good candidate for the hardware acceleration, while the mutation tasks can be left in the software since they insignificantly influence the complexity of the |algo| algorithm.
 
 Experiments
 -----------
 
-In this section, the results of the experiments are presented, that were conducted in order to compare the |algo| algorithm to the existing solutions. The algorithms listed in the :num:`Table #tbl-existing-algo`, available in open literature, were used for the comparison.
+In this section, the results of experiments are presented, that were conducted in order to compare the |algo| algorithm to the existing solutions. The algorithms listed in the :num:`Table #tbl-existing-algo`, available in open literature, were used for the comparison. The experimental procedure explained in the :num:`Section #sec-exp-struct` was used to compare the quality of the induced DTs, in terms of their sizes and accuracies. For the DT inference algorithms that require DT pruning, a pruning set was created by taking 30% of the training set instances selected at random.
 
 .. raw:: latex
 
@@ -1042,7 +1070,7 @@ In this section, the results of the experiments are presented, that were conduct
 
 .. tabularcolumns:: p{0.1\linewidth} L{0.3\linewidth} p{0.5\linewidth}
 .. _tbl-existing-algo:
-.. list-table:: The values of the parameters relevant to the search probability set to the |algo| algorithm while running the experiments for comparing different search probability approaches
+.. list-table:: The list of the exisisting algorithms used for the comparison with the proposed |algo| algorithm
     :header-rows: 1
 
     * - Short Name
@@ -1076,10 +1104,6 @@ In this section, the results of the experiments are presented, that were conduct
 .. raw:: latex
 
    \endgroup
-
-Conducted experiments were devised to compare the quality of the DTs evolved by the proposed |algo| algorithm, with the DTs inferred by some of the previously proposed algorithms. In particular, DTs were compared by their size and accuracy.
-
-For the DT inference algorithms that require DT pruning, a pruning set was created by taking 30% of the training set instances selected at random.
 
 Dependence on the number of iterations
 ......................................

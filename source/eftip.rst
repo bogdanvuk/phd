@@ -9,6 +9,8 @@ In this section, the |cop| co-processor is presented...
 Profiling results
 -----------------
 
+It is clear from the equation :eq:`cplx_final` that the ``fitness_eval()`` function is a good candidate for the hardware acceleration, while the mutation tasks can be left in the software since they insignificantly influence the complexity of the |algo| algorithm.
+
 To confirm the results obtained by the computational complexity analysis, the software profiling was performed on the |algo| algorithm's C implementation. The software implementation was developed using many optimization techniques:
 
 - arithmetic operation on 64-bit operands only (optimized for the 64-bit CPU),
