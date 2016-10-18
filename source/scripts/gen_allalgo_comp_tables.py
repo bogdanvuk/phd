@@ -2,7 +2,7 @@
 import sys
 import os
 sys.path.append(os.path.expandvars('$EFTI/script'))
-from rank import load_data, dump_table_csv, features, form_mean_table, anova
+from rank import load_data, dump_table_csv, prepare_csv_table, write_csv_table, features, form_mean_table, form_mean_rank, anova
 
 files = [
     'oc1_ap.js',
@@ -13,7 +13,7 @@ files = [
     'nodt.js',
     'gale.js',
     'gatree.js',
-    'EFTI_500k_ow-0.01.js'
+    'EFTI_1000k_ow-0.01.js'
 ]
 
 files = [os.path.join('results', f) for f in files]
@@ -79,13 +79,18 @@ def gen_tables(files, cw, titles=None):
                        )
 
         rank = anova(data[f], features[f]['desc'])
-        dump_table_csv("comp-rank-{}-{}.csv".format(f,cw),
-                       rank, cvs,
-                       sort_by_desc=False,
-                       dstitle='',
-                       head_fmt=head_fmt,
-                       data_fmt=r":math:`{}`"
-                       )
+
+        csv_table = prepare_csv_table(
+            rank, cvs,
+            sort_by_desc=False,
+            dstitle='',
+            head_fmt=head_fmt,
+            data_fmt=r":math:`{}`"
+        )
+
+        mean_rank = form_mean_rank(rank)
+        csv_table.append([r":raw:`\bottomrule rank`"] + ['{:0.3f}'.format(mean_rank[c]) for c in cvs])
+        write_csv_table("comp-rank-{}-{}.csv".format(f,cw), csv_table)
 
         # mean_ranks[f] = form_mean_rank(rank)
 

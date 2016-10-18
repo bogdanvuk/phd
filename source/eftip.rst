@@ -2,24 +2,16 @@
 Co-processor for the DT induction - the |cop|
 =============================================
 
-In this section, the |cop| co-processor is presented...
+Very few theorems exist about evolutionary algorithms that can be used to guarantee some of their behaviour, with probably the most famous results being the one that statesl that (1+1) ES takes :math:`O(n log(n))` iterations to find a maximum of any linear function :cite:`droste2002analysis`. Even worse, the "No Free Lunch" theorem :cite:`wolpert1996lack` implies that no optimization algorithm can have, on average, a superior performance on many different problems, which means that usually optimization algorithms need to be specifically tuned for each problem. However, in order to find the optimal parameter set for an EA, or test the efficiency of a new algorithm feature, usually an experimantal approach needs to be used for the lack of theoretical guidelines. In order for the experiment to have a level of statistical significance, usually multiple runs of cross-validation technique are used. For tuning the parameters and testing new features for the |algo| algorithm, five 5-fold cross-validations were performed for each dataset with 500k iterations, which for the largest of them, ``shuttle`` took almost 6 hours on a desktop PC (average induction times when partial reconfiguration is used can be found in :num:`Table #tbl-delta-time-comp`). In order to find an optimal parameter set, some kind of meta-heuristic needs to be employed, where in each of its iterations such a cross-validation test would be needed to evaluate its current candidate solution. This would then amount to days or even weeks of processing time. Embedded CPUs are even less powerfull and would take even more time for these operations. Hence, the application of the DT induction using EAs in a dynamically adaptable real-time embedded machine learning system would be impractical.
+
+In an attempt to address these issues, the |cop| co-processor (Evolutionary Full Tree Induction co-Processor) is proposed
 
 .. _profiling-results:
 
 Profiling results
 -----------------
 
-It is clear from the equation :eq:`cplx_final` that the ``fitness_eval()`` function is a good candidate for the hardware acceleration, while the mutation tasks can be left in the software since they insignificantly influence the complexity of the |algo| algorithm.
-
-To confirm the results obtained by the computational complexity analysis, the software profiling was performed on the |algo| algorithm's C implementation. The software implementation was developed using many optimization techniques:
-
-- arithmetic operation on 64-bit operands only (optimized for the 64-bit CPU),
-- loop unfolding for the node test evaluation loop,
-- maximum compiler optimization settings, etc.
-
-To perform the experiments 21 datasets, presented in the :num:`Table #tbl-uci-datasets`, were selected from the UCI benchmark datasets database :cite:`newman1998uci`. The UCI database is commonly used in the machine learning community to estimate and compare the performance of different machine learning algorithms.
-
-The software implementation of the |algo| algorithm was compiled using the GCC 4.8.2 compiler, run on the AMD Phenom(tm) II X4 965 (3.4 GHz) computer and profiled using the GProf performance analysis tool for each of the tests listed in the :numref:`tbl-uci-datasets`. The results obtained by profiling were consistent with the algorithm complexity analysis performed in the previous chapter and are shown in the :numref:`fig-profiling-plot`. The :numref:`fig-profiling-plot` shows the percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset. On average, |algo| spent 99.0% of time calculating the fitness of the individual.
+It is clear from the equation :eq:`cplx_final` that the ``fitness_eval()`` function is a good candidate for the hardware acceleration since it is the dominant contributor to the algorithm time complexity. To confirm the results obtained by the computational complexity analysis, the software profiling was performed on the |algo| algorithm's C implementation. The |algo| algorithm was let to induce DTs from all datasets from the :num:`Table #tbl-uci` in order to gather the profiling data. The software implementation of the |algo| algorithm was compiled using the GCC 5.4.1 compiler, run on the PC with 64-bit, 4-core, Intel i5-2500K CPU operating at approximately 3.5GHz, with 8GB or RAM, running Ubuntu 16.04 operating system and profiled using the GProf performance analysis tool for each of the datasets individually. The results obtained by the profiling were found to be consistent with the algorithm complexity analysis performed in the previous chapter and are shown in the :numref:`fig-profiling-plot`. The :numref:`fig-profiling-plot` shows the percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset. On average, |algo| spent 99.0% of time calculating the fitness of the individual.
 
 .. subfigstart::
 

@@ -1,5 +1,5 @@
-def select(dt, dt_mut, fit, fit_mut):
-   if fit_mut > fit:
-       return dt_mut, fit_mut
-   else:
-       return dt, fit
+def select(dt, dt_mut):
+    if dt_mut.fit > dt.fit:
+        return dt_mut
+    else:
+        return dt

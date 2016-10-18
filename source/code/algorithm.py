@@ -1,11 +1,11 @@
 def efti(train_set, max_iter):
     dt = initialize()
-    fit = fitness_eval(dt, train_set)
+    fitness_eval(dt, train_set)
 
     for iter in range(max_iter):
         dt_mut  = mutate(dt)
-        fit_mut = fitness_eval(dt_mut, train_set)
+        fitness_eval(dt_mut, train_set)
 
-        dt, fit = select(dt, dt_mut, fit, fit_mut)
+        dt = select(dt, dt_mut)
 
     return dt
