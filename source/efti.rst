@@ -1,13 +1,15 @@
 |algo| algorithm
 ================
 
-This section describes an evolutionary algorithm for oblique full DT induction using supervised learning - |algo|. As we have seen in the introduction (:num:`Section #sec-dt-induction`), an algorithm that would take advantage of the full DT induction, but limit its resource consumption to make it attractive for the world of embedded systems is lacking in the open literature. The main motivation for creating |algo|, was to thus to develop an algorithm that:
+This section describes an evolutionary algorithm for oblique full DT induction using supervised learning - |algo|. As we have seen in the introduction (:num:`Section #sec-dt-induction`), an algorithm that would take advantage of the full DT induction, but limit its resource consumption to make it attractive for the world of embedded systems is lacking in the open literature. The main motivation for creating |algo|, was thus to develop an algorithm that:
 
 - is suitable for the implementation on embedded systems, i.e. has low hardware resource requirements,
 - is easy parallelizable and accelerated in hardware, and
 - uses nonincremental DT induction to induce smaller DTs than the existing solutions, without the loss in DT accuracy.
 
-Since inferring an optimal DT in terms of both size and accuracy is an NP-hard problem, the |algo| algorithm needed to be based on some kind of heuristic. In order to minimize the hardware resource consumption of the algorithm implementation, it was chosen to be operated only on a single candidate solution, effectively excluding all the algorithms that operate on populations, such as particle swarm optimization, memetic algorithms, genetic algorithms, and some types of evolutionary algorithms. For all these reasons, it was chosen to base the |algo| algorithm on the (1+1) Evolutionary Strategy, since on one hand it operates on a single individual, while on the other it was supposed to be capable of managing the highly complex problem of searching for the small, yet accurate enough DTs, by using the nature inspired evolution process.
+Since inferring an optimal DT in terms of both size and accuracy is an NP-hard problem, the |algo| algorithm needed to be based on some kind of heuristic. In order to minimize the hardware resource consumption of the algorithm implementation, it was chosen to be operated only on a single candidate solution, effectively excluding all the algorithms that operate on populations, such as particle swarm optimization, memetic algorithms, genetic algorithms, and some types of evolutionary algorithms. For all these reasons, it was chosen to base the |algo| algorithm on the (1+1) Evolutionary Strategy, since on one hand it operates on a single individual, while on the other it was supposed to be capable of managing the highly complex problem of searching for the small, yet accurate enough DTs, by using the nature inspired evolutionary process.
+
+.. _sec-algorithm-overview:
 
 The algorithm overview
 ----------------------
@@ -22,9 +24,9 @@ The :num:`Algorithm #fig-algorithm-pca` shows the algorithmic framework for the 
 .. literalinclude:: code/algorithm.py
     :caption: Overview of the |algo| algorithm
 
-The fitness of the mutated individual (accessed via attribute ``dt_mut.fit``), calculated by the ``fitness_eval()`` function, is then compared with the fitness of the candidate solution (accessed via attribute ``dt.fit``) by the ``selection()`` function, which decides whether the mutated individual will be taken as the new candidate solution, i.e. will it become the base for the mutation in the iterations to follow. During ``max_iter`` iterations, the |algo| algorithm tries to improve upon the DT candidate solution, after which the algorithm exits and the fittest DT individual found during this process is returned. Once the DT is formed in this way, it can be used to classify problem instances outside of the training set.
+The fitness of the mutated individual, calculated by the ``fitness_eval()`` function (:num:`Algorithm #fig-fitness-eval-pca`), is then compared with the fitness of the candidate solution within the ``select()`` function (:num:`Algorithm #fig-selection-vanilla-pca), which decides whether the mutated individual will be taken as the new candidate solution, i.e. will it become the base for the mutation in the iterations to follow. During ``max_iter`` iterations, the |algo| algorithm tries to improve upon the DT candidate solution, after which the algorithm exits and the fittest DT individual found during this process is returned. Once the DT is formed in this way, it can be used to classify problem instances outside of the training set.
 
-In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, one example evolution process performed by the |algo| algorithm on the ``vene`` dataset is shown. The ``vene`` dataset contains instances of three different classes: :math:`C_1`, marked by the red stars, :math:`C_2`, marked by the green squares, and :math:`C_3`, marked by the blue triangles. Eight specific moments in the DT evolution where significant breakthroughs in the fitness of the DT were made, are presented in these figures by both plotting the tree structure and displaying the partition of the attribute space that the DT individuals at these moments induced. The nodes are drawn in the figures using circles and the leaves using squares, and each node and each leaf is assigned a unique ID. Each leaf node and its corresponding attribute space region are labeled in the format *i-Cj*, where *i* equals the ID of the leaf, and *j* equals the class number assigned to that leaf, hence also to the region. For each of these figures, the following information is given:
+In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, one example evolutionary process performed by the |algo| algorithm on the ``vene`` dataset is shown. The ``vene`` dataset contains instances of three different classes: :math:`C_1`, marked by the red stars, :math:`C_2`, marked by the green squares, and :math:`C_3`, marked by the blue triangles. Eight specific moments in the DT evolution where significant breakthroughs in the fitness of the DT were made, are presented in these figures by both plotting the tree structure and displaying the partition of the attribute space that the DT individuals at these moments induced. The nodes are drawn in the figures using circles and the leaves using squares, and each node and each leaf is assigned a unique ID. Each leaf node and its corresponding attribute space region are labeled in the format *i-Cj*, where *i* equals the ID of the leaf, and *j* equals the class number assigned to that leaf, hence also to the region. For each of these figures, the following information is given:
 
 - Iteration - the iteration number in which the DT individual was evolved
 - Fitness - the fitness of the DT individual
@@ -54,7 +56,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview00
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 000000, Fitness: 0.6024, Size: 2, Accuracy: 0.6005
+    An example evolutionary process by the |algo| algorithm. Iteration: 000000, Fitness: 0.6024, Size: 2, Accuracy: 0.6005
 
 .. subfigstart::
 
@@ -79,7 +81,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview01
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 000013, Fitness: 0.6287, Size: 2, Accuracy: 0.6274
+    An example evolutionary process by the |algo| algorithm. Iteration: 000013, Fitness: 0.6287, Size: 2, Accuracy: 0.6274
 
 .. subfigstart::
 
@@ -104,7 +106,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview02
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 003599, Fitness: 0.9138, Size: 5, Accuracy: 0.9202
+    An example evolutionary process by the |algo| algorithm. Iteration: 003599, Fitness: 0.9138, Size: 5, Accuracy: 0.9202
 
 .. subfigstart::
 
@@ -127,7 +129,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview03
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 007859, Fitness: 0.9265 Size: 4, Accuracy: 0.9297
+    An example evolutionary process by the |algo| algorithm. Iteration: 007859, Fitness: 0.9265 Size: 4, Accuracy: 0.9297
 
 .. subfigstart::
 
@@ -150,7 +152,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview04
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 030268, Fitness: 0.9272, Size: 5, Accuracy: 0.9331
+    An example evolutionary process by the |algo| algorithm. Iteration: 030268, Fitness: 0.9272, Size: 5, Accuracy: 0.9331
 
 .. subfigstart::
 
@@ -173,7 +175,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview05
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 177050, Fitness: 0.9273, Size: 6, Accuracy: 0.9374
+    An example evolutionary process by the |algo| algorithm. Iteration: 177050, Fitness: 0.9273, Size: 6, Accuracy: 0.9374
 
 .. subfigstart::
 
@@ -196,7 +198,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview06
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 279512, Fitness: 0.9274, Size: 7, Accuracy: 0.9395
+    An example evolutionary process by the |algo| algorithm. Iteration: 279512, Fitness: 0.9274, Size: 7, Accuracy: 0.9395
 
 .. subfigstart::
 
@@ -219,7 +221,7 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
     :label: fig-efti-overview07
     :after: \quad
 
-    An example evolution process by the |algo| algorithm. Iteration: 415517, Fitness: 0.9342, Size: 5, Accuracy: 0.9396
+    An example evolutionary process by the |algo| algorithm. Iteration: 415517, Fitness: 0.9342, Size: 5, Accuracy: 0.9396
 
 At the beginning of the |algo| algorithm, the initial individual is generated (:num:`Figure #fig-efti-overview00`) to contain only one node, since |algo| has a goal of creating DTs as small as possible. By the iteration #13 (:num:`Figure #fig-efti-overview01`), no new nodes were added, but the root node test was modified to produce the increase in the DT accuracy from 0.6005 to 0.6274. During the further evolution, some nodes were added which raised the accuracy of the DT. Notice how fitness started to deviate from the accuracy when the DT grew bigger. This is because the fitness also depends on the size of the DT to which it applies, in that it is more significantly penalized, the more leaves the DT has. In this example, the biggest drop in the fitness caused by the DT size is in the iteration #279512 of the DT evolution (:num:`Figure #fig-efti-overview06`), where the DT individual comprised 7 leaves and even though the accuracy climbed to 0.9395 (classification success rate of 94%), the fitness remained at 0.9274. In this way, the evolutionary process was forced to search for the smaller DT solutions, in which it eventually succeeded by the iteration #415517 (:num:`Figure #fig-efti-overview07`), where the DT size dropped to only 5 leaves with no loss in accuracy.
 
@@ -310,7 +312,7 @@ There is a known result regarding (1+1)-ES algorithms called 1/5 success rule :c
 The DT node insertion algorithm
 ...............................
 
-Each time a node is to be added to the DT, whether it is the root node for the DT initialization or any other node in the mutation procedure, the node's test needs to be initialized. Initializing the test coefficients with random numbers proved to be an impediment to the evolution process, since there is a rather small probability for a node test generated in this way to provide a useful split in the attribute space, i.e. a split that divides instances of different classes. With this, completely random, procedure, the hyperplane usually lands completely outside the attribute space region where the instances are located, where the :num:`Figure #fig-split-init-miss1` shows one such hyperplane as an example. Even if the hyperplane intersects the area of the attribute space where the instances reside, the split can still be ineffective in the way that it does not help distinguish between instances of different classes, i.e. it does not contribute to the DT accuracy, where the :num:`Figure #fig-split-init-miss2` shows one such hyperplane as an example. This influences the algorithm convergence negatively, in that it takes too many generations to relocate the ill-positioned hyperplane to the location where it starts contributing to the accuracy of the DT individual.
+Each time a node is to be added to the DT, whether it is the root node for the DT initialization or any other node in the mutation procedure, the node's test needs to be initialized. Initializing the test coefficients with random numbers proved to be an impediment to the evolutionary process, since there is a rather small probability for a node test generated in this way to provide a useful split in the attribute space, i.e. a split that divides instances of different classes. With this, completely random, procedure, the hyperplane usually lands completely outside the attribute space region where the instances are located, where the :num:`Figure #fig-split-init-miss1` shows one such hyperplane as an example. Even if the hyperplane intersects the area of the attribute space where the instances reside, the split can still be ineffective in the way that it does not help distinguish between instances of different classes, i.e. it does not contribute to the DT accuracy, where the :num:`Figure #fig-split-init-miss2` shows one such hyperplane as an example. This influences the algorithm convergence negatively, in that it takes too many generations to relocate the ill-positioned hyperplane to the location where it starts contributing to the accuracy of the DT individual.
 
 .. subfigstart::
 
@@ -413,13 +415,13 @@ The accuracy of the DT is, hence, equal to the percentage of the instances whose
 Oversize
 ;;;;;;;;
 
-The DT oversize is calculated as the relative difference between the number of leaves in the DT and the total number of classes (|Nc|) in the training set (obtained via the ``train_set.cls_cnt()`` function). In order to be able to classify correctly all training set instances, the DT needs to have at least one leaf for each class occurring in the training set. Therefore, without knowing anything else about the dataset, our best guess is that the minimal DT that could be consistent with the dataset has one leaf for each of the dataset classes. For that reason, the oversize measure given by the equation :eq:`eq-oversize`, was defined in such a way to have the DT start suffering penalties to the fitness when the number of its leaves exceeds the total number of classes in the training set, i.e. the oversize measure is zero when :math:`\Nl=\Nc`:
+The DT oversize is calculated as the relative difference between the number of leaves in the DT and the total number of classes (|NC|) in the training set (obtained via the ``train_set.cls_cnt()`` function). In order to be able to classify correctly all training set instances, the DT needs to have at least one leaf for each class occurring in the training set. Therefore, without knowing anything else about the dataset, our best guess is that the minimal DT that could be consistent with the dataset has one leaf for each of the dataset classes. For that reason, the oversize measure given by the equation :eq:`eq-oversize`, was defined in such a way to have the DT start suffering penalties to the fitness when the number of its leaves exceeds the total number of classes in the training set, i.e. the oversize measure is zero when :math:`\Nl=\NC`:
 
 .. math::
     :label: eq-oversize
 
     \begin{aligned}
-    \texttt{oversize} &= \frac{\Nl - \Nc}{\Nc}, \\
+    \texttt{oversize} &= \frac{\Nl - \NC}{\NC}, \\
     \texttt{fit} &= \texttt{accuracy}\cdot(1-K_o\cdot\texttt{oversize}^2)
     \end{aligned}
 
@@ -429,15 +431,15 @@ The DT oversize negatively influences the fitness, as it can be seen from the eq
 .. plot:: images/pareto.py
     :width: 70%
 
-    The layout of Pareto frontiers for the accuracy value of 0.8, when |Nc| equals 5, for |Ko| parameter values of: 0, 0.02 and 0.1.
+    The layout of Pareto frontiers for the accuracy value of 0.8, when |NC| equals 5, for |Ko| parameter values of: 0, 0.02 and 0.1.
 
-The :num:`Figure #fig-fit-oversize` shows the layout of the Pareto frontier for an example of fitness value of 0.8 and few different values of the parameter |Ko|, with the value of 5 selected for the parameter |Nc|. It can be seen that if |Ko| is chosen to be 0, the oversize does not influence the fitness, which is in turn always equal to the value of the accuracy. When :math:`K_o > 0`, the |algo| algorithm will be willing to trade accuracy for the DT size. As it can be seen from the figure, when the parameter |Ko| has a large value, for an example 0.1, the big DTs are highly discouraged in that an individual of size 5 with the accuracy of 0.8 is equally fit in the eyes of the algorithm as the larger one with more than 10% higher accuracy, but of size 10.
+The :num:`Figure #fig-fit-oversize` shows the layout of the Pareto frontier for an example of fitness value of 0.8 and few different values of the parameter |Ko|, with the value of 5 selected for the parameter |NC|. It can be seen that if |Ko| is chosen to be 0, the oversize does not influence the fitness, which is in turn always equal to the value of the accuracy. When :math:`K_o > 0`, the |algo| algorithm will be willing to trade accuracy for the DT size. As it can be seen from the figure, when the parameter |Ko| has a large value, for an example 0.1, the big DTs are highly discouraged in that an individual of size 5 with the accuracy of 0.8 is equally fit in the eyes of the algorithm as the larger one with more than 10% higher accuracy, but of size 10.
 
 As shown in the :num:`Algorithm #fig-fitness-eval-pca`, the dependence of the fitness on the oversize measure is quadratic. This serves two purposes:
 
-#. Since oversize turns negative when the DT size falls below |Nc|, such undersized DTs would be getting a boost in fitness if it were not for the squaring. If all classes are to be represented in the DT, the number of leaves should at least match the number of classes, so that it would be at least possible, for each class to have a leaf. By squaring the oversize, the undersized DTs are discouraged in the same way the oversized are.
+#. Since oversize turns negative when the DT size falls below |NC|, such undersized DTs would be getting a boost in fitness if it were not for the squaring. If all classes are to be represented in the DT, the number of leaves should at least match the number of classes, so that it would be at least possible, for each class to have a leaf. By squaring the oversize, the undersized DTs are discouraged in the same way the oversized are.
 
-#. By using the quadratic dependence, the rate at which fitness decreases with the DT size is lower when the size is closer to the |Nc|, and gets progressively higher as the size increases. This way, the DTs whose size is close to |Nc| are penalized less then they would be if the dependence of the fitness on oversize were linear.
+#. By using the quadratic dependence, the rate at which fitness decreases with the DT size is lower when the size is closer to the |NC|, and gets progressively higher as the size increases. This way, the DTs whose size is close to |NC| are penalized less then they would be if the dependence of the fitness on oversize were linear.
 
 In order to measure the influence of the oversize on the induced DTs, an experiment has been conducted on all datasets from the :numref:`tbl-uci`. The DTs were induced for a number of values for the parameter |Ko|, namely :math:`K_o \in \{0, 0.001, 0.01, 0.02, 0.06, 0.1, 0.2\}`. The results are presented in the :num:`Table #tbl-oversize-size-comp`, :num:`Table #tbl-oversize-acc-comp`, :num:`Figure #fig-oversize-comp1` and :num:`Figure #fig-oversize-comp2`. The :num:`Table #tbl-oversize-size-comp` and the :num:`Table #tbl-oversize-acc-comp` list the induced DT sizes and accuracies respectively, for all datasets and all values of the oversized weight parameter |Ko| used in the experiment. In the figures, the plots are organized in pairs, where each pair consists of the accuracy and size plots for the same five algorithms displayed in juxtaposition. Please notice that the x-axis, corresponding to the value of the parameter |Ko|, is given in logarithmic scale, as well as the y-axis of the DT size plots. Please also notice that the ranges for the y-axis, be it for the accuracy or the size plots, vary from plot to plot and depend on the datasets used for the induction.
 
@@ -630,7 +632,7 @@ The selection task is responsible for deciding, in each iteration, which DT will
 
 .. _fig-selection-vanilla-pca:
 .. literalinclude:: code/selection-vanilla.py
-    :caption: The pseudo-code of the :literal:`selection()` function of the |algo| algorithm, that implements the basic individual selection procedure
+    :caption: The pseudo-code of the :literal:`select()` function of the |algo| algorithm, that implements the basic individual selection procedure
 
 .. _sec-exp-struct:
 
@@ -661,9 +663,9 @@ In this section several additional features that can improve either the executio
 Percentage of missing classes
 .............................
 
-The percentage of missing classes is calculated as the percentage of the classes for which the DT does not have a leaf, to the total number of classes in the training set (|Nc|):
+The percentage of missing classes is calculated as the percentage of the classes for which the DT does not have a leaf, to the total number of classes in the training set (|NC|):
 
-.. math:: missing = \frac{\Nc - N_{DTc}}{\Nc}
+.. math:: missing = \frac{\NC - N_{DTc}}{\NC}
     :label: eq-missing
 
 where |NDTc| is the number of classes represented in the DT leaves. The fitness calculation is then updated so that the penalties are taken for the missing classes in the DT individual: ``fitness = accuracy*(1 - Ko*oversize*oversize)*(1 - Km*missing)``, where the parameter |Km| is used to control how much influence the number of missing classes will have on overall fitness.
@@ -683,7 +685,7 @@ Evolution is inherently an unpredictable process. It is akin to searching for th
 
     An example of the hill climbing problem and the issue of escaping the local optimum A by a greedy strategy in order to reach point B.
 
-In terms of the evolutional DT induction, instead of striving for higher elevation, the algorithm is striving for a DT individual with higher fitness, and instead of walking in the mountains, the DT individual is being mutated to move around in the search space. For practical problems, the search spaces for the DT individuals have much higher dimensionality and are thus much more complicated than the hill-climbing problem described above. However, the main idea is the same, in order to visit and discover as many fitness peaks as possible (in order to find the highest one), the algorithm sometimes needs to pursue a less fit individual. Since it is impossible to tell which poorer performing solution will eventually lead to an improved one, the decision of going after a poorer solution is made at random with some probability. Here, this probability will be called the search probability, since it allows for the evolution process to search the wider neighborhood of the current solution. Without this search, the systems tend to get stuck at local maximas.
+In terms of the evolutional DT induction, instead of striving for higher elevation, the algorithm is striving for a DT individual with higher fitness, and instead of walking in the mountains, the DT individual is being mutated to move around in the search space. For practical problems, the search spaces for the DT individuals have much higher dimensionality and are thus much more complicated than the hill-climbing problem described above. However, the main idea is the same, in order to visit and discover as many fitness peaks as possible (in order to find the highest one), the algorithm sometimes needs to pursue a less fit individual. Since it is impossible to tell which poorer performing solution will eventually lead to an improved one, the decision of going after a poorer solution is made at random with some probability. Here, this probability will be called the search probability, since it allows for the evolutionary process to search the wider neighborhood of the current solution. Without this search, the systems tend to get stuck at local maximas.
 
 Several approaches to providing the values for the search probability that were tried with the |algo| algorithm in an effort to increase its performance, will now be discussed. The results of the experiments used to infer which of the approaches offers statistically significant improvement to the quality of solutions induced by |algo|, are discussed in the :num:`Section #sec-searchprob-exp`.
 
@@ -883,11 +885,11 @@ Metropolis with multiple restarts approach was implemented for the selection pro
 .. literalinclude:: code/algorithm-metropolis-rp.py
     :caption: The pseudo-code of the :literal:`efti()` function of the |algo| algorithm when using Metropolis with multiple restarts
 
-Within the ``selection()`` function, the logic for selecting the less fit individual and returning to the best solution need to be implemented, as shown in the :num:`Figure #fig-selection-metropolis-rp-pca`. When the evolution finds a solution better then the current candidate, the selection procedure will also check if it is the overall best, and if so, store it inside ``dt_best`` variable. On the other hand, if mutation did not advance the fitness, the stagnation duration will be increased and the search probability will be calculated based on it using the Metropolis criterion. A chance will be than given to the selection procedure to terminate the search and return to the best solution overall. Otherwise, the less fit ``dt_mut`` individual might get selected at random with the current value of search probability.
+Within the ``select()`` function, the logic for selecting the less fit individual and returning to the best solution need to be implemented, as shown in the :num:`Figure #fig-selection-metropolis-rp-pca`. When the evolution finds a solution better then the current candidate, the selection procedure will also check if it is the overall best, and if so, store it inside ``dt_best`` variable. On the other hand, if mutation did not advance the fitness, the stagnation duration will be increased and the search probability will be calculated based on it using the Metropolis criterion. A chance will be than given to the selection procedure to terminate the search and return to the best solution overall. Otherwise, the less fit ``dt_mut`` individual might get selected at random with the current value of search probability.
 
 .. _fig-selection-metropolis-rp-pca:
 .. literalinclude:: code/selection-metropolis-rp.py
-    :caption: The pseudo-code of the :literal:`selection()` function of the |algo| algorithm  when using Metropolis with multiple restarts
+    :caption: The pseudo-code of the :literal:`select()` function of the |algo| algorithm  when using Metropolis with multiple restarts
 
 .. _sec-partial-reclass:
 
@@ -955,6 +957,8 @@ In the :num:`Table #tbl-delta-time-comp` the results of an experiment are shown 
 
     \endgroup
 
+.. _sec-complexity:
+
 Complexity of the |algo| algorithm
 ----------------------------------
 
@@ -995,10 +999,10 @@ Hence, the complexity of the whole DT Mutation task sums to:
 
 Once the number of hits is determined, the fitness can be calculated in constant time :math:`O(1)`, hence the complexity of the whole ``fitness_eval()`` function is:
 
-.. math:: T(\texttt{fitness\_eval}) = N_I\cdot O(\texttt{find\_dt\_leaf\_for\_inst}) + O(N_l\cdot N_c) + O(1)
+.. math:: T(\texttt{fitness\_eval}) = N_I\cdot O(\texttt{find\_dt\_leaf\_for\_inst}) + O(N_l\cdot \NC) + O(1)
     :label: fitness_eval
 
-where |NI| is the number of instances in the training set and |Nc| is the total number of classes in the classification problem, and :math:`O(N_l\cdot N_c)` is for the dominant class calculation for each leaf. As for the ``find_dt_leaf_for_inst()`` function, the complexity can be calculated as:
+where |NI| is the number of instances in the training set and |NC| is the total number of classes in the classification problem, and :math:`O(N_l\cdot \NC)` is for the dominant class calculation for each leaf. As for the ``find_dt_leaf_for_inst()`` function, the complexity can be calculated as:
 
 .. math:: T(\texttt{find\_dt\_leaf\_for\_inst}) = D\cdot O(\texttt{dot\_product}),
     :label: find_dt_leaf
@@ -1010,18 +1014,20 @@ and the complexity of the node test evaluation is:
 
 By inserting the equation :eq:`node_test_eval` into the equation :eq:`find_dt_leaf`, and then both of them into the equation :eq:`fitness_eval`, we obtain the complexity for the ``fitness_eval()`` function:
 
-.. math:: T(\texttt{fitness\_eval}) = O(N_{I}\cdot D\cdot\NA + \Nl\cdot N_c)
+.. math:: T(\texttt{fitness\_eval}) = O(N_{I}\cdot D\cdot\NA + \Nl\cdot \NC)
     :label: fitness_eval_tot
 
 By inserting the equations :eq:`fitness_eval_tot`, :eq:`cplx_mutation`, :eq:`leaves_cnt` and :eq:`depth` into the equation :eq:`cplx_algo_tot_components`, we obtain the total complexity of the |algo| algorithm:
 
-.. math:: T(EFTI) = \texttt{max\_iter}\cdot(N_I\cdot N_l \cdot\NA + N_l\cdot N_c + \NA)
+.. math:: T(EFTI) = \texttt{max\_iter}\cdot(N_I\cdot N_l \cdot\NA + N_l\cdot \NC + \NA)
     :label: cplx_all_together
 
 Since :math:`N_A \ll N_I\cdot N_l\cdot N_A` the mutation insignificantly influences the complexity and can be disregarded. We finally obtain that the complexity of the |algo| algorithm is dominated by the fitness evaluation task complexity, and sums up to:
 
-.. math:: T(EFTI) = O(\texttt{max\_iter}\cdot(N_I\cdot N_l\cdot\NA + N_l\cdot N_c))
+.. math:: T(EFTI) = O(\texttt{max\_iter}\cdot(N_I\cdot N_l\cdot\NA + N_l\cdot \NC))
     :label: cplx_final
+
+.. _sec-efti-experiments:
 
 Experiments
 -----------
@@ -1074,7 +1080,7 @@ The software implementation of the |algo| algorithm was developed in C, using ma
 
 - The node test coefficients are represented in fixed point and all dot product arithmetic operations are performed on 64-bit operands only (optimized for the 64-bit CPU).
 - The dot product calculation loop is unfolded for all supported |NA| values.
-- To save on copying the DT individuals, the current candidate solution (``dt``) and the mutated individual (``dt_mut``) are represented by a single DT in memory. Hence, the mutations are applied directly to the candidate solution. If the mutated solution gets rejected by the ``selection()`` function, the mutations are undone, which since they are sparse is more efficient than copying the whole DT to create a mutated individual. On the other hand if the mutated solution is selected, no actions are needed since the mutated solution is at the same time the candidate solution.
+- To save on copying the DT individuals, the current candidate solution (``dt``) and the mutated individual (``dt_mut``) are represented by a single DT in memory. Hence, the mutations are applied directly to the candidate solution. If the mutated solution gets rejected by the ``select()`` function, the mutations are undone, which since they are sparse is more efficient than copying the whole DT to create a mutated individual. On the other hand if the mutated solution is selected, no actions are needed since the mutated solution is at the same time the candidate solution.
 - Special case was introduced for traversing the DT which contains only the root node. The ``find_dt_leaf_for_inst()`` function contains a lot of programming structures for iterating through the DT and also for deciding whether memorized traversal paths can be reused or not, which is all superfluous for a simple case of one node DT.
 - The maximum compiler optimization settings for speed were used.
 
@@ -1581,7 +1587,7 @@ The results of the comparison experiments are displayed side by side in the :num
 Group comparison of all algorithms
 ..................................
 
-In this section, the results of the experiments are displayed and discussed, that compare all the algorithms from the :num:`Table #tbl-existing-algo` together with the proposed |algo| algorithm in terms of induced DT accuracies and sizes. In these experiments, the |algo| algorithm was given 1000k iterations for the induction and the cross-validation and ranking were employed as discussed in the :num:`Section #sec-exp-struct`. The results are listed in following tables:
+In this section, the results of the experiments are displayed and discussed, that compare all the algorithms from the :num:`Table #tbl-existing-algo` together with the proposed |algo| algorithm in terms of induced DT accuracies and sizes. In these experiments, the |algo| algorithm was given 1000k iterations for the induction and the cross-validation and ranking were employed as discussed in the :num:`Section #sec-exp-struct`. The results are listed in the following tables:
 
    - :num:`Table #tbl-comp-mean-acc-01` shows the average accuracies of the induced DTs,
    - :num:`Table #tbl-comp-conf-acc-01` shows the 95% confidence intervals for the accuracies of the induced DTs

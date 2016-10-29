@@ -1,9 +1,13 @@
 from subprocess import call
+import sys
+import os
+sys.path.append(os.path.expandvars('$EFTI/script'))
+from rank import load_js_data, dump_table_csv, prepare_csv_table, write_csv_table, features, form_mean_table, form_mean_rank, anova
 import json
 import os
 import csv
 
-files_all = ['adult', 'ausc', 'bank', 'bc', 'bch', 'bcw', 'ca', 'car', 'cmc', 'ctg', 'cvf', 'eb', 'eye', 'ger', 'gls', 'hep', 'hrtc', 'hrts', 'ion', 'irs', 'jvow', 'krkopt', 'letter', 'liv', 'lym', 'magic', 'mushroom', 'nurse', 'page', 'pen', 'pid', 'psd', 'sb', 'seg', 'shuttle', 'sick', 'son', 'spect', 'spf', 'thy', 'ttt', 'veh', 'vene', 'vote', 'vow', 'w21', 'w40', 'wfr', 'wilt', 'wine', 'zoo']
+files_all = ['adult', 'ausc', 'bank', 'bc', 'bch', 'bcw', 'ca', 'car', 'cmc', 'ctg', 'cvf', 'eb', 'eye', 'ger', 'gls', 'hep', 'hrtc', 'hrts', 'ion', 'irs', 'jvow', 'krkopt', 'letter', 'liv', 'lym', 'magic', 'msh', 'nurse', 'page', 'pen', 'pid', 'psd', 'sb', 'seg', 'shuttle', 'sick', 'son', 'spect', 'spf', 'thy', 'ttt', 'veh', 'vene', 'vote', 'vow', 'w21', 'w40', 'wfr', 'wilt', 'wine', 'zoo']
 
 param_def = {
     'max_iter': 10000,
@@ -47,18 +51,18 @@ def load_gprof_for_file():
     row['others'] = abs(1 - total)
     return row
 
-def dump_csv(fn, table):
-    with open(fn, 'w', newline='') as csvfile:
+# def dump_csv(fn, table):
+#     with open(fn, 'w', newline='') as csvfile:
 
-        csvwriter = csv.writer(csvfile, delimiter=',',
-                           quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#         csvwriter = csv.writer(csvfile, delimiter=',',
+#                            quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
-        head_row = ['Dataset'] + funcs
-        csvwriter.writerow(head_row)
+#         head_row = ['Dataset'] + funcs
+#         csvwriter.writerow(head_row)
 
-        for d,res in iter(sorted(table.items())):
-            row = [d] + ["{0:2.1f}".format(res[f]*100) for f in funcs]
-            csvwriter.writerow(row)
+#         for d,res in iter(sorted(table.items())):
+#             row = [d] + ["{0:2.1f}".format(res[f]*100) for f in funcs]
+#             csvwriter.writerow(row)
 
 def gprof():
     table = {}
@@ -80,12 +84,43 @@ def gprof():
 
     return table
 
-def load_js_data(fname):
-    with open(fname) as data_file:
-        res = json.load(data_file)
+short_name = [
+    'FDLFI',
+    'AC',
+    'ENT',
+    'ASPC',
+    'others'
+]
+def dump_gprof_table_csv(fn):
+    table = load_js_data('profiling.js')
 
-    return res
+    cvs = {}
+    for i,n in enumerate(short_name):
+        cvs[i] = {'desc': '{} [%]'.format(n)}
 
-table = gprof()
+    mean_perc = {k:0 for k in funcs}
+    table_hack = {}
+    for ds in table:
+        if ds not in table_hack:
+            table_hack[ds] = {}
+
+        for i,f in enumerate(funcs):
+            table_hack[ds][i] = table[ds][f] * 100
+            mean_perc[f] += table[ds][f] * 100
+
+    for f in funcs:
+        mean_perc[f] /= len(table)
+
+
+    csv_table = prepare_csv_table(
+        table_hack, cvs,
+        sort_by_desc=False,
+        data_fmt="{0:0.2f}"
+    )
+
+    csv_table.append([r":raw:`\bottomrule \renewcommand{\arraystretch}{0.8} average`"] + ['{:0.2f}'.format(mean_perc[f]) for f in funcs])
+    write_csv_table("profiling.csv", csv_table)
+
+# table = gprof()
 # table = load_js_data('profiling.js')
-dump_csv('profiling.csv', table)
+dump_gprof_table_csv('profiling.csv')

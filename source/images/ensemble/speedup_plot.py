@@ -10,11 +10,13 @@ spdup_arm = [[] for _ in range(5)]
 spdup_pc = [[] for _ in range(5)]
 datasets = []
 
-with open('/data/projects/rst/examples/ensembles/source/scripts/results.csv', 'r', newline='') as csvfile:
+with open('/data/projects/phd/source/scripts/co_ens_results.csv', 'r', newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',',
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
     
     iterreader = iter(csvreader)
+    # Skip headers
+    next(iterreader)
     next(iterreader)
     for row in iterreader:
         for i in range(5):
@@ -46,7 +48,7 @@ for i in range(5):
                      alpha=opacity,
                      color='b')
     
-ax0.yaxis.set_major_locator(MultipleLocator(80))
+ax0.yaxis.set_major_locator(MultipleLocator(20))
 ax0.yaxis.grid(True)
 ax0.set_title('a) HW/SW speedup over SW-ARM implementation', fontsize=fs, loc='left')
 

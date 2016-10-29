@@ -7,6 +7,7 @@ import csv
 import pylab
 import os
 import json
+import numpy as np
 
 def to_percent(y, position):
     # Ignore the passed in position. This has the effect of scaling the default
@@ -27,7 +28,7 @@ def load_js_data(fname):
 
     return res
 
-def profiling_plot(ds_slice):
+def profiling_plot(ds_slice, base_color, alpha_range=(0.3,1)):
     table = load_js_data(gprof_res_file)
 
     datasets = list(sorted(table.keys()))[ds_slice]
@@ -37,16 +38,25 @@ def profiling_plot(ds_slice):
 
     m = min(percents) - 1
 
+    colors = []
     for i in range(len(percents)):
         percents[i] -= m
+
+    alphas = np.linspace(alpha_range[0], alpha_range[1], len(percents))
+    rgba_colors = np.zeros((len(percents),4))
+    # for red the first column needs to be one
+    for i in range(3):
+        rgba_colors[:,i] = base_color[i]
+    # the fourth column needs to be your alphas
+    rgba_colors[:, 3] = alphas
 
     opacity = 0.4
     bar_width = 0.5
 
     left = [i - bar_width/2 for i in range(len(datasets))]
 
-    fig = plt.figure(figsize=(16,4), tight_layout=True)
-    plt.bar(left, percents, bottom=[m]*len(datasets), alpha=opacity, width=0.5)
+    fig = plt.figure(figsize=(16,3), tight_layout=True)
+    plt.bar(left, percents, bottom=[m]*len(datasets), width=0.5, color=rgba_colors)
     #plt.stem(range(len(datasets)), percents,  markersize=100, bottom=96)
     plt.xticks(range(len(datasets)), datasets)
     plt.margins(0.03)

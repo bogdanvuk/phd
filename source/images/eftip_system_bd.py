@@ -1,6 +1,6 @@
 from bdp import *
 
-part = block(text_margin=p(0.5, 0.5), alignment="nw", dotted=True, group='tight', group_margin=[p(1,2), p(1,2)])
+part = block(text_margin=p(0.5, 0.5), alignment="nw", dotted=True, group='tight', group_margin=[p(1,3), p(1,2)])
 
 comp = block(size=p(6,4), nodesep=(2,2))
 ps_comp = block(size=p(6,6), nodesep=(2,3))
@@ -37,10 +37,10 @@ fig << ps
 
 eftip = part("EFTIP co-processor", group_margin=[p(1,2), p(1,2)])
 
-eftip['cu'] = comp("Control Unit", size=p(7,4), nodesep=(2,2)).right(ps['intercon'], 4).aligny(ps['cpu'].p)
+eftip['cu'] = comp("Control Unit", size=p(7,4), nodesep=(2,2)).right(ps['intercon'], 5).aligny(ps['cpu'].p)
 
 eftip['inst_mem'] = comp("Training Set Memory").right(eftip['cu'])
-eftip += bus_small(eftip['cu'].e(0.5), eftip['inst_mem'].w(0.5))
+eftip += bus_small(eftip['cu'].e(1), eftip['inst_mem'].w(1))
 
 eftip['calc'] = comp("Accuracy Calculator").right(eftip['inst_mem'])
 eftip += bus_small(eftip['calc'].n(0.5), eftip['calc'].n(0.5) - (0,1), eftip['cu'].n(0.5), 
@@ -57,6 +57,9 @@ dt_mem += t_dt_submem("CM").align(dt_mem.e(0), prev().e(0))
 dt_mem += t_dt_submem("SM").align(dt_mem.e(1.0), prev().e(1.0))
 
 dt_mem_array = array_part("DT Memory Array")
+
+#Hack for bad group bdp design
+dt_mem_array.group_margin[0] += p(2.5,0)
 dt_mem_array += dt_mem("$L_1$").below(eftip['cu']).alignx(eftip['cu'].s(3))
 dt_mem_array += dt_mem("$L_2$").below(dt_mem_array[-1])
 dt_mem_array += dt_mem("$L_{D^M}$").below(dt_mem_array[-1], 3)
@@ -85,52 +88,9 @@ eftip += cu2dtmem
 eftip += dt_mem_array
 
 fig << eftip
-fig << bus(p(ps['intercon'].e(), eftip['cu'].w(0.5)), eftip['cu'].w(0.5), style=(bus_cap, bus_cap))
-fig << bus_text("AXI4").alignx(mid(ps.e(), eftip.w()), prev().c()).aligny(fig[-1].pos(0.5), prev().s(0, 0.2))
+fig << bus(p(ps['intercon'].e(3), eftip['cu'].w(3)), eftip['cu'].w(3), style=(bus_cap, bus_cap))
+fig << bus_text("AXI4").alignx(mid(ps.e(), eftip.w()) + p(0.3,0), prev().c()).aligny(fig[-1].pos(0.5), prev().s(0, 0.2))
+fig << path(eftip['cu'].w(1), ps['intercon'].e() + p(1.7,-1), ps['cpu'].n(0.5), routedef='-|', style=('', '>'))
+fig << bus_text("IRQ").alignx(mid(ps.e(), eftip.w()) + p(0.3,0), prev().c()).aligny(eftip['cu'].w(1),prev().s(0, -0.1))
 
-#eftip += dt_mem
-
-# dt_mem = []
-# dt_mem.append(t_dt_mem("$L_1$").below(cu).align_x(cu.s(3))())
-# dt_mem.append(t_dt_mem("$L_2$").below(dt_mem[0])())
-# dt_mem.append(t_dt_mem("$L_{D^M}$").below(dt_mem[1], 3)())
-
-# for d in dt_mem:
-#     t_dt_submem("CM").align(d.e(0), prev().e(0))()
-#     t_dt_submem("SM").align(d.e(1.0), prev().e(1.0))()
-
-# text(r"$\cdot\cdot\cdot$", text_font='footnotesize').align(mid(dt_mem[1].c(), dt_mem[2].c()), prev().c())()
-
-# block("DT Memory Array", dt_mem[2].s(1.0) - dt_mem[0].n() + (2,2), dotted=True, text_font='footnotesize', text_align='bc').align(dt_mem[0].n() - (1,1))()
-
-# for d in dt_mem:
-#     bus([cu.s(1), d.w(0.5)], style='<->', def_routing='|-')()
-
-# nte = []
-# nte.append(t_nte("$NTE_1$").right(dt_mem[0])())
-# nte.append(t_nte("$NTE_2$").right(dt_mem[1])())
-# bus([nte[0].s(0.5), nte[1].n(0.5)], style='->')()
-# nte.append(t_nte("$NTE_{D^M}$").right(dt_mem[2])())
-# bus([nte[1].s(0.5), nte[1].s(0.5) + (0,1)], style='->')()
-# bus([nte[2].n(0.5), nte[2].n(0.5) - (0,1)], style='<-')()
-# text('$\cdot\cdot\cdot$').align(mid(nte[1].c(), nte[2].c()), prev().c())()
-
-# block("Classifier", nte[2].s(1.0) - nte[0].n() + (2,2), dotted=True, text_font='footnotesize', text_align='bc').align(nte[0].n() - (1,1))()
-
-# bus([nte[2].e(0.5), fit_calc.s(0.5)], style='->', def_routing='-|')()
-
-# mem_bus_text = bus_text(margin=p(0,0.2))
-
-# for n, d in zip(nte, dt_mem):
-#     for i in range(2):
-#         for (j, name, style) in zip(range(2), ['addr', 'data'], ['<-', '->']):
-#             pos = i*3 + j + 1
-#             bus([d.e(pos), n.w(pos)], style=style)()
-#             mem_bus_text(name).align(prev(1).pos(0.5), prev().s(0.5))()
-
-#         # bus([d.e(2), n.w(i*3 + 2)], style='->')()
-#         # mem_bus_text("data").align(prev(1).pos(0.5), prev().s(0.5))()
-# #    bus([d.e(4), n.w(4)], style='<-')()
-# #    bus([d.e(5), n.w(5)], style='->')()
-
-# bus([inst_mem.e(0.5), (nte[0].n(0.5)[0], inst_mem.e(0.5)[1]), nte[0].n(0.5)], style='->', def_routing='-|')()
+render_fig(fig)

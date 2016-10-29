@@ -43,7 +43,7 @@ fig << bus(nte[1].e(5), nte[1].e(5) + (3,0), style=('', bus_cap))
 fig << bus(nte[2].w(2) - (3,0), nte[2].w(2), style=('', bus_cap))
 fig << bus(nte[2].w(5) - (3,0), nte[2].w(5), style=('', bus_cap))
 
-fig << text("$\cdot\cdot\cdot$", font="\\huge").align(mid(nte[1].c(), nte[2].c()), prev().c())
+fig << text("$\cdot\cdot\cdot$", font="\\huge").align(mid(nte[1].c(), nte[2].c()) - p(0,2), prev().c())
 
 fig << bus(nte[0].w(2) - (6, 0), nte[0].w(2), style=('', bus_cap))
 fig << bus(nte[0].w(5) - (2, 0), nte[0].w(5), style=('', bus_cap))
@@ -60,6 +60,6 @@ for i in range(3):
 fig << bus(nte[2].e(2), nte[2].e(2) + (3, 0), style=('', bus_cap))
 fig << bus(nte[2].e(5), nte[2].e(5) + (3, 0), style=('', bus_cap))
 
-fig << block("Classifier", nte[2].s(1.0) - nte[0].n() + (7,6), alignment="nw", text_font='\\Large', dotted=True, text_margin=(1, 0.4)).align(nte[0].n() - (5, 4), prev().n())
+fig << block("Classifier", nte[2].s(1.0) - nte[0].n() + (6.5,5), alignment="nw", text_font='\\Large', dotted=True, text_margin=(1, 0.8)).align(nte[0].n() - (5, 4), prev().n())
 
-#render_fig(fig)
+# render_fig(fig)

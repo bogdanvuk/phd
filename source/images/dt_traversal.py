@@ -54,6 +54,6 @@ draw_children_con(node3_ch[0], node4_ch)
 # node5_ch = draw_children(node3_ch[1], [leaf, leaf], ['$C_{5}$', '$C_{6}$'], 1)
 # draw_children_con(node3_ch[1], node5_ch)
 
-fig << path(root.c(), root_ch[1].s(), node3_ch[0].c(), node4_ch[1].w(0.5), rounded_corners=10, thick=True, shorten=(0.5, 0.5), style=('', '>'), draw='red')
+fig << path(root.c(), root_ch[1].s(), node3_ch[0].c(), node4_ch[1].w(0.5), rounded_corners=10, thick=True, line_width=0.2, shorten=(0.5, 0.5), style=('', '>'), draw='red')
 
 #render_fig(fig, './dt_traversal.pdf')

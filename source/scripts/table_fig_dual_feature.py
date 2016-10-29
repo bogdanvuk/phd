@@ -2,8 +2,8 @@ import sys
 import os
 import numpy as np
 sys.path.append(os.path.expandvars('$EFTI/script'))
-from rank import load_data, form_mean_table, dump_table_csv
-from rank import features as feature_properties
+from rank import load_data, form_mean_rank, form_mean_table, prepare_csv_table, write_csv_table
+from rank import features as feature_properties, anova
 import matplotlib.pyplot as plt
 import matplotlib
 from plot_tools import form_clusters
@@ -67,7 +67,10 @@ def print_figures(table, feature, fplot, xvals, name, loc=1, figs=None, aspect=1
 
 def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=None,
                              head_fmt=r":raw:`\multicolumn{{1}}{{c}}{{{}}}`",
-                             data_fmt="{0:0.2f}", complexity_weight=0.02, rank=False):
+                             data_fmt="{0:0.2f}", complexity_weight=0.02, rank=False,
+                             rank_avg=[],
+                             scale_acc=True
+                             ):
     data, cvs = load_data(files, complexity_weight)
     if titles:
         for i, n in enumerate(titles):
@@ -76,12 +79,23 @@ def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=
     for feature in features:
         if not rank:
             table = form_mean_table(data[feature])
+            if feature == 'acc':
+                for ds in table:
+                    for a in table[ds]:
+                        table[ds][a] = tuple(v*100 for v in table[ds][a])
         else:
             table = anova(data[feature], feature_properties[feature]['desc'])
+            mean_rank = form_mean_rank(table)
 
-        dump_table_csv("{}-{}.csv".format(name, feature),
-                       table, cvs, horizontal_splits=horizontal_splits,
-                       sort_by_desc=False, head_fmt=head_fmt, data_fmt=data_fmt)
+        csv_table = prepare_csv_table(table=table, cvs=cvs,
+                                      head_fmt=head_fmt, data_fmt=data_fmt,
+                                      sort_by_desc=False)
+
+        if rank and rank_avg:
+            csv_table.append(rank_avg + ['{:0.2f}'.format(mean_rank[c]) for c in cvs])
+
+        write_csv_table("{}-{}.csv".format(name, feature), csv_table,
+                        horizontal_splits=horizontal_splits)
 
 def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fig_plotsnum=5,
                            figs=None,cluster_by=None, plot_funcs=(plt.plot, plt.plot),

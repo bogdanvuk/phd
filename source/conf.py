@@ -259,7 +259,7 @@ latex_title = ur'''
 %Bogdan Vukobratović, mentor dr Rastistlav Struharik
 %\vspace{50pt}
 %\end{center}
-\includepdf[pages=-]{front.pdf}
+\includepdf[pages=-]{front_eng.pdf}
 
 \pagebreak
 \tableofcontents\thispagestyle{fancy}
@@ -297,9 +297,9 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 
 author = 'bvukobratovic'
-
+title = 'PhD - Bogdan Vukobratovic - Hardware Acceleration of Nonincremental Algorithms for the Induction of Decision Trees and Decision Tree Ensembles'
 latex_documents = [
-  (master_doc, 'phd.tex', 'A System for Hardware Aided Decision Tree Ensemble Evolution',
+  (master_doc, 'phd.tex', title,
    author,
    'howto'),
 ]
@@ -326,7 +326,7 @@ latex_documents = [
 
 latex_additional_files = [
     'tex/preamble._tex',
-    'front.pdf'
+    'front_eng.pdf'
 ]
 
 # -- Options for manual page output ---------------------------------------

@@ -28,6 +28,12 @@ fig << acc[0]
 fig << path(acc[0].e(5), poffx(7), style=('', bus_cap))
 fig << text("hits = {}".format(141), margin=p(0.2,0.3)).align(acc[0].e(5), prev().s())
 fig << path(acc[0].e(7), poffx(7), style=('', bus_cap))
-fig << text("dt\\_classes = [1, 1, 1]", margin=p(0.2,0.3)).align(acc[0].e(7), prev().s())
+fig << text("dt\\_classes = [2, 3, 2, 1, 3]", margin=p(0.2,0.3)).align(acc[0].e(7), prev().s())
 
+# print(fig._bounding_box())
+canvas_size = p(25.5,19)
+bb = fig._bounding_box()
+fig << block(border=False, p=p(midx(bb[0], bb[1])-canvas_size[0]/2,
+                               midy(bb[0], bb[1])-canvas_size[1]/2), size=canvas_size)
+# render_fig(fig)
 # render_fig(fig)

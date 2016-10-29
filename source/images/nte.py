@@ -9,10 +9,10 @@ fifo_item = block(size=p(5,3), nodesep=p(0,0))
 fifo_blk = block(text_margin=p(0.5, 0), alignment="tw", border=False, group='tight')
 
 bus_cap = cap(length=0.4, width=0.6, inset=0, type='Stealth')
-bus = path(color="black!40", style=('', bus_cap), line_width=0.3, border_width=0.06, double=True)
+bus = path(color="black!40", style=('', bus_cap), shorten=p(0.2,0.2), line_width=0.3, border_width=0.06, double=True)
 bus_text = text(font="\\footnotesize", margin=p(0.4,0.2))
 
-nte = block("Node Test Evaluator - NTE", text_margin=p(0.5, 0.5), alignment="nw", dotted=True, group='tight', group_margin=[p(4,6), p(3,1)])
+nte = block("Node Test Evaluator - NTE", text_margin=p(0.5, 0.5), alignment="nw", dotted=True, group='tight', group_margin=[p(4,7), p(3,1)], text_font="\\Large")
 
 def make_external(pos, direction='o'):
     if direction == 'o':
@@ -24,11 +24,11 @@ def make_external(pos, direction='o'):
 #pin_leftx = evaluator.p[0] - 2
 
 inst_fifo_text = [
-    "$I_{i}$",
-    "$I_{i+1}$",
-    "$\cdot\cdot\cdot$",
+    "$I_{i+N_P-1}$",
     "$I_{i+N_P-2}$",
-    "$I_{i+N_P-1}$"
+    "$\cdot\cdot\cdot$",
+    "$I_{i+1}$",
+    "$I_{i}$",
 ]
 
 inst_fifo = fifo_blk("Instance Queue")
@@ -114,15 +114,15 @@ final_add_reg = block(size=p(0.5, 1.2)).align(add[2].c() + (2.5, 0), prev().c())
 nte += final_add_reg
 fig << path(add[-1].c(), final_add_reg.w(0.5), shorten=(1.1, 0.1), style=('','>'), thick=True)
 
-struct_mem_reg = block(size=(0.5, 6)).below(inp_coefs[7], 2).alignx(inst_fifo[-2].e(0), prev().c())
+struct_mem_reg = block(size=(0.5, 6)).below(inp_coefs[7], 0).alignx(inst_fifo[-2].e(0), prev().c())
 nte += struct_mem_reg
 
 node_fifo_text = [
-    "$N_{i}$",
-    "$N_{i+1}$",
-    "$\cdot\cdot\cdot$",
+    "$N_{i+N_P-1}$",
     "$N_{i+N_P-2}$",
-    "$N_{i+N_P-1}$"
+    "$\cdot\cdot\cdot$",
+    "$N_{i+1}$",
+    "$N_{i}$",
 ]
 
 node_fifo = fifo_blk("Node Queue")
@@ -178,7 +178,7 @@ node_id_net += bus(node_id_net[0][-1], mem_intf.s(4), routedef='-|')
 
 fig << node_id_net
 
-comp = block("$\geq$", p(3,3), text_font="\\large").right(add[-1], 4).aligny(add[-1].c(), prev().w(1))
+comp = block("$\leq$", p(3,3), text_font="\\large").right(add[-1], 4).aligny(add[-1].c(), prev().w(1))
 nte += comp
 fig << bus(final_add_reg.e(0.5), comp.w(1), shorten=p(0.3, 0.2))
 fig << text("$\sum\limits_{i=1}^{N^{M}_{A}}w_{i}\cdot x_{i}$").align(comp.w(1) + (0.5,-1), prev().s(1.0))
@@ -194,7 +194,7 @@ fig << bus(struct_mem_reg.e(1), struct_mem_reg.e(1) + (1,0), comp.w(2), routedef
 fig << bus(struct_mem_reg.e(3), mux.s(1), routedef='-|')
 fig << bus(struct_mem_reg.e(5), mux.s(2), routedef='-|')
 
-fig << path(comp.e(0.5), mux.w(0.5), style=('', '>'))
+fig << path(comp.e(0.5), mux.w(0.5), style=('', '>'), shorten=p(0.1,0.1))
 
 mux2 = mux_tmpl("MUX2").over(mux, 2).alignx(mux.e(), cur().s(1))
 nte += mux2
@@ -204,7 +204,7 @@ fig << bus(mux.n(0.5), poffy(-1), mux2.s(1), routedef='-|')
 fig << bus(node_fifo[-1].e(0.5), mux2.s(2), routedef='-|')
 fig << bus_text(r"Node ID").align(fig[-1][0], prev().s())
 
-fig << path((mux2.s(2)[0], node_fifo[-1].e(0.5)[1]), (mux2.e(0.5)[0] + 2, node_fifo[-1].e(0.5)[1]),mux2.e(0.5), routedef='|-', style=('','>'), shorten=p(0.2, 0))
+fig << path((mux2.s(2)[0], node_fifo[-1].e(0.5)[1]), (mux2.e(0.5)[0] + 2, node_fifo[-1].e(0.5)[1]),mux2.e(0.5), routedef='|-', style=('','>'), shorten=p(0.2, 0.1))
 fig << bus_text(r"[MSB]").alignx(mux2.s(2), prev().s()).aligny(node_fifo[-1].e(0.5), cur().s())
 
 fig << bus(mux2.n(0.5), p(nte.e()[0] + 2, mux2.n()[1] -2), routedef='|-')
@@ -231,4 +231,4 @@ for stage_id, (n, i, s) in enumerate(zip(node_fifo, inst_fifo, stages)):
 fig << path(inst_fifo[0].n() - p(0, 2), poffx(nte.e() - inst_fifo[0].n()), dotted=True)
 
 fig << nte
-#render_fig(fig)
+# render_fig(fig)

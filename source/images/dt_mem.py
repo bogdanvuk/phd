@@ -98,7 +98,7 @@ for i in range(1, len(stripe_text)+1):
 fig << stripe_line
 
 fig << bus(addr_dec.e(0.5), addr_dec.e(0.5) + p(3, 0), style=(bus_cap, bus_cap), shorten = p(0.2, 0))
-fig << text("User Port").align(fig[-1][-1], prev().w(0.5))
+fig << text("User Port").align(fig[-1][-1], prev().s(1.0))
 
 coef_brace = path(coef_row[-1][0].s() + (0, 0.5), coef_row[-1][-1].s(1.0) + (0, 0.5), decorate=True, decoration='{brace,amplitude=10pt,mirror}')
 fig << coef_brace
@@ -114,9 +114,9 @@ sm_port_dec = block("SM Port Interface Controller", topo_row[0][-1].s(1.0) - top
 fig << sm_port_dec
 
 fig << bus(cm_port_dec.w(0.5), cm_port_dec.w(0.5) - (6, 0), style=(bus_cap, bus_cap), shorten = p(0.2, 0))
-fig <<text("CM Port").align(fig[-1][-1], prev().e(0.5))
+fig <<text("CM Port", margin=(0.5, 0.5)).align(fig[-1][-1], prev().s())
 
 fig << bus(sm_port_dec.e(0.5), sm_port_dec.e(0.5) + (6, 0), style=(bus_cap, bus_cap), shorten = p(0.2, 0))
-fig << text("SM Port").align(fig[-1][-1], prev().w(0.5))
+fig << text("SM Port", margin=(0.5, 0.5)).align(fig[-1][-1], prev().s(1.0))
 
 #render_fig(fig)

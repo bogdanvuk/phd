@@ -1,18 +1,26 @@
 def efti(train_set, max_iter):
     hw_load_train_set(train_set, fp_format)
 
-    initialize(dt)
-    hw_load_whole_dt(dt)
-    fit = fitness_eval(dt, train_set)
+    dt_best = dt = initialize(train_set)
+    hw_load_dt(dt.root)
+    fitness_eval(dt, train_set)
 
     for iter in range(max_iter):
         dt_mut  = mutate(dt)
         hw_load_dt_diff(dt_mut)
 
-        fit_mut = hw_fitness_eval(train_set)
+        fitness_eval(dt_mut, train_set)
 
-        dt = select(dt, dt_mut, fit, fit_mut)
+        dt, dt_best = select(dt, dt_mut, dt_best)
+
         if dt != dt_mut:
-           hw_revert_dt_diff(dt_mut)
+            if dt == dt_best:
+                hw_load_dt(dt.root)
+            else:
+                hw_revert_dt_diff(dt_mut)
 
-    return dt
+
+    hw_load_dt(dt_best.root)
+    hw_populate_classes(dt_best)
+
+    return dt_best

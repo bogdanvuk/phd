@@ -15,14 +15,14 @@ def make_reg(text, pos):
     
     return reg
 # 
-# fig << bit("SMAE 31 Status Bit").align(fig[-1].n(-1,-1))
-# fig << bit("SMAE 30 Status Bit").right(fig[-1], 0)
+# fig << bit("EFTIP 31 Status Bit").align(fig[-1].n(-1,-1))
+# fig << bit("EFTIP 30 Status Bit").right(fig[-1], 0)
 # fig << bit(". . .").right(fig[-1], 0)
-# fig << bit("SMAE 1 Status Bit").right(fig[-1], 0)
-# fig << bit("SMAE 0 Status Bit").right(fig[-1], 0)
+# fig << bit("EFTIP 1 Status Bit").right(fig[-1], 0)
+# fig << bit("EFTIP 0 Status Bit").right(fig[-1], 0)
 
-reg1 = make_reg(["$SMAE_{{{0}}}$ Status Bit".format(i) for i in [32, 31, 2, 1]], (0,0))
-regn = make_reg(["Unused", "Unused", "$SMAE_{S_m}$ Status Bit", "$SMAE_{S_m-1}$ Status Bit"], (0,8))
+reg1 = make_reg(["$EFTIP_{{{0}}}$ Status Bit".format(i) for i in [32, 31, 2, 1]], (0,0))
+regn = make_reg(["Unused", "Unused", "$EFTIP_{S_m}$ Status Bit", "$EFTIP_{S_m-1}$ Status Bit"], (0,8))
 
 
 fig << reg1

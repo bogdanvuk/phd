@@ -7,6 +7,9 @@ PhD Thesis
 .. include:: introduction.rst
 .. include:: efti.rst
 .. include:: eftip.rst
+.. include:: eefti.rst
+.. include:: dteep.rst
+.. include:: conclusion.rst
 .. include:: zreferences.rst
 
 ..

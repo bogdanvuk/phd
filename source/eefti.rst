@@ -2,161 +2,53 @@
 |ealgo| algorithm
 =================
 
-In this section, the |ealgo| algorithm for the induction of DT ensembles using the full DT induction approach based on the EA is described. Only one individual per ensemble member is required for the induction by the |algo| algorithm. Each individual represents the best DT evolved up to the current iteration for its corresponding ensemble member. Because |algo| uses supervised learning, the training set used to induce the ensemble consists of the problem instances together with their corresponding class memberships. Since the |ealgo| uses the Bagging algorithm, one subset of the training set is generated for each ensemble member which will be used to induce it. Two common ways of forming the subsets are:
+In this section, the |ealgo| algorithm for the induction of the DT ensembles which uses the Bagging algorithm on top of the |algo| algorithm is proposed. The ability of the |algo| algorithm to operate on a single individual and induce small DTs is even more important for the ensembles, since all the operations, be it induction or classification of new instances, are performed on multiple DTs at once.
 
-- **random sampling without replacement** - formed subsets are disjoint sets of size :math:`N_{Iass}=\frac{N_I}{n_e}`, and
-- **random sampling with replacement** - formed subsets are of size :math:`N_{Iass} \leq N_I`,
+.. _sec-bagging:
 
-where |NI| is the size of the training set and |ne| the number of subsets, i.e. ensemble members. Each ensemble member starts off as a randomly generated one-node DT and the algorithm iteratively tries to improve on it. DT is slightly changed, i.e. mutated, in each iteration, and let to perform classification of its corresponding subset of the training set. The known training set classification is then used to calculate the quality of the classification results. When the newly mutated DT performs better at the classification than its predecessor, it is promoted to the new current best individual for its ensemble member and will become the base for the mutations in the following iterations, until a better one is found. After the desired number of iterations, the algorithm exits and returns the set of best DT individuals, one for each ensemble member.
+Bagging algorithm
+-----------------
 
-.. _fig-algorithm-pca:
-.. literalinclude:: code/algorithm.py
-    :caption: Overview of the |ealgo| algorithm
+The choice of the Bagging algorithm was made mainly because it generates one subset of the training set for each ensemble member, hence completely decoupling the induction of the individual members from each other, which in turn makes the algorithm suitable for the parallelization and hardware acceleration. Furthermore, the Bagging algorithm was reported to reduce the accuracy variance and help avoid overfitting. Two common ways of forming the subsets are:
 
-The :num:`Algorithm #fig-algorithm-pca` shows the |ealgo| algorithm. Please note that all algorithms in this paper are described in the Python language style and that many details have been omitted for the sake of clarity. The |algo| algorithm is used for the induction of each ensemble member since it is suitable for the hardware acceleration (it uses only one individual for the induction and creates smaller DTs with no loss of accuracy compared to many other well-known algorithms :cite:`vukobratovic2015evolving`). It was decided to implement the Bagging algorithm for the |ealgo|, since the induction process of one ensemble member is then uninfluenced by the induction processes of other ensemble members in any way, hence they can be performed in separate tasks, created by a successive calls to the *create_task* function in the :num:`Algorithm #fig-algorithm-pca`. These tasks implement the |algo| algorithm whose pseudo-code is shown in the :num:`Algorithm #fig-task-pca`. The |ealgo| first divides the training set in the subsets using the *divide_train_set()* function and stores them in the array *task_train_sets*. The result array is then created using the *initialize_result_array()* function and stored in the *res* variable. The *res* array contains one item for each ensemble member, to which the corresponding |algo| will output induced DTs and various miscellaneous corresponding statistical data. Next, the |algo| tasks are created, assigned their corresponding *task_train_sets* and *res* items, and started. The |ealgo| waits for the completion of all |algo| tasks and returns the *res* array populated by them.
+- **random sampling without replacement** - formed subsets are disjoint sets of size :math:`N_{IS}=\frac{N_I}{n_e}`, and
+- **random sampling with replacement** - formed subsets are of size :math:`N_{IS} \leq N_I`,
 
-.. tabularcolumns:: l p{30pt} p{40pt} p{40pt} p{40pt}
+where :math:`N_{IS}` is the size of the subsets, |NI| the size of the whole training set and |ne| the number of subsets, i.e. the number of the ensemble members. The most important feature of the sampling procedure is the diversity of the ensemble members it helps induce. This is especially important for the deterministic induction algorithms, since given the same training subset they would induce identical DT individual each time. In case of stochastic algorithms on the other hand, this is less of a problem. Hence, the |ealgo| algorithm can be used event when :math:`N_{IS} = N_I`.
+
+|ealgo| description
+-------------------
+
+The :num:`Algorithm #fig-algorithm-pca` shows the |ealgo| algorithm. The |ealgo| first divides the training set in the subsets using the ``divide_train_set()`` function that implements one of the techniques discussed in the :num:`Subsection #sec-bagging`. Next, for each member of the ensemble an |algo| tasks is created and assigned its corresponding training subset (``task_train_sets[i]``). In addition, the reference to the result object ``r`` is passed to the |algo| task, to which it can assign the resulting DT and any additional information about the induction, like inference time, etc. All result objects are gathered in the ``res`` array and are returned to the user when the induction is finished. Handles to the created tasks are gathered in the ``tasks`` array, which is used by the ``all_finished()`` helper function, which in turn checks the statuses of the running |algo| tasks and returns ``true`` when all of them have finished the induction and exited. Once all the individual tasks have finished and thus populated their corresponding result objects, the |ealgo| algorithm exits by returning the ``res`` array to the user.
+
+.. _fig-ens-algorithm-pca:
+.. literalinclude:: code/ens_algorithm.py
+    :caption: The main functino of the |ealgo| algorithm
+
+Advantages of the DT ensembles
+------------------------------
+
+As it was already said, the ensemble classifier systems were shown to provide improvement to the classification performance over a single classifier :cite:`rokach2010ensemble`. In order to test whether |ealgo| algorithm is capable of inducing an ensemble that has superior accuracy than the individual classifier induced by the |algo| algorithm, an experiment has been conducted whose results are shown in this subsection. The ensembles of sizes 3, 5, 9, 17 and 33 were induced on all datasets from the :num:`Table #tbl-uci` using five 5-fold cross-validations techinique together with the Tukey multiple comparisons test as described in the :num:`Section #sec-exp-struct`. The induced ensembles' accuracies were measured by performing the classification of the test set using the majority voting technique. In the :num:`Table #tbl-ens-vs-single` the average accuracies of the single classifier and the ensembles of five different sizes used in this experiment are given for each dataset together with their 95% confidence intervals. The accuracy rankings of the induced classifiers are given in the :num:`Table #tbl-ens-vs-single-rank` for each dataset, together with the average rank for each classifier used.
+
+.. raw:: latex
+
+   \begingroup
+   \setlength{\tabcolsep}{.3em}
+
+.. tabularcolumns:: p{0.09\linewidth} *{6}{R{0.13\linewidth}}
 .. _tbl-ens-vs-single:
 .. csv-table:: The accuracies of the ensembles with various numbers of elements
     :header-rows: 1
-    :file: scripts/ens_vs_single.csv
+    :file: scripts/ens-vs-single-acc.csv
 
-**Ubaci ANOVA rankove takodje, da se vidi da su ansambli konzistentiniji**
+The results show that an ensemle of classifiers almost always has superior accuracy over the single classifier, with few exceptions with ``bank``, ``page``, ``sb`` and ``thy`` datasets. Also, it can be seen that increasing the number of ensemble members helps the performance until a certain point of saturation, which is different for different datasets. The accuracy on some datasets could not be improved by using ensembles of sizes beyond 3, like ``adult``, ``bcw``, ``ca``, ``eye``, ``hep``, ``irs``, ``lym``, ``magic`` and ``zoo``, while for some datasets progressively larger ensembles continued to steadily advance in terms of the accuracy, like ``bch``, ``jvow``, ``letter`` and ``vow``. Nevertheless, the results in the :num:`Table #tbl-ens-vs-single` show that the accuracy variance decreases the larger the ensembles are used, even when the average value shows no improvement, which is exactly what was expected. Finally, the average ranks in the :num:`Table #tbl-ens-vs-single-rank` show indeed that larger ensembles show statistically significant improvement in the classification accuracy.
 
-.. _eefti-profiling-res:
-
-EEFTI algorithm profiling results
----------------------------------
-
-In order to decide which part of the |ealgo| algorithm should be accelerated in the hardware, the profiling was performed on the |ealgo| algorithm software implementation. The software implementation of the |ealgo| algorithm was realized in the C programming language, with many optimization techniques employed:
-
-- node test evaluation loop (within *evaluate_node_test()* function in :num:`Algorithm #fig-find-dt-leaf-for-inst-pca`) has been unfold
-- all arithmetic operation were performed using 64-bit operands (optimized for the 64-bit CPU which was used for profiling),
-- compiler optimization settings were set to maximum for speed, etc.
-
-To perform the experiments, 18 datasets, presented in the :num:`Table #tbl-uci-datasets`, were selected from the UCI benchmark datasets database :cite:`newman1998uci`. UCI database is commonly used database in the machine learning community to estimate and compare performance of different machine learning algorithms.
-
-.. tabularcolumns:: l p{30pt} p{40pt} p{40pt} p{40pt}
-.. _tbl-uci-datasets:
-.. list-table:: Characteristics of the UCI datasets used in the experiments
+.. tabularcolumns:: p{0.08\linewidth} *{6}{R{0.05\linewidth}} | p{0.08\linewidth} *{6}{R{0.05\linewidth}}
+.. _tbl-ens-vs-single-rank:
+.. csv-table:: The accuracies of the ensembles with various numbers of elements
     :header-rows: 1
+    :file: scripts/ens-vs-single-rank-acc.csv
 
-    * - Dataset Name
-      - Short Name
-      - No. of attributes
-      - No. of instances
-      - No. of classes
-    * - Adult
-      - adult
-      - 14
-      - 48842
-      - 2
-    * - Bank Marketing
-      - bank
-      - 16
-      - 45211
-      - 2
-    * - Bach Choral Harmony
-      - bch
-      - 16
-      - 5665
-      - 60
-    * - Clave Vectors Firm Teacher Model
-      - cvf
-      - 15
-      - 10800
-      - 7
-    * - Tamilnadu Electricity Board Hourly Readings
-      - eb
-      - 4
-      - 45781
-      - 31
-    * - EEG Eye State
-      - eye
-      - 14
-      - 14980
-      - 2
-    * - Japanese Vowels
-      - jvow
-      - 14
-      - 4274
-      - 9
-    * - White King and Rook against Black King
-      - kpt
-      - 6
-      - 28056
-      - 18
-    * - Letter Recognition
-      - ltr
-      - 16
-      - 20000
-      - 26
-    * - MAGIC Gamma Telescope
-      - magic
-      - 10
-      - 19020
-      - 2
-    * - Mushroom
-      - msh
-      - 22
-      - 8124
-      - 2
-    * - Nursery
-      - nrs
-      - 8
-      - 12960
-      - 5
-    * - Page Block Classification
-      - page
-      - 10
-      - 5473
-      - 5
-    * - Pen Based Recognition of Handwritten Digits
-      - pen
-      - 16
-      - 10992
-      - 10
-    * - Statlog Shuttle
-      - sht
-      - 9
-      - 58000
-      - 7
-    * - Waveform Database Generator
-      - w21
-      - 21
-      - 5000
-      - 3
-    * - Wall Following Robot Navigation
-      - wfr
-      - 24
-      - 5456
-      - 4
-    * - Wine Quality
-      - wine
-      - 11
-      - 4898
-      - 7
+.. raw:: latex
 
-GCC 4.8.2 compiler was used to compile the software implementation of the |ealgo| algorithm and GProf to profile it on each of the UCI datasets listed in the :num:`Table #tbl-uci-datasets`. It was run on the AMD Phenom(tm) II X4 965 (3.4 GHz) based computer and the results obtained by the profiling are shown in the :num:`Figure #fig-profiling-plot`. All tests were performed by inducing a single member ensemble, since the results obtained in this way are then convenient for conducting the calculation of the arbitrary size ensemble induction performance as discussed in the :num:`Figure #ens-hw-sw-speedup-estim`. The figure shows percentage of the total execution time spent in the *fitness_eval()* function and its subfuctions for each dataset. On average, |ealgo| spent 98.9% of time calculating the fitness of the individuals.
-
-.. _fig-profiling-plot:
-.. plot:: images/ensemble/profiling_plot.py
-    :width: 100%
-
-    Percentage of time spent in the *fitness_eval()* function and its subfuctions for each dataset listed in the :num:`Table #tbl-uci-datasets`
-
-The results for one example profiling experiment on the *magic* dataset are given in the :num:`Figure #fig-profiling`. Each row in the table provides the profiling data for one function with the following data:
-
-- **Name** - The name of the function
-- **Time** - Total amount of time spent in the function
-- **Calls** - Total number of calls to the function
-- **% Time** - Percentage of time spent in the function relative to the total execution time.
-
-.. _fig-profiling:
-.. figure:: images/profiling.png
-
-    Profiling results of the |ealgo| algorithm's C implementation.
-
-Fitness evaluation task comprises the following functions from the table : *evaluate node test()*, *find_dt_leaf_for_inst()* and *find_node_distribution()*. The percentage of execution time spent in the fitness evaluation task can be obtained by summing the execution times of these three functions, which adds up to 98.7% of total time for this particular dataset.
-
-The certain candidate for the hardware acceleration is thus the fitness evaluation operation, since it takes 98.9% of the total computational time on average. All other operations (DT initialization, DT mutation and individual selection) were decided to be left in the software, since they require significantly less amount of time to complete. On the other hand, by leaving these operations in the software the design remains flexible for experimenting with different algorithms for DT mutation, Bagging and individual selection. Furthermore, many other algorithms based on the EA like: Simulated Annealing (SA), Genetic Algorithms (GA), Genetic Programming (GP) etc., can be employed to perform the DT induction instead of the |algo| algorithm and still benefit from the co-processor performing the fitness evaluation operation, which significantly expands the scope of use of the proposed |cop| co-processor.
+    \endgroup

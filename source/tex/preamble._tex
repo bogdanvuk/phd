@@ -23,7 +23,7 @@
 \counterwithin{table}{section} % Restart numbering in each section
 % for subfigure
 \usepackage{subcaption}
-\captionsetup{labelfont=bf}
+\captionsetup{labelfont=bf,margin=15pt,font={it}}
 \usepackage{xcolor,colortbl}
 \definecolor{bluegray}{rgb}{0.4, 0.6, 0.8}
 \definecolor{carnelian}{rgb}{0.7, 0.11, 0.11}
@@ -49,13 +49,13 @@
 \newcommand{\IM}{I_{m}}
 \newcommand{\WDTD}{W_{DTD}}
 \newcommand{\Nl}{N_{l}}
-\newcommand{\Nc}{N_{c}}
-\newcommand{\NlM}{N_{lm}}
+\newcommand{\NC}{N_{c}}
+\newcommand{\NlM}{N^{M}_{l}}
 \newcommand{\Tsw}{T_{sw}}
 \newcommand{\Ths}{T_{hs}}
-\newcommand{\Tswmut}{T_{sw\_mut}}
+\newcommand{\Tswms}{T_{sw\_ms}}
 \newcommand{\Tswacc}{T_{sw\_acc}}
-\newcommand{\Thsmut}{T_{hs\_mut}}
+\newcommand{\Thsms}{T_{hs\_ms}}
 \newcommand{\Thsacc}{T_{hs\_acc}}
 \newcommand{\DM}{D^{M}}
 \newcommand{\NAM}{N^{M}_{A}}

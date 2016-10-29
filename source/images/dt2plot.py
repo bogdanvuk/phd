@@ -137,7 +137,8 @@ def get_intersections(hier, path, node):
     #print(intersections)
     return intersections
 
-def plot_subspace(dt, n, hier=[], path=[], alpha=1):
+def plot_subspace(dt, n, hier=[], path=[], alpha=1,
+                  region_ttl = lambda i,c: '{}-$C_{}$'.format(i + 1, c)):
     if n['left'] != "-1":
         inter = get_intersections(hier, path, n)
         n['line'] = inter
@@ -151,7 +152,7 @@ def plot_subspace(dt, n, hier=[], path=[], alpha=1):
         hier.append(n)
         for ch in ['left', 'right']:
             path.append(ch)
-            plot_subspace(dt, dt[n[ch]], hier, path, alpha=alpha)
+            plot_subspace(dt, dt[n[ch]], hier, path, alpha=alpha, region_ttl=region_ttl)
             path.pop()
 
         hier.pop()
@@ -169,6 +170,7 @@ def plot_subspace(dt, n, hier=[], path=[], alpha=1):
             import jarvis
             intersections = jarvis.convex_hull([i.tolist() for i in intersections])
             import centroids
+
             center = centroids.calculate_polygon_centroid(intersections + [intersections[0]])
 
 #         center = np.array([0,0])
@@ -177,19 +179,20 @@ def plot_subspace(dt, n, hier=[], path=[], alpha=1):
 #
 #         center = 1/len(intersections)*center
 
-            plt.text(center[0]-0.05, center[1], '{}-$C_{}$'.format(n['id'] + 1, n['cls']), size=25)
+            plt.text(center[0]-0.05, center[1], region_ttl(n['id'], n['cls']), size=25)
             #print('CLASS: {}{}: '.format(n['lvl'], n['id']))
             #print(intersections)
 
 #print(get_intersections([], dt['00']))
 
-def plot(dt, dataset, alpha=0.5):
+def plot(dt, dataset, alpha=0.5,
+         region_ttl = lambda i,c: '{}-$C_{}$'.format(i + 1, c)):
     plt.figure(0)
     attr, cls = attrspace_plot.load_arff(dataset)
     ds = {'attr': attr, 'cls': cls}
     attrspace_plot.plot(ds, (0,1), alpha=alpha)
 
-    plot_subspace(dt, dt['0'], alpha=0.7)
+    plot_subspace(dt, dt['0'], alpha=0.7, region_ttl=region_ttl)
     plt.gca().axes.get_xaxis().set_visible(False)
     plt.gca().axes.get_yaxis().set_visible(False)
 

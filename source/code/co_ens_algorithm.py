@@ -1,12 +1,17 @@
-def efti(train_set, ensemble_size):
+def eefti(train_set, ensemble_size):
     task_train_sets = divide_train_set(train_set, ensemble_size)
-    
+
     res = []
-    initialize_result_array(res, ensemble_size)
-    
-    for t, r in zip(task_train_sets, res):
-        create_task(efti_task, t, r)
-    
-    wait_for_all_tasks()
-    
+    semaphores = []
+    tasks = []
+    for eftip_id in range(ensemble_size):
+        r = {}
+        s = create_semaphore()
+        t = create_task(efti, task_train_sets[eftip_id], r, eftip_id, s)
+        res.append(r)
+        semaphores.append(s)
+        tasks.append(t)
+
+    scheduler(tasks, semaphores)
+
     return res

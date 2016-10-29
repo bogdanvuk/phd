@@ -8,10 +8,10 @@ fifo_item = block(size=p(7,2), nodesep=p(0,0))
 fifo_blk = block(text_margin=p(0.5, 0), alignment="tw", border=False, group='tight')
 
 bus_cap = cap(length=0.4, width=0.6, inset=0, type='Stealth')
-bus = path(color="black!40", style=('', bus_cap), line_width=0.3, border_width=0.06, double=True)
+bus = path(color="black!40", style=('', bus_cap), shorten=p(0.2,0.2), line_width=0.3, border_width=0.06, double=True)
 bus_text = text(font="\\footnotesize", margin=p(0.4,0.2))
 
-nte = block("Node Test Evaluator - NTE", text_margin=p(0.5, 0.5), alignment="nw", dotted=True, group='tight', group_margin=[p(5,5), p(3,1)])
+nte = block("Node Test Evaluator - NTE", text_margin=p(0.5, 0.5), text_font="\\Large", alignment="nw", dotted=True, group='tight', group_margin=[p(5,4.5), p(3,1)])
 ports = group()
 
 def make_external(pos, direction='o'):
@@ -32,9 +32,10 @@ inst_fifo_text = [
 inst_fifo = fifo_blk("Instance Queue")
 for i,t in enumerate(inst_fifo_text):
     if i == 0:
-        inst_fifo += fifo_item(t, size=p(10,2))
+        # inst_fifo += fifo_item(t, size=p(10,2))
+        inst_fifo += fifo_item(t, size=p(10,3.2))
     else:
-        inst_fifo += fifo_item(t).right(inst_fifo[-1])
+        inst_fifo += fifo_item(t, size=p(7,3.2)).right(inst_fifo[-1])
 
 nte += inst_fifo
 
@@ -50,7 +51,7 @@ inp_coef_text = [
 inp_coefs = group()
 for i,t in enumerate(inp_coef_text):
     if i == 0:
-        inp_coefs += inp_coef_tmpl(t).align(inst_fifo[0].s(1.0) + p(-5.5,1), cur().n(1.0))
+        inp_coefs += inp_coef_tmpl(t).align(inst_fifo[0].s(1.0) + p(-5.5,2), cur().n(1.0))
     else:
         inp_coefs += inp_coef_tmpl(t).below(inp_coefs[-1])
 
@@ -130,9 +131,9 @@ ports['sm_data'] =  make_external(struct_mem_intf.w(4), direction='i')
 ports += bus_text(r"SM data").alignx(nte.w()).aligny(struct_mem_intf.w(4), prev().s())
 
 ports['cm_addr'] = make_external(mem_intf.w(2))
-ports += bus_text(r"CM addr").alignx(nte.w()).aligny(mem_intf.w(2), cur().s())
+ports += bus_text(r"CM addr", margin=(0.3, 0.4)).alignx(nte.w()).aligny(mem_intf.w(2), cur().s())
 ports['cm_data'] = make_external(mem_intf.w(5), direction='i')
-ports += bus_text(r"CM data").alignx(nte.w()).aligny(mem_intf.w(5), cur().s())
+ports += bus_text(r"CM data", margin=(0.3, 0.4)).alignx(nte.w()).aligny(mem_intf.w(5), cur().s())
 
 mem_intf_net = net()
 coef_net = net()
@@ -151,9 +152,9 @@ node_id_net += bus(node_id_net[0][-1], mem_intf.s(4), routedef='-|')
 
 ports['node_id_net'] = node_id_net
 
-comp = block("$\geq$", p(3,3), text_font="\\large").right(add[-1], 5).aligny(mid(add[-1].c(), struct_mem_reg.w(1)) + p(0,1), cur().c())
+comp = block("$\leq$", p(3,3), text_font="\\large").right(add[-1], 5).aligny(mid(add[-1].c(), struct_mem_reg.w(1)) + p(0,1), cur().c())
 nte += comp
-nte['final_add_reg_bus']  = bus(final_add_reg.e(0.5), poffx(1), comp.w(1), routedef='|-', shorten=p(0.3, 0.2))
+nte['final_add_reg_bus']  = bus(final_add_reg.e(0.5), poffx(1), comp.w(1), routedef='|-', shorten=p(0.2, 0.2))
 #nte += text("$\sum\limits_{i=1}^{N^{M}_{A}}w_{i}\cdot x_{i}$").align(comp.w(1) + (0.5,-1), prev().s(1.0))
 
 mux_tmpl = block("MUX1", p(3,3), text_margin=p(0,1), alignment='nc')
@@ -163,11 +164,11 @@ nte += mux
 nte['mux10'] = bus_text("0").align(mux.s(1), prev().s(0.5))
 nte['mux11'] = bus_text("1").align(mux.s(2), prev().s(0.5))
 
-nte['thr_reg_bus'] = bus(struct_mem_reg.e(1), struct_mem_reg.e(1) + (1,0), comp.w(2), routedef='|-', shorten=p(0,0.2))
-nte['chl_reg_bus'] = bus(struct_mem_reg.e(3), mux.s(1), routedef='-|')
-nte['chr_reg_bus'] = bus(struct_mem_reg.e(5), mux.s(2), routedef='-|')
+nte['thr_reg_bus'] = bus(struct_mem_reg.e(1), struct_mem_reg.e(1) + (1,0), comp.w(2), routedef='|-', shorten=p(0.2,0.2))
+nte['chl_reg_bus'] = bus(struct_mem_reg.e(3), mux.s(1), routedef='-|', shorten=p(0.2,0.2))
+nte['chr_reg_bus'] = bus(struct_mem_reg.e(5), mux.s(2), routedef='-|', shorten=p(0.2,0.2))
 
-nte += path(comp.e(0.5), mux.w(0.5), style=('', '>'))
+nte += path(comp.e(0.5), mux.w(0.5), style=('', '>'), shorten=p(0.1, 0.1))
 mux2 = mux_tmpl("MUX2").over(mux, 3).alignx(mux.e(), cur().s(1))
 nte += mux2
 nte['mux20'] = bus_text("0").align(mux2.s(1), prev().s(0.5))
@@ -176,7 +177,7 @@ nte['mux1_res_bus'] = bus(mux.n(0.5), poffy(-1), mux2.s(1), routedef='-|')
 nte['node_id_mux'] = bus(node_fifo[-1].e(0.5), mux2.s(2), routedef='-|')
 nte += bus_text(r"Node ID").align(nte['node_id_mux'][0], prev().s())
 
-nte['msb_path'] = path((mux2.s(2)[0], node_fifo[-1].e(0.5)[1]), (mux2.e(0.5)[0] + 2, node_fifo[-1].e(0.5)[1]),mux2.e(0.5), routedef='|-', style=('','>'), shorten=p(0.2, 0))
+nte['msb_path'] = path((mux2.s(2)[0], node_fifo[-1].e(0.5)[1]), (mux2.e(0.5)[0] + 2, node_fifo[-1].e(0.5)[1]),mux2.e(0.5), routedef='|-', style=('','>'), shorten=p(0.2, 0.1))
 nte['bla'] = bus_text(r"[MSB]").align(nte['msb_path'][0], cur().s())
 
 ports['node_id_out'] = bus(mux2.n(0.5), p(nte.e()[0] + 2, mux2.n()[1] -1), routedef='|-')
@@ -192,10 +193,10 @@ stages = [
 ]
 
 for stage_id, (n, i, s) in enumerate(zip(node_fifo, inst_fifo, stages)):
-    ports += path(inst_fifo[i].n() - p(0, 4), node_fifo[n].n(), dotted=True)
+    ports += path(inst_fifo[i].n() - p(0, 3.5), node_fifo[n].n(), dotted=True)
     if stage_id == len(inst_fifo) - 1:
-        ports += block(s, border=False).aligny(inst_fifo[i].n() - p(0,2), cur().s()).alignx(mid(inst_fifo[i].n(), nte.e()), cur().c())
+        ports += block(s, border=False).aligny(inst_fifo[i].n() - p(0,1.5), cur().s()).alignx(mid(inst_fifo[i].n(), nte.e()), cur().c())
     else:
-        ports += block(s, border=False).aligny(inst_fifo[i].n() - p(0,2), cur().s()).alignx(inst_fifo[i].c(), cur().c())
+        ports += block(s, border=False).aligny(inst_fifo[i].n() - p(0,1.5), cur().s()).alignx(inst_fifo[i].c(), cur().c())
 
-ports += path(inst_fifo[0].n() - p(0, 2), poffx(nte.e() - inst_fifo[0].n()), dotted=True)
+ports += path(inst_fifo[0].n() - p(0, 1.5), poffx(nte.e() - inst_fifo[0].n()), dotted=True)
