@@ -19,4 +19,4 @@ make_feature_comp_tables(files, ['acc'], 'ens-vs-single', horizontal_splits=1, t
 make_feature_comp_tables(files, ['acc'], 'ens-vs-single-rank', horizontal_splits=2, titles=titles,
                          head_fmt=r":raw:`\multicolumn{{1}}{{r}}{{{}}}`",
                          data_fmt=r'{}', rank=True,
-                         rank_avg=[r":raw:`\\ \bottomrule \multicolumn{7}{c|}{\textbf{Rank}})`"])
+                         rank_avg=[r":raw:`\textbf{Rank}`"])

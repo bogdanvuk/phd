@@ -89,7 +89,7 @@ short_name = [
     'AC',
     'ENT',
     'ASPC',
-    'others'
+    'Others'
 ]
 def dump_gprof_table_csv(fn):
     table = load_js_data('profiling.js')

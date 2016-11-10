@@ -5,6 +5,9 @@ from bdp import *
 bus_cap = cap(length=0.4, width=0.6, inset=0, type='Stealth')
 bus = path(style=(bus_cap, bus_cap), line_width=0.3, double=True, border_width=0.06)
 
+templdef['node'].nodesep = p(0.5, 1.5)
+templdef['leaf'].nodesep = p(0.5, 1.5)
+
 root = draw_dt(dt)
 
 inst_net = net()

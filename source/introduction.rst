@@ -36,12 +36,12 @@ The :num:`Figure #fig-machine-learning-overview` shows an overview of how machin
 
 .. bdp:: images/machine_learning_overview.py
 
-    An overview of how machine learning is used to solve problems in certain domain. The domain objects are represented by their attribute vectors, which are in turn called the instances. A machine learning task is defined to describe the desired output of the system in terms of the instances. The model that produces the correct output for the input instances, i.e. solves the defined task, is obtained via process of learning on the training set.
+    An overview of how machine learning is used to solve problems in a certain domain, by constructing the model via process of learning on the training set.
 
 Machine learning systems can be constructed using supervised learning, unsupervised learning or any combination of the two techniques :cite:`flach2012machine,murphy2012machine`. Supervised learning implies providing the desired responses to the instances of the training set to construct the system, while unsupervised learning implies constructing the system based on the instances only. When the supervised learning is used, the lifetime of a machine learning system usually comprises two distinct phases:
 
-- the training (induction or learning), during which the learning problem is solved and the model is developed, and
-- the deployment, during which the model is used to process new data
+- the training phase (induction or learning), during which the learning problem is solved and the model is developed, and
+- the deployment phase, during which the model is used to process new data
 
 For an example, the classification of ROIs for self-driving vehicles is usually performed by the machine learning systems, induced by the method of supervised learning. During the training phase, a training set is used to build the system, which comprises input data instances and the desired system responses to them. Once constructed, the system is ready to be used, where new, previously unseen data, will arrive and the system must provide the responses using the knowledge extracted from the training set.
 
@@ -229,3 +229,22 @@ For the various experiments presented in the thesis, datasets from the UCI bench
 .. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
     :header-rows: 1
     :file: scripts/uci.csv
+
+.. _sec-exp-struct:
+
+The structure of the experiments used in the thesis
+---------------------------------------------------
+
+Similar experimental setup is used throughout this thesis whenever a quality of a certain feature needs to be assessed for an induction algorithm or its specific implementation. Unless stated otherwise, this procedure comprises the induction of the DTs from all datasets listed in the :numref:`tbl-uci`, and measuring the inference times and the qualities of the produced DTs, such as accuracy and size. All the results reported for the experiments in accompanying tables and figures, are the averages of the five 5-fold cross-validations, usually given with their 95% confidence intervals.
+
+The cross-validation setup for assessing the induction algorithm or its implementation is performed for each dataset selected for the experiment in the following way:
+
+- The dataset D, is partitioned into 5 non-overlapping sets: :math:`D_1`, :math:`D_2`, ... :math:`D_5`, by randomly selecting the instances from D using uniform distribution
+- For the :math:`i^{th}` cross-validation run, where :math:`i \in (1,5)`, training set is formed by using all the instances from D except the ones from :math:`D_i`, :math:`train\_set = D \setminus D_i`, and is used to induce the DT by the current algorithm being tested
+- Inferred DT is finally tested for accuracy by letting it perform the classification on the instances form the set :math:`D_i`.
+
+This whole procedure is repeated 5 times, resulting in 25 inferred DTs for each dataset and for each inference algorithm. For each of the DTs, the information about various features is gathered: classification accuracy, DT size, DT depth, inference time, DT fitness, etc., for which the average values and 95% confidence intervals are calculated.
+
+Often, the aim of an experiment used in this thesis is to discover whether there is a statistical difference between the performance of different algorithms, or the same algorithms with different parameters, or the different implementations of the same algorithm. The well known Student's t-test is used in statistics to determine if two sets of data are significantly different from each other. However, in the experiments throughout this thesis, there are usually more than two sets of data compared, hence the t-test cannot be applied. Instead, for each feature tested and dataset used, first the one-way analysis of variance (ANOVA) :cite:`neter1996applied` test is applied on collected data, with the significance level set at 0.05. When ANOVA analysis indicates that at least one of the results is statistically different from the others, the Tukey multiple comparisons test :cite:`hochberg2009multiple` is used to group the algorithms into groups of statistically identical results. Hence, for each feature of interest and each dataset, a set of groups is obtained, where the algorithms within the group have similar performance for that feature and dataset. Finally, these groups are ranked with respect to their average performance on that feature and dataset, and each tested algorithm is assigned a number, representing the position of its group within the ranking.
+
+Finally, often the average of all ranking numbers for the algorithm for one feature is taken to represent the overall performance of that algorithm on all datasets with respect to that feature. The average rankings are then compared between the algorithms per feature, to determine the benefits of using one over the other.

@@ -2,17 +2,24 @@
 Co-processor for the DT ensemble induction - |ecop|
 ===================================================
 
+For the induction of a single DT, it was already demonstrated that the |cop| co-processor can be used in a HW/SW architecture to achieve substantial speedups over the pure software implementation of the |algo| algorithm. Furthermore, it was explained in the :num:`Section #profiling-results` what was behind the decision to accelerate only the accuracy calculation task in hardware. Hence, in an attempt to achieve the same benefits for the DT ensemble induction, the |ecop| co-processor proposed in this section was implemented using |cop| as a module for the accuracy calculation. However, the |ecop| co-processor also takes advantage of the intrinsic parallelism of the Bagging algorithm to achieve even higher speedups when compared to the pure software implementation of the |ealgo| algorithm.
+
 .. _fig-ens-cop-system-bd:
 .. bdp:: images/ens_cop_system_bd.py
     :width: 80%
 
     The |ecop| co-processor structure and integration with the host CPU
 
-For the induction of a single DT, it was already demonstrated that the |cop| co-processor can be used in a HW/SW architecture to achieve substantial speedups over the pure software implementation of the |algo| algorithm. Furthermore, it was explained in the :num:`Section #profiling-results` what was behind the decision to accelerate only the accuracy calculation task in hardware. Hence, in an attempt to achieve the same benefits for the DT ensemble induction, the |ecop| co-processor proposed in this section was implemented using |cop| as a module for the accuracy calculation. However, the |ecop| co-processor also takes advantage of the intrinsic parallelism of the Bagging algorithm to achieve even higher speedups when compared to the pure software implementation of the |ealgo| algorithm.
+The |ecop| co-processor structure and integration with the host CPU is depicted in the :num:`Figure #fig-ens-cop-system-bd`. The |ecop| consists of an array of |cop| modules (described in the :num:`Section #sec-cop`) :math:`\textit{EFTIP}_1` to :math:`\textit{EFTIP}_{S^M}`, each of which can be used to evaluate the accuracy of the DT individual for the induction of one ensemble member. Each |cop| has its own address space and can be individually accessed for all operation described in the :num:`Section #sec-cop`. In addition, the |ecop| co-processor features the IRQ Status (Interrupt Request Status) block that allows the user to read-out the operation status of all |cop| units. The maximal number of ensemble member accuracy calculations that can be performed in parallel equals the total number of the |cop| units in the |ecop| co-processor, which is a parameter that can be set during the design time of the |cop| co-processor, and is called |SM|. The following topics will be covered in this section:
 
-The |ecop| co-processor structure and integration with the host CPU is depicted in the :num:`Figure #fig-ens-cop-system-bd`. The |ecop| consists of an array of |cop| modules, described in the :num:`Section #sec-cop`, :math:`\textit{EFTIP}_1` to :math:`\textit{EFTIP}_{S^M}`, each of which can be used to evaluate the accuracy of the DT individual for the induction of one ensemble member. Each |cop| has its own address space and can be individually accessed for all operation described in the :num:`Section #sec-cop`. In addition, the co-processor features the IRQ Status (Interrupt Request Status) block that allows the user to read-out the operation status of all |cop| units. The maximal number of ensemble member accuracy calculations that can be performed in parallel equals the total number of the |cop| units in the |ecop| co-processor, which is a parameter that can be set during the design time of the |cop| co-processor, and is called |SM|.
+- :num:`Section #sec-ecop-irq` - Description of the |ecop| IRQ Status module
+- :num:`Section #ens-hw-sw-speedup-estim` - Theoretical induction speedup derivation achievable by using the |ecop| co-processor
+- :num:`Section #sec-ecop-sw` - Discussion on the software routines that need to be added to the |ealgo| algorithm, in order for it to make use of the |ecop| co-processor
+- :num:`Section #sec-ecop-experiments` - Experimental section that shows the speedups that can be achieved by using the |ecop| co-processor
 
-IRQ Status module
+.. _sec-ecop-irq:
+
+IRQ Status Module
 -----------------
 
 IRQ Status module has been implemented in order to provide the user with the means of reading the statuses of all |cop| units with only one AXI4 read operation and thus optimize the AXI bus traffic. Each |cop| unit comprises an IRQ (Interrupt Request) port for signaling the end of the accuracy calculation, which was in turn connected to the IRQ Status block of the |ecop| co-processor. The IRQ Status block comprises an array of IRQ Status Word Registers representing the statuses of all |cop| units, which can all be read in a single burst via the AXI bus. Additionally, the IRQ Status block provides a combined IRQ signal, which is triggered each time any of the |cop| units signal their corresponding IRQ outputs, i.e. each time any of the |cop| units finish the accuracy calculation.
@@ -79,7 +86,7 @@ By incorporating the fact that |Tswacc| is constant in this case and substitutin
 
     The shape of the :math:`\text{speedup}(n_e)` function given by the equation :eq:`m-speedup-func-subst`.
 
-The plot in the :num:`Figure #fig-speedup-func-plot` suggests that accelerating the |ealgo| by a co-processor that performs the DT accuracy calculation in parallel for all ensemble members, will in the beginning provide increase in the speedup as the number of ensemble members increase. Then, after a speedup maximum has been reached, it will slowly degrade, but continue to offer a substantial speedup for all reasonable ensemble sizes. The maximum of the speedup can be found by seeking the maximum of the function given by the equation :eq:`m-speedup-func-subst`. By taking into the account parameter relationships, the point of the maximum of the :math:`\text{speedup}(n_e)` function can be expressed as follows:
+The plot in the :num:`Figure #fig-speedup-func-plot` suggests that accelerating the |ealgo| by a co-processor that performs the DT accuracy calculation in parallel for all ensemble members, will provide an increase in the speedup as the number of ensemble members increases in the beginning. Then, after a speedup maximum has been reached, it will slowly degrade, but continue to offer a substantial speedup for all reasonable ensemble sizes. The maximum of the speedup can be found by seeking the maximum of the function given by the equation :eq:`m-speedup-func-subst`. By taking into the account parameter relationships, the point of the maximum of the :math:`\text{speedup}(n_e)` function can be expressed as follows:
 
 .. math:: max(\text{speedup}(n_e))\approx\frac{\Tswacc}{2\sqrt{\Thsacc(1)\Thsms(1)}}\ at\ n_e \approx \sqrt{\frac{\Thsacc(1)}{\Thsms(1)}}
 	:label: m-speedup-maximum
@@ -89,7 +96,7 @@ Furthermore, the :num:`Figure #fig-speedup-func-plot` shows that even though the
 Whole training set for each member
 ..................................
 
-In this case, the total number of instances in the ensemble rises linearly with the number of ensemble members. This means that |Tswacc| will rise linearly and |Thsacc| will remain constant being that it is performed in parallel. This yield the following form for the speedup function:
+In this case, the total number of instances in the ensemble rises linearly with the number of ensemble members. This means that |Tswacc| will rise linearly and |Thsacc| will remain constant being that it is performed in parallel. This yields the following form for the speedup function:
 
 .. math:: \text{speedup}(n_e) = \frac{\Tswms(1) \cdot n_e + \Tswacc(1) \cdot n_e}{\Thsms(1) \cdot n_e + \Thsacc(1)}
     :label: m-speedup-whole-subst
@@ -100,6 +107,8 @@ Taking into the account that :math:`\Tsw = \Thsms + \Tswacc`, and rearanging the
     :label: m-speedup-whole-rearange
 
 The equation :eq:`m-speedup-whole-rearange` shows that the speedup increases with the number of ensemble members induced and asymptotically converges to the ratio of the total time needed for the single member induction in software (:math:`\Tsw(1)`) to the time needed for the mutation/selection tasks in the HW/SW co-design implementation (:math:`\Thsms(1)`), which basically means that the speedup can be increased by optimizing the execution time of the mutation/selection tasks and the communication with the co-processor.
+
+.. _sec-ecop-sw:
 
 Software for the |ecop| assisted DT ensemble induction
 ------------------------------------------------------
@@ -120,7 +129,7 @@ The pseudo-code for the Scheduler task is given in the :num:`Algorithm #fig-co-e
 
 The |ealgo| top level pseudo-code with the added instantiation of the synchronization mechanism in the form of the Scheduler task and the semaphores is presented in the :num:`Algorithm #fig-co-ens-algorithm-pca`. In addition to the training set and the reference to the result object ``r``, each of the |algo| tasks created is assigned a semaphore handle, and the unique ID (variable ``eftip_id``) that serves as a handle to the |cop| unit of the |ecop| co-processor assigned to the task. After all the |algo| tasks have been created, the control is transfered to the Scheduler task until all ensemble members have been induced.
 
-The HW/SW implementation of almost all of the |algo| tasks, which were described in the :num:`Section #sec-cop-sw`, is used almost verbatim for the HW/SW implementation of the |ealgo| algorithm. One difference is that here a co-processor with multiple |cop| units is accessed by the software. Hence, all the helper functions of the HW/SW implementation of the |algo| algorithm for calculating the appropriate hardware memory addresses, need now to take into the account the ID of the |cop| unit (``eftip_id``) they are interfacing. The second change needed was to adapt the code from the :num:`Algorithm #fig-accuracy-calc-pca` for the ``accuracy_calc()`` function to support the described protocol for the access rights delegation using semaphores. The adapted function pseudo-code is shown in the :num:`Algorithm #fig-co-ens-accuracy-calc-pca`.
+The HW/SW implementation of almost all of the |algo| tasks, which were described in the :num:`Section #sec-cop-sw`, is used almost verbatim for the HW/SW implementation of the |ealgo| algorithm. One difference is that here a co-processor with multiple |cop| units is accessed by the software. Hence, all the helper functions of the HW/SW implementation of the |algo| algorithm for calculating the appropriate hardware memory addresses, need now take into the account the ID of the |cop| unit (``eftip_id``) they are interfacing. The second needed change was to adapt the code from the :num:`Algorithm #fig-accuracy-calc-pca` for the ``accuracy_calc()`` function to support the described protocol for the access rights delegation using semaphores. The adapted function pseudo-code is shown in the :num:`Algorithm #fig-co-ens-accuracy-calc-pca`.
 
 .. _fig-co-ens-accuracy-calc-pca:
 .. literalinclude:: code/co_ens_accuracy_calc.py
@@ -146,7 +155,9 @@ With the naive approach shown in the :num:`Figure #fig-ens-scheduling-sequential
     :width: 1
     :label: fig-ens-scheduling
 
-    Achieving the maximum CPU utilization by interlacing the inducion operations of different ensemble members **(b)**, as opposed to performing these operations sequentially **(a)**. Time periods marked with letters M and S represent mutation and selection tasks respectively, and the idle periods of the CPU are showed hatched in figure. The operations related to the different |algo| tasks are given in different colors.
+    Achieving the maximum CPU utilization by interlacing the inducion operations of different ensemble members **(b)**, as opposed to performing these operations sequentially **(a)**.
+
+.. _sec-ecop-experiments:
 
 Experiments
 -----------
@@ -156,14 +167,14 @@ To estimate the DT ensemble induction speedup of the HW/SW implementation over t
 Required Hardware Resources for the |ecop| co-processor
 .......................................................
 
-For the experiments, five different instances of the |ecop| co-processor were generated, one for each of the ensemble sizes used in the experiments: 2, 4, 8, 16 and 25. The values of the customization parameters, given in the :num:`Table #tbl-ens-exp-params`, were chosen so that the generated co-processors could fit inside the xc7z100 Xilinx Zynq device that was used for testing.
+For the experiments, five different instances of the |ecop| co-processor were generated, one for each of the following ensemble sizes: 2, 4, 8, 16 and 25. The values of the customization parameters, given in the :num:`Table #tbl-ens-exp-params`, were chosen so that the generated co-processors could fit inside the XC7Z100 Xilinx Zynq device that was used for testing.
 
 .. raw:: latex
 
    \begingroup
-   \setlength{\tabcolsep}{.2em}
+   \setlength{\tabcolsep}{.15em}
 
-.. tabularcolumns:: p{0.44\linewidth} *{5}{R{0.1\linewidth}}
+.. tabularcolumns:: p{0.45\linewidth} *{5}{R{0.1\linewidth}}
 .. _tbl-ens-exp-params:
 .. list-table:: Values of the customization parameters of the |ecop| co-processor instances, one for each of the ensemble sizes used in the experiments.
     :header-rows: 1
@@ -238,20 +249,20 @@ The VHDL language has been used to model the |ecop| co-processor and it was impl
       - Slices/CLBs
       - BRAMs
       - DSPs
-    * - xc7z100
+    * - XC7Z100
       - 62091 (89%)
       - 412.5 (55%)
       - 2000 (99%)
-    * - xcku115
+    * - XCKU115
       - 33231 (40%)
       - 412.5 (19%)
       - 2000 (36%)
-    * - xc7vx690
+    * - XC7VX690
       - 63885 (59%)
       - 412.5 (28%)
       - 2000 (56%)
 
-Given in the brackets along with each resource utilization number is a percentage of used resources from the total resources available in the corresponding FPGA devices. :num:`Table #tbl-ens-utilization` shows that the implemented |ecop| co-processor fits into xc7z100 Xilinx FPGA device of the Zynq series, and into mid- to high-level Virtex7 and UltraScale Kintex7 Xilinx FPGA devices (xc7vx690 and xcku115).
+Given in the brackets along with each resource utilization number is a percentage of used resources from the total resources available in the corresponding FPGA devices. :num:`Table #tbl-ens-utilization` shows that the implemented |ecop| co-processor fits into xc7z100 Xilinx FPGA device of the Zynq series, and into mid- to high-level Virtex7 and UltraScale Kintex7 Xilinx FPGA devices (XC7VX690 and XCKU115).
 
 Estimation of the Induction Speedup
 ...................................
@@ -292,6 +303,6 @@ The results of the experiments are presented in the :num:`Table #tbl-ens-results
     :width: 100%
 
     Speedup of the HW/SW implementation over a)
-    SW-ARM implementation and b) SW-PC implementation, given for each dataset listed in the :num:`Table #tbl-uci-datasets`. Each bar represents a speedup for one ensemble size.
+    SW-ARM implementation and b) SW-PC implementation, given for each dataset used in the experiments. Each bar represents a speedup for one ensemble size.
 
-:num:`Figure #fig-speedup` and :num:`Table #tbl-ens-results` suggest that the HW/SW implementation using |ecop| co-processor offers a substantial speedup in comparison to the pure software implementations for both PC and ARM. Furthermore, the |ecop| implementation used in the experiments operates at much lower frequency (100MHz) than both ARM (667MHz) and PC(3.4GHz) platforms. If |ecop| co-processor were implemented in ASIC, the operating frequency would be increased by an order of magnitude, and the DT induction speedup would increase accordingly.
+:num:`Figure #fig-speedup` and :num:`Table #tbl-ens-results` suggest that the HW/SW implementation using |ecop| co-processor offers a substantial speedup in comparison to the pure software implementations for both PC and ARM. Furthermore, the |ecop| implementation used in the experiments operates at much lower frequency (100MHz) than both ARM (667MHz) and PC(3.5GHz) platforms. If |ecop| co-processor were implemented in ASIC, the operating frequency would be increased by an order of magnitude, and the DT induction speedup would increase accordingly.

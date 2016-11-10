@@ -2,33 +2,41 @@
 |ealgo| algorithm
 =================
 
-In this section, the |ealgo| algorithm for the induction of the DT ensembles which uses the Bagging algorithm on top of the |algo| algorithm is proposed. The ability of the |algo| algorithm to operate on a single individual and induce small DTs is even more important for the ensembles, since all the operations, be it induction or classification of new instances, are performed on multiple DTs at once.
+In this section, the |ealgo| algorithm for the induction of the DT ensembles which uses Bagging on top of the |algo| algorithm is proposed. The ability of the |algo| algorithm to operate on a single individual and induce small DTs is even more important for the ensembles, since all the operations, be it induction or classification of new instances, are performed on all the DT members of the ensemble at once. The following topics will be covered in this section:
+
+- :num:`Section #sec-bagging` - Description of the Bagging algorithm
+- :num:`Section #classifier-arch-overview` - Description of the |ealgo| algorithm
+- :num:`Section #sec-ens-advantages` - Experiments showing the superior performance of the ensembles induced by the |ealgo| algorithm over single classifiers in terms of the classification accuracy
 
 .. _sec-bagging:
 
-Bagging algorithm
+Bagging Algorithm
 -----------------
 
 The choice of the Bagging algorithm was made mainly because it generates one subset of the training set for each ensemble member, hence completely decoupling the induction of the individual members from each other, which in turn makes the algorithm suitable for the parallelization and hardware acceleration. Furthermore, the Bagging algorithm was reported to reduce the accuracy variance and help avoid overfitting. Two common ways of forming the subsets are:
 
-- **random sampling without replacement** - formed subsets are disjoint sets of size :math:`N_{IS}=\frac{N_I}{n_e}`, and
-- **random sampling with replacement** - formed subsets are of size :math:`N_{IS} \leq N_I`,
+- **random sampling without replacement** - forms disjoint subsets of size :math:`N_{IS}=\frac{N_I}{n_e}`, and
+- **random sampling with replacement** - forms overlapping subsets of size :math:`N_{IS} \leq N_I`,
 
-where :math:`N_{IS}` is the size of the subsets, |NI| the size of the whole training set and |ne| the number of subsets, i.e. the number of the ensemble members. The most important feature of the sampling procedure is the diversity of the ensemble members it helps induce. This is especially important for the deterministic induction algorithms, since given the same training subset they would induce identical DT individual each time. In case of stochastic algorithms on the other hand, this is less of a problem. Hence, the |ealgo| algorithm can be used event when :math:`N_{IS} = N_I`.
+where :math:`N_{IS}` is the size of the subsets, |NI| the size of the whole training set and |ne| the number of subsets, i.e. the number of the ensemble members. The most important feature of the sampling procedure is the diversity of the ensemble members it helps induce. This is especially important for the deterministic induction algorithms, since given the same training subset they would induce identical DT individual each time. In case of stochastic algorithms on the other hand, this is less of a problem. Hence, the |ealgo| algorithm can be used even when :math:`N_{IS} = N_I`.
 
-|ealgo| description
+.. _sec-ealgo:
+
+|ealgo| Description
 -------------------
 
-The :num:`Algorithm #fig-algorithm-pca` shows the |ealgo| algorithm. The |ealgo| first divides the training set in the subsets using the ``divide_train_set()`` function that implements one of the techniques discussed in the :num:`Subsection #sec-bagging`. Next, for each member of the ensemble an |algo| tasks is created and assigned its corresponding training subset (``task_train_sets[i]``). In addition, the reference to the result object ``r`` is passed to the |algo| task, to which it can assign the resulting DT and any additional information about the induction, like inference time, etc. All result objects are gathered in the ``res`` array and are returned to the user when the induction is finished. Handles to the created tasks are gathered in the ``tasks`` array, which is used by the ``all_finished()`` helper function, which in turn checks the statuses of the running |algo| tasks and returns ``true`` when all of them have finished the induction and exited. Once all the individual tasks have finished and thus populated their corresponding result objects, the |ealgo| algorithm exits by returning the ``res`` array to the user.
+The :num:`Algorithm #fig-algorithm-pca` shows the |ealgo| algorithm pseudo-code. |ealgo| first partitions the training set in the subsets using the ``divide_train_set()`` function that implements one of the techniques discussed in the :num:`Subsection #sec-bagging`. Next, for each member of the ensemble an |algo| tasks is created and assigned its corresponding training subset (``train_par[i]``). In addition, the reference to the result object ``r`` is passed to the |algo| task, to which it can assign the resulting DT and any additional information about the induction, like inference time, etc. All result objects are gathered in the ``res`` array and are returned to the user when the induction is finished. Handles to the created tasks are gathered in the ``tasks`` array, which is used by the ``all_finished()`` helper function, which in turn checks the statuses of the running |algo| tasks and returns ``true`` when all of them have finished the induction and exited. Once all the individual tasks have finished and thus populated their corresponding result objects, the |ealgo| algorithm exits by returning the ``res`` array to the user.
 
 .. _fig-ens-algorithm-pca:
 .. literalinclude:: code/ens_algorithm.py
     :caption: The main functino of the |ealgo| algorithm
 
+.. _sec-ens-advantages:
+
 Advantages of the DT ensembles
 ------------------------------
 
-As it was already said, the ensemble classifier systems were shown to provide improvement to the classification performance over a single classifier :cite:`rokach2010ensemble`. In order to test whether |ealgo| algorithm is capable of inducing an ensemble that has superior accuracy than the individual classifier induced by the |algo| algorithm, an experiment has been conducted whose results are shown in this subsection. The ensembles of sizes 3, 5, 9, 17 and 33 were induced on all datasets from the :num:`Table #tbl-uci` using five 5-fold cross-validations techinique together with the Tukey multiple comparisons test as described in the :num:`Section #sec-exp-struct`. The induced ensembles' accuracies were measured by performing the classification of the test set using the majority voting technique. In the :num:`Table #tbl-ens-vs-single` the average accuracies of the single classifier and the ensembles of five different sizes used in this experiment are given for each dataset together with their 95% confidence intervals. The accuracy rankings of the induced classifiers are given in the :num:`Table #tbl-ens-vs-single-rank` for each dataset, together with the average rank for each classifier used.
+As it was already said, the ensemble classifier systems were shown to provide improvement to the classification performance over a single classifier :cite:`rokach2010ensemble`. In order to test whether |ealgo| algorithm is capable of inducing an ensemble that has superior accuracy than the individual classifier induced by the |algo| algorithm, an experiment has been conducted whose results are shown in this subsection. The ensembles of sizes 3, 5, 9, 17 and 33 were induced on all datasets from the :num:`Table #tbl-uci` using five 5-fold cross-validation techinique together with the Tukey multiple comparisons test as described in the :num:`Section #sec-exp-struct`. The induced ensembles' accuracies were measured by performing the classification of the test set using the majority voting technique. In the :num:`Table #tbl-ens-vs-single` the average accuracies of the single classifier and the ensembles of five different sizes used in this experiment are given for each dataset together with their 95% confidence intervals. The accuracy rankings of the induced classifiers are given in the :num:`Table #tbl-ens-vs-single-rank` for each dataset, together with the average rank for each classifier used.
 
 .. raw:: latex
 
@@ -52,3 +60,4 @@ The results show that an ensemle of classifiers almost always has superior accur
 .. raw:: latex
 
     \endgroup
+

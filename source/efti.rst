@@ -7,7 +7,13 @@ This section describes an evolutionary algorithm for oblique full DT induction u
 - is easy parallelizable and accelerated in hardware, and
 - uses nonincremental DT induction to induce smaller DTs than the existing solutions, without the loss in DT accuracy.
 
-Since inferring an optimal DT in terms of both size and accuracy is an NP-hard problem, the |algo| algorithm needed to be based on some kind of heuristic. In order to minimize the hardware resource consumption of the algorithm implementation, it was chosen to be operated only on a single candidate solution, effectively excluding all the algorithms that operate on populations, such as particle swarm optimization, memetic algorithms, genetic algorithms, and some types of evolutionary algorithms. For all these reasons, it was chosen to base the |algo| algorithm on the (1+1) Evolutionary Strategy, since on one hand it operates on a single individual, while on the other it was supposed to be capable of managing the highly complex problem of searching for the small, yet accurate enough DTs, by using the nature inspired evolutionary process.
+Since inferring an optimal DT in terms of both size and accuracy is an NP-hard problem, the |algo| algorithm needed to be based on some kind of heuristic. In order to minimize the hardware resource consumption of the algorithm implementation, it was chosen to be operated only on a single candidate solution, effectively excluding all the algorithms that operate on populations, such as particle swarm optimization, memetic algorithms, genetic algorithms, and some types of evolutionary algorithms. For all these reasons, it was chosen to base the |algo| algorithm on the (1+1) Evolutionary Strategy, since on one hand it operates on a single individual, while on the other it was supposed to be capable of managing the highly complex problem of searching for the small, yet accurate enough DTs, by using the nature inspired evolutionary process. The following topics will be covered in this section:
+
+- :num:`Section #sec-algorithm-overview` - Overview of the algorithm
+- :num:`Section #sec-algo-detailed-description` - Detailed description of the algorithm
+- :num:`Section #sec-algo-improvements` - The improvements to the basic algorithm version
+- :num:`Section #sec-complexity` - Analysis of the algorithm's computational complexity
+- :num:`Section #sec-efti-experiments` - Experimental section that shows the performance of the |algo| algorithm in comparison to the performances of the existing DT induction algorithms
 
 .. _sec-algorithm-overview:
 
@@ -225,6 +231,8 @@ In the :num:`Figures #fig-efti-overview00` through :num:`#fig-efti-overview07`, 
 
 At the beginning of the |algo| algorithm, the initial individual is generated (:num:`Figure #fig-efti-overview00`) to contain only one node, since |algo| has a goal of creating DTs as small as possible. By the iteration #13 (:num:`Figure #fig-efti-overview01`), no new nodes were added, but the root node test was modified to produce the increase in the DT accuracy from 0.6005 to 0.6274. During the further evolution, some nodes were added which raised the accuracy of the DT. Notice how fitness started to deviate from the accuracy when the DT grew bigger. This is because the fitness also depends on the size of the DT to which it applies, in that it is more significantly penalized, the more leaves the DT has. In this example, the biggest drop in the fitness caused by the DT size is in the iteration #279512 of the DT evolution (:num:`Figure #fig-efti-overview06`), where the DT individual comprised 7 leaves and even though the accuracy climbed to 0.9395 (classification success rate of 94%), the fitness remained at 0.9274. In this way, the evolutionary process was forced to search for the smaller DT solutions, in which it eventually succeeded by the iteration #415517 (:num:`Figure #fig-efti-overview07`), where the DT size dropped to only 5 leaves with no loss in accuracy.
 
+.. _sec-algo-detailed-description:
+
 Detailed description
 --------------------
 
@@ -240,9 +248,9 @@ For the sake of describing an oblique DT, two different sets of information need
 - The node test coefficients mutation
 - The DT topology mutation
 
-During each iteration of the |algo| algorithm, a small number (|alpha|) of DT nodes' test coefficients is selected at random and then mutated by a small random number. Every change in the node test influences the classification, as the instances take different paths through the DT and get classified in a different way. Finding the optimal oblique split is in itself an NP hard problem (as already discussed in the :num:`Section #sec-general-dt-induction`), hence deciding which coefficients should be mutated in order to enhance the DT accuracy is also a hard algorithmic problem. For this reason, the coefficients to be mutated are selected randomly according to the uniform distribution from the set of all coefficients from all DT nodes. Usually, only one to several coefficients (dictated by the parameter |alpha|) are mutated in each iteration in order for the classification result to change in small steps. The larger the number of coefficients mutated in each iteration, the more the algorithm starts behaving as a random search.
+During each iteration of the |algo| algorithm, a small number (|alpha|) of DT nodes' test coefficients is selected at random and then mutated by adding (or subtracting) to it a small random number. Every change in the node test influences the classification, as the instances take different paths through the DT and get classified in a different way. Finding the optimal oblique split is in itself an NP hard problem (as already discussed in the :num:`Section #sec-general-dt-induction`), hence deciding which coefficients should be mutated in order to enhance the DT accuracy is also a hard algorithmic problem. For this reason, the coefficients to be mutated are selected randomly according to the uniform distribution from the set of all coefficients from all DT nodes. Usually, only one to several coefficients (dictated by the parameter |alpha|) are mutated in each iteration in order for the classification result to change in small steps. The larger the number of coefficients mutated in each iteration, the more the algorithm starts behaving as a random search.
 
-Once the decision is made which coefficients are to be mutated, the amount by which to change each of the coefficients needs to be specified. Since the algorithm cannot know in advance the optimal order of magnitude of a coefficient value, which would allow it to adjust the size of the coefficient mutation step, the only reference it can take the advantage of is the coefficient's current value. Furthermore, as it will be discussed in the :num:`Section #sec-node-insertion`, the node test coefficients are not initialized completely at random, but are calculated according to an algorithm to provide an improvement to the overall accuracy of the DT, hence their initial values provide a useful starting reference point in searching for their optimal values. Due to all this, the |algo| algorithm selects the mutation step for the coefficients according to the normal distribution centered at zero, with the standard deviation proportional to the value of the coefficient to be mutated. However, for the coefficients with small values, the deviation would be likewise low, and it would be hard to escape this situation via process of mutation. Similarly, for the coefficients with large values, the deviation would be likewise high, and these coefficients would be changed in too large increments. Hence, the |algo| algorithm saturates the deviation for both small and large coefficient values, so that the random variable of the mutation step for the coefficient :math:`w_i`, named :math:`X_{mwi}` is finally given by the equation:
+Once the decision is made which coefficients are to be mutated, the amount by which to change each of the coefficients needs to be specified. Since the algorithm cannot know in advance the optimal order of magnitude of a coefficient value, which would in turn allow it to adjust the size of the coefficient mutation step, the only reference it can take the advantage of is the coefficient's current value. Furthermore, as it will be discussed in the :num:`Section #sec-node-insertion`, the node test coefficients are not initialized completely at random, but are calculated according to an algorithm to provide an improvement to the overall accuracy of the DT, hence their initial values provide a useful starting reference point in searching for their optimal values. Due to all this, the |algo| algorithm selects the mutation step for the coefficients according to the normal distribution centered at zero, with the standard deviation proportional to the value of the coefficient to be mutated. However, for the coefficients with small values, the deviation would be likewise low, and it would be hard to escape this situation via process of mutation. Similarly, for the coefficients with large values, the deviation would be likewise high, and these coefficients would be changed in too large increments. Hence, the |algo| algorithm saturates the deviation for both small and large coefficient values at :math:`\sigma_{min}` and :math:`\sigma_{max}` respectively. The saturation points :math:`\sigma_{min}` and :math:`\sigma_{max}` are fixed throughout the algorithm operation and selected by the user. The random variable representing the mutation step for the coefficient :math:`w_i`, named :math:`X_{mwi}` is finally given by the equation:
 
 .. math::
     :label: eq-coeff-mutation-distrib
@@ -252,6 +260,8 @@ Once the decision is made which coefficients are to be mutated, the amount by wh
         & w_i,          \qquad & \sigma_{min} < & w_i < \sigma_{max} \\
         & \sigma_{max}, \qquad & \sigma_{max} \leq & w_i
     \end{alignedat}\right.
+
+This means that the mutated value :math:`w^m_i` for the selected coefficient :math:`w_i` is obtained as :math:`w^m_i = w_i + X_{mwi}`.
 
 .. subfigstart::
 
@@ -303,7 +313,7 @@ Once the decision is made which coefficients are to be mutated, the amount by wh
 
     Example showing how a DT is mutated by removing a node from it
 
-On the other hand, the topology mutations represent very large moves in the search space, so they are performed even less often. In every iteration, there is a chance (|beta|) that a single node will either be added to the DT or removed from it. This change either adds an additional test to the classification process, or removes one from it. The node is always added in place of an existing leaf, i.e. never in place of an internal non-leaf node, as shown in the example in the :num:`Figure #fig-node-addition`. The test coefficients of the newly added non-leaf node are calculated using the same initialization procedure as for the root test coefficients, which is explained in the :num:`Section #sec-node-insertion`. On the other hand, if a node is to be removed, first a leaf is selected at random. Then both the leaf and its parent are removed from the DT, while the leaf's sibling moves up to replace its former parent, as shown in the example in the :num:`Figure #fig-node-removal`. By adding a test, a new point is created where during the classification, instances from different classes might separate and take different paths through the DT and eventually be classified as different, which can in turn increase the accuracy of the DT. On the other hand, by removing unnecessary tests the DT is made smaller, and the size of the DT is also an important factor in the fitness calculation in the |algo| algorithm as discussed in the :num:`Section #sec-oversize`.
+On the other hand, the topology mutations represent very large moves in the search space, so they are performed even less often. In every iteration, there is a chance (|beta|) that a single node will either be added to the DT or removed from it. This change either adds an additional test to the classification process, or removes one from it. The node is always added in place of an existing leaf, i.e. never in place of an internal non-leaf node, as shown in the example in the :num:`Figure #fig-node-addition`. The leaf which is to be turned into a node is selected at random uniformly from all the leaves in the DT. The test coefficients of the newly added non-leaf node are calculated using the same initialization procedure as for the root test coefficients, which is explained in the :num:`Section #sec-node-insertion`. On the other hand, if a node is to be removed, first a leaf is selected at random uniformly from all the leaves in the DT. Then both the leaf and its parent are removed from the DT, while the leaf's sibling moves up to replace its former parent, as shown in the example in the :num:`Figure #fig-node-removal`. By adding a test, a new point is created where during the classification, instances from different classes might separate and take different paths through the DT and eventually be classified as different, which can in turn increase the accuracy of the DT. On the other hand, by removing unnecessary tests the DT is made smaller, and the size of the DT is also an important factor in the fitness calculation in the |algo| algorithm as discussed in the :num:`Section #sec-oversize`.
 
 There is a known result regarding (1+1)-ES algorithms called 1/5 success rule :cite:`auger2009benchmarking`, stating that the mutation step size should be adapted dynamically in order to keep the mutation success rate close to one-fifth, meaning that approximately every fifth mutation should lead to an individual with higher fitness. To accomplish this, the mutation step is dynamically adapted try to control the success rate. There are at least two problems with adopting the 1/5 strategy here: first there are two different types of mutations (coefficient and topological) with each one having its own mutation rate, and second the success rates were measured to be closer to around 1% when the |algo| algorithm was run on practical datasets. Although the effort was made in an attempt to devise a dynamic adaptation strategy akin to the 1/5 success rule that would provide statistically significant benefits to the |algo| algorithm, it was futile.
 
@@ -360,7 +370,7 @@ This procedure aims to introduce a useful test into the DT, based on the assumpt
 Fitness evaluation
 ..................
 
-The DT can be optimized with respect to various parameters, where the DT accuracy and its size are usually the most important. However, there are some more parameters that might be of interest, like the number of training set classes not represented in the DT, the purity of the DT leaves, the degree at which the DT is balanced, etc. Hence, in order to solve this multi-objective optimizational problem with the evolutionary approach, a fitness function needs to be defined to effectively collapse it to a single objective optimizational problem. This can be done in various ways, and here one procedure, employed by the |algo| algorithm is given.
+The DT can be optimized with respect to various parameters, where the DT accuracy and its size are usually the most important. Hence, in order to solve this multi-objective optimizational problem with the evolutionary approach, a fitness function needs to be defined to effectively collapse it to a single objective optimizational problem. This can be done in various ways, and here one procedure, employed by the |algo| algorithm is given.
 
 .. _fig-fitness-eval-pca:
 
@@ -634,48 +644,35 @@ The selection task is responsible for deciding, in each iteration, which DT will
 .. literalinclude:: code/selection-vanilla.py
     :caption: The pseudo-code of the :literal:`select()` function of the |algo| algorithm, that implements the basic individual selection procedure
 
-.. _sec-exp-struct:
-
-The structure of the experiments
---------------------------------
-
-The same setup is used for most of the experiments in this section, whether the experiments are used to compare the performances of several |algo| algorithms with different sets of features or parameters, or to compare the |algo| algorithm's performance with the performance of other algorithms. The procedure of all these experiments, comprises the induction of the DTs from all datasets listed in the :numref:`tbl-uci`, and measuring the induction speed and the quality of produced DTs. All the results, reported in tables and figures, are the averages of the five 5-fold cross-validations, usually given with their 95% confidence intervals. The cross-validation setup for each algorithm and each dataset is as follows:
-
-- The dataset D, is divided into 5 non-overlapping sets: :math:`D_1`, :math:`D_2`, ... :math:`D_5`, by randomly selecting the instances from D using uniform distribution
-- For the :math:`i^{th}` cross-validation run, where :math:`i \in (1,5)`, training set is formed by using all the instances from D except the ones from :math:`D_i`, :math:`train\_set = D \setminus D_i`, and is used to induce the DT by the current algorithm being tested
-- Inferred DT is than tested for accuracy by using the instances form the set :math:`D_i`.
-
-This whole procedure is repeated 5 times, resulting in 25 inferred DTs for each dataset and for each inference algorithm. For each of the DTs, the information about various features is gathered: classification accuracy, DT size, DT depth, induction time, DT fitness, etc., for which the average values and 95% confidence intervals are calculated.
-
-Usually, the aim of the experiment is to discover whether there is a statistical difference between the feature quality of the DTs induced by different algorithms (or the same algorithms with different parameters). The well known Student's t-test is used in statistics to determine if two sets of data are significantly different from each other. However, in the following experiments, there are usually more than two sets of data compared, hence the t-test cannot be applied. Instead, first for each feature and dataset, the one-way analysis of variance (ANOVA) :cite:`neter1996applied` test is applied on collected data, with the significance level set at 0.05. When ANOVA analysis indicates that at least one of the results is statistically different from the others, the Tukey multiple comparisons test :cite:`hochberg2009multiple` is used to group the algorithms into groups of statistically identical results. Hence, for each feature of interest and each dataset, a set of groups is obtained, where the algorithms within the group have similar performance for the that feature and dataset. Finally, for each feature and dataset, these groups are ranked with respect to their average performance on that feature and dataset, and each tested algorithm is assigned a number, representing the position of its group within the ranking. Usually, the average of all ranking numbers for the algorithm for one feature is taken to represent the overall performance of that algorithm on all datasets with respect to that feature. The average rankings are then compared between the algorithms per feature, to determine the benefits of using one over the other.
+.. _sec-algo-improvements:
 
 Improvements to the basic |algo| algorithm
 ------------------------------------------
 
 In this section several additional features that can improve either the execution time or the quality of solutions produced by the |algo| algorithm are discussed:
 
-- :num:`Section #sec-perc-missing-classes` - Make fitness dependent on the number of training set classes that are not assigned to any leaf
-- :num:`Section #sec-search-probability` - Introduce the search probability, i.e. the probability with which a less fit individual can be selected for the candidate solution
-- :num:`Section #sec-partial-reclass` - Improve the induction times by keeping track of the classification traversal paths, and trying to reuse them between iterations
+- :num:`Section #sec-perc-missing-classes` - Make fitness dependent on the number of training set classes that are not represented in the DT individual, i.e not assigned to any leaf.
+- :num:`Section #sec-search-probability` - Introduce the search probability, i.e. the probability with which a less fit individual can be selected for the candidate solution.
+- :num:`Section #sec-partial-reclass` - Improve the induction times by keeping track of the classification traversal paths, and trying to reuse them between iterations.
 
 .. _sec-perc-missing-classes:
 
-Percentage of missing classes
-.............................
+Unrepresented classes
+.....................
 
-The percentage of missing classes is calculated as the percentage of the classes for which the DT does not have a leaf, to the total number of classes in the training set (|NC|):
+When working with highly imbalanced datasets, the induced DT can happen to contain no leaves to which an under-represented class has been assigned. In these cases it might be useful to encourage the |algo| algorithm to represent all classes from the dataset within the DT. Here, an extension to the fitness formula is given that aims at discouraging the DTs in which some classes are not represented. The percentage of missing classes is calculated as the percentage of the classes for which the DT does not have a leaf, to the total number of classes in the training set (|NC|):
 
 .. math:: missing = \frac{\NC - N_{DTc}}{\NC}
     :label: eq-missing
 
-where |NDTc| is the number of classes represented in the DT leaves. The fitness calculation is then updated so that the penalties are taken for the missing classes in the DT individual: ``fitness = accuracy*(1 - Ko*oversize*oversize)*(1 - Km*missing)``, where the parameter |Km| is used to control how much influence the number of missing classes will have on overall fitness.
+where |NDTc| is the number of classes represented in the DT leaves. The fitness calculation is then updated so that the penalties are taken for the missing classes in the DT individual: ``dt.fit = accuracy*(1 - Ko*oversize*oversize)*(1 - Km*missing)``, where the parameter |Km| is used to control how much influence the number of missing classes will have on overall fitness.
 
 .. _sec-search-probability:
 
 Search probability
 ..................
 
-Evolution is inherently an unpredictable process. It is akin to searching for the highest peak in the mountain range but only being able to see ones immediate vicinity, i.e. not being able to peek at distant mountain tops that could guide ones exploration (see :num:`Figure #fig-escape-local-optimum`). Simplest strategy for conquering the peak closest to ones current location is to always choose the path that leads upwards. This strategy is thus called the greedy hill-climbing strategy. However, there is no guarantee that the closest peak is in the same time the highest in the mountain range and it often is not. One example of such a peak is the peak marked by the letter A in the :num:`Figure #fig-escape-local-optimum`, which is called the local maximum. It is a maximum, since all points in its neighborhood have lower elevation, but it is only local since there is a higher peak in this search space, namely B from the :num:`Figure #fig-escape-local-optimum`. The greedy approach described above fails in finding a path from point A to point B, since there exist no monotonically uphill path connecting A to B. In order to get to point B the exploration has to first traverse through the regions with lower elevation, shown by an arrow in the :num:`Figure #fig-escape-local-optimum`, in order to get to the base of the hill with the summit at the point B, from which it can start moving up again. However, it is not clear in which direction from the point A the movement should proceed. Nothing is gained if the movement continues towards the point C, since the predominant uphill movement will eventually bring the exploration back to the point A, only wasting the computational time. Even worse, if the exploration step size is large, the position might be moved to the point D, from where it could wander off in the opposite direction from the global maximum B.
+Evolution is inherently an unpredictable process. It is akin to searching for the highest peak in the mountain range but only being able to see one's immediate vicinity, i.e. not being able to peek at distant mountain tops that could guide one's exploration (see :num:`Figure #fig-escape-local-optimum`). Simplest strategy for conquering the peak closest to one's current location is to always choose the path that leads upwards. This strategy is thus called the greedy hill-climbing strategy. However, there is no guarantee that the closest peak is in the same time the highest in the mountain range and it often is not. One example of such a peak is the peak marked by the letter A in the :num:`Figure #fig-escape-local-optimum`, which is called the local maximum. It is a maximum, since all points in its neighborhood have lower elevation, but it is only local since there is a higher peak in this search space, namely B from the :num:`Figure #fig-escape-local-optimum`. The greedy approach described above fails in finding a path from point A to point B, since there exist no monotonically uphill path connecting A to B. In order to get to point B the exploration has to first traverse through the regions with lower elevation, shown by an arrow in the :num:`Figure #fig-escape-local-optimum`, in order to get to the base of the hill with the summit at the point B, from which it can start moving up again. However, it is not clear in which direction from the point A the movement should proceed. Nothing is gained if the movement continues towards the point C, since the predominant uphill movement will eventually bring the exploration back to the point A, only wasting the computational time. Even worse, if the exploration step size is large, the position might be moved to the point D, from where it could wander off in the opposite direction from the global maximum B.
 
 .. _fig-escape-local-optimum:
 .. plot:: images/escape_local.py
@@ -866,7 +863,7 @@ The results are given in the :num:`Table #tbl-searchprob-comp`, where for each o
 .. tabularcolumns:: L{0.085\linewidth} | R{0.135\linewidth} R{0.04\linewidth} | R{0.135\linewidth} R{0.04\linewidth} | R{0.135\linewidth} R{0.04\linewidth} | R{0.135\linewidth} R{0.04\linewidth}
 
 .. _tbl-searchprob-comp:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: Average fitness values of the induced DTs using four selection strategies, together with their 95% confidence intervals and Tukey HSD based rankings
     :header-rows: 2
     :file: scripts/searchprob-comp-fit.csv
 
@@ -1032,7 +1029,7 @@ Since :math:`N_A \ll N_I\cdot N_l\cdot N_A` the mutation insignificantly influen
 Experiments
 -----------
 
-In this section, the results of the experiments are presented, that were conducted in order to compare the |algo| algorithm to the existing solutions. The algorithms listed in the :num:`Table #tbl-existing-algo`, available in open literature, were used for the comparison. The experimental procedure explained in the :num:`Section #sec-exp-struct` was used to compare the quality of the induced DTs, in terms of their sizes and accuracies. For the DT inference algorithms that require DT pruning, a pruning set was created by taking 30% of the training set instances selected at random.
+In this section, the results of the experiments are presented, that were conducted in order to compare the |algo| algorithm to the existing solutions. The algorithms listed in the :num:`Table #tbl-existing-algo`, available in open literature, were used for the comparison. The experimental procedure explained in the :num:`Section #sec-exp-struct` was used to compare the quality of the induced DTs, in terms of their sizes and accuracies. For the incremental DT inference algorithms, a pruning set was created and the induced DTs were pruned after the induction. For the algorithms: CART-LC, OC1, OC1-AP, OC1-ES and OC1-SA, the default value of 10% randomly selected training set  instances were used to form a pruning set, and the Error-Complexity pruning algorithm was used. For the NODT algorithm, the pruning was performed in the manner described in the original publication :cite:`struharik2014inducing`, where a specific pruning algorithm is described and pruning set is created by taking 30% of the training set instances selected at random.
 
 .. raw:: latex
 
@@ -1062,7 +1059,7 @@ In this section, the results of the experiments are presented, that were conduct
     * - OC1-SA
       - Oblique Classifier - Simulated Annealing
       - an extension to OC1 that uses simulated annealing to optimize the oblique hyperplanes,
-    * - HBDT
+    * - NODT
       - HereBoy Decision Tree induction
       - an incremental randomized algorithm for oblique DT induction, that uses HereBoy :cite:`levi2000hereboy` for the hyperplane optimization process.
     * - GaTree
@@ -1101,14 +1098,14 @@ First, the results are presented for the set of the experiments that test the de
 .. tabularcolumns:: L{0.09\linewidth} | *{10}{R{0.075\linewidth}}
 
 .. _tbl-max-iter-comp-acc:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: The average fitness values for the DTs induced using different number of iterations
     :header-rows: 1
     :file: scripts/max-iter-comp-acc.csv
 
 .. tabularcolumns:: L{0.09\linewidth} | *{10}{R{0.075\linewidth}}
 
 .. _tbl-max-iter-comp-size:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: The average sizes of the DTs induced using different number of iterations
     :header-rows: 1
     :file: scripts/max-iter-comp-size.csv
 
@@ -1400,7 +1397,7 @@ The following section presents the results of the comparison between the OC1-SA 
 
 .. tabularcolumns:: L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth}
 .. _tbl-oc1-sa-time:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: The average induction times of the OC1-SA algorithm per dataset
     :header-rows: 1
     :file: scripts/oc1_sa-time.csv
 
@@ -1417,7 +1414,7 @@ The results of the comparison experiments are displayed side by side in the :num
 
 .. tabularcolumns:: L{0.09\linewidth} | R{0.11\linewidth} R{0.08\linewidth} | R{0.16\linewidth} R{0.12\linewidth} | R{0.2\linewidth} R{0.12\linewidth}
 .. _tbl-oc1-sa-acc:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: The results of the comparison experiments between the OC1-SA algorihtm and the |algo| algorithm, displayed side by side for different induced DTs' characteristics: accuracy, size and fitness
     :header-rows: 2
     :file: scripts/oc1_sa-comp.csv
 
@@ -1439,7 +1436,7 @@ The following section presents the results of the comparison between the OC1 alg
 
 .. tabularcolumns:: L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth} | L{0.09\linewidth} | R{0.18\linewidth}
 .. _tbl-oc1-time:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: The average induction times of the OC1 algorithm per dataset
     :header-rows: 1
     :file: scripts/oc1-time.csv
 
@@ -1456,7 +1453,7 @@ The results of the comparison experiments are displayed side by side in the :num
 
 .. tabularcolumns:: L{0.09\linewidth} | R{0.11\linewidth} R{0.08\linewidth} | R{0.16\linewidth} R{0.12\linewidth} | R{0.2\linewidth} R{0.12\linewidth}
 .. _tbl-oc1-acc:
-.. csv-table:: List of datasets (and their characteristics) from the UCI database, that are used in the experiments throughout this thesis
+.. csv-table:: The results of the comparison experiments between the OC1 algorihtm and the |algo| algorithm, displayed side by side for different induced DTs' characteristics: accuracy, size and fitness
     :header-rows: 2
     :file: scripts/oc1-comp.csv
 
@@ -1587,7 +1584,7 @@ The results of the comparison experiments are displayed side by side in the :num
 Group comparison of all algorithms
 ..................................
 
-In this section, the results of the experiments are displayed and discussed, that compare all the algorithms from the :num:`Table #tbl-existing-algo` together with the proposed |algo| algorithm in terms of induced DT accuracies and sizes. In these experiments, the |algo| algorithm was given 1000k iterations for the induction and the cross-validation and ranking were employed as discussed in the :num:`Section #sec-exp-struct`. The results are listed in the following tables:
+In this section, the results of the experiments are displayed and discussed, that compare all the algorithms from the :num:`Table #tbl-existing-algo` together with the proposed |algo| algorithm in terms of induced DT accuracies and sizes. In these experiments, the |algo| algorithm was setup using the "High accuracy" configuration for the :num:`Table #tbl-existing-comp-exp-params` and given 1000k iterations for the induction. The cross-validation employed and the rankings devised in the manner described in the :num:`Section #sec-exp-struct`. The results are listed in the following tables:
 
    - :num:`Table #tbl-comp-mean-acc-01` shows the average accuracies of the induced DTs,
    - :num:`Table #tbl-comp-conf-acc-01` shows the 95% confidence intervals for the accuracies of the induced DTs
@@ -1605,56 +1602,65 @@ In this section, the results of the experiments are displayed and discussed, tha
    \renewcommand{\arraystretch}{0.9}
    \normalsize
 
-.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.1\linewidth}}
+.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.09\linewidth}}
 
 .. _tbl-comp-mean-acc-01:
 .. csv-table:: The average accuracies of the induced DTs by all algorithms from the :num:`Table #tbl-existing-algo` and |algo|, on all datasets from the :num:`Table #tbl-uci` from five 5-fold cross-validation test.
     :header-rows: 1
     :file: scripts/comp-mean-acc-0.01.csv
 
-.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.1\linewidth}}
+.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.09\linewidth}}
 
 .. _tbl-comp-conf-acc-01:
 .. csv-table:: The 95% confidence intervals for the accuracies of the induced DTs by all algorithms from the :num:`Table #tbl-existing-algo`, on all datasets from the :num:`Table #tbl-uci` from five 5-fold cross-validation test.
     :header-rows: 1
     :file: scripts/comp-conf-acc-0.01.csv
 
-.. tabularcolumns:: p{0.05\linewidth} *{8}{R{0.11\linewidth}}
+.. tabularcolumns:: p{0.05\linewidth} *{8}{R{0.1\linewidth}}
 
 .. _tbl-comp-mean-relative-acc-01:
 .. csv-table:: The relative differences in accuracies of the DTs induced by the algorithms from the :num:`Table #tbl-existing-algo`, compared to the DTs induced by the |algo| algorithm on the same dataset.
     :header-rows: 1
     :file: scripts/comp-mean-relative-acc-0.01.csv
 
-.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.1\linewidth}}
+.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.09\linewidth}}
 
 .. _tbl-comp-mean-size-01:
 .. csv-table:: The average sizes of the induced DTs by all algorithms from the :num:`Table #tbl-existing-algo` and |algo|, on all datasets from the :num:`Table #tbl-uci` from five 5-fold cross-validation test.
     :header-rows: 1
     :file: scripts/comp-mean-size-0.01.csv
 
-.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.1\linewidth}}
+.. raw:: latex
+
+   \begingroup
+   \setlength{\tabcolsep}{.15em}
+
+.. tabularcolumns:: p{0.05\linewidth} *{9}{R{0.095\linewidth}}
 
 .. _tbl-comp-conf-size-01:
 .. csv-table:: The 95% confidence intervals for the sizes of the induced DTs by all algorithms from the :num:`Table #tbl-existing-algo`, on all datasets from the :num:`Table #tbl-uci` from five 5-fold cross-validation test.
     :header-rows: 1
     :file: scripts/comp-conf-size-0.01.csv
 
-.. tabularcolumns:: p{0.05\linewidth} *{8}{R{0.11\linewidth}}
+.. raw:: latex
+
+   \endgroup
+
+.. tabularcolumns:: p{0.05\linewidth} *{8}{R{0.1\linewidth}}
 
 .. _tbl-comp-mean-relative-size-01:
 .. csv-table:: The relative differences in sizes of the DTs induced by the algorithms from the :num:`Table #tbl-existing-algo`, compared to the DTs induced by the |algo| algorithm on the same dataset.
     :header-rows: 1
     :file: scripts/comp-mean-relative-size-0.01.csv
 
-.. tabularcolumns:: p{0.05\linewidth} *{9}{C{0.1\linewidth}}
+.. tabularcolumns:: p{0.05\linewidth} *{9}{C{0.09\linewidth}}
 
 .. _tbl-comp-rank-acc-01:
 .. csv-table:: The ranking of the algorithms from the :num:`Table #tbl-existing-algo` and |algo| based on the induced DT accuracies, calculated using the procedure explained in the :num:`Section #sec-exp-struct`.
     :header-rows: 1
     :file: scripts/comp-rank-acc-0.01.csv
 
-.. tabularcolumns:: p{0.05\linewidth} *{9}{C{0.1\linewidth}}
+.. tabularcolumns:: p{0.05\linewidth} *{9}{C{0.09\linewidth}}
 
 .. _tbl-comp-rank-size-01:
 .. csv-table:: The ranking of the algorithms from the :num:`Table #tbl-existing-algo` and |algo| based on the induced DT sizes, calculated using the procedure explained in the :num:`Section #sec-exp-struct`.
@@ -1666,12 +1672,3 @@ In this section, the results of the experiments are displayed and discussed, tha
     \endgroup
 
 The results of the experiments in this section show that the proposed |algo| algorithm is capable of inducing the DTs of the accuracies comparable to other well known incremental algorithms like CART-LC and OC1, but with the significant reduction in their sizes. This can be seen in the average rankings of the algorithms based on their accuracies and sizes. In terms of accuracy, the |algo| scored an average of 1.804, compared to 1.686 of CART-LC and 1.961 of OC1. On the other hand, when it comes to size, |algo| had a significantly higher average rank of 1.118, compared to 1.843 of CART-LC and 1.627 of OC1. When compared to full DT induction algorithms GALE and GaTree, |algo| was better in terms of induced DT size and significantly better when it came to DT accuracies.
-
-Conclusion
-----------
-
-It was shown in this section that the proposed |algo| algorithm succeeds in fulfilling the requirements that were set in the beginning:
-
-- It operates only on one DT individual, unlike many full DT induction algorithms that use the populations of 20 to 100 or more individuals. This implies a 20 to 100 fold times less resources needed for its implementation, which are critical in embedded systems. Furthermore, the most time consuming task of accuracy calculation, besides the control flow, comprises only the simple operations of multiplication and addition performed for the node test evaluations. Hardware blocks that perform these operations are found in abundance within the chips used in embedded systems, such as DSPs and FPGAs.
-- It is easily parallelizable. Within the accuracy calculation, each instance from the training set traverses the DT by itself and the traversal is decoupled from the traversals of other instances, which is suitable for parallelization by either pipelining or completely performing the instance traversal in parallel.
-- It produces smaller DTs than the existing solutions, without the loss in DT accuracy, which was proved in the experimental section.

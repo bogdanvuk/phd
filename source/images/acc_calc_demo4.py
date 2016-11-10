@@ -10,7 +10,7 @@ for i in random.sample(range(len(attr)), 150):
     leaf = int(classify([float(a) for a in attr[i]], dt)['id'][1:])
     dm[leaf][int(cls[i])-1] = str(int(dm[leaf][int(cls[i])-1]) + 1)
 
-acc = plot_calculator(dm, slice(148,150), None, 0, margin=[p(1,2), p(1,1)])
+acc = plot_calculator(dm, slice(148,150), None, 0, margin=[p(1,2), p(1,0.5)])
 
 dc = [1, 2, 1, 0, 2]
 

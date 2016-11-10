@@ -2,7 +2,7 @@ import sys
 import os
 import numpy as np
 sys.path.append(os.path.expandvars('$EFTI/script'))
-from rank import load_data, form_mean_rank, form_mean_table, prepare_csv_table, write_csv_table
+from rank import load_data, form_mean_rank, form_mean_table, dump_table_csv, prepare_csv_table, write_csv_table
 from rank import features as feature_properties, anova
 import matplotlib.pyplot as plt
 import matplotlib
@@ -79,7 +79,7 @@ def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=
     for feature in features:
         if not rank:
             table = form_mean_table(data[feature])
-            if feature == 'acc':
+            if feature == 'acc' and scale_acc:
                 for ds in table:
                     for a in table[ds]:
                         table[ds][a] = tuple(v*100 for v in table[ds][a])
@@ -100,7 +100,8 @@ def make_feature_comp_tables(files, features, name, horizontal_splits=1, titles=
 def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fig_plotsnum=5,
                            figs=None,cluster_by=None, plot_funcs=(plt.plot, plt.plot),
                            aspect=1, subfig_caption = "DT {feature}: {datasets}",
-                           fig_caption = ("{name}", "{name}"), titles=None, locs=["lower left", "lower left"]
+                           fig_caption = ("{name}", "{name}"), titles=None, locs=["lower left", "lower left"],
+                           scale_acc = True
                            ):
     if (cluster_by is None) or (features[0] == cluster_by):
         fig_order = features
@@ -117,6 +118,11 @@ def table_fig_dual_feature(files, features, name, rst_file, xvals, fignum=10, fi
 
     for feature, plot, l in zip(fig_order, plot_funcs, locs):
         table = form_mean_table(data[feature])
+        if feature == 'acc' and scale_acc:
+            for ds in table:
+                for a in table[ds]:
+                    table[ds][a] = tuple(v*100 for v in table[ds][a])
+
         plots = form_cluster_matrix(table)
         if feature == cluster_by:
             figs = form_clusters(plots,fignum,fig_plotsnum)

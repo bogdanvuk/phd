@@ -43,7 +43,7 @@ fig << bus(nte[1].e(5), nte[1].e(5) + (3,0), style=('', bus_cap))
 fig << bus(nte[2].w(2) - (3,0), nte[2].w(2), style=('', bus_cap))
 fig << bus(nte[2].w(5) - (3,0), nte[2].w(5), style=('', bus_cap))
 
-fig << text("$\cdot\cdot\cdot$", font="\\huge").align(mid(nte[1].c(), nte[2].c()) - p(0,2), prev().c())
+fig << text("$\cdot\cdot\cdot$", font="\\Large").align(mid(nte[1].c(), nte[2].c()) - p(0,2), prev().c())
 
 fig << bus(nte[0].w(2) - (6, 0), nte[0].w(2), style=('', bus_cap))
 fig << bus(nte[0].w(5) - (2, 0), nte[0].w(5), style=('', bus_cap))
